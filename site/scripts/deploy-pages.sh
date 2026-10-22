@@ -59,7 +59,7 @@ if ! node scripts/audit-public.mjs dist-pages --require-sidecar; then
   echo "audit failed: nothing was copied to $REPO" >&2; exit 1
 fi
 
-[[ -d "$REPO/.git" ]] || { echo "public repo working tree not found: $REPO" >&2; exit 1; }
+git -C "$REPO" rev-parse --is-inside-work-tree >/dev/null 2>&1 || { echo "public repo working tree not found: $REPO" >&2; exit 1; }
 current="$(git -C "$REPO" symbolic-ref --short HEAD)"
 [[ "$current" == "$BRANCH" ]] || { echo "public repo is on $current, expected $BRANCH" >&2; exit 1; }
 if [[ -n "$(git -C "$REPO" status --porcelain -- . ":(exclude)$DIR")" ]]; then
