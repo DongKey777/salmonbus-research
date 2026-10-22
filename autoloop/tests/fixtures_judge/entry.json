@@ -1,0 +1,392 @@
+{
+ "runId": "AUTOLOOP_002",
+ "experimentId": "OBJ_MEDIAN_VS_MEAN_002",
+ "hypothesis": "판정 지표가 가중 MAE이므로 목적함수를 L1로 바꾸면 DEV_S MAE가 챔피언보다 내려가고 만석 시 2석 미만 예보 비율이 오른다.",
+ "rationale": "챔피언은 조건부 평균을 맞춘다. 실제 만석일 때 평균 5.7석을 예보한다.",
+ "expectedEffect": "ABS 후보 MAE 0.01석 이상 개선, fullBusUnder2Share 상승",
+ "preregistration": {
+  "predictions": [
+   {
+    "id": "P1",
+    "candidate": "ABS_D8_R1024",
+    "metric": "MAE",
+    "comparator": "CHAMPION",
+    "direction": "lower",
+    "minEffect": 0.01,
+    "why": "L1 목적함수가 MAE를 직접 줄인다"
+   },
+   {
+    "id": "P2",
+    "candidate": "Q50_D8_R1024",
+    "metric": "MAE",
+    "comparator": "CHAMPION",
+    "direction": "lower",
+    "minEffect": 0.01,
+    "why": "중앙값 추정의 구현 재현"
+   },
+   {
+    "id": "P3",
+    "candidate": "HUB6_MDS10_D8_R1024",
+    "metric": "over10Share",
+    "comparator": "CHAMPION",
+    "direction": "lower",
+    "minEffect": 0.0,
+    "why": "huber가 큰 오차를 지킨다"
+   },
+   {
+    "id": "P4",
+    "candidate": "ABS_D8_R1024",
+    "metric": "fullBusUnder2Share",
+    "comparator": "CHAMPION",
+    "direction": "higher",
+    "minEffect": 0.02,
+    "why": "중앙값 예보가 만석 쪽으로 내려간다"
+   }
+  ],
+  "refutedIf": "ABS_D8_R1024의 MAE 차 구간 하한이 0 이상이면 반박"
+ },
+ "experiment": {
+  "id": "OBJ_MEDIAN_VS_MEAN_002",
+  "candidates": [
+   {
+    "candidate": "ABS_D8_R1024",
+    "kind": "XGB",
+    "head": "SEAT",
+    "features": "ALL",
+    "blocks": "NONE",
+    "objective": "reg:absoluteerror",
+    "rounds": 1024,
+    "params": {
+     "max_depth": 8,
+     "eta": 0.1
+    }
+   },
+   {
+    "candidate": "ABS_D8_R2048",
+    "kind": "XGB",
+    "head": "SEAT",
+    "features": "ALL",
+    "blocks": "NONE",
+    "objective": "reg:absoluteerror",
+    "rounds": 2048,
+    "params": {
+     "max_depth": 8,
+     "eta": 0.1
+    }
+   },
+   {
+    "candidate": "Q50_D8_R1024",
+    "kind": "XGB",
+    "head": "SEAT",
+    "features": "ALL",
+    "blocks": "NONE",
+    "objective": "reg:quantileerror",
+    "quantileAlphas": [
+     0.5
+    ],
+    "rounds": 1024,
+    "params": {
+     "max_depth": 8,
+     "eta": 0.1
+    }
+   },
+   {
+    "candidate": "HUB6_MDS10_D8_R1024",
+    "kind": "XGB",
+    "head": "SEAT",
+    "features": "ALL",
+    "blocks": "NONE",
+    "objective": "reg:pseudohubererror",
+    "rounds": 1024,
+    "params": {
+     "max_depth": 8,
+     "eta": 0.1,
+     "huber_slope": 6,
+     "max_delta_step": 10
+    }
+   },
+   {
+    "candidate": "FULL_D8",
+    "kind": "XGB",
+    "head": "FULL",
+    "features": "ALL",
+    "blocks": "NONE",
+    "objective": "binary:logistic",
+    "rounds": 1024,
+    "params": {
+     "max_depth": 8,
+     "eta": 0.1
+    }
+   }
+  ]
+ },
+ "championSpec": {
+  "kind": "XGB",
+  "head": "SEAT",
+  "features": "ALL",
+  "blocks": "NONE",
+  "objective": "reg:squarederror",
+  "rounds": 1024,
+  "params": {
+   "max_depth": 8,
+   "eta": 0.1
+  }
+ },
+ "measured": {
+  "candidates": {
+   "ABS_D8_R1024": {
+    "head": "SEAT",
+    "kind": "XGB",
+    "final": {
+     "MAE": 2.2101034417702117,
+     "RMSE": 3.8122960183051444,
+     "routeMacroMAE": 3.310881524609073,
+     "unseenRouteMAE": 4.187125504518911,
+     "over10Share": 0.027148380917512226,
+     "fullBusUnder2Share": 0.5012449127355902,
+     "over5Share": 0.12611830211066893,
+     "within1Share": 0.5590153305318843,
+     "within2Share": 0.7262117908440072,
+     "exactShare": 0.2721348072251756
+    },
+    "deltaVsChampionCI95": {
+     "MAE": [
+      -0.03912044583015358,
+      -0.011781190275208214
+     ],
+     "routeMacroMAE": [
+      -0.05517011232770381,
+      0.00932155071183418
+     ],
+     "unseenRouteMAE": [
+      -0.08816412500313213,
+      0.05930275132510074
+     ],
+     "over10Share": [
+      -0.0019311802245410093,
+      0.002345017420188371
+     ],
+     "fullBusUnder2Share": [
+      0.031274413301928476,
+      0.07921331044077103
+     ]
+    },
+    "pointDeltaVsChampion": {
+     "MAE": -0.02519687651616742,
+     "routeMacroMAE": -0.022619162254488234,
+     "unseenRouteMAE": -0.014647756878767737,
+     "over10Share": 0.0002083644708351963,
+     "fullBusUnder2Share": 0.05573297448615272
+    },
+    "guardWorsened": {
+     "unseenRouteMAE": false,
+     "routeMacroMAE": false,
+     "over10Share": false,
+     "fullBusUnder2Share": false
+    },
+    "gatePassed": true
+   },
+   "ABS_D8_R2048": {
+    "head": "SEAT",
+    "kind": "XGB",
+    "final": {
+     "MAE": 2.2052207129130617,
+     "RMSE": 3.8251870117408227,
+     "routeMacroMAE": 3.308112991034245,
+     "unseenRouteMAE": 4.190402338001174,
+     "over10Share": 0.02722085931123318,
+     "fullBusUnder2Share": 0.5048817342218893,
+     "over5Share": 0.1258051337402861,
+     "within1Share": 0.5602911742039021,
+     "within2Share": 0.7270118843021007,
+     "exactShare": 0.2734117023558015
+    },
+    "deltaVsChampionCI95": {
+     "MAE": [
+      -0.04433107791241021,
+      -0.01615818290302215
+     ],
+     "routeMacroMAE": [
+      -0.05833916712245306,
+      0.007120938102313305
+     ],
+     "unseenRouteMAE": [
+      -0.09233058127610334,
+      0.06184440183013908
+     ],
+     "over10Share": [
+      -0.0018806420917318227,
+      0.002456510882319911
+     ],
+     "fullBusUnder2Share": [
+      0.03410892003771422,
+      0.0822119075240291
+     ]
+    },
+    "pointDeltaVsChampion": {
+     "MAE": -0.030079605373317442,
+     "routeMacroMAE": -0.025387695829316215,
+     "unseenRouteMAE": -0.011370923396504473,
+     "over10Share": 0.00028084286455615226,
+     "fullBusUnder2Share": 0.05936979597245179
+    },
+    "guardWorsened": {
+     "unseenRouteMAE": false,
+     "routeMacroMAE": false,
+     "over10Share": false,
+     "fullBusUnder2Share": false
+    },
+    "gatePassed": true
+   },
+   "Q50_D8_R1024": {
+    "head": "SEAT",
+    "kind": "XGB",
+    "final": {
+     "MAE": 2.2281180327447414,
+     "RMSE": 3.783912110338363,
+     "routeMacroMAE": 3.3297810051143033,
+     "unseenRouteMAE": 4.199215811208117,
+     "over10Share": 0.02701920034318371,
+     "fullBusUnder2Share": 0.4789012217432215,
+     "over5Share": 0.1281192034741092,
+     "within1Share": 0.5503318123015541,
+     "within2Share": 0.7214023130213117,
+     "exactShare": 0.2601123481307142
+    },
+    "deltaVsChampionCI95": {
+     "MAE": [
+      -0.019302135913404406,
+      0.004912210228187402
+     ],
+     "routeMacroMAE": [
+      -0.03612054213307132,
+      0.02874201183040781
+     ],
+     "unseenRouteMAE": [
+      -0.07123345012810933,
+      0.0657122031811422
+     ],
+     "over10Share": [
+      -0.002104410183713211,
+      0.002281120831023411
+     ],
+     "fullBusUnder2Share": [
+      0.011023412308113413,
+      0.05561030912311214
+     ]
+    },
+    "pointDeltaVsChampion": {
+     "MAE": -0.00718228554163769,
+     "routeMacroMAE": -0.0037196817492577416,
+     "unseenRouteMAE": -0.00255745018956155,
+     "over10Share": 7.918389650668142e-05,
+     "fullBusUnder2Share": 0.03338928349378395
+    },
+    "guardWorsened": {
+     "unseenRouteMAE": false,
+     "routeMacroMAE": false,
+     "over10Share": false,
+     "fullBusUnder2Share": false
+    },
+    "gatePassed": false
+   },
+   "HUB6_MDS10_D8_R1024": {
+    "head": "SEAT",
+    "kind": "XGB",
+    "final": {
+     "MAE": 2.1987315502811318,
+     "RMSE": 3.651201709330162,
+     "routeMacroMAE": 3.3002183211401315,
+     "unseenRouteMAE": 4.172201130981211,
+     "over10Share": 0.030612021380112004,
+     "fullBusUnder2Share": 0.4612380110233019,
+     "over5Share": 0.12401183310412,
+     "within1Share": 0.5521130801231132,
+     "within2Share": 0.7231110301213303,
+     "exactShare": 0.2551120381303114
+    },
+    "deltaVsChampionCI95": {
+     "MAE": [
+      -0.05211340119308217,
+      -0.021309811023412218
+     ],
+     "routeMacroMAE": [
+      -0.06103218021340112,
+      0.0012034012381301
+     ],
+     "unseenRouteMAE": [
+      -0.10123011381230113,
+      0.03121031201231102
+     ],
+     "over10Share": [
+      0.0012012031123011,
+      0.006110230112033011
+     ],
+     "fullBusUnder2Share": [
+      -0.004012311230121,
+      0.03512031123011312
+     ]
+    },
+    "pointDeltaVsChampion": {
+     "MAE": -0.03656876800524733,
+     "routeMacroMAE": -0.033282365723429574,
+     "unseenRouteMAE": -0.02957213041646778,
+     "over10Share": 0.0036720049334349747,
+     "fullBusUnder2Share": 0.015726072773864397
+    },
+    "guardWorsened": {
+     "unseenRouteMAE": false,
+     "routeMacroMAE": false,
+     "over10Share": true,
+     "fullBusUnder2Share": false
+    },
+    "gatePassed": false
+   },
+   "FULL_D8": {
+    "head": "FULL",
+    "final": {
+     "Brier": 0.010412031123011,
+     "meanProbability": 0.017812031123401
+    },
+    "gatePassed": null
+   }
+  },
+  "champion": {
+   "modelId": "SEAT.V2_D8",
+   "MAE": 2.235300318286379,
+   "RMSE": 3.7067129813323745,
+   "routeMacroMAE": 3.333500686863561,
+   "unseenRouteMAE": 4.201773261397679,
+   "over10Share": 0.02694001644667703,
+   "fullBusUnder2Share": 0.4455119382494375,
+   "over5Share": 0.13028424364487254,
+   "within1Share": 0.5454133408954807,
+   "within2Share": 0.7187441255510051,
+   "exactShare": 0.2487490375669036,
+   "notFullUnder2Share": 0.000844788660795353
+  },
+  "product": {
+   "MAE": 3.1445111802482706,
+   "RMSE": 5.0330761864387075,
+   "routeMacroMAE": 4.038887877754973,
+   "unseenRouteMAE": 4.510395965265789,
+   "over10Share": 0.06272591843573974,
+   "fullBusUnder2Share": 0.2171184653986922,
+   "over5Share": 0.21865433098252146,
+   "within1Share": 0.43971415198053704,
+   "within2Share": 0.6032744084928875,
+   "exactShare": 0.1786956006540757,
+   "notFullUnder2Share": 0.0005898297731518801,
+   "fullChance": 0.01077754790323372
+  },
+  "metricsSha256": "0000000000000000000000000000000000000000000000000000000000000000"
+ },
+ "mechanicalVerdicts": {
+  "P1": "SUPPORTED",
+  "P2": "INCONCLUSIVE",
+  "P3": "REFUTED",
+  "P4": "SUPPORTED"
+ },
+ "judge": null,
+ "lessons": []
+}
