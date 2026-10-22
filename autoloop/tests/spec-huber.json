@@ -1,0 +1,2 @@
+{"id":"TEST_HUBER","hypothesis":"Check that pseudo-Huber with the default step cap no longer diverges.","candidates":[
+ {"candidate":"HUB_D6","kind":"XGB","head":"SEAT","features":"NO_ROUTE","blocks":"NONE","objective":"reg:pseudohubererror","params":{"max_depth":6,"eta":0.1,"huber_slope":2.0},"rounds":64}]}

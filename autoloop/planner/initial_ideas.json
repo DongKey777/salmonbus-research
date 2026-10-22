@@ -1,0 +1,22 @@
+[
+ {
+  "idea": "원인 분리: 같은 입력으로 LINEAR(통합·노선×거리 구간별)와 XGB를 비교해 모델 방식과 통합 학습의 몫을 가른다",
+  "why": "운영 대비 개선의 출처가 측정되지 않았다"
+ },
+ {
+  "idea": "목적함수: reg:absoluteerror, reg:pseudohubererror, reg:quantileerror(0.5)는 MAE에 맞는 중앙값을 직접 맞춘다",
+  "why": "지금 챔피언은 평균을 맞추는 squared error다"
+ },
+ {
+  "idea": "하이퍼파라미터: 작은 eta와 많은 라운드, 깊이 10, min_child_weight, colsample",
+  "why": "(DEV_S) 챔피언의 라운드별 MAE가 768에서 1024라운드 사이에도 0.007석 내려간다(2.0710→2.0640, salmonbus-full-v1/outputs/SEAT_FEATURES_V2_002/worker/V2_D8.model.json을 autoloop/sandbox-data/dev_s에서 평가). 다만 같은 설정을 2048라운드로 다시 학습한 SQ_D8_R2048은 2.0651로 챔피언과 차이가 없었다(full-pipeline-v1/control/learning-batch-parent-v11/run-outputs/worker/metrics.json)"
+ },
+ {
+  "idea": "만석 대응: 만석 확률 FULL 헤드와 좌석 회귀의 결합, 낮은 분위수",
+  "why": "(DEV_S) 실제 만석일 때 평균 5.86석을 예보하고, 2석 미만으로 예보하는 비율은 41.7%다(autoloop/sandbox-data/dev_s의 champion_pred, full-pipeline-v1/control/learning-batch-parent-v11/run-outputs/worker/metrics.json의 fullBusUnder2Share)"
+ },
+ {
+  "idea": "노선 일반화: NO_ROUTE와 정류장 수요 강화로 학습에 없던 노선 성능을 지킨다",
+  "why": "(DEV_S) TRAIN에 없는 12개 노선의 MAE는 3.818로 전체 2.064보다 크고, 그중 e3d463a0(코드 11) 한 노선은 8.34로 운영 8.11보다 나쁘다(full-pipeline-v1/control/learning-batch-parent-v11/run-outputs/worker/metrics.json의 unseenRouteMAE, 같은 폴더 diagnostics.json의 route)"
+ }
+]

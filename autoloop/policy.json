@@ -1,0 +1,130 @@
+{
+ "schema": "AUTOLOOP_POLICY/1",
+ "owner": "user",
+ "decidedAt": "2026-10-22",
+ "objective": {
+  "primary": "DEV_S_MAE",
+  "direction": "lower",
+  "champion": "SEAT.V2_D8"
+ },
+ "gate": {
+  "primaryMustImprove": true,
+  "significance": "paired MAE delta 95% interval from a block bootstrap over (service day x KST hour) blocks of DEV_S must lie entirely below 0",
+  "guards": [
+   "unseenRouteMAE",
+   "routeMacroMAE",
+   "fullBusUnder2Share",
+   "over10Share"
+  ],
+  "guardRule": "a guard may not worsen beyond its service-day bootstrap 95% interval",
+  "significanceNote": "implementer refinement 2026-10-22: DEV_S has only 4 service days, so a day-only bootstrap is degenerate; hour blocks keep same-hour arrivals together"
+ },
+ "data": {
+  "fixed": true,
+  "pins": {
+   "rows": "FULL_TRAIN_PREPARATION_007",
+   "observationFeatures": "FULL_TRAIN_PREPARATION_013",
+   "stopDemand": "FULL_TRAIN_PREPARATION_012"
+  },
+  "split": {
+   "serviceDayBoundaryKST": "03:00",
+   "DEV_S": [
+    "2026-10-12",
+    "2026-10-14",
+    "2026-10-16",
+    "2026-10-17"
+   ],
+   "H": [
+    "2026-10-13",
+    "2026-10-15",
+    "2026-10-18",
+    "2026-10-19"
+   ],
+   "groupWhole": true
+  }
+ },
+ "forbidden": [
+  "H rows in any loop run (H opens once at loop end)",
+  "production database writes",
+  "network volume deletion",
+  "payment changes",
+  "pushing or opening PRs",
+  "raw route or vehicle identifiers in public outputs"
+ ],
+ "features": {
+  "rule": "hard features allowed only if production can compute them after a service change; each new feature declares its serving requirement",
+  "forbidden": [
+   "information after the forecast time",
+   "data production never collects"
+  ]
+ },
+ "budget": {
+  "perRunUSD": 1.0,
+  "perDayUSD": 15.0,
+  "totalUSD": 20.0,
+  "overrun": "stop the loop and report; never exceed without a new user decision"
+ },
+ "stop": {
+  "noImprovementRounds": 8,
+  "consecutiveInfrastructureFailures": 2,
+  "budgetExhausted": true,
+  "stopFile": "autoloop/STOP"
+ },
+ "reporting": {
+  "perRound": "short Korean summary to the user",
+  "language": "ko"
+ },
+ "userConsultation": "policy changes only; experiment-level choices belong to the planner",
+ "budgetAmendments": [
+  {
+   "at": "2026-10-22",
+   "change": "perDayUSD 5 -> 15",
+   "by": "user"
+  },
+  {
+   "at": "2026-10-22",
+   "change": "stop.noImprovementRounds 4 -> 8 (safety ceiling; judge may stop earlier)",
+   "by": "user"
+  }
+ ],
+ "planner": {
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "decidedAt": "2026-10-22",
+  "basis": "official guidance: start with Opus 5.5; 2.5x cheaper than Fable 5.1 per token; grounding test 16/18 vs 0; to be re-validated on our own ledger",
+  "auth": "api",
+  "version": "v2"
+ },
+ "aiBudget": {
+  "perRoundUSD": 3.0,
+  "perDayUSD": 20.0,
+  "totalUSD": 60.0,
+  "perCallGuardUSD": 1.0,
+  "billing": "Anthropic API key from the protected research key file; separate from the GPU budget",
+  "decidedAt": "2026-10-22",
+  "note": "user chose API; amounts are the assistant proposal pending user adjustment"
+ },
+ "power": {
+  "requireAC": false,
+  "decidedBy": "user",
+  "decidedAt": "2026-10-22",
+  "risk": "lid-close sleep stops the local watchdog while a paid pod runs"
+ },
+ "debate": {
+  "maxRoundTrips": 2,
+  "authorModel": "claude-opus-5-5",
+  "authorEffort": "high",
+  "reviewerModel": "claude-opus-5-5",
+  "reviewerEffort": "medium",
+  "maxTotalUSD": 2.0,
+  "decidedAt": "2026-10-22",
+  "basis": "debate research: gains flat after 2 round trips; early stop on agreement; deadlock -> conservative default"
+ },
+ "judge": {
+  "enabled": true,
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "decidedAt": "2026-10-22",
+  "floor": "gatePassed is a hard veto; judge chooses among floor-passers or none"
+ }
+}

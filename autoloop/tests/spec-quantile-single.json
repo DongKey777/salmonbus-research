@@ -1,0 +1,53 @@
+{
+ "id": "QUANTILE_SINGLE_ALPHA_TEST",
+ "hypothesis": "single-alpha quantile regression must score like any other candidate",
+ "candidates": [
+  {
+   "candidate": "Q1_D6",
+   "kind": "XGB",
+   "head": "SEAT",
+   "features": "ALL",
+   "blocks": "NONE",
+   "objective": "reg:quantileerror",
+   "quantileAlphas": [
+    0.5
+   ],
+   "params": {
+    "max_depth": 6,
+    "eta": 0.1
+   },
+   "rounds": 64
+  },
+  {
+   "candidate": "Q3_D6",
+   "kind": "XGB",
+   "head": "SEAT",
+   "features": "ALL",
+   "blocks": "NONE",
+   "objective": "reg:quantileerror",
+   "quantileAlphas": [
+    0.1,
+    0.5,
+    0.9
+   ],
+   "params": {
+    "max_depth": 6,
+    "eta": 0.1
+   },
+   "rounds": 64
+  },
+  {
+   "candidate": "ABS_D6",
+   "kind": "XGB",
+   "head": "SEAT",
+   "features": "ALL",
+   "blocks": "NONE",
+   "objective": "reg:absoluteerror",
+   "params": {
+    "max_depth": 6,
+    "eta": 0.1
+   },
+   "rounds": 64
+  }
+ ]
+}
