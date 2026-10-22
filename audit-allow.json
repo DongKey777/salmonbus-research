@@ -1,0 +1,326 @@
+[
+ {
+  "rule": "local-path",
+  "file": "^autoloop/ai/gateway\\.py$",
+  "sha256": "46dc943e3424a2254a109373bb5e9e7d016a71c4ad9f38d63991107e091bee56",
+  "reason": "redaction pattern source (detects local paths in AI traffic)"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/ai/gateway\\.py$",
+  "sha256": "dbad7b6ef1e1dac7d5dbbc5b5e9cb97277f92edc365d62114bd906bb86c66604",
+  "reason": "redaction pattern source (detects local paths in AI traffic)"
+ },
+ {
+  "rule": "secret",
+  "file": "^autoloop/ai/gateway\\.py$",
+  "sha256": "feb48d0281b091fce6e53df1ab3b326e7eb43609c81e99a83363de1a0dd208c5",
+  "reason": "redaction pattern source"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/hfinal/run_hfinal\\.py$",
+  "sha256": "a6bc1a98be7342ccb1dcad6b8115adfad98b643518124659e2f53229d37939c3",
+  "reason": "path inside the Docker test/sandbox container, not this machine"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/hfinal/run_hfinal\\.py$",
+  "sha256": "f2c2f31675ed7f9db8ed9b77fb09e8ee066152ff8ce1cddd189bd7e0256e149d",
+  "reason": "path inside the Docker test/sandbox container, not this machine"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/hfinal/run_hfinal\\.py$",
+  "sha256": "31d9242ad42ebac674ad122d754eb67eb440db58abbda2d7c4944c458648d222",
+  "reason": "path inside the Docker test/sandbox container, not this machine"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/hfinal/test_evaluate\\.py$",
+  "sha256": "a6bc1a98be7342ccb1dcad6b8115adfad98b643518124659e2f53229d37939c3",
+  "reason": "path inside the Docker test/sandbox container, not this machine"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/hfinal/test_evaluate\\.py$",
+  "sha256": "f2c2f31675ed7f9db8ed9b77fb09e8ee066152ff8ce1cddd189bd7e0256e149d",
+  "reason": "path inside the Docker test/sandbox container, not this machine"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/hfinal/test_evaluate\\.py$",
+  "sha256": "31d9242ad42ebac674ad122d754eb67eb440db58abbda2d7c4944c458648d222",
+  "reason": "path inside the Docker test/sandbox container, not this machine"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/sandbox/entry\\.py$",
+  "sha256": "d575cf9b59d76511144298abd50b315ce39962d0ece328b16a8e1933d05a8513",
+  "reason": "path inside the Docker test/sandbox container, not this machine"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests/run_docker_tests\\.sh$",
+  "sha256": "c9d6d991e3d59e3d5c23026bae8103f67f1ff35597a2baf063e9ba96bc1eb6c2",
+  "reason": "path inside the Docker test/sandbox container, not this machine"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests/run_docker_tests\\.sh$",
+  "sha256": "cf0154434a61ad78362fbbb891bb52e5e5b211e50b32f304bcc5b9c5986f1b5f",
+  "reason": "path inside the Docker test/sandbox container, not this machine"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests/run_docker_tests\\.sh$",
+  "sha256": "ce0e15305176fe4f737073323f2b78df45d108746c7ae9cf5504b41ff5d49cb6",
+  "reason": "path inside the Docker test/sandbox container, not this machine"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests/test_ai_gateway\\.py$",
+  "sha256": "d17398660f0a6fa46faa7b2a388386d2f97f1fa276386dbf5dbb911bf44cf3cf",
+  "reason": "fake path fixture for redaction tests"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests/test_ai_gateway\\.py$",
+  "sha256": "514da9956b77b75e2848c7b9cfdc746ae1bb8f60e0dc98d36702fc414a8b8ff6",
+  "reason": "fake path fixture for redaction tests"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests/test_ai_gateway\\.py$",
+  "sha256": "46dc943e3424a2254a109373bb5e9e7d016a71c4ad9f38d63991107e091bee56",
+  "reason": "fake path fixture for redaction tests"
+ },
+ {
+  "rule": "secret",
+  "file": "^autoloop/tests/test_ai_gateway\\.py$",
+  "sha256": "9a27d00b990717e21b7c84b5c9965a1f3d671831e6f5f6b89790d34dc15ff716",
+  "reason": "fake key fixture for redaction tests (short, not a real key)"
+ },
+ {
+  "rule": "secret",
+  "file": "^autoloop/tests/test_ai_gateway\\.py$",
+  "sha256": "03d104c669e3c7b6be7f989db8b12c8b910d3be8c1e2a73c9369d3cc0ba803b5",
+  "reason": "fake key fixture for redaction tests (short, not a real key)"
+ },
+ {
+  "rule": "secret",
+  "file": "^autoloop/tests/test_ai_gateway\\.py$",
+  "sha256": "12ff86ce73c381178b03de91c5ff0aa327ca2f1af5b88fdd7055e16f50a29e6c",
+  "reason": "fake key fixture for redaction tests (short, not a real key)"
+ },
+ {
+  "rule": "secret",
+  "file": "^autoloop/tests/test_ai_gateway\\.py$",
+  "sha256": "ea0387dd68e6e7cdb33b383eae2b0afe17d553487228f5cd5813b3ab829a7673",
+  "reason": "fake key fixture for redaction tests (short, not a real key)"
+ },
+ {
+  "rule": "secret",
+  "file": "^autoloop/tests/test_ai_gateway\\.py$",
+  "sha256": "448c9932533664c2732f9e60ad4aebfbd4c3d95ae27b0381194877a64b5ba1e3",
+  "reason": "fake key fixture for redaction tests (short, not a real key)"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests/test_ai_judge\\.py$",
+  "sha256": "aca69153b96c6e209733ca6ae532e11396400a0bca9181cefeb811954ef17293",
+  "reason": "fake path fixture for redaction tests"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests/test_ai_judge\\.py$",
+  "sha256": "46dc943e3424a2254a109373bb5e9e7d016a71c4ad9f38d63991107e091bee56",
+  "reason": "fake path fixture for redaction tests"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests/test_ai_planner_v2\\.py$",
+  "sha256": "46dc943e3424a2254a109373bb5e9e7d016a71c4ad9f38d63991107e091bee56",
+  "reason": "fake path fixture for redaction tests"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests/test_ai_planner_v2\\.py$",
+  "sha256": "9ffd7a9a04333aec4a3064f0d9d0c7de70c07bf5b2b16c9e520e596f5576abd2",
+  "reason": "fake path fixture for redaction tests"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests\\-next/run_docker_tests\\.sh$",
+  "sha256": "c9d6d991e3d59e3d5c23026bae8103f67f1ff35597a2baf063e9ba96bc1eb6c2",
+  "reason": "path inside the Docker test/sandbox container, not this machine"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests\\-next/run_docker_tests\\.sh$",
+  "sha256": "cf0154434a61ad78362fbbb891bb52e5e5b211e50b32f304bcc5b9c5986f1b5f",
+  "reason": "path inside the Docker test/sandbox container, not this machine"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests\\-next/run_docker_tests\\.sh$",
+  "sha256": "ce0e15305176fe4f737073323f2b78df45d108746c7ae9cf5504b41ff5d49cb6",
+  "reason": "path inside the Docker test/sandbox container, not this machine"
+ },
+ {
+  "rule": "private-net",
+  "file": "^site/package\\.json$",
+  "sha256": "12ca17b49af2289436f303e0166030a21e525d266e209267433801a8fd4071a0",
+  "reason": "local dev server / test origin address (localhost only)"
+ },
+ {
+  "rule": "private-net",
+  "file": "^site/scripts/capture\\-snapshots\\.mjs$",
+  "sha256": "12ca17b49af2289436f303e0166030a21e525d266e209267433801a8fd4071a0",
+  "reason": "local dev server / test origin address (localhost only)"
+ },
+ {
+  "rule": "private-net",
+  "file": "^site/test/history\\-actual\\.test\\.ts$",
+  "sha256": "e000c94c2f3e905086eec1bbe7c0673d12ec22a9b027042ab4d70ef635c93197",
+  "reason": "local dev server / test origin address (localhost only)"
+ },
+ {
+  "rule": "private-net",
+  "file": "^site/test/history\\-contract\\.test\\.ts$",
+  "sha256": "e000c94c2f3e905086eec1bbe7c0673d12ec22a9b027042ab4d70ef635c93197",
+  "reason": "local dev server / test origin address (localhost only)"
+ },
+ {
+  "rule": "private-net",
+  "file": "^site/vite\\.config\\.ts$",
+  "sha256": "12ca17b49af2289436f303e0166030a21e525d266e209267433801a8fd4071a0",
+  "reason": "local dev server / test origin address (localhost only)"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests/test_sandbox_container\\.py$",
+  "sha256": "c0bd14e65ed265f29481b401480575c070af818a040f4baabca6cfa37b83f657",
+  "reason": "path or host inside the sandbox container test (asserts isolation; the address is the Docker Desktop host it must not reach)"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests/test_sandbox_container\\.py$",
+  "sha256": "2e56aa36f538b33b48f37ef51e54ddb5cb9c7935e65c296b7494a17e8dff2a12",
+  "reason": "path or host inside the sandbox container test (asserts isolation; the address is the Docker Desktop host it must not reach)"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests/test_sandbox_container\\.py$",
+  "sha256": "e549f2e8c418f5c0dd9522d70434b4ddebc364b0b0fc7d44799d1fa9ce1e1d99",
+  "reason": "path or host inside the sandbox container test (asserts isolation; the address is the Docker Desktop host it must not reach)"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests/test_sandbox_container\\.py$",
+  "sha256": "cc58136f180be8a777faaa6e40f81082c4690360d17bc426a5e813b5d20d657f",
+  "reason": "path or host inside the sandbox container test (asserts isolation; the address is the Docker Desktop host it must not reach)"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests/test_sandbox_container\\.py$",
+  "sha256": "6c2a38df0a123d0c330aeb4e863928db3756e27f8b23171ee2809e9eddb2b21f",
+  "reason": "path or host inside the sandbox container test (asserts isolation; the address is the Docker Desktop host it must not reach)"
+ },
+ {
+  "rule": "private-net",
+  "file": "^autoloop/tests/test_sandbox_container\\.py$",
+  "sha256": "87072d1b3547b22954d601200ac19b26c89b446d5956e314277f36f38a8ab40c",
+  "reason": "path or host inside the sandbox container test (asserts isolation; the address is the Docker Desktop host it must not reach)"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests/test_ai_judge\\.py$",
+  "sha256": "172e42f7f6aa8c930987fa18c6a177286bc10dd435841661c9e40a4c1109247f",
+  "reason": "fake path input that tests local-path scrubbing"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests/test_ai_planner_v2\\.py$",
+  "sha256": "514da9956b77b75e2848c7b9cfdc746ae1bb8f60e0dc98d36702fc414a8b8ff6",
+  "reason": "fake path input that tests local-path scrubbing"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests/test_ai_planner_v2\\.py$",
+  "sha256": "caac4b579f15e370ecd07039dcf69c3c8d19ca00c7c67fd21f44791d9dc21a21",
+  "reason": "fake path input that tests local-path scrubbing"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests/test_ai_planner_v2\\.py$",
+  "sha256": "2c9662262ced9d2341a38669c046ee65cfcb42487a48b98dbf948a2510cded1d",
+  "reason": "fake path input that tests local-path scrubbing"
+ },
+ {
+  "rule": "local-path",
+  "file": "^autoloop/tests/test_ai_planner_v2\\.py$",
+  "sha256": "88745bcb156b1c4597c8e2a2f88c2b14df6a1c95b3a610682c844d8cf5be0f47",
+  "reason": "fake path input that tests local-path scrubbing"
+ },
+ {
+  "rule": "local-path",
+  "file": "^site/test/site\\-public\\.test\\.ts$",
+  "sha256": "f0e9e553d28f2d037255bf81815cdeb99fa2ec84eeb05c01802af7caeb123fd8",
+  "reason": "planted fake sample that tests the public-data audit rules"
+ },
+ {
+  "rule": "email",
+  "file": "^site/test/site\\-public\\.test\\.ts$",
+  "sha256": "8c2a47d3bdb8d3096a6479f53eac3b724291db5f1c31611100f675be5537329d",
+  "reason": "planted fake sample that tests the public-data audit rules"
+ },
+ {
+  "rule": "secret",
+  "file": "^site/test/site\\-public\\.test\\.ts$",
+  "sha256": "03d104c669e3c7b6be7f989db8b12c8b910d3be8c1e2a73c9369d3cc0ba803b5",
+  "reason": "planted fake sample that tests the public-data audit rules"
+ },
+ {
+  "rule": "private-net",
+  "file": "^site/test/site\\-public\\.test\\.ts$",
+  "sha256": "12ca17b49af2289436f303e0166030a21e525d266e209267433801a8fd4071a0",
+  "reason": "planted fake sample that tests the public-data audit rules"
+ },
+ {
+  "rule": "cloud-endpoint",
+  "file": "^site/test/site\\-public\\.test\\.ts$",
+  "sha256": "84495203a8731eafb73e812065026d70bbd43ce3732a4df4196f26f022e58ab6",
+  "reason": "planted fake sample that tests the public-data audit rules"
+ },
+ {
+  "rule": "runpod-id",
+  "file": "^site/test/site\\-public\\.test\\.ts$",
+  "sha256": "ecfe94c98f8bd860bdd3c04aa459be2ba648cef1abed2d84b59a824a47ceaa8e",
+  "reason": "planted fake sample that tests the public-data audit rules"
+ },
+ {
+  "rule": "route-id",
+  "file": "^site/test/site\\-public\\.test\\.ts$",
+  "sha256": "dd1a81d6e6276b6224a65a30249c6e705a53320ffe8df37219b487a0d379bf70",
+  "reason": "planted fake sample that tests the public-data audit rules"
+ },
+ {
+  "rule": "route-id",
+  "file": "^site/test/site\\-public\\.test\\.ts$",
+  "sha256": "5537a4433d105bce089e386a213b1c142e7195f4cd2eb9d975498beedc45737b",
+  "reason": "planted fake sample that tests the public-data audit rules"
+ },
+ {
+  "rule": "route-id",
+  "file": "^site/test/site\\-public\\.test\\.ts$",
+  "sha256": "d363bf14e2d6bf07155f59cd160974dd4a8eb6fb71a13deb94b6d0c0faeea860",
+  "reason": "planted fake sample that tests the public-data audit rules"
+ },
+ {
+  "rule": "route-id",
+  "file": "^site/test/site\\-public\\.test\\.ts$",
+  "sha256": "31735aac3c9a90c9eefbcf306477bc633da73b00807720cfb5edcd05b7eaafee",
+  "reason": "planted fake sample that tests the public-data audit rules"
+ }
+]
