@@ -1,0 +1,67 @@
+{
+ "id": "TEST_DERIVED_DUPLICATE",
+ "hypothesis": "A derived feature that duplicates a base feature must be refused on TRAIN before training.",
+ "candidates": [
+  {
+   "candidate": "DUP",
+   "kind": "XGB",
+   "head": "SEAT",
+   "features": "ALL",
+   "blocks": "NONE",
+   "objective": "reg:squarederror",
+   "params": {
+    "max_depth": 6,
+    "eta": 0.1
+   },
+   "rounds": 64,
+   "curve": [
+    32,
+    64
+   ],
+   "derivedFeatures": [
+    {
+     "op": "sub",
+     "args": [
+      {
+       "op": "col",
+       "name": "f_remaining_seats"
+      },
+      {
+       "op": "mul",
+       "args": [
+        {
+         "op": "clip",
+         "args": [
+          {
+           "op": "col",
+           "name": "s_net_boarding_segment_score"
+          }
+         ],
+         "lo": -5,
+         "hi": 5
+        },
+        {
+         "op": "const",
+         "value": 2
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "op": "mul",
+     "args": [
+      {
+       "op": "col",
+       "name": "f_remaining_seats"
+      },
+      {
+       "op": "const",
+       "value": 2
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

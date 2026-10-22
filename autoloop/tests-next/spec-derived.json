@@ -1,0 +1,166 @@
+{
+ "id": "TEST_DERIVED",
+ "hypothesis": "Two DSL derived features flow through XGB, blocked LINEAR and a plain control candidate on a small sample.",
+ "candidates": [
+  {
+   "candidate": "DER_SQ",
+   "kind": "XGB",
+   "head": "SEAT",
+   "features": "ALL",
+   "blocks": "NONE",
+   "objective": "reg:squarederror",
+   "params": {
+    "max_depth": 6,
+    "eta": 0.1
+   },
+   "rounds": 64,
+   "curve": [
+    32,
+    64
+   ],
+   "derivedFeatures": [
+    {
+     "op": "sub",
+     "args": [
+      {
+       "op": "col",
+       "name": "f_remaining_seats"
+      },
+      {
+       "op": "mul",
+       "args": [
+        {
+         "op": "clip",
+         "args": [
+          {
+           "op": "col",
+           "name": "s_net_boarding_segment_score"
+          }
+         ],
+         "lo": -5,
+         "hi": 5
+        },
+        {
+         "op": "const",
+         "value": 2
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "op": "bucketize",
+     "args": [
+      {
+       "op": "log1p",
+       "args": [
+        {
+         "op": "fillna",
+         "args": [
+          {
+           "op": "col",
+           "name": "x_prev_gap_seconds"
+          }
+         ],
+         "value": 0
+        }
+       ]
+      }
+     ],
+     "edges": [
+      3,
+      4,
+      5,
+      6,
+      7
+     ]
+    }
+   ]
+  },
+  {
+   "candidate": "DER_LIN_BLK",
+   "kind": "LINEAR",
+   "head": "SEAT",
+   "features": "NO_ROUTE",
+   "blocks": "ROUTE_HORIZON",
+   "params": {
+    "ridge": 1.0
+   },
+   "derivedFeatures": [
+    {
+     "op": "bucketize",
+     "args": [
+      {
+       "op": "log1p",
+       "args": [
+        {
+         "op": "fillna",
+         "args": [
+          {
+           "op": "col",
+           "name": "x_prev_gap_seconds"
+          }
+         ],
+         "value": 0
+        }
+       ]
+      }
+     ],
+     "edges": [
+      3,
+      4,
+      5,
+      6,
+      7
+     ]
+    },
+    {
+     "op": "sub",
+     "args": [
+      {
+       "op": "col",
+       "name": "f_remaining_seats"
+      },
+      {
+       "op": "mul",
+       "args": [
+        {
+         "op": "clip",
+         "args": [
+          {
+           "op": "col",
+           "name": "s_net_boarding_segment_score"
+          }
+         ],
+         "lo": -5,
+         "hi": 5
+        },
+        {
+         "op": "const",
+         "value": 2
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "candidate": "PLAIN_SQ",
+   "kind": "XGB",
+   "head": "SEAT",
+   "features": "ALL",
+   "blocks": "NONE",
+   "objective": "reg:squarederror",
+   "params": {
+    "max_depth": 6,
+    "eta": 0.1
+   },
+   "rounds": 64,
+   "curve": [
+    32,
+    64
+   ]
+  }
+ ]
+}

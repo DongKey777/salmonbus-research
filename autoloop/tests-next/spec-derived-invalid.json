@@ -1,0 +1,38 @@
+{
+ "id": "TEST_DERIVED_INVALID",
+ "hypothesis": "A derived feature that names the label must be refused before training.",
+ "candidates": [
+  {
+   "candidate": "BAD",
+   "kind": "XGB",
+   "head": "SEAT",
+   "features": "ALL",
+   "blocks": "NONE",
+   "objective": "reg:squarederror",
+   "params": {
+    "max_depth": 6,
+    "eta": 0.1
+   },
+   "rounds": 64,
+   "curve": [
+    32,
+    64
+   ],
+   "derivedFeatures": [
+    {
+     "op": "add",
+     "args": [
+      {
+       "op": "col",
+       "name": "observed_seats"
+      },
+      {
+       "op": "const",
+       "value": 1
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
