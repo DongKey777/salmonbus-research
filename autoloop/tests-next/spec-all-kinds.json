@@ -1,0 +1,9 @@
+{"id":"TEST_ALL_KINDS","hypothesis":"Exercise every candidate kind, objective and block mode once on a small sample.","candidates":[
+ {"candidate":"SQ_D6","kind":"XGB","head":"SEAT","features":"ALL","blocks":"NONE","objective":"reg:squarederror","params":{"max_depth":6,"eta":0.1},"rounds":64,"curve":[32,64]},
+ {"candidate":"ABS_D6","kind":"XGB","head":"SEAT","features":"ALL","blocks":"NONE","objective":"reg:absoluteerror","params":{"max_depth":6,"eta":0.1},"rounds":64},
+ {"candidate":"HUB_D6","kind":"XGB","head":"SEAT","features":"NO_ROUTE","blocks":"NONE","objective":"reg:pseudohubererror","params":{"max_depth":6,"eta":0.1,"huber_slope":2.0},"rounds":64},
+ {"candidate":"Q_D6","kind":"XGB","head":"SEAT","features":"ALL","blocks":"NONE","objective":"reg:quantileerror","quantileAlphas":[0.1,0.5,0.9],"params":{"max_depth":6,"eta":0.1},"rounds":64},
+ {"candidate":"BLK_D4","kind":"XGB","head":"SEAT","features":"ALL","blocks":"ROUTE_HORIZON","objective":"reg:squarederror","params":{"max_depth":4,"eta":0.1},"rounds":32},
+ {"candidate":"LIN","kind":"LINEAR","head":"SEAT","features":"ALL","blocks":"NONE","params":{"ridge":1.0}},
+ {"candidate":"LIN_BLK","kind":"LINEAR","head":"SEAT","features":"NO_ROUTE","blocks":"ROUTE_HORIZON","params":{"ridge":1.0}},
+ {"candidate":"FULL_D6","kind":"XGB","head":"FULL","features":["f_remaining_seats","f_horizon_stops","s_fill_rate_score","p_stop_position","p_seat_slope"],"blocks":"NONE","objective":"binary:logistic","params":{"max_depth":6,"eta":0.1},"rounds":64}]}
