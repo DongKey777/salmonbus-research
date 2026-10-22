@@ -1,0 +1,265 @@
+{
+  "fixtureOrigin": "ARTIFICIAL_TRANSPORT_FIXTURE",
+  "actualExecution": false,
+  "public": {
+    "schema": "route-report/1",
+    "origin": "REAL_OBSERVATION_PIPELINE",
+    "runId": "SEAT_DEPTH_SWEEP_002",
+    "evaluationRole": "DEV",
+    "producerStatus": "ROUTE_REPORT_DEV_REUSED_NOT_ADOPTED",
+    "receiptSha256": "dfc06cedf94bcb5f15c2b82db773d19390e58102019db5eb2c51812b7a0e47bb",
+    "dataset": {
+      "manifestSha256": "a2e42ab6ab45c1f33c8963b13456fe957a500f1752c9d027f4125a0cb0cc7a62",
+      "trainRows": 38651044,
+      "devRows": 20989927,
+      "trainGroups": 631972,
+      "devGroups": 351831
+    },
+    "routeMap": {
+      "sha256": "f77fd2ad4b6bcced7254644b495ff4720ac25f6b9cffe21ea510942601db3346",
+      "routeDefinition": "R.route_id",
+      "tokenKind": "OPAQUE_ROUTE_TOKEN",
+      "knownRouteCount": 7,
+      "unknownGroupCount": 7040
+    },
+    "routes": [
+      {
+        "token": "7695d6b2d3422cfa",
+        "devRows": 6506877,
+        "devGroups": 105549,
+        "weightSum": 105549.0,
+        "trainSupport": {
+          "rows": 25010000,
+          "groups": 410000
+        }
+      },
+      {
+        "token": "521ad9c77658f538",
+        "devRows": 4617783,
+        "devGroups": 73884,
+        "weightSum": 73884.0,
+        "trainSupport": {
+          "rows": 9150000,
+          "groups": 150000
+        }
+      },
+      {
+        "token": "a44ab19450ab05dd",
+        "devRows": 3568287,
+        "devGroups": 63329,
+        "weightSum": 63329.0,
+        "trainSupport": {
+          "rows": 2440000,
+          "groups": 40000
+        }
+      },
+      {
+        "token": "d39ac520dea5fab6",
+        "devRows": 2518791,
+        "devGroups": 45738,
+        "weightSum": 45738.0,
+        "trainSupport": {
+          "rows": 1220000,
+          "groups": 20000
+        }
+      },
+      {
+        "token": "4e141cfde02d2307",
+        "devRows": 1679194,
+        "devGroups": 24628,
+        "weightSum": 24628.0,
+        "trainSupport": {
+          "rows": 549000,
+          "groups": 9000
+        }
+      },
+      {
+        "token": "d10f5eddf410bcff",
+        "devRows": 1049496,
+        "devGroups": 21109,
+        "weightSum": 21109.0,
+        "trainSupport": null
+      },
+      {
+        "token": "d40f6b756a89beb1",
+        "devRows": 629697,
+        "devGroups": 10554,
+        "weightSum": 10554.0,
+        "trainSupport": {
+          "rows": 73200,
+          "groups": 1200
+        }
+      }
+    ],
+    "unknown": {
+      "devRows": 419802,
+      "devGroups": 7040,
+      "weightSum": 7040.0
+    },
+    "models": [
+      {
+        "id": "BASELINE",
+        "role": "REFERENCE",
+        "trainingMode": "CONTINUED_REFERENCE",
+        "depth": 6,
+        "rounds": 256,
+        "publishedGlobal": {
+          "source": "fixtures/ARTIFICIAL-not-a-published-global.json",
+          "MAE": 2.536998445276283,
+          "MSE": 16.138946823901247
+        },
+        "micro": {
+          "MAE": 2.536998445276283,
+          "MSE": 16.138946823901247,
+          "pairedMAEDelta": null,
+          "pairedMSEDelta": null
+        },
+        "knownRouteMacro": {
+          "MAE": 3.1142857142857143,
+          "MSE": 24.957142857142856,
+          "routeCount": 7
+        },
+        "unknown": {
+          "MAE": 3.4,
+          "MSE": 27.0,
+          "pairedMAEDelta": null,
+          "pairedMSEDelta": null
+        },
+        "routes": [
+          {
+            "token": "7695d6b2d3422cfa",
+            "MAE": 1.9,
+            "MSE": 8.1,
+            "pairedMAEDelta": null,
+            "pairedMSEDelta": null
+          },
+          {
+            "token": "521ad9c77658f538",
+            "MAE": 2.4,
+            "MSE": 13.0,
+            "pairedMAEDelta": null,
+            "pairedMSEDelta": null
+          },
+          {
+            "token": "a44ab19450ab05dd",
+            "MAE": 2.1,
+            "MSE": 9.9,
+            "pairedMAEDelta": null,
+            "pairedMSEDelta": null
+          },
+          {
+            "token": "d39ac520dea5fab6",
+            "MAE": 3.2,
+            "MSE": 24.0,
+            "pairedMAEDelta": null,
+            "pairedMSEDelta": null
+          },
+          {
+            "token": "4e141cfde02d2307",
+            "MAE": 2.8,
+            "MSE": 18.5,
+            "pairedMAEDelta": null,
+            "pairedMSEDelta": null
+          },
+          {
+            "token": "d10f5eddf410bcff",
+            "MAE": 4.1,
+            "MSE": 40.2,
+            "pairedMAEDelta": null,
+            "pairedMSEDelta": null
+          },
+          {
+            "token": "d40f6b756a89beb1",
+            "MAE": 5.3,
+            "MSE": 61.0,
+            "pairedMAEDelta": null,
+            "pairedMSEDelta": null
+          }
+        ]
+      },
+      {
+        "id": "D6",
+        "role": "CANDIDATE",
+        "trainingMode": "FRESH_FROM_ZERO",
+        "depth": 6,
+        "rounds": 256,
+        "publishedGlobal": null,
+        "micro": {
+          "MAE": 2.4949978825060897,
+          "MSE": 15.567947679425632,
+          "pairedMAEDelta": -0.04200056277019337,
+          "pairedMSEDelta": -0.5709991444756142
+        },
+        "knownRouteMacro": {
+          "MAE": 3.0714285714285716,
+          "MSE": 23.857142857142858,
+          "routeCount": 7
+        },
+        "unknown": {
+          "MAE": 3.3,
+          "MSE": 25.5,
+          "pairedMAEDelta": -0.10000000000000009,
+          "pairedMSEDelta": -1.5
+        },
+        "routes": [
+          {
+            "token": "7695d6b2d3422cfa",
+            "MAE": 1.85,
+            "MSE": 7.7,
+            "pairedMAEDelta": -0.04999999999999982,
+            "pairedMSEDelta": -0.39999999999999947
+          },
+          {
+            "token": "521ad9c77658f538",
+            "MAE": 2.3,
+            "MSE": 12.1,
+            "pairedMAEDelta": -0.10000000000000009,
+            "pairedMSEDelta": -0.9000000000000004
+          },
+          {
+            "token": "a44ab19450ab05dd",
+            "MAE": 2.15,
+            "MSE": 10.3,
+            "pairedMAEDelta": 0.04999999999999982,
+            "pairedMSEDelta": 0.40000000000000036
+          },
+          {
+            "token": "d39ac520dea5fab6",
+            "MAE": 3.0,
+            "MSE": 21.5,
+            "pairedMAEDelta": -0.20000000000000018,
+            "pairedMSEDelta": -2.5
+          },
+          {
+            "token": "4e141cfde02d2307",
+            "MAE": 2.9,
+            "MSE": 19.4,
+            "pairedMAEDelta": 0.10000000000000009,
+            "pairedMSEDelta": 0.8999999999999986
+          },
+          {
+            "token": "d10f5eddf410bcff",
+            "MAE": 4.4,
+            "MSE": 44.0,
+            "pairedMAEDelta": 0.3000000000000007,
+            "pairedMSEDelta": 3.799999999999997
+          },
+          {
+            "token": "d40f6b756a89beb1",
+            "MAE": 4.9,
+            "MSE": 52.0,
+            "pairedMAEDelta": -0.39999999999999947,
+            "pairedMSEDelta": -9.0
+          }
+        ]
+      }
+    ],
+    "DEVReused": true,
+    "HRead": false,
+    "modelAdoption": false,
+    "generalizationClaim": false,
+    "replacesGlobalGate": false,
+    "servedAt": "2027-01-15T08:00:00+00:00",
+    "sourceReportedAt": "2027-01-15T07:59:00+00:00"
+  }
+}

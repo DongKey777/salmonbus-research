@@ -1,0 +1,55 @@
+{
+  "cursor": 2,
+  "generationId": "fixture-generation-v2",
+  "lastReceivedAt": "2026-10-19T12:00:00+00:00",
+  "runs": [
+    {
+      "candidateCount": 0,
+      "comparisonGroups": [],
+      "decisionStatus": "NOT_CONNECTED",
+      "events": [
+        {
+          "journalEvent": "CREATED",
+          "observedAt": "2026-10-19T11:00:00+00:00",
+          "occurredAt": "2026-10-19T10:00:00+00:00",
+          "phase": "NEW",
+          "receivedAt": "2026-10-19T12:00:00+00:00",
+          "registeredCandidateIds": [],
+          "sourceHash": "29daaa60880f903be57a2bd21deb236c880fd9109c64bedddfa767afee4d1e27",
+          "sourceId": "20602f2ecca1b87fa80ade8099a7386e275b1d06038aa9046540658e630a2d02",
+          "sourceKind": "JOURNAL",
+          "sourceSeq": 0
+        },
+        {
+          "sourceId": "6d82b9018a1d865562724861917b88b2a678e2ad51728e14b23f405e6077932c",
+          "sourceKind": "JOURNAL",
+          "sourceSeq": 1,
+          "sourceHash": "46b0479b711b38e91f8409a2bd63c8724654cacbfbb4665e40e11c9931d3d390",
+          "journalEvent": "SCORE_COMPLETED",
+          "phase": "SCORED",
+          "occurredAt": "2026-10-19T10:00:01+00:00",
+          "observedAt": "2026-10-19T11:00:00+00:00",
+          "receivedAt": "2026-10-19T12:00:00+00:00",
+          "registeredCandidateIds": []
+        }
+      ],
+      "head": {
+        "seq": 1,
+        "hash": "46b0479b711b38e91f8409a2bd63c8724654cacbfbb4665e40e11c9931d3d390"
+      },
+      "lastObservedAt": "2026-10-19T11:00:00+00:00",
+      "lastOccurredAt": "2026-10-19T10:00:01+00:00",
+      "lastReceivedAt": "2026-10-19T12:00:00+00:00",
+      "phase": "SCORED",
+      "registeredCandidates": [],
+      "reportValidity": "VERIFIED_REGISTERED_ONLY",
+      "runId": "FIXTURE_RUN_0",
+      "sourceKind": "ARTIFICIAL_FIXTURE"
+    }
+  ],
+  "schemaVersion": "research-monitor-v2",
+  "source": {
+    "kind": "COMMITTED_SYNTHETIC_JOURNAL",
+    "mode": "FINITE_POLL_ONCE"
+  }
+}

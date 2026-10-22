@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "preparation-monitor-v3",
+  "sourceKind": "OWNER_REPORTS",
+  "servedAt": "2030-01-02T01:00:00+00:00",
+  "sourceUpdatedAt": null,
+  "attempts": [
+    {
+      "id": "C1B_ORIGINAL",
+      "title": "C1b 원 실행 — 미완료 보존",
+      "status": "STOPPED_NOT_ACCEPTED",
+      "phase": "STOPPED",
+      "lastReportReceivedAt": "2030-01-01T01:00:00+00:00",
+      "sourceReportedTimes": {
+        "startedAt": null,
+        "stoppedAt": null,
+        "completedAt": null
+      },
+      "limits": {
+        "maxAttempts": null,
+        "processes": null,
+        "wallSeconds": null,
+        "rssMiB": null,
+        "newOutputBytes": null,
+        "startFreeGiB": null,
+        "minimumFreeGiB": null,
+        "algorithmVisits": null,
+        "allReadBytes": null
+      },
+      "inputs": {
+        "evaluationRows": null,
+        "observationKeyRows": null
+      },
+      "acceptedCounts": null,
+      "intermediateCounts": {
+        "nonNullMembers": 59839018,
+        "nullRows": 12662713,
+        "groups": 988235,
+        "weightedOMatched": 59745557,
+        "weightedOAboveHighwater": 93461
+      },
+      "failureCode": "C1B_FULL_IMMUTABLE_BASE_CHANGED",
+      "proofStatus": null,
+      "milestones": [],
+      "samples": []
+    },
+    {
+      "id": "C1B_INDEPENDENT_AUDIT",
+      "title": "독립 재감사 — 담당 보고",
+      "status": "RUNNING",
+      "phase": "E_SEQUENTIAL_MERGE",
+      "lastReportReceivedAt": "2030-01-02T00:00:00+00:00",
+      "sourceReportedTimes": {
+        "startedAt": null,
+        "stoppedAt": null,
+        "completedAt": null
+      },
+      "limits": {
+        "maxAttempts": null,
+        "processes": null,
+        "wallSeconds": null,
+        "rssMiB": null,
+        "newOutputBytes": null,
+        "startFreeGiB": null,
+        "minimumFreeGiB": null,
+        "algorithmVisits": null,
+        "allReadBytes": null
+      },
+      "inputs": {
+        "evaluationRows": null,
+        "observationKeyRows": null
+      },
+      "acceptedCounts": null,
+      "intermediateCounts": null,
+      "failureCode": null,
+      "proofStatus": null,
+      "milestones": [],
+      "samples": [
+        {
+          "receivedAt": "2030-01-02T00:00:00+00:00",
+          "sourceReportedAt": null,
+          "elapsedSeconds": 284,
+          "elapsedBasis": "APPROXIMATE_REPORTED",
+          "freeGiB": 30.298,
+          "pressure": null,
+          "currentRssMiB": null,
+          "peakRssMiB": null,
+          "unspecifiedReportedRssMiB": null,
+          "algorithmVisits": null
+        }
+      ]
+    }
+  ],
+  "readiness": {
+    "originalCompletionAccepted": false,
+    "legacyConsumerEligible": false,
+    "C2Ready": false,
+    "HSealed": false,
+    "trainingReady": false,
+    "modelResultCount": 0
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "cursor": 4,
+  "generationId": "fixture-generation-v2",
+  "lastReceivedAt": "2026-10-19T12:00:00+00:00",
+  "runs": [
+    {
+      "candidateCount": 2,
+      "comparisonGroups": [
+        {
+          "candidateIds": [
+            "BASE",
+            "NEW_STRUCTURE"
+          ],
+          "cohortHash": "405f830253c935752e46a195f8e78cc943e755341838417a26489cc6eae7ca75",
+          "comparisonContractHash": "0c72a747b8da58cf0a0b0c59ba094a0d28c87e5e811340b5668ce0e5566bed60"
+        }
+      ],
+      "decisionStatus": "NOT_CONNECTED",
+      "events": [
+        {
+          "journalEvent": "CREATED",
+          "observedAt": "2026-10-19T11:00:00+00:00",
+          "occurredAt": "2026-10-19T10:00:00+00:00",
+          "phase": "NEW",
+          "receivedAt": "2026-10-19T12:00:00+00:00",
+          "registeredCandidateIds": [],
+          "sourceHash": "29daaa60880f903be57a2bd21deb236c880fd9109c64bedddfa767afee4d1e27",
+          "sourceId": "20602f2ecca1b87fa80ade8099a7386e275b1d06038aa9046540658e630a2d02",
+          "sourceKind": "JOURNAL",
+          "sourceSeq": 0
+        },
+        {
+          "journalEvent": "SCORE_COMPLETED",
+          "observedAt": "2026-10-19T11:00:00+00:00",
+          "occurredAt": "2026-10-19T10:00:01+00:00",
+          "phase": "SCORED",
+          "receivedAt": "2026-10-19T12:00:00+00:00",
+          "registeredCandidateIds": [],
+          "sourceHash": "46b0479b711b38e91f8409a2bd63c8724654cacbfbb4665e40e11c9931d3d390",
+          "sourceId": "6d82b9018a1d865562724861917b88b2a678e2ad51728e14b23f405e6077932c",
+          "sourceKind": "JOURNAL",
+          "sourceSeq": 1
+        },
+        {
+          "journalEvent": "NEW_REPORT_REGISTERED",
+          "observedAt": "2026-10-19T11:00:00+00:00",
+          "occurredAt": "2026-10-19T10:00:02+00:00",
+          "phase": "PREPARE",
+          "receivedAt": "2026-10-19T12:00:00+00:00",
+          "registeredCandidateIds": [
+            "BASE"
+          ],
+          "sourceHash": "fe666be753a423332f91c8accb02878cad21e1752ef1a0e9040793c92f89fc13",
+          "sourceId": "2903c642271dfae5f4246c363d4d2ca23407b82f40ca69169625f44ec4c6ab1b",
+          "sourceKind": "JOURNAL",
+          "sourceSeq": 2
+        },
+        {
+          "sourceId": "2980ffb9d5609fc59fe6fdabd0d0d55c5d453577b442748344c0805853971aba",
+          "sourceKind": "JOURNAL",
+          "sourceSeq": 3,
+          "sourceHash": "dea65882347d6132869c4638dc6000708b3efa56b0d5d993934555663470653c",
+          "journalEvent": "NEW_REPORT_REGISTERED",
+          "phase": "PREPARE",
+          "occurredAt": "2026-10-19T10:00:03+00:00",
+          "observedAt": "2026-10-19T11:00:00+00:00",
+          "receivedAt": "2026-10-19T12:00:00+00:00",
+          "registeredCandidateIds": [
+            "NEW_STRUCTURE"
+          ]
+        }
+      ],
+      "head": {
+        "seq": 3,
+        "hash": "dea65882347d6132869c4638dc6000708b3efa56b0d5d993934555663470653c"
+      },
+      "lastObservedAt": "2026-10-19T11:00:00+00:00",
+      "lastOccurredAt": "2026-10-19T10:00:03+00:00",
+      "lastReceivedAt": "2026-10-19T12:00:00+00:00",
+      "phase": "PREPARE",
+      "registeredCandidates": [
+        {
+          "candidateId": "BASE",
+          "cohortHash": "405f830253c935752e46a195f8e78cc943e755341838417a26489cc6eae7ca75",
+          "comparisonContractHash": "0c72a747b8da58cf0a0b0c59ba094a0d28c87e5e811340b5668ce0e5566bed60",
+          "decisionStatus": "NOT_CONNECTED",
+          "label": null,
+          "metrics": {
+            "Brier": 0.3,
+            "MAE": 2.0,
+            "NRPS": 0.03
+          },
+          "observedAt": "2026-10-19T11:00:00+00:00",
+          "occurredAt": "2026-10-19T10:00:02+00:00",
+          "receivedAt": "2026-10-19T12:00:00+00:00",
+          "registeredGeneration": 2,
+          "registeredOrder": 1,
+          "reportHash": "c69b1e6d40f7dc71eb1d422b5ea8758d3c40ca35f48c1fd650a3b764a708629f",
+          "sourceCohortHash": "405f830253c935752e46a195f8e78cc943e755341838417a26489cc6eae7ca75",
+          "support": {
+            "days": 2,
+            "events": 3,
+            "fullEvents": 1,
+            "nonFullEvents": 2,
+            "positiveRows": 3,
+            "rows": 3
+          },
+          "validity": "VERIFIED_REGISTERED",
+          "weightSum": 4
+        },
+        {
+          "candidateId": "NEW_STRUCTURE",
+          "label": null,
+          "reportHash": "7a4c95fc4d845977359919ddce2cd4d271c88451dd9239f354cebb88f5954fb3",
+          "sourceCohortHash": "405f830253c935752e46a195f8e78cc943e755341838417a26489cc6eae7ca75",
+          "cohortHash": "405f830253c935752e46a195f8e78cc943e755341838417a26489cc6eae7ca75",
+          "comparisonContractHash": "0c72a747b8da58cf0a0b0c59ba094a0d28c87e5e811340b5668ce0e5566bed60",
+          "metrics": {
+            "Brier": 0.15,
+            "NRPS": 0.015,
+            "MAE": 1.0
+          },
+          "support": {
+            "days": 2,
+            "events": 3,
+            "fullEvents": 1,
+            "nonFullEvents": 2,
+            "positiveRows": 3,
+            "rows": 3
+          },
+          "weightSum": 4,
+          "registeredOrder": 2,
+          "registeredGeneration": 3,
+          "occurredAt": "2026-10-19T10:00:03+00:00",
+          "observedAt": "2026-10-19T11:00:00+00:00",
+          "validity": "VERIFIED_REGISTERED",
+          "decisionStatus": "NOT_CONNECTED",
+          "receivedAt": "2026-10-19T12:00:00+00:00"
+        }
+      ],
+      "reportValidity": "VERIFIED_REGISTERED_ONLY",
+      "runId": "FIXTURE_RUN_0",
+      "sourceKind": "ARTIFICIAL_FIXTURE"
+    }
+  ],
+  "schemaVersion": "research-monitor-v2",
+  "source": {
+    "kind": "COMMITTED_SYNTHETIC_JOURNAL",
+    "mode": "FINITE_POLL_ONCE"
+  }
+}

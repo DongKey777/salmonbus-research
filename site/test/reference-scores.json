@@ -1,0 +1,15 @@
+{
+  "sourceSnapshot": "da04d9495bc3d264f7210c22ec2d443639445a2e7e171d0d3e7309d9252db461",
+  "method": "independent Python Decimal precision 50; no JS function import",
+  "weights": {
+    "Brier": "0.60",
+    "NRPS": "0.25",
+    "MAE": "0.15"
+  },
+  "scores": {
+    "NUMERIC_BASE_V4": "0.00",
+    "LIVE_JEV_V4": "3.8256250684780747991411770912396339525479532977572",
+    "LIVE_JEV_SHRINK4_V4": "2.8187002304193549561679675865616051585122592206628",
+    "RULE_CONTEXT_V4": "0.65850250180772337520905899226661526106710957041270"
+  }
+}
