@@ -1,0 +1,115 @@
+{
+  "schemaVersion": "runtime-monitor-v4",
+  "sourceKind": "SYNTHETIC_HARNESS",
+  "servedAt": "2030-01-01T00:00:02+00:00",
+  "runs": [
+    {
+      "runId": "syn-0000000000000001",
+      "sourceKind": "SYNTHETIC_HARNESS",
+      "taskKind": "INTEGER_TRANSFORM",
+      "attempts": [
+        {
+          "attemptId": "attempt-1",
+          "previousAttemptId": null,
+          "status": "RUNNING",
+          "stage": "TRANSFORMING",
+          "lastProducerSeq": 1,
+          "lastEventAt": "2030-01-01T00:00:01+00:00",
+          "lastReceivedAt": "2030-01-01T00:00:01+00:00",
+          "lastWorkerHeartbeatAt": "2030-01-01T00:00:01+00:00",
+          "lastHeartbeatReceivedAt": "2030-01-01T00:00:01+00:00",
+          "monotonicElapsedSeconds": 1.0,
+          "progress": {
+            "completedUnits": 512,
+            "totalUnits": 1024,
+            "unit": "INTEGER_RECORDS"
+          },
+          "resources": {
+            "currentRssMiB": null,
+            "peakRssMiB": 24.5
+          },
+          "pacing": {
+            "pacedForObservation": true,
+            "pacingMs": 1000
+          },
+          "observation": {
+            "state": "FRESH",
+            "ageSeconds": 1.0,
+            "staleAfterSeconds": 5,
+            "basis": "LAST_WORKER_RECEIPT"
+          },
+          "completionEvidence": {
+            "state": "NOT_REPORTED",
+            "evidenceId": null,
+            "checkedAt": null,
+            "claimHash": null,
+            "reason": null,
+            "scope": "SYNTHETIC_INTEGER_TRANSFORM_ONLY"
+          },
+          "events": [
+            {
+              "eventId": "1c4c7bcc5d1d9e946ca84614cf785b00607e260b6625fd379ab7412ab5a3071b",
+              "previousEventId": null,
+              "runId": "syn-0000000000000001",
+              "attemptId": "attempt-1",
+              "producerSeq": 0,
+              "occurredAt": "2030-01-01T00:00:00+00:00",
+              "receivedAt": "2030-01-01T00:00:00+00:00",
+              "monotonicElapsedSeconds": 0.0,
+              "eventKind": "STARTED",
+              "stage": "INITIALIZING",
+              "status": "RUNNING",
+              "progress": {
+                "completedUnits": 0,
+                "totalUnits": 1024,
+                "unit": "INTEGER_RECORDS"
+              },
+              "resources": {
+                "currentRssMiB": null,
+                "peakRssMiB": 24.5
+              },
+              "pacing": {
+                "pacedForObservation": true,
+                "pacingMs": 1000
+              },
+              "claimHash": null
+            },
+            {
+              "eventId": "4e2be9bee51dc41bcfc6767f1dd888f215163bc7c32bfa5f3c209f8d1d51a772",
+              "previousEventId": "1c4c7bcc5d1d9e946ca84614cf785b00607e260b6625fd379ab7412ab5a3071b",
+              "runId": "syn-0000000000000001",
+              "attemptId": "attempt-1",
+              "producerSeq": 1,
+              "occurredAt": "2030-01-01T00:00:01+00:00",
+              "receivedAt": "2030-01-01T00:00:01+00:00",
+              "monotonicElapsedSeconds": 1.0,
+              "eventKind": "PROGRESS",
+              "stage": "TRANSFORMING",
+              "status": "RUNNING",
+              "progress": {
+                "completedUnits": 512,
+                "totalUnits": 1024,
+                "unit": "INTEGER_RECORDS"
+              },
+              "resources": {
+                "currentRssMiB": null,
+                "peakRssMiB": 24.5
+              },
+              "pacing": {
+                "pacedForObservation": true,
+                "pacingMs": 1000
+              },
+              "claimHash": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": {
+    "syntheticOnly": true,
+    "modelTraining": false,
+    "modelPerformanceClaim": false,
+    "realData": false
+  }
+}

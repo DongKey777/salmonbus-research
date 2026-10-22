@@ -1,0 +1,91 @@
+{
+  "fixtureOrigin": "ARTIFICIAL_TRANSPORT_FIXTURE",
+  "actualExecution": false,
+  "public": {
+    "runId": "SEAT_DEPTH_SWEEP_002",
+    "phase": "TRAINING",
+    "terminal": false,
+    "statusDetail": "선택한 깊이의 좌석 예측 모델을 처음부터 학습하고 있습니다.",
+    "candidate": "D4",
+    "trainingCallsReserved": 1,
+    "verifiedCandidateCount": 0,
+    "currentModelRoundsCompleted": 32,
+    "freshRoundsCompleted": null,
+    "devRowsProcessed": null,
+    "trainRows": 38651044,
+    "devRows": 20989927,
+    "baselineRounds": 256,
+    "models": [
+      {
+        "id": "BASELINE",
+        "depth": 6,
+        "trainingMode": "CONTINUED_REFERENCE",
+        "targetRounds": 256,
+        "observedRounds": 256,
+        "status": "VALIDATED_SAVED_REFERENCE",
+        "metrics": {
+          "MAE": 2.0,
+          "MSE": 9.0,
+          "RMSE": 3.0,
+          "Brier": null,
+          "logLoss": null,
+          "NRPS": null
+        },
+        "gatePassed": null
+      },
+      {
+        "id": "D4",
+        "depth": 4,
+        "trainingMode": "FRESH_FROM_ZERO",
+        "targetRounds": 256,
+        "observedRounds": 32,
+        "status": "TRAINING",
+        "metrics": null,
+        "gatePassed": null
+      },
+      {
+        "id": "D6",
+        "depth": 6,
+        "trainingMode": "FRESH_FROM_ZERO",
+        "targetRounds": 256,
+        "observedRounds": null,
+        "status": "NOT_OBSERVED",
+        "metrics": null,
+        "gatePassed": null
+      },
+      {
+        "id": "D8",
+        "depth": 8,
+        "trainingMode": "FRESH_FROM_ZERO",
+        "targetRounds": 256,
+        "observedRounds": null,
+        "status": "NOT_OBSERVED",
+        "metrics": null,
+        "gatePassed": null
+      }
+    ],
+    "bestObservedDevModel": null,
+    "workerElapsedSeconds": 10,
+    "legacyRunAccepted": false,
+    "modelAdoption": false,
+    "generalizationClaim": false,
+    "DEVReused": true,
+    "productComparison": "NOT_CONNECTED",
+    "pureDepthContrast": "FRESH_D4_D6_D8_ONLY",
+    "continuedBaselineIsNotFreshControl": true,
+    "schema": "full-depth-sweep/2",
+    "origin": "REAL_OBSERVATION_PIPELINE",
+    "servedAt": "2027-01-15T08:00:00+00:00",
+    "sourceReportedAt": "2027-01-15T08:00:00+00:00",
+    "producerStatus": null,
+    "priorAttempt": {
+      "runId": "SEAT_DEPTH_SWEEP_001",
+      "outcome": "STOPPED_BEFORE_TRAINING",
+      "freshFits": 0,
+      "accepted": false,
+      "publicScorePublished": false
+    },
+    "receiptSha256": null,
+    "completeSha256": null
+  }
+}

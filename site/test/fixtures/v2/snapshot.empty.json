@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "research-monitor-v2",
+  "generationId": "fixture-generation-v2",
+  "cursor": 0,
+  "lastReceivedAt": null,
+  "source": {
+    "kind": "COMMITTED_SYNTHETIC_JOURNAL",
+    "mode": "FINITE_POLL_ONCE"
+  },
+  "runs": []
+}

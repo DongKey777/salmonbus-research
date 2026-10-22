@@ -1,0 +1,17 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {composite,prefixComposite,verifySnapshot,readyModels,receivedSourceEvents} from '../src/domain.ts';
+const fixture=()=>JSON.parse(readFileSync(new URL('../retired-synthetic-20261021/public/archive.json',import.meta.url),'utf8'));
+const near=(a:number|null,b:number)=>assert.ok(a!==null&&Math.abs(a-b)<1e-10);
+test('baseline is zero; equal relative loss reduction is preserved',()=>{const base={Brier:2,NRPS:4,MAE:8};near(composite(base,base),0);near(composite({Brier:1,NRPS:2,MAE:4},base),50);});
+test('worsening remains negative, never clipped into an apparent gain',()=>near(composite({Brier:4,NRPS:8,MAE:16},{Brier:2,NRPS:4,MAE:8}),-100));
+test('missing, nonfinite, negative and zero reference values reject score',()=>{const base={Brier:1,NRPS:1,MAE:1};for(const x of [undefined,NaN,Infinity,-1])assert.equal(composite({...base,MAE:x},base),null);assert.equal(composite(base,{...base,Brier:0}),null);assert.equal(composite(base,{...base,MAE:1e-12}),null);});
+test('invalid weights are not silently normalized',()=>{const b={Brier:1,NRPS:1,MAE:1};assert.equal(composite(b,b,{Brier:.5,NRPS:.5,MAE:.5}),null);assert.equal(composite(b,b,{Brier:1.1,NRPS:-.1,MAE:0}),null);});
+test('known synthetic weight sensitivity remains visible',()=>{const d=fixture().projection.recordedSnapshot,b=d.models[0].metrics,j=d.models[1].metrics,r=d.models[3].metrics;const oracle=JSON.parse(readFileSync(new URL('./reference-scores.json',import.meta.url),'utf8'));near(composite(j,b),Number(oracle.scores.LIVE_JEV_V4));assert.ok(composite(j,b)!>composite(r,b)!);const w={Brier:1/3,NRPS:1/3,MAE:1/3};assert.ok(composite(j,b,w)!<composite(r,b,w)!);});
+test('matching baseline prefixes produce zero at every question count',()=>{const b=fixture().projection.recordedSnapshot.models[0];const points=prefixComposite(b,b);assert.equal(points.length,12);for(const [,q]of points)near(q,0);});
+test('prefix scope mismatch is not replaced by a full-run score',()=>{const d=fixture().projection.recordedSnapshot,b=structuredClone(d.models[0]);b.curves.prefix[0].weight+=1;assert.equal(prefixComposite(d.models[1],b)[0][1],null);});
+test('registered source never reveals unreceived reports or events',()=>{const s=fixture();s.cursor=1;s.projection.receivedEventCount=1;s.projection.replayStatus='REPLAYING';s.projection.candidatesReady=[];s.projection.lastSourceEvent=null;const v=verifySnapshot(s);assert.equal(readyModels(v).length,0);assert.equal(receivedSourceEvents(v).length,0);assert.equal(v.projection.recordedSnapshot!.models.length,4);});
+test('completed source has four reports and 132 source events',()=>{const v=verifySnapshot(fixture());assert.equal(readyModels(v).length,4);assert.equal(receivedSourceEvents(v).length,132);assert.equal(v.cursor,138);});
+test('event object member order is semantically irrelevant',()=>{const s=fixture();s.projection.lastSourceEvent=Object.fromEntries(Object.entries(s.projection.lastSourceEvent).reverse());assert.equal(verifySnapshot(s).cursor,138);});
+test('contradictory completion and source origin are rejected',()=>{let s=fixture();s.cursor=100;s.projection.receivedEventCount=100;assert.throws(()=>verifySnapshot(s));s=fixture();s.source.kind='REAL';assert.throws(()=>verifySnapshot(s));s=fixture();s.projection.candidatesReady=['UNKNOWN'];assert.throws(()=>verifySnapshot(s));});

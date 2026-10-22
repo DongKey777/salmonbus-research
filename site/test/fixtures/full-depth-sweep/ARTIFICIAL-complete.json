@@ -1,0 +1,112 @@
+{
+  "fixtureOrigin": "ARTIFICIAL_TRANSPORT_FIXTURE",
+  "actualExecution": false,
+  "public": {
+    "runId": "SEAT_DEPTH_SWEEP_002",
+    "phase": "COMPLETE",
+    "terminal": true,
+    "statusDetail": "세 깊이의 새 학습과 점수 검수가 완료됐습니다.",
+    "candidate": null,
+    "trainingCallsReserved": 3,
+    "verifiedCandidateCount": 3,
+    "currentModelRoundsCompleted": null,
+    "freshRoundsCompleted": 768,
+    "devRowsProcessed": 20989927,
+    "trainRows": 38651044,
+    "devRows": 20989927,
+    "baselineRounds": 256,
+    "models": [
+      {
+        "id": "BASELINE",
+        "depth": 6,
+        "trainingMode": "CONTINUED_REFERENCE",
+        "targetRounds": 256,
+        "observedRounds": 256,
+        "status": "VALIDATED_SAVED_REFERENCE",
+        "metrics": {
+          "MAE": 2.0,
+          "MSE": 9.0,
+          "RMSE": 3.0,
+          "Brier": null,
+          "logLoss": null,
+          "NRPS": null
+        },
+        "gatePassed": null
+      },
+      {
+        "id": "D4",
+        "depth": 4,
+        "trainingMode": "FRESH_FROM_ZERO",
+        "targetRounds": 256,
+        "observedRounds": 256,
+        "status": "VERIFIED",
+        "metrics": {
+          "MAE": 1.9,
+          "MSE": 8.41,
+          "RMSE": 2.9,
+          "Brier": null,
+          "logLoss": null,
+          "NRPS": null
+        },
+        "gatePassed": true
+      },
+      {
+        "id": "D6",
+        "depth": 6,
+        "trainingMode": "FRESH_FROM_ZERO",
+        "targetRounds": 256,
+        "observedRounds": 256,
+        "status": "VERIFIED",
+        "metrics": {
+          "MAE": 1.8,
+          "MSE": 7.839999999999999,
+          "RMSE": 2.8,
+          "Brier": null,
+          "logLoss": null,
+          "NRPS": null
+        },
+        "gatePassed": true
+      },
+      {
+        "id": "D8",
+        "depth": 8,
+        "trainingMode": "FRESH_FROM_ZERO",
+        "targetRounds": 256,
+        "observedRounds": 256,
+        "status": "VERIFIED",
+        "metrics": {
+          "MAE": 1.7,
+          "MSE": 7.290000000000001,
+          "RMSE": 2.7,
+          "Brier": null,
+          "logLoss": null,
+          "NRPS": null
+        },
+        "gatePassed": true
+      }
+    ],
+    "bestObservedDevModel": "D8",
+    "workerElapsedSeconds": 10,
+    "legacyRunAccepted": false,
+    "modelAdoption": false,
+    "generalizationClaim": false,
+    "DEVReused": true,
+    "productComparison": "NOT_CONNECTED",
+    "pureDepthContrast": "FRESH_D4_D6_D8_ONLY",
+    "continuedBaselineIsNotFreshControl": true,
+    "schema": "full-depth-sweep/2",
+    "origin": "REAL_OBSERVATION_PIPELINE",
+    "servedAt": "2027-01-15T08:00:00+00:00",
+    "sourceReportedAt": "2027-01-15T08:00:00+00:00",
+    "producerStatus": "FRESH_DEPTH_SWEEP_AND_DEV_VERIFIED_NOT_ADOPTED",
+    "priorAttempt": {
+      "runId": "SEAT_DEPTH_SWEEP_001",
+      "outcome": "STOPPED_BEFORE_TRAINING",
+      "freshFits": 0,
+      "accepted": false,
+      "publicScorePublished": false
+    },
+    "receiptSha256": "67e70c4a5f133f969f0b865f25f0dd1ba5761d13a4abd19c9e1dd04e7d1781bb",
+    "completeSha256": "f7108759a74c26ffc130e0fe500415f895a1154c198e138d0ab0f75161c9d06a"
+  }
+}

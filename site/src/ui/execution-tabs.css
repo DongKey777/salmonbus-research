@@ -1,0 +1,4 @@
+.execution-tabs{display:flex;align-items:center;gap:5px;padding:8px 20px;background:#fff;border-bottom:1px solid var(--border)}
+.execution-tabs a{padding:6px 10px;border-radius:4px;font-size:11px;color:#7b8da5}
+.execution-tabs a.current{color:#4662af;background:#edf2fd;font-weight:600}
+@media(max-width:600px){.execution-tabs{padding-inline:14px}.execution-tabs a{font-size:10px}}
