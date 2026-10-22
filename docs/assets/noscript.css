@@ -1,0 +1,9 @@
+.chart__v.chart__wide { display: block !important; }
+.chart__v.chart__medium, .chart__v.chart__narrow { display: none !important; }
+.chart-scroll { overflow-x: auto; }
+.chart--by-horizon .chart__wide { min-width: 738px; }
+.chart--by-hour .chart__wide { min-width: 738px; }
+.chart--deltas .chart__wide { min-width: 738px; }
+.chart--home-bundle .chart__wide { min-width: 1160px; }
+.chart--home-progress .chart__wide { min-width: 1160px; }
+.chart--metrics .chart__wide { min-width: 738px; }

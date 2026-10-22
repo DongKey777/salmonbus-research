@@ -1,0 +1,852 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개선 현황 · salmonbus 연구</title>
+<meta name="description" content="버스 남는 좌석 예보 모델의 자동 실험 현황">
+<link rel="canonical" href="https://research.dongkey.tech/progress/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="salmonbus 연구">
+<meta property="og:title" content="개선 현황 · salmonbus 연구">
+<meta property="og:url" content="https://research.dongkey.tech/progress/">
+<meta property="og:image" content="https://research.dongkey.tech/charts/home-progress.png?v=1095d692983a5e2d">
+<meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/favicon.svg?v=42a4ccc6ef62" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="stylesheet" href="/assets/site.css?v=eac0885c537d" data-asset="css">
+<noscript><link rel="stylesheet" href="/assets/noscript.css?v=24fe7a57d410"></noscript>
+<script src="/assets/charts.js?v=c6141312e347" defer data-asset="js"></script>
+<script src="/assets/live.js?v=df47452db166" defer data-asset="js"></script>
+</head>
+<body data-digest="e727a2ed5b45c953f5c46ea611e9f28718ea786cfd7dcfb1799f874d5ccff800" data-poll="60" data-version-url="/version.json">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="/"><span class="brand__mark">salmonbus</span> <span class="brand__sub">연구</span></a>
+    <nav class="nav" aria-label="주 메뉴">
+      <a href="/">홈</a>
+      <a href="/progress/" aria-current="page">개선 현황</a>
+      <a href="/attempts/">시도 상세</a>
+    </nav>
+    <p class="live" id="live-status" data-live aria-live="polite">
+<span class="live__dot" aria-hidden="true"></span><span class="live__text">갱신 10월 22일 02:52</span>    </p>
+  </div>
+</header>
+<main id="main" class="page">
+<section class="head" id="progress-head" data-live>
+  <div class="head__row">
+    <h1 class="page__title">개선 현황</h1>
+<span class="tag tag--scope">판정용 4일 기준</span><span class="badge badge--stopped"><span class="badge__dot" aria-hidden="true"></span>루프 멈춤</span><details class="help" id="help-progress"><summary class="help__btn" aria-label="단계 설명">?</summary><div class="help__body" role="note"><p>설계 AI가 가설과 후보를 정합니다.</p><p>코드 시험과 모의 실행으로 실행 전 점검을 합니다.</p><p>GPU 서버에서 후보를 학습합니다.</p><p>코드가 4일 검증 자료로 점수를 매깁니다.</p><p>정해진 기준(게이트)과 심사 AI가 채택 여부를 정합니다.</p><p>새 기준 모델(챔피언)이 됩니다.</p></div></details>  </div>
+<p class="head__line"><span>정지 파일이 놓여 루프를 멈췄습니다.</span><span>10월 22일 02:39 기록 · 3회차가 끝난 뒤 설계·검토·심사 단계를 루프에 붙이려고 멈췄습니다.</span><span class="head__muted">마지막 신호 10월 22일 02:42</span></p>
+</section>
+
+<div class="legend" aria-label="범례">
+  <ul class="legend__stages">
+    <li><span class="step step--done" aria-hidden="true"></span>끝남</li>
+    <li><span class="step step--running" aria-hidden="true"></span>진행 중</li>
+    <li><span class="step step--failed" aria-hidden="true"></span>멈춤</li>
+    <li><span class="step step--pending" aria-hidden="true"></span>아직</li>
+    <li><span class="step step--skipped" aria-hidden="true"></span>해당 없음</li>
+  </ul>
+  <ul class="legend__lights">
+    <li><span class="light light--green" aria-hidden="true"></span>채택</li>
+    <li><span class="light light--red" aria-hidden="true"></span>채택 안 됨</li>
+    <li><span class="light light--none light--ring" aria-hidden="true"></span>결정 전</li>
+  </ul>
+</div>
+<div class="grid-head" aria-hidden="true">
+  <span class="grid-head__name">시도</span>
+  <span class="grid-head__stages"><span class="tip" data-tip="설계 AI가 가설과 후보를 정합니다.">설계</span><span class="tip" data-tip="코드 시험과 모의 실행으로 실행 전 점검을 합니다.">검토</span><span class="tip" data-tip="GPU 서버에서 후보를 학습합니다.">학습</span><span class="tip" data-tip="코드가 4일 검증 자료로 점수를 매깁니다.">채점</span><span class="tip" data-tip="정해진 기준(게이트)과 심사 AI가 채택 여부를 정합니다.">심사</span></span>
+  <span class="grid-head__light"><span class="tip" data-tip="새 기준 모델(챔피언)이 됩니다.">채택</span></span>
+</div>
+
+<div class="rounds" id="rounds" data-live-list>
+  <details class="round round--muted" id="round-AUTOLOOP_004" data-era="loop" open>
+    <summary class="round__summary">
+      <span class="round__open">
+        <span class="round__label">자동 루프 4회차</span>
+        <span class="round__headline">
+          <span class="round__title">나무 깊이·학습 보폭·표본 추출 바꾸기</span>
+          <span class="round__meta"><span class="round__status round__status--muted">초안 · 검토에서 멈춤</span> · 10월 22일 02:35 – 02:52<span class="round__tally">초안 7개 · 실행 전</span><span class="round__fold">접기</span></span>
+        </span>
+      </span>
+      <span class="round__closed">
+        <span class="round__line">
+          <span class="round__label round__label--inline">자동 루프 4회차</span>
+          <span class="round__title">나무 깊이·학습 보폭·표본 추출 바꾸기</span>
+          <span class="round__status round__status--muted">초안 · 검토에서 멈춤</span>
+          <span class="round__when">10월 22일 02:35 – 02:52 · 시도 7개</span>
+        </span>
+        <span class="round__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 아직, 학습 아직, 채점 아직, 심사 아직"
+      data-tip="설계 끝남 · 검토 아직 · 학습 아직 · 채점 아직 · 심사 아직"><span class="step step--done" title="설계 끝남"></span><span class="step step--pending" title="검토 아직"></span><span class="step step--pending" title="학습 아직"></span><span class="step step--pending" title="채점 아직"></span><span class="step step--pending" title="심사 아직"></span></span><span class="steps steps--labels" aria-hidden="true"><span>설계</span><span>검토</span><span>학습</span><span>채점</span><span>심사</span></span></span>
+        <span class="round__lights">
+<span class="count count--none">결정 전 7</span>        </span>
+        <span class="round__unfold">펼치기<svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+<span class="round__notes">수정 요청 반영 · 재검토 전 멈춤</span>      </span>
+    </summary>
+    <div class="round__body">
+      <div class="round__memo">
+<p>수정 요청 반영 · 재검토 전 멈춤</p>      </div>
+      <ul class="attempts">
+        <li class="attempt attempt--labels" aria-hidden="true"><span class="attempt__bar"><span class="steps steps--labels" aria-hidden="true"><span>설계</span><span>검토</span><span>학습</span><span>채점</span><span>심사</span></span></span><span class="attempt__light">채택</span></li>
+        <li class="attempt">
+          <span class="attempt__name">
+평균 맞춤 · 4,096번 학습            <span class="attempt__order attempt__order--draft">초안</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 아직, 학습 아직, 채점 아직, 심사 아직"
+      data-tip="설계 끝남 · 검토 아직 · 학습 아직 · 채점 아직 · 심사 아직"><span class="step step--done" title="설계 끝남"></span><span class="step step--pending" title="검토 아직"></span><span class="step step--pending" title="학습 아직"></span><span class="step step--pending" title="채점 아직"></span><span class="step step--pending" title="심사 아직"></span></span></span>
+          <span class="attempt__light"><span class="light light--none" role="img" aria-label="결정 전" data-tip="결정 전"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+평균 맞춤 · 깊이 8            <span class="attempt__order attempt__order--draft">초안</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 아직, 학습 아직, 채점 아직, 심사 아직"
+      data-tip="설계 끝남 · 검토 아직 · 학습 아직 · 채점 아직 · 심사 아직"><span class="step step--done" title="설계 끝남"></span><span class="step step--pending" title="검토 아직"></span><span class="step step--pending" title="학습 아직"></span><span class="step step--pending" title="채점 아직"></span><span class="step step--pending" title="심사 아직"></span></span></span>
+          <span class="attempt__light"><span class="light light--none" role="img" aria-label="결정 전" data-tip="결정 전"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+평균 맞춤 · 폭 제한 없음            <span class="attempt__order attempt__order--draft">초안</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 아직, 학습 아직, 채점 아직, 심사 아직"
+      data-tip="설계 끝남 · 검토 아직 · 학습 아직 · 채점 아직 · 심사 아직"><span class="step step--done" title="설계 끝남"></span><span class="step step--pending" title="검토 아직"></span><span class="step step--pending" title="학습 아직"></span><span class="step step--pending" title="채점 아직"></span><span class="step step--pending" title="심사 아직"></span></span></span>
+          <span class="attempt__light"><span class="light light--none" role="img" aria-label="결정 전" data-tip="결정 전"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+평균 맞춤 · 노선 코드 뺌 · 4,096번 학습            <span class="attempt__order attempt__order--draft">초안</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 아직, 학습 아직, 채점 아직, 심사 아직"
+      data-tip="설계 끝남 · 검토 아직 · 학습 아직 · 채점 아직 · 심사 아직"><span class="step step--done" title="설계 끝남"></span><span class="step step--pending" title="검토 아직"></span><span class="step step--pending" title="학습 아직"></span><span class="step step--pending" title="채점 아직"></span><span class="step step--pending" title="심사 아직"></span></span></span>
+          <span class="attempt__light"><span class="light light--none" role="img" aria-label="결정 전" data-tip="결정 전"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+평균 맞춤 · 잎 크기 200 · 벌점 10            <span class="attempt__order attempt__order--draft">초안</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 아직, 학습 아직, 채점 아직, 심사 아직"
+      data-tip="설계 끝남 · 검토 아직 · 학습 아직 · 채점 아직 · 심사 아직"><span class="step step--done" title="설계 끝남"></span><span class="step step--pending" title="검토 아직"></span><span class="step step--pending" title="학습 아직"></span><span class="step step--pending" title="채점 아직"></span><span class="step step--pending" title="심사 아직"></span></span></span>
+          <span class="attempt__light"><span class="light light--none" role="img" aria-label="결정 전" data-tip="결정 전"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+큰 오차 덜 반영(경계 10석) · 2,048번 학습            <span class="attempt__order attempt__order--draft">초안</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 아직, 학습 아직, 채점 아직, 심사 아직"
+      data-tip="설계 끝남 · 검토 아직 · 학습 아직 · 채점 아직 · 심사 아직"><span class="step step--done" title="설계 끝남"></span><span class="step step--pending" title="검토 아직"></span><span class="step step--pending" title="학습 아직"></span><span class="step step--pending" title="채점 아직"></span><span class="step step--pending" title="심사 아직"></span></span></span>
+          <span class="attempt__light"><span class="light light--none" role="img" aria-label="결정 전" data-tip="결정 전"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+중앙값 맞춤 · 4,096번 학습            <span class="attempt__order attempt__order--draft">초안</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 아직, 학습 아직, 채점 아직, 심사 아직"
+      data-tip="설계 끝남 · 검토 아직 · 학습 아직 · 채점 아직 · 심사 아직"><span class="step step--done" title="설계 끝남"></span><span class="step step--pending" title="검토 아직"></span><span class="step step--pending" title="학습 아직"></span><span class="step step--pending" title="채점 아직"></span><span class="step step--pending" title="심사 아직"></span></span></span>
+          <span class="attempt__light"><span class="light light--none" role="img" aria-label="결정 전" data-tip="결정 전"></span></span>
+        </li>
+      </ul>
+    </div>
+  </details>
+  <details class="round round--bad" id="round-AUTOLOOP_003" data-era="loop">
+    <summary class="round__summary">
+      <span class="round__open">
+        <span class="round__label">자동 루프 3회차</span>
+        <span class="round__headline">
+          <span class="round__title">나무 깊이·학습 보폭·표본 추출 바꾸기</span>
+          <span class="round__meta"><span class="round__status round__status--bad">학습에서 멈춤</span> · 10월 22일 02:35 – 02:42<span class="round__tally">시도 7개 · 채택 안 됨 7</span><span class="round__fold">접기</span></span>
+        </span>
+      </span>
+      <span class="round__closed">
+        <span class="round__line">
+          <span class="round__label round__label--inline">자동 루프 3회차</span>
+          <span class="round__title">나무 깊이·학습 보폭·표본 추출 바꾸기</span>
+          <span class="round__status round__status--bad">학습에서 멈춤</span>
+          <span class="round__when">10월 22일 02:35 – 02:42 · 시도 7개</span>
+        </span>
+        <span class="round__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 멈춤, 채점 해당 없음, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 멈춤 · 채점 해당 없음 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--failed" title="학습 멈춤"></span><span class="step step--skipped" title="채점 해당 없음"></span><span class="step step--skipped" title="심사 해당 없음"></span></span><span class="steps steps--labels" aria-hidden="true"><span>설계</span><span>검토</span><span>학습</span><span>채점</span><span>심사</span></span></span>
+        <span class="round__lights">
+<span class="count"><span class="light light--red light--sm" role="img" aria-label="채택 안 됨 7개" tabindex="0" data-tip="채택 안 됨 7개"></span><span aria-hidden="true">7</span></span>        </span>
+        <span class="round__unfold">펼치기<svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+<span class="round__notes">GPU 서버 생성 실패</span>      </span>
+    </summary>
+    <div class="round__body">
+      <div class="round__memo">
+<p>GPU 서버 생성 실패</p>      </div>
+      <ul class="attempts">
+        <li class="attempt attempt--labels" aria-hidden="true"><span class="attempt__bar"><span class="steps steps--labels" aria-hidden="true"><span>설계</span><span>검토</span><span>학습</span><span>채점</span><span>심사</span></span></span><span class="attempt__light">채택</span></li>
+        <li class="attempt">
+          <span class="attempt__name">
+평균 맞춤 · 깊이 8            <span class="attempt__order">#38</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 멈춤, 채점 해당 없음, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 멈춤 · 채점 해당 없음 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--failed" title="학습 멈춤"></span><span class="step step--skipped" title="채점 해당 없음"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+평균 맞춤 · 표본 전체 · 특징 전체            <span class="attempt__order">#39</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 멈춤, 채점 해당 없음, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 멈춤 · 채점 해당 없음 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--failed" title="학습 멈춤"></span><span class="step step--skipped" title="채점 해당 없음"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+평균 맞춤 · 4,096번 학습            <span class="attempt__order">#40</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 멈춤, 채점 해당 없음, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 멈춤 · 채점 해당 없음 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--failed" title="학습 멈춤"></span><span class="step step--skipped" title="채점 해당 없음"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+평균 맞춤 · 노선 코드 뺌 · 4,096번 학습            <span class="attempt__order">#41</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 멈춤, 채점 해당 없음, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 멈춤 · 채점 해당 없음 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--failed" title="학습 멈춤"></span><span class="step step--skipped" title="채점 해당 없음"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+평균 맞춤 · 잎 크기 200 · 벌점 10            <span class="attempt__order">#42</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 멈춤, 채점 해당 없음, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 멈춤 · 채점 해당 없음 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--failed" title="학습 멈춤"></span><span class="step step--skipped" title="채점 해당 없음"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+평균 맞춤 · 깊이 12 · 잎 크기 100 · 벌점 10            <span class="attempt__order">#43</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 멈춤, 채점 해당 없음, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 멈춤 · 채점 해당 없음 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--failed" title="학습 멈춤"></span><span class="step step--skipped" title="채점 해당 없음"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+큰 오차 덜 반영(경계 3석) · 폭 제한 10            <span class="attempt__order">#44</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 멈춤, 채점 해당 없음, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 멈춤 · 채점 해당 없음 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--failed" title="학습 멈춤"></span><span class="step step--skipped" title="채점 해당 없음"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+      </ul>
+    </div>
+  </details>
+  <details class="round round--plain" id="round-AUTOLOOP_002" data-era="loop" open>
+    <summary class="round__summary">
+      <span class="round__open">
+        <span class="round__label">자동 루프 2회차</span>
+        <span class="round__headline">
+          <span class="round__title">학습 목표 바꾸기</span>
+          <span class="round__meta"><span class="round__status round__status--plain">평가 완료</span> · 10월 22일 02:11 – 02:31<span class="round__tally">시도 8개 · 채택 안 됨 8</span><span class="round__fold">접기</span></span>
+        </span>
+      </span>
+      <span class="round__closed">
+        <span class="round__line">
+          <span class="round__label round__label--inline">자동 루프 2회차</span>
+          <span class="round__title">학습 목표 바꾸기</span>
+          <span class="round__status round__status--plain">평가 완료</span>
+          <span class="round__when">10월 22일 02:11 – 02:31 · 시도 8개</span>
+        </span>
+        <span class="round__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 끝남"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 끝남"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--done" title="심사 끝남"></span></span><span class="steps steps--labels" aria-hidden="true"><span>설계</span><span>검토</span><span>학습</span><span>채점</span><span>심사</span></span></span>
+        <span class="round__lights">
+<span class="count"><span class="light light--red light--sm" role="img" aria-label="채택 안 됨 8개" tabindex="0" data-tip="채택 안 됨 8개"></span><span aria-hidden="true">8</span></span>        </span>
+        <span class="round__unfold">펼치기<svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+<span class="round__notes">1회차 후보 다시 실행</span>      </span>
+    </summary>
+    <div class="round__body">
+      <div class="round__memo">
+<p>1회차 후보 다시 실행</p>      </div>
+      <ul class="attempts">
+        <li class="attempt attempt--labels" aria-hidden="true"><span class="attempt__bar"><span class="steps steps--labels" aria-hidden="true"><span>설계</span><span>검토</span><span>학습</span><span>채점</span><span>심사</span></span></span><span class="attempt__light">채택</span></li>
+        <li class="attempt">
+          <span class="attempt__name">
+<a href="/attempts/AUTOLOOP_002/ABS_D8_R1024/">중앙값 맞춤 · 1,024번 학습</a>            <span class="attempt__order">#30</span>
+<a class="attempt__more" href="/attempts/AUTOLOOP_002/ABS_D8_R1024/" aria-label="중앙값 맞춤 · 1,024번 학습 상세">상세</a>          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 끝남"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 끝남"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--done" title="심사 끝남"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+<a href="/attempts/AUTOLOOP_002/ABS_D8_R2048/">중앙값 맞춤 · 2,048번 학습</a>            <span class="attempt__order">#31</span>
+<a class="attempt__more" href="/attempts/AUTOLOOP_002/ABS_D8_R2048/" aria-label="중앙값 맞춤 · 2,048번 학습 상세">상세</a>          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 끝남"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 끝남"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--done" title="심사 끝남"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+<a href="/attempts/AUTOLOOP_002/ABS_D8_E03_R1024/">중앙값 맞춤 · 보폭 0.3</a>            <span class="attempt__order">#32</span>
+<a class="attempt__more" href="/attempts/AUTOLOOP_002/ABS_D8_E03_R1024/" aria-label="중앙값 맞춤 · 보폭 0.3 상세">상세</a>          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 끝남"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 끝남"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--done" title="심사 끝남"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+<a href="/attempts/AUTOLOOP_002/Q50_D8_R1024/">중앙값 맞춤(분위 방식) · 1,024번 학습</a>            <span class="attempt__order">#33</span>
+<a class="attempt__more" href="/attempts/AUTOLOOP_002/Q50_D8_R1024/" aria-label="중앙값 맞춤(분위 방식) · 1,024번 학습 상세">상세</a>          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 끝남"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 끝남"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--done" title="심사 끝남"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+<a href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/">큰 오차 덜 반영(경계 2석) · 폭 제한 10</a>            <span class="attempt__order">#34</span>
+<a class="attempt__more" href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/" aria-label="큰 오차 덜 반영(경계 2석) · 폭 제한 10 상세">상세</a>          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 끝남"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 끝남"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--done" title="심사 끝남"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+<a href="/attempts/AUTOLOOP_002/HUB6_MDS10_D8_R1024/">큰 오차 덜 반영(경계 6석) · 폭 제한 10</a>            <span class="attempt__order">#35</span>
+<a class="attempt__more" href="/attempts/AUTOLOOP_002/HUB6_MDS10_D8_R1024/" aria-label="큰 오차 덜 반영(경계 6석) · 폭 제한 10 상세">상세</a>          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 끝남"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 끝남"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--done" title="심사 끝남"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+<a href="/attempts/AUTOLOOP_002/SQ_MDS10_D8_R1024/">평균 맞춤 · 폭 제한 10</a>            <span class="attempt__order">#36</span>
+<a class="attempt__more" href="/attempts/AUTOLOOP_002/SQ_MDS10_D8_R1024/" aria-label="평균 맞춤 · 폭 제한 10 상세">상세</a>          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 끝남"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 끝남"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--done" title="심사 끝남"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+<a href="/attempts/AUTOLOOP_002/SQ_D8_R2048/">평균 맞춤 · 2,048번 학습</a>            <span class="attempt__order">#37</span>
+<a class="attempt__more" href="/attempts/AUTOLOOP_002/SQ_D8_R2048/" aria-label="평균 맞춤 · 2,048번 학습 상세">상세</a>          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 끝남"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 끝남"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--done" title="심사 끝남"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+      </ul>
+    </div>
+  </details>
+  <details class="round round--bad" id="round-AUTOLOOP_001" data-era="loop">
+    <summary class="round__summary">
+      <span class="round__open">
+        <span class="round__label">자동 루프 1회차</span>
+        <span class="round__headline">
+          <span class="round__title">학습 목표 바꾸기</span>
+          <span class="round__meta"><span class="round__status round__status--bad">채점에서 멈춤</span> · 10월 22일 00:49 – 01:57<span class="round__tally">시도 8개 · 채택 안 됨 8</span><span class="round__fold">접기</span></span>
+        </span>
+      </span>
+      <span class="round__closed">
+        <span class="round__line">
+          <span class="round__label round__label--inline">자동 루프 1회차</span>
+          <span class="round__title">학습 목표 바꾸기</span>
+          <span class="round__status round__status--bad">채점에서 멈춤</span>
+          <span class="round__when">10월 22일 00:49 – 01:57 · 시도 8개</span>
+        </span>
+        <span class="round__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 멈춤, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 멈춤 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--failed" title="채점 멈춤"></span><span class="step step--skipped" title="심사 해당 없음"></span></span><span class="steps steps--labels" aria-hidden="true"><span>설계</span><span>검토</span><span>학습</span><span>채점</span><span>심사</span></span></span>
+        <span class="round__lights">
+<span class="count"><span class="light light--red light--sm" role="img" aria-label="채택 안 됨 8개" tabindex="0" data-tip="채택 안 됨 8개"></span><span aria-hidden="true">8</span></span>        </span>
+        <span class="round__unfold">펼치기<svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+<span class="round__notes">채점 중 작업 오류 · 2회차에서 다시 실행</span>      </span>
+    </summary>
+    <div class="round__body">
+      <div class="round__memo">
+<p>채점 중 작업 오류 · 2회차에서 다시 실행</p>      </div>
+      <ul class="attempts">
+        <li class="attempt attempt--labels" aria-hidden="true"><span class="attempt__bar"><span class="steps steps--labels" aria-hidden="true"><span>설계</span><span>검토</span><span>학습</span><span>채점</span><span>심사</span></span></span><span class="attempt__light">채택</span></li>
+        <li class="attempt">
+          <span class="attempt__name">
+중앙값 맞춤 · 1,024번 학습            <span class="attempt__order">#22</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 멈춤, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 멈춤 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--failed" title="채점 멈춤"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+중앙값 맞춤 · 2,048번 학습            <span class="attempt__order">#23</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 멈춤, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 멈춤 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--failed" title="채점 멈춤"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+중앙값 맞춤 · 보폭 0.3            <span class="attempt__order">#24</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 멈춤, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 멈춤 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--failed" title="채점 멈춤"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+중앙값 맞춤(분위 방식) · 1,024번 학습            <span class="attempt__order">#25</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 멈춤, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 멈춤 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--failed" title="채점 멈춤"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+큰 오차 덜 반영(경계 2석) · 폭 제한 10            <span class="attempt__order">#26</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 멈춤, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 멈춤 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--failed" title="채점 멈춤"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+큰 오차 덜 반영(경계 6석) · 폭 제한 10            <span class="attempt__order">#27</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 멈춤, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 멈춤 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--failed" title="채점 멈춤"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+평균 맞춤 · 폭 제한 10            <span class="attempt__order">#28</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 멈춤, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 멈춤 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--failed" title="채점 멈춤"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+평균 맞춤 · 2,048번 학습            <span class="attempt__order">#29</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 멈춤, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 멈춤 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--failed" title="채점 멈춤"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+      </ul>
+    </div>
+  </details>
+  <section class="era" id="era-pre-loop" data-era="pre-loop">
+    <h2 class="era__title">루프 이전</h2>
+    <details class="help" id="help-era-pre-loop"><summary class="help__btn" aria-label="루프 이전 설명">?</summary><div class="help__body" role="note">자동 루프가 생기기 전에 사람이 설계하고 채택 여부를 정한 회차입니다. 심사 단계가 없어 그 칸은 비어 있습니다.</div></details>
+  </section>
+  <details class="round round--plain" id="round-SEAT_FEATURES_V2_002" data-era="pre-loop">
+    <summary class="round__summary">
+      <span class="round__open">
+        <span class="round__label">루프 이전</span>
+        <span class="round__headline">
+          <span class="round__title">입력 특징 32개</span>
+          <span class="round__meta"><span class="round__status round__status--plain">평가 완료</span> · 10월 21일 23:39<span class="round__tally">시도 6개 · 채택 1 · 채택 안 됨 5</span><span class="round__fold">접기</span></span>
+        </span>
+      </span>
+      <span class="round__closed">
+        <span class="round__line">
+          <span class="round__label round__label--inline">루프 이전</span>
+          <span class="round__title">입력 특징 32개</span>
+          <span class="round__status round__status--plain">평가 완료</span>
+          <span class="round__when">10월 21일 23:39 · 시도 6개</span>
+        </span>
+        <span class="round__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span><span class="steps steps--labels" aria-hidden="true"><span>설계</span><span>검토</span><span>학습</span><span>채점</span><span>심사</span></span></span>
+        <span class="round__lights">
+<span class="count"><span class="light light--green light--sm" role="img" aria-label="채택 1개" tabindex="0" data-tip="채택 1개"></span><span aria-hidden="true">1</span></span><span class="count"><span class="light light--red light--sm" role="img" aria-label="채택 안 됨 5개" tabindex="0" data-tip="채택 안 됨 5개"></span><span aria-hidden="true">5</span></span>        </span>
+        <span class="round__unfold">펼치기<svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </span>
+    </summary>
+    <div class="round__body">
+      <ul class="attempts">
+        <li class="attempt attempt--labels" aria-hidden="true"><span class="attempt__bar"><span class="steps steps--labels" aria-hidden="true"><span>설계</span><span>검토</span><span>학습</span><span>채점</span><span>심사</span></span></span><span class="attempt__light">채택</span></li>
+        <li class="attempt">
+          <span class="attempt__name">
+특징 32개 · 깊이 6            <span class="attempt__order">#16</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+특징 32개 · 깊이 8 · 1,024번 학습            <span class="attempt__order">#17</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--green" role="img" aria-label="채택" tabindex="0" data-tip="채택"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+특징 32개 · 정류장 수요 뺌            <span class="attempt__order">#18</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+특징 32개 · 노선 코드 뺌            <span class="attempt__order">#19</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+만석 확률 · 특징 32개            <span class="attempt__order">#20</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+만석 확률 · 노선 코드 뺌            <span class="attempt__order">#21</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+      </ul>
+    </div>
+  </details>
+  <details class="round round--plain" id="round-SEAT_FEATURES_V2_001" data-era="pre-loop">
+    <summary class="round__summary">
+      <span class="round__open">
+        <span class="round__label">루프 이전</span>
+        <span class="round__headline">
+          <span class="round__title">입력 특징 32개(1차)</span>
+          <span class="round__meta"><span class="round__status round__status--plain">평가 완료</span> · 10월 21일 20:35<span class="round__tally">시도 6개 · 채택 안 됨 6</span><span class="round__fold">접기</span></span>
+        </span>
+      </span>
+      <span class="round__closed">
+        <span class="round__line">
+          <span class="round__label round__label--inline">루프 이전</span>
+          <span class="round__title">입력 특징 32개(1차)</span>
+          <span class="round__status round__status--plain">평가 완료</span>
+          <span class="round__when">10월 21일 20:35 · 시도 6개</span>
+        </span>
+        <span class="round__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span><span class="steps steps--labels" aria-hidden="true"><span>설계</span><span>검토</span><span>학습</span><span>채점</span><span>심사</span></span></span>
+        <span class="round__lights">
+<span class="count"><span class="light light--red light--sm" role="img" aria-label="채택 안 됨 6개" tabindex="0" data-tip="채택 안 됨 6개"></span><span aria-hidden="true">6</span></span>        </span>
+        <span class="round__unfold">펼치기<svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+<span class="round__notes">입력 자료 차이로 결과 폐기</span>      </span>
+    </summary>
+    <div class="round__body">
+      <div class="round__memo">
+<p>입력 자료 차이로 결과 폐기</p>      </div>
+      <ul class="attempts">
+        <li class="attempt attempt--labels" aria-hidden="true"><span class="attempt__bar"><span class="steps steps--labels" aria-hidden="true"><span>설계</span><span>검토</span><span>학습</span><span>채점</span><span>심사</span></span></span><span class="attempt__light">채택</span></li>
+        <li class="attempt">
+          <span class="attempt__name">
+특징 32개 · 깊이 6            <span class="attempt__order">#10</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+특징 32개 · 깊이 8 · 1,024번 학습            <span class="attempt__order">#11</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+특징 32개 · 정류장 수요 뺌            <span class="attempt__order">#12</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+특징 32개 · 노선 코드 뺌            <span class="attempt__order">#13</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+만석 확률 · 특징 32개            <span class="attempt__order">#14</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+만석 확률 · 노선 코드 뺌            <span class="attempt__order">#15</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+      </ul>
+    </div>
+  </details>
+  <details class="round round--plain" id="round-SEAT_DEPTH_SWEEP_002" data-era="pre-loop">
+    <summary class="round__summary">
+      <span class="round__open">
+        <span class="round__label">루프 이전</span>
+        <span class="round__headline">
+          <span class="round__title">나무 깊이 비교</span>
+          <span class="round__meta"><span class="round__status round__status--plain">평가 완료</span> · 10월 21일 17:35<span class="round__tally">시도 3개 · 채택 1 · 채택 안 됨 2</span><span class="round__fold">접기</span></span>
+        </span>
+      </span>
+      <span class="round__closed">
+        <span class="round__line">
+          <span class="round__label round__label--inline">루프 이전</span>
+          <span class="round__title">나무 깊이 비교</span>
+          <span class="round__status round__status--plain">평가 완료</span>
+          <span class="round__when">10월 21일 17:35 · 시도 3개</span>
+        </span>
+        <span class="round__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span><span class="steps steps--labels" aria-hidden="true"><span>설계</span><span>검토</span><span>학습</span><span>채점</span><span>심사</span></span></span>
+        <span class="round__lights">
+<span class="count"><span class="light light--green light--sm" role="img" aria-label="채택 1개" tabindex="0" data-tip="채택 1개"></span><span aria-hidden="true">1</span></span><span class="count"><span class="light light--red light--sm" role="img" aria-label="채택 안 됨 2개" tabindex="0" data-tip="채택 안 됨 2개"></span><span aria-hidden="true">2</span></span>        </span>
+        <span class="round__unfold">펼치기<svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </span>
+    </summary>
+    <div class="round__body">
+      <ul class="attempts">
+        <li class="attempt attempt--labels" aria-hidden="true"><span class="attempt__bar"><span class="steps steps--labels" aria-hidden="true"><span>설계</span><span>검토</span><span>학습</span><span>채점</span><span>심사</span></span></span><span class="attempt__light">채택</span></li>
+        <li class="attempt">
+          <span class="attempt__name">
+기본 특징 6개 · 얕은 나무(깊이 4)            <span class="attempt__order">#7</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+기본 특징 6개 · 깊이 6 새로 학습            <span class="attempt__order">#8</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--green" role="img" aria-label="채택" tabindex="0" data-tip="채택"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+기본 특징 6개 · 깊은 나무(깊이 8)            <span class="attempt__order">#9</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+      </ul>
+    </div>
+  </details>
+  <details class="round round--bad" id="round-SEAT_DEPTH_SWEEP_001" data-era="pre-loop">
+    <summary class="round__summary">
+      <span class="round__open">
+        <span class="round__label">루프 이전</span>
+        <span class="round__headline">
+          <span class="round__title">나무 깊이 비교(1차)</span>
+          <span class="round__meta"><span class="round__status round__status--bad">학습에서 멈춤</span> · 10월 21일 10:15<span class="round__tally">시도 3개 · 채택 안 됨 3</span><span class="round__fold">접기</span></span>
+        </span>
+      </span>
+      <span class="round__closed">
+        <span class="round__line">
+          <span class="round__label round__label--inline">루프 이전</span>
+          <span class="round__title">나무 깊이 비교(1차)</span>
+          <span class="round__status round__status--bad">학습에서 멈춤</span>
+          <span class="round__when">10월 21일 10:15 · 시도 3개</span>
+        </span>
+        <span class="round__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 멈춤, 채점 해당 없음, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 멈춤 · 채점 해당 없음 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--failed" title="학습 멈춤"></span><span class="step step--skipped" title="채점 해당 없음"></span><span class="step step--skipped" title="심사 해당 없음"></span></span><span class="steps steps--labels" aria-hidden="true"><span>설계</span><span>검토</span><span>학습</span><span>채점</span><span>심사</span></span></span>
+        <span class="round__lights">
+<span class="count"><span class="light light--red light--sm" role="img" aria-label="채택 안 됨 3개" tabindex="0" data-tip="채택 안 됨 3개"></span><span aria-hidden="true">3</span></span>        </span>
+        <span class="round__unfold">펼치기<svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+<span class="round__notes">학습 환경 준비 실패</span>      </span>
+    </summary>
+    <div class="round__body">
+      <div class="round__memo">
+<p>학습 환경 준비 실패</p>      </div>
+      <ul class="attempts">
+        <li class="attempt attempt--labels" aria-hidden="true"><span class="attempt__bar"><span class="steps steps--labels" aria-hidden="true"><span>설계</span><span>검토</span><span>학습</span><span>채점</span><span>심사</span></span></span><span class="attempt__light">채택</span></li>
+        <li class="attempt">
+          <span class="attempt__name">
+기본 특징 6개 · 얕은 나무(깊이 4)            <span class="attempt__order">#4</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 멈춤, 채점 해당 없음, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 멈춤 · 채점 해당 없음 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--failed" title="학습 멈춤"></span><span class="step step--skipped" title="채점 해당 없음"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+기본 특징 6개 · 깊이 6 새로 학습            <span class="attempt__order">#5</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 멈춤, 채점 해당 없음, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 멈춤 · 채점 해당 없음 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--failed" title="학습 멈춤"></span><span class="step step--skipped" title="채점 해당 없음"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+기본 특징 6개 · 깊은 나무(깊이 8)            <span class="attempt__order">#6</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 멈춤, 채점 해당 없음, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 멈춤 · 채점 해당 없음 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--failed" title="학습 멈춤"></span><span class="step step--skipped" title="채점 해당 없음"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+      </ul>
+    </div>
+  </details>
+  <details class="round round--plain" id="round-SEAT_CONTINUATION_001" data-era="pre-loop">
+    <summary class="round__summary">
+      <span class="round__open">
+        <span class="round__label">루프 이전</span>
+        <span class="round__headline">
+          <span class="round__title">이어서 더 학습하기</span>
+          <span class="round__meta"><span class="round__status round__status--plain">평가 완료</span> · 10월 21일 08:01<span class="round__tally">시도 2개 · 채택 1 · 채택 안 됨 1</span><span class="round__fold">접기</span></span>
+        </span>
+      </span>
+      <span class="round__closed">
+        <span class="round__line">
+          <span class="round__label round__label--inline">루프 이전</span>
+          <span class="round__title">이어서 더 학습하기</span>
+          <span class="round__status round__status--plain">평가 완료</span>
+          <span class="round__when">10월 21일 08:01 · 시도 2개</span>
+        </span>
+        <span class="round__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span><span class="steps steps--labels" aria-hidden="true"><span>설계</span><span>검토</span><span>학습</span><span>채점</span><span>심사</span></span></span>
+        <span class="round__lights">
+<span class="count"><span class="light light--green light--sm" role="img" aria-label="채택 1개" tabindex="0" data-tip="채택 1개"></span><span aria-hidden="true">1</span></span><span class="count"><span class="light light--red light--sm" role="img" aria-label="채택 안 됨 1개" tabindex="0" data-tip="채택 안 됨 1개"></span><span aria-hidden="true">1</span></span>        </span>
+        <span class="round__unfold">펼치기<svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </span>
+    </summary>
+    <div class="round__body">
+      <ul class="attempts">
+        <li class="attempt attempt--labels" aria-hidden="true"><span class="attempt__bar"><span class="steps steps--labels" aria-hidden="true"><span>설계</span><span>검토</span><span>학습</span><span>채점</span><span>심사</span></span></span><span class="attempt__light">채택</span></li>
+        <li class="attempt">
+          <span class="attempt__name">
+기본 특징 6개 · 128번까지 이어 학습            <span class="attempt__order">#2</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span></span>
+        </li>
+        <li class="attempt">
+          <span class="attempt__name">
+기본 특징 6개 · 256번까지 이어 학습            <span class="attempt__order">#3</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--green" role="img" aria-label="채택" tabindex="0" data-tip="채택"></span></span>
+        </li>
+      </ul>
+    </div>
+  </details>
+  <details class="round round--plain" id="round-GPU_FULL_PRIMARY_001" data-era="pre-loop">
+    <summary class="round__summary">
+      <span class="round__open">
+        <span class="round__label">루프 이전</span>
+        <span class="round__headline">
+          <span class="round__title">첫 전체 자료 학습</span>
+          <span class="round__meta"><span class="round__status round__status--plain">평가 완료</span> · 10월 21일 05:32<span class="round__tally">시도 1개 · 채택 1</span><span class="round__fold">접기</span></span>
+        </span>
+      </span>
+      <span class="round__closed">
+        <span class="round__line">
+          <span class="round__label round__label--inline">루프 이전</span>
+          <span class="round__title">첫 전체 자료 학습</span>
+          <span class="round__status round__status--plain">평가 완료</span>
+          <span class="round__when">10월 21일 05:32 · 시도 1개</span>
+        </span>
+        <span class="round__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span><span class="steps steps--labels" aria-hidden="true"><span>설계</span><span>검토</span><span>학습</span><span>채점</span><span>심사</span></span></span>
+        <span class="round__lights">
+<span class="count"><span class="light light--green light--sm" role="img" aria-label="채택 1개" tabindex="0" data-tip="채택 1개"></span><span aria-hidden="true">1</span></span>        </span>
+        <span class="round__unfold">펼치기<svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </span>
+    </summary>
+    <div class="round__body">
+      <ul class="attempts">
+        <li class="attempt attempt--labels" aria-hidden="true"><span class="attempt__bar"><span class="steps steps--labels" aria-hidden="true"><span>설계</span><span>검토</span><span>학습</span><span>채점</span><span>심사</span></span></span><span class="attempt__light">채택</span></li>
+        <li class="attempt">
+          <span class="attempt__name">
+기본 특징 6개 · 64번 학습            <span class="attempt__order">#1</span>
+          </span>
+          <span class="attempt__bar"><span class="steps" role="img" tabindex="0"
+      aria-label="설계 끝남, 검토 끝남, 학습 끝남, 채점 끝남, 심사 해당 없음"
+      data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 해당 없음"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--skipped" title="심사 해당 없음"></span></span></span>
+          <span class="attempt__light"><span class="light light--green" role="img" aria-label="채택" tabindex="0" data-tip="채택"></span></span>
+        </li>
+      </ul>
+    </div>
+  </details>
+</div>
+
+<nav class="pager" id="pager" data-live aria-label="회차 쪽">
+  <span class="pager__note">회차 10개 중 1–10</span>
+</nav>
+</main>
+<footer class="footer">
+  <div class="footer__inner">
+    <p>채택 = 다음 실험의 기준 모델 · 운영 예보 반영과 별개</p>
+    <p class="footer__meta" id="footer-meta" data-live>판본 1 · 10월 22일 02:52 · <a href="/THIRD-PARTY-LICENSES.txt">글꼴 라이선스</a></p>
+  </div>
+</footer>
+</body>
+</html>
