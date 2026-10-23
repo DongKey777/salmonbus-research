@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1208" height="520" viewBox="0 0 869.76 374.4" version="1.1" class="rs-chart" role="img" aria-labelledby="rs-home-bundle-title rs-home-bundle-desc">
- <title id="rs-home-bundle-title">채점된 시도 22개의 거리 구간별 평균 오차</title><desc id="rs-home-bundle-desc">시도마다 목표 정류장까지 남은 정류장 수 구간별 평균 오차를 선 하나로 그렸습니다. 현재 기준 모델(특징 32개 · 깊이 8 · 1,024번 학습) 2.064석, 지금 운영 중인 예보 3.045석.</desc><style>.rs-chart *{pointer-events:none}.rs-chart .rs-hit{pointer-events:all}.rs-chart .rs-h{cursor:default}.rs-chart a .rs-h{cursor:pointer}.rs-chart .rs-h:hover .rs-vis{stroke-opacity:1!important;stroke-width:2.2!important}.rs-chart .rs-area:hover .rs-hit{fill:#1F2B3A!important;fill-opacity:.05!important}</style><defs>
+ <title id="rs-home-bundle-title">채점된 시도 26개의 거리 구간별 평균 오차</title><desc id="rs-home-bundle-desc">시도마다 목표 정류장까지 남은 정류장 수 구간별 평균 오차를 선 하나로 그렸습니다. 현재 기준 모델(이동 제한 제거) 2.025석, 지금 운영 중인 예보 3.045석.</desc><style>.rs-chart *{pointer-events:none}.rs-chart .rs-hit{pointer-events:all}.rs-chart .rs-h{cursor:default}.rs-chart a .rs-h{cursor:pointer}.rs-chart .rs-h:hover .rs-vis{stroke-opacity:1!important;stroke-width:2.2!important}.rs-chart .rs-area:hover .rs-hit{fill:#1F2B3A!important;fill-opacity:.05!important}</style><defs>
   <style type="text/css">.rs-chart *{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
  <g id="rs-home-bundle-figure_1">
@@ -335,58 +335,67 @@
     </g>
    </g>
    <g id="rs-home-bundle-h2">
-    <path d="M 86.87 236.24  L 252.64 138.83  L 403.06 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #aeb9c6; stroke-opacity: 0.284268; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 86.87 236.24  L 252.64 138.83  L 403.06 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #b0bac7; stroke-opacity: 0.259187; stroke-width: 0.941357; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h6">
-    <path d="M 86.87 234.27  L 252.64 137.78  L 402.31 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #9eaab9; stroke-opacity: 0.315537; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 86.87 234.27  L 252.64 137.78  L 402.31 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #a2aebd; stroke-opacity: 0.283349; stroke-width: 0.941357; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h10">
-    <path d="M 86.87 236.75  L 252.64 138.83  L 403.41 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #8e9bac; stroke-opacity: 0.346806; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 86.87 236.75  L 252.64 138.83  L 403.41 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #95a2b2; stroke-opacity: 0.30751; stroke-width: 0.941357; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h12">
-    <path d="M 86.87 261.99  L 252.64 228.38  L 418.4 179.11  L 584.17 146.45  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #8592a5; stroke-opacity: 0.326197; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 86.87 261.99  L 252.64 228.38  L 418.4 179.11  L 584.17 146.45  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke-dasharray: 1.129629,1.694443; stroke-dashoffset: 0; stroke: #8d9aab; stroke-opacity: 0.287632; stroke-width: 0.941357; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h14">
-    <path d="M 86.87 270.33  L 252.64 238.71  L 418.4 194.73  L 584.17 165.74  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #7d8a9d; stroke-opacity: 0.340268; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 86.87 270.33  L 252.64 238.71  L 418.4 194.73  L 584.17 165.74  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke-dasharray: 1.129629,1.694443; stroke-dashoffset: 0; stroke: #8693a5; stroke-opacity: 0.298504; stroke-width: 0.941357; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h16">
-    <path d="M 86.87 266.95  L 252.64 234.9  L 418.4 192.61  L 584.17 165.62  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #738096; stroke-opacity: 0.35434; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 86.87 266.95  L 252.64 234.9  L 418.4 192.61  L 584.17 165.62  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke-dasharray: 1.129629,1.694443; stroke-dashoffset: 0; stroke: #7f8c9f; stroke-opacity: 0.309377; stroke-width: 0.941357; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h18">
-    <path d="M 86.87 270.63  L 252.64 236.17  L 418.4 187.92  L 584.17 156.18  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #6b788e; stroke-opacity: 0.368411; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 86.87 270.63  L 252.64 236.17  L 418.4 187.92  L 584.17 156.18  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke-dasharray: 1.129629,1.694443; stroke-dashoffset: 0; stroke: #778499; stroke-opacity: 0.32025; stroke-width: 0.941357; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h20">
-    <path d="M 86.87 264.13  L 252.64 231.72  L 418.4 184.57  L 584.17 151.53  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #637087; stroke-opacity: 0.42498; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 86.87 264.13  L 252.64 231.72  L 418.4 184.57  L 584.17 151.53  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #707d93; stroke-opacity: 0.367914; stroke-width: 0.941357; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h24">
-    <path d="M 86.87 268.28  L 252.64 235.78  L 418.4 193.17  L 584.17 166.81  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #546178; stroke-opacity: 0.45625; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 86.87 268.28  L 252.64 235.78  L 418.4 193.17  L 584.17 166.81  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #626f86; stroke-opacity: 0.392075; stroke-width: 0.941357; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h26">
-    <path d="M 86.87 273.02  L 252.64 238.24  L 418.4 191.2  L 584.17 159.63  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #4d5a71; stroke-opacity: 0.471884; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 86.87 273.02  L 252.64 238.24  L 418.4 191.2  L 584.17 159.63  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #5d6a81; stroke-opacity: 0.404156; stroke-width: 0.941357; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h28">
-    <path d="M 86.87 278.55  L 252.64 243.51  L 418.4 197.31  L 584.17 166.78  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #46536a; stroke-opacity: 0.487519; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 86.87 278.55  L 252.64 243.51  L 418.4 197.31  L 584.17 166.78  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #56637a; stroke-opacity: 0.416237; stroke-width: 0.941357; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h30">
-    <path d="M 86.87 278.59  L 252.64 244.78  L 418.4 199.7  L 584.17 169.8  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #3f4c63; stroke-opacity: 0.503154; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 86.87 278.59  L 252.64 244.78  L 418.4 199.7  L 584.17 169.8  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #505d74; stroke-opacity: 0.428318; stroke-width: 0.941357; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h32">
-    <path d="M 86.87 274.59  L 252.64 242.34  L 418.4 197.97  L 584.17 168.31  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #39465c; stroke-opacity: 0.518788; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 86.87 274.59  L 252.64 242.34  L 418.4 197.97  L 584.17 168.31  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #4a576e; stroke-opacity: 0.440398; stroke-width: 0.941357; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h34">
-    <path d="M 86.87 279.4  L 252.64 240.05  L 418.4 190.85  L 584.17 159.05  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #344055; stroke-opacity: 0.534423; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 86.87 279.4  L 252.64 240.05  L 418.4 190.85  L 584.17 159.05  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #445168; stroke-opacity: 0.452479; stroke-width: 0.941357; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h36">
-    <path d="M 86.87 277.48  L 252.64 243.42  L 418.4 198.85  L 584.17 169.79  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #2f3b4e; stroke-opacity: 0.550058; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 86.87 277.48  L 252.64 243.42  L 418.4 198.85  L 584.17 169.79  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #3e4b62; stroke-opacity: 0.46456; stroke-width: 0.941357; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h38">
-    <path d="M 86.87 274.1  L 252.64 241.76  L 418.4 198.35  L 584.17 169.31  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #293647; stroke-opacity: 0.565693; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 86.87 274.1  L 252.64 241.76  L 418.4 198.35  L 584.17 169.31  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #39465c; stroke-opacity: 0.476641; stroke-width: 0.941357; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h40">
-    <path d="M 86.87 272.34  L 252.64 241.34  L 418.4 198.95  L 584.17 170.24  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #243041; stroke-opacity: 0.581327; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 86.87 272.34  L 252.64 241.34  L 418.4 198.95  L 584.17 170.24  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #354257; stroke-opacity: 0.488721; stroke-width: 0.941357; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h42">
-    <path d="M 86.87 271.41  L 252.64 241.12  L 418.4 198.54  L 584.17 169.65  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #1f2b3a; stroke-opacity: 0.596962; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 86.87 271.41  L 252.64 241.12  L 418.4 198.54  L 584.17 169.65  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #303d51; stroke-opacity: 0.500802; stroke-width: 0.941357; stroke-linecap: round" />
+   </g>
+   <g id="rs-home-bundle-h44">
+    <path d="M 86.87 272.43  L 252.64 242.37  L 418.4 200.51  L 584.17 171.52  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #2c394b; stroke-opacity: 0.512883; stroke-width: 0.941357; stroke-linecap: round" />
+   </g>
+   <g id="rs-home-bundle-h46">
+    <path d="M 86.87 272.12  L 252.64 241.43  L 418.4 199.32  L 584.17 170.58  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #273445; stroke-opacity: 0.524964; stroke-width: 0.941357; stroke-linecap: round" />
+   </g>
+   <g id="rs-home-bundle-h50">
+    <path d="M 86.87 272.65  L 252.64 241.49  L 418.4 199.67  L 584.17 171.05  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #1f2b3a; stroke-opacity: 0.549125; stroke-width: 0.941357; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h0">
     <path d="M 86.87 233.2  L 252.64 138  L 401.93 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #f2ae8c; stroke-width: 1.4; stroke-linecap: round" />
@@ -397,7 +406,10 @@
    <g id="rs-home-bundle-h8">
     <path d="M 86.87 237.11  L 252.64 139.01  L 403.5 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #f2ae8c; stroke-width: 1.4; stroke-linecap: round" />
    </g>
-   <g id="rs-home-bundle-h44">
+   <g id="rs-home-bundle-h22">
+    <path d="M 86.87 271.99  L 252.64 241.24  L 418.4 198.5  L 584.17 169.58  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #f2ae8c; stroke-width: 1.4; stroke-linecap: round" />
+   </g>
+   <g id="rs-home-bundle-h52">
     <path d="M 86.87 248.41  L 252.64 187.02  L 418.4 117.47  L 584.17 76.66  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke-dasharray: 7.5,4.5; stroke-dashoffset: 0; stroke: #4e5866; stroke-width: 1.5; stroke-linecap: round" />
     <defs>
      <path id="rs-home-bundle-m6c7348a747" d="M 0 2.25  C 0.6 2.25 1.17 2.01 1.59 1.59  C 2.01 1.17 2.25 0.6 2.25 0  C 2.25 -0.6 2.01 -1.17 1.59 -1.59  C 1.17 -2.01 0.6 -2.25 0 -2.25  C -0.6 -2.25 -1.17 -2.01 -1.59 -1.59  C -2.01 -1.17 -2.25 -0.6 -2.25 0  C -2.25 0.6 -2.01 1.17 -1.59 1.59  C -1.17 2.01 -0.6 2.25 0 2.25  z " style="stroke: #4e5866; stroke-width: 1.1" />
@@ -409,17 +421,17 @@
      <use xlink:href="#rs-home-bundle-m6c7348a747" x="584.17" y="76.66" style="fill: #ffffff; stroke: #4e5866; stroke-width: 1.1" />
     </g>
    </g>
-   <g id="rs-home-bundle-h22">
-    <path d="M 86.87 271.99  L 252.64 241.24  L 418.4 198.5  L 584.17 169.58  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; opacity: 0.16; stroke: #e0662e; stroke-width: 7; stroke-linecap: round" />
-    <path d="M 86.87 271.99  L 252.64 241.24  L 418.4 198.5  L 584.17 169.58  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #e0662e; stroke-width: 2.6; stroke-linecap: round" />
-    <path d="M 86.87 274.99  C 87.66 274.99 88.43 274.67 88.99 274.11  C 89.55 273.55 89.87 272.78 89.87 271.99  C 89.87 271.19 89.55 270.43 88.99 269.87  C 88.43 269.3 87.66 268.99 86.87 268.99  C 86.07 268.99 85.31 269.3 84.75 269.87  C 84.18 270.43 83.87 271.19 83.87 271.99  C 83.87 272.78 84.18 273.55 84.75 274.11  C 85.31 274.67 86.07 274.99 86.87 274.99  z " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: #e0662e; opacity: 0.16; stroke: #e0662e; stroke-width: 7" />
-    <path d="M 252.64 244.24  C 253.43 244.24 254.2 243.92 254.76 243.36  C 255.32 242.8 255.64 242.03 255.64 241.24  C 255.64 240.44 255.32 239.68 254.76 239.12  C 254.2 238.56 253.43 238.24 252.64 238.24  C 251.84 238.24 251.08 238.56 250.51 239.12  C 249.95 239.68 249.64 240.44 249.64 241.24  C 249.64 242.03 249.95 242.8 250.51 243.36  C 251.08 243.92 251.84 244.24 252.64 244.24  z " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: #e0662e; opacity: 0.16; stroke: #e0662e; stroke-width: 7" />
-    <path d="M 418.4 201.5  C 419.2 201.5 419.96 201.18 420.53 200.62  C 421.09 200.06 421.4 199.29 421.4 198.5  C 421.4 197.7 421.09 196.94 420.53 196.38  C 419.96 195.81 419.2 195.5 418.4 195.5  C 417.61 195.5 416.84 195.81 416.28 196.38  C 415.72 196.94 415.4 197.7 415.4 198.5  C 415.4 199.29 415.72 200.06 416.28 200.62  C 416.84 201.18 417.61 201.5 418.4 201.5  z " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: #e0662e; opacity: 0.16; stroke: #e0662e; stroke-width: 7" />
-    <path d="M 584.17 172.58  C 584.97 172.58 585.73 172.26 586.29 171.7  C 586.86 171.13 587.17 170.37 587.17 169.58  C 587.17 168.78 586.86 168.02 586.29 167.45  C 585.73 166.89 584.97 166.58 584.17 166.58  C 583.38 166.58 582.61 166.89 582.05 167.45  C 581.49 168.02 581.17 168.78 581.17 169.58  C 581.17 170.37 581.49 171.13 582.05 171.7  C 582.61 172.26 583.38 172.58 584.17 172.58  z " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: #e0662e; opacity: 0.16; stroke: #e0662e; stroke-width: 7" />
-    <path d="M 86.87 274.99  C 87.66 274.99 88.43 274.67 88.99 274.11  C 89.55 273.55 89.87 272.78 89.87 271.99  C 89.87 271.19 89.55 270.43 88.99 269.87  C 88.43 269.3 87.66 268.99 86.87 268.99  C 86.07 268.99 85.31 269.3 84.75 269.87  C 84.18 270.43 83.87 271.19 83.87 271.99  C 83.87 272.78 84.18 273.55 84.75 274.11  C 85.31 274.67 86.07 274.99 86.87 274.99  z " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: #e0662e; stroke: #ffffff; stroke-width: 1.2" />
-    <path d="M 252.64 244.24  C 253.43 244.24 254.2 243.92 254.76 243.36  C 255.32 242.8 255.64 242.03 255.64 241.24  C 255.64 240.44 255.32 239.68 254.76 239.12  C 254.2 238.56 253.43 238.24 252.64 238.24  C 251.84 238.24 251.08 238.56 250.51 239.12  C 249.95 239.68 249.64 240.44 249.64 241.24  C 249.64 242.03 249.95 242.8 250.51 243.36  C 251.08 243.92 251.84 244.24 252.64 244.24  z " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: #e0662e; stroke: #ffffff; stroke-width: 1.2" />
-    <path d="M 418.4 201.5  C 419.2 201.5 419.96 201.18 420.53 200.62  C 421.09 200.06 421.4 199.29 421.4 198.5  C 421.4 197.7 421.09 196.94 420.53 196.38  C 419.96 195.81 419.2 195.5 418.4 195.5  C 417.61 195.5 416.84 195.81 416.28 196.38  C 415.72 196.94 415.4 197.7 415.4 198.5  C 415.4 199.29 415.72 200.06 416.28 200.62  C 416.84 201.18 417.61 201.5 418.4 201.5  z " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: #e0662e; stroke: #ffffff; stroke-width: 1.2" />
-    <path d="M 584.17 172.58  C 584.97 172.58 585.73 172.26 586.29 171.7  C 586.86 171.13 587.17 170.37 587.17 169.58  C 587.17 168.78 586.86 168.02 586.29 167.45  C 585.73 166.89 584.97 166.58 584.17 166.58  C 583.38 166.58 582.61 166.89 582.05 167.45  C 581.49 168.02 581.17 168.78 581.17 169.58  C 581.17 170.37 581.49 171.13 582.05 171.7  C 582.61 172.26 583.38 172.58 584.17 172.58  z " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: #e0662e; stroke: #ffffff; stroke-width: 1.2" />
+   <g id="rs-home-bundle-h48">
+    <path d="M 86.87 274.52  L 252.64 243.66  L 418.4 201.31  L 584.17 172.73  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; opacity: 0.16; stroke: #e0662e; stroke-width: 7; stroke-linecap: round" />
+    <path d="M 86.87 274.52  L 252.64 243.66  L 418.4 201.31  L 584.17 172.73  " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: none; stroke: #e0662e; stroke-width: 2.6; stroke-linecap: round" />
+    <path d="M 86.87 277.52  C 87.66 277.52 88.43 277.2 88.99 276.64  C 89.55 276.08 89.87 275.32 89.87 274.52  C 89.87 273.73 89.55 272.96 88.99 272.4  C 88.43 271.84 87.66 271.52 86.87 271.52  C 86.07 271.52 85.31 271.84 84.75 272.4  C 84.18 272.96 83.87 273.73 83.87 274.52  C 83.87 275.32 84.18 276.08 84.75 276.64  C 85.31 277.2 86.07 277.52 86.87 277.52  z " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: #e0662e; opacity: 0.16; stroke: #e0662e; stroke-width: 7" />
+    <path d="M 252.64 246.66  C 253.43 246.66 254.2 246.35 254.76 245.78  C 255.32 245.22 255.64 244.46 255.64 243.66  C 255.64 242.87 255.32 242.1 254.76 241.54  C 254.2 240.98 253.43 240.66 252.64 240.66  C 251.84 240.66 251.08 240.98 250.51 241.54  C 249.95 242.1 249.64 242.87 249.64 243.66  C 249.64 244.46 249.95 245.22 250.51 245.78  C 251.08 246.35 251.84 246.66 252.64 246.66  z " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: #e0662e; opacity: 0.16; stroke: #e0662e; stroke-width: 7" />
+    <path d="M 418.4 204.31  C 419.2 204.31 419.96 203.99 420.53 203.43  C 421.09 202.86 421.4 202.1 421.4 201.31  C 421.4 200.51 421.09 199.75 420.53 199.18  C 419.96 198.62 419.2 198.31 418.4 198.31  C 417.61 198.31 416.84 198.62 416.28 199.18  C 415.72 199.75 415.4 200.51 415.4 201.31  C 415.4 202.1 415.72 202.86 416.28 203.43  C 416.84 203.99 417.61 204.31 418.4 204.31  z " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: #e0662e; opacity: 0.16; stroke: #e0662e; stroke-width: 7" />
+    <path d="M 584.17 175.73  C 584.97 175.73 585.73 175.41 586.29 174.85  C 586.86 174.29 587.17 173.53 587.17 172.73  C 587.17 171.93 586.86 171.17 586.29 170.61  C 585.73 170.05 584.97 169.73 584.17 169.73  C 583.38 169.73 582.61 170.05 582.05 170.61  C 581.49 171.17 581.17 171.93 581.17 172.73  C 581.17 173.53 581.49 174.29 582.05 174.85  C 582.61 175.41 583.38 175.73 584.17 175.73  z " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: #e0662e; opacity: 0.16; stroke: #e0662e; stroke-width: 7" />
+    <path d="M 86.87 277.52  C 87.66 277.52 88.43 277.2 88.99 276.64  C 89.55 276.08 89.87 275.32 89.87 274.52  C 89.87 273.73 89.55 272.96 88.99 272.4  C 88.43 271.84 87.66 271.52 86.87 271.52  C 86.07 271.52 85.31 271.84 84.75 272.4  C 84.18 272.96 83.87 273.73 83.87 274.52  C 83.87 275.32 84.18 276.08 84.75 276.64  C 85.31 277.2 86.07 277.52 86.87 277.52  z " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: #e0662e; stroke: #ffffff; stroke-width: 1.2" />
+    <path d="M 252.64 246.66  C 253.43 246.66 254.2 246.35 254.76 245.78  C 255.32 245.22 255.64 244.46 255.64 243.66  C 255.64 242.87 255.32 242.1 254.76 241.54  C 254.2 240.98 253.43 240.66 252.64 240.66  C 251.84 240.66 251.08 240.98 250.51 241.54  C 249.95 242.1 249.64 242.87 249.64 243.66  C 249.64 244.46 249.95 245.22 250.51 245.78  C 251.08 246.35 251.84 246.66 252.64 246.66  z " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: #e0662e; stroke: #ffffff; stroke-width: 1.2" />
+    <path d="M 418.4 204.31  C 419.2 204.31 419.96 203.99 420.53 203.43  C 421.09 202.86 421.4 202.1 421.4 201.31  C 421.4 200.51 421.09 199.75 420.53 199.18  C 419.96 198.62 419.2 198.31 418.4 198.31  C 417.61 198.31 416.84 198.62 416.28 199.18  C 415.72 199.75 415.4 200.51 415.4 201.31  C 415.4 202.1 415.72 202.86 416.28 203.43  C 416.84 203.99 417.61 204.31 418.4 204.31  z " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: #e0662e; stroke: #ffffff; stroke-width: 1.2" />
+    <path d="M 584.17 175.73  C 584.97 175.73 585.73 175.41 586.29 174.85  C 586.86 174.29 587.17 173.53 587.17 172.73  C 587.17 171.93 586.86 171.17 586.29 170.61  C 585.73 170.05 584.97 169.73 584.17 169.73  C 583.38 169.73 582.61 170.05 582.05 170.61  C 581.49 171.17 581.17 171.93 581.17 172.73  C 581.17 173.53 581.49 174.29 582.05 174.85  C 582.61 175.41 583.38 175.73 584.17 175.73  z " clip-path="url(#rs-home-bundle-p786315a9f8)" style="fill: #e0662e; stroke: #ffffff; stroke-width: 1.2" />
    </g>
   </g>
   <g id="rs-home-bundle-axes_2">
@@ -497,72 +509,81 @@
    </g>
    <g id="rs-home-bundle-h3">
     <defs>
-     <path id="rs-home-bundle-mbc7c096ec9" d="M 0 -3  L -3 3  L 3 3  z " style="stroke: #ffffff; stroke-opacity: 0.584268; stroke-width: 0.6; stroke-linejoin: miter" />
+     <path id="rs-home-bundle-mfb0e303945" d="M 0 -3  L -3 3  L 3 3  z " style="stroke: #ffffff; stroke-opacity: 0.559187; stroke-width: 0.6; stroke-linejoin: miter" />
     </defs>
     <g>
-     <use xlink:href="#rs-home-bundle-mbc7c096ec9" x="670.32" y="34.56" style="fill: #aeb9c6; fill-opacity: 0.584268; stroke: #ffffff; stroke-opacity: 0.584268; stroke-width: 0.6; stroke-linejoin: miter" />
+     <use xlink:href="#rs-home-bundle-mfb0e303945" x="670.32" y="34.56" style="fill: #b0bac7; fill-opacity: 0.559187; stroke: #ffffff; stroke-opacity: 0.559187; stroke-width: 0.6; stroke-linejoin: miter" />
     </g>
    </g>
    <g id="rs-home-bundle-h7">
     <defs>
-     <path id="rs-home-bundle-md0d1109c99" d="M 0 -3  L -3 3  L 3 3  z " style="stroke: #ffffff; stroke-opacity: 0.615537; stroke-width: 0.6; stroke-linejoin: miter" />
+     <path id="rs-home-bundle-m584f06eb65" d="M 0 -3  L -3 3  L 3 3  z " style="stroke: #ffffff; stroke-opacity: 0.583349; stroke-width: 0.6; stroke-linejoin: miter" />
     </defs>
     <g>
-     <use xlink:href="#rs-home-bundle-md0d1109c99" x="670.32" y="34.56" style="fill: #9eaab9; fill-opacity: 0.615537; stroke: #ffffff; stroke-opacity: 0.615537; stroke-width: 0.6; stroke-linejoin: miter" />
+     <use xlink:href="#rs-home-bundle-m584f06eb65" x="670.32" y="34.56" style="fill: #a2aebd; fill-opacity: 0.583349; stroke: #ffffff; stroke-opacity: 0.583349; stroke-width: 0.6; stroke-linejoin: miter" />
     </g>
    </g>
    <g id="rs-home-bundle-h11">
     <defs>
-     <path id="rs-home-bundle-md34101d152" d="M 0 -3  L -3 3  L 3 3  z " style="stroke: #ffffff; stroke-opacity: 0.646806; stroke-width: 0.6; stroke-linejoin: miter" />
+     <path id="rs-home-bundle-m9e5a7e3e8c" d="M 0 -3  L -3 3  L 3 3  z " style="stroke: #ffffff; stroke-opacity: 0.60751; stroke-width: 0.6; stroke-linejoin: miter" />
     </defs>
     <g>
-     <use xlink:href="#rs-home-bundle-md34101d152" x="670.32" y="34.56" style="fill: #8e9bac; fill-opacity: 0.646806; stroke: #ffffff; stroke-opacity: 0.646806; stroke-width: 0.6; stroke-linejoin: miter" />
+     <use xlink:href="#rs-home-bundle-m9e5a7e3e8c" x="670.32" y="34.56" style="fill: #95a2b2; fill-opacity: 0.60751; stroke: #ffffff; stroke-opacity: 0.60751; stroke-width: 0.6; stroke-linejoin: miter" />
     </g>
    </g>
    <g id="rs-home-bundle-h13">
-    <path d="M 653.47 192.42  L 687.17 192.42  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #8592a5; stroke-opacity: 0.326197; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 653.47 192.42  L 687.17 192.42  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke-dasharray: 1.2,1.8; stroke-dashoffset: 0; stroke: #8d9aab; stroke-opacity: 0.287632; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h15">
-    <path d="M 653.47 206.92  L 687.17 206.92  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #7d8a9d; stroke-opacity: 0.340268; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 653.47 206.92  L 687.17 206.92  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke-dasharray: 1.2,1.8; stroke-dashoffset: 0; stroke: #8693a5; stroke-opacity: 0.298504; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h17">
-    <path d="M 653.47 204.87  L 687.17 204.87  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #738096; stroke-opacity: 0.35434; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 653.47 204.87  L 687.17 204.87  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke-dasharray: 1.2,1.8; stroke-dashoffset: 0; stroke: #7f8c9f; stroke-opacity: 0.309377; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h19">
-    <path d="M 653.47 201.28  L 687.17 201.28  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #6b788e; stroke-opacity: 0.368411; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 653.47 201.28  L 687.17 201.28  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke-dasharray: 1.2,1.8; stroke-dashoffset: 0; stroke: #778499; stroke-opacity: 0.32025; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h21">
-    <path d="M 653.47 196.78  L 687.17 196.78  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #637087; stroke-opacity: 0.42498; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 653.47 196.78  L 687.17 196.78  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #707d93; stroke-opacity: 0.367914; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h25">
-    <path d="M 653.47 205.82  L 687.17 205.82  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #546178; stroke-opacity: 0.45625; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 653.47 205.82  L 687.17 205.82  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #626f86; stroke-opacity: 0.392075; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h27">
-    <path d="M 653.47 204.21  L 687.17 204.21  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #4d5a71; stroke-opacity: 0.471884; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 653.47 204.21  L 687.17 204.21  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #5d6a81; stroke-opacity: 0.404156; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h29">
-    <path d="M 653.47 210.38  L 687.17 210.38  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #46536a; stroke-opacity: 0.487519; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 653.47 210.38  L 687.17 210.38  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #56637a; stroke-opacity: 0.416237; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h31">
-    <path d="M 653.47 212.36  L 687.17 212.36  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #3f4c63; stroke-opacity: 0.503154; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 653.47 212.36  L 687.17 212.36  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #505d74; stroke-opacity: 0.428318; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h33">
-    <path d="M 653.47 210.19  L 687.17 210.19  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #39465c; stroke-opacity: 0.518788; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 653.47 210.19  L 687.17 210.19  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #4a576e; stroke-opacity: 0.440398; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h35">
-    <path d="M 653.47 205.32  L 687.17 205.32  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #344055; stroke-opacity: 0.534423; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 653.47 205.32  L 687.17 205.32  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #445168; stroke-opacity: 0.452479; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h37">
-    <path d="M 653.47 211.62  L 687.17 211.62  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #2f3b4e; stroke-opacity: 0.550058; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 653.47 211.62  L 687.17 211.62  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #3e4b62; stroke-opacity: 0.46456; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h39">
-    <path d="M 653.47 210.42  L 687.17 210.42  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #293647; stroke-opacity: 0.565693; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 653.47 210.42  L 687.17 210.42  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #39465c; stroke-opacity: 0.476641; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h41">
-    <path d="M 653.47 210.54  L 687.17 210.54  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #243041; stroke-opacity: 0.581327; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 653.47 210.54  L 687.17 210.54  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #354257; stroke-opacity: 0.488721; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h43">
-    <path d="M 653.47 210.03  L 687.17 210.03  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #1f2b3a; stroke-opacity: 0.596962; stroke-width: 1.023363; stroke-linecap: round" />
+    <path d="M 653.47 210.03  L 687.17 210.03  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #303d51; stroke-opacity: 0.500802; stroke-linecap: round" />
+   </g>
+   <g id="rs-home-bundle-h45">
+    <path d="M 653.47 211.67  L 687.17 211.67  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #2c394b; stroke-opacity: 0.512883; stroke-linecap: round" />
+   </g>
+   <g id="rs-home-bundle-h47">
+    <path d="M 653.47 210.75  L 687.17 210.75  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #273445; stroke-opacity: 0.524964; stroke-linecap: round" />
+   </g>
+   <g id="rs-home-bundle-h51">
+    <path d="M 653.47 211.1  L 687.17 211.1  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #1f2b3a; stroke-opacity: 0.549125; stroke-linecap: round" />
    </g>
    <g id="rs-home-bundle-h1">
     <defs>
@@ -582,22 +603,25 @@
      <use xlink:href="#rs-home-bundle-mab83d8345d" x="670.32" y="34.56" style="fill: #f2ae8c; stroke: #ffffff; stroke-width: 0.6; stroke-linejoin: miter" />
     </g>
    </g>
-   <g id="rs-home-bundle-h45">
+   <g id="rs-home-bundle-h23">
+    <path d="M 653.47 210.11  L 687.17 210.11  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #f2ae8c; stroke-width: 1.4; stroke-linecap: round" />
+   </g>
+   <g id="rs-home-bundle-h53">
     <path d="M 647.86 140.14  L 692.78 140.14  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke-dasharray: 7.5,4.5; stroke-dashoffset: 0; stroke: #4e5866; stroke-width: 1.5; stroke-linecap: round" />
    </g>
-   <g id="rs-home-bundle-h23">
-    <path d="M 647.86 210.11  L 692.78 210.11  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; opacity: 0.16; stroke: #e0662e; stroke-width: 7; stroke-linecap: round" />
-    <path d="M 647.86 210.11  L 692.78 210.11  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #e0662e; stroke-width: 2.6; stroke-linecap: round" />
+   <g id="rs-home-bundle-h49">
+    <path d="M 647.86 212.9  L 692.78 212.9  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; opacity: 0.16; stroke: #e0662e; stroke-width: 7; stroke-linecap: round" />
+    <path d="M 647.86 212.9  L 692.78 212.9  " clip-path="url(#rs-home-bundle-p490fa17b95)" style="fill: none; stroke: #e0662e; stroke-width: 2.6; stroke-linecap: round" />
    </g>
   </g>
   <g id="rs-home-bundle-axes_3">
-   <g clip-path="url(#rs-home-bundle-pee01f9c280)">
-    <image xlink:href="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAMAAAAAOCAYAAAB5PhPDAAAA2ElEQVR4nO2YQRKDIAxFQ+9/na57gB4KByEmCgx2umrznlYj+Ris/pYxPV/vnLNI2eyBaCySy6LtTlPbd6m1aZ8jb8dn3Uzjclet+/Q1Z9qZ7pybn++qXen0O1nX15qr2nd0PndH9+25Cv5+2fW6Nnd/Wwd7ZnyuxXW1fZc7YjeudqzPaY0H49L6R87yhUcdIUBMegM00wL8A+ljA6x6APwQq99zpkAQmDwyAHMgiEIaGYA5EIT+BwCIAwaAwAynQABxwAAQGgwAYSnvOzEABIa3QCBxSZJkA9oEw66QXfI4AAAAAElFTkSuQmCC" id="rs-home-bundle-image0015605d19" transform="scale(1 -1) translate(0 -5.04)" x="768.24" y="-11.16" width="69.12" height="5.04" />
+   <g clip-path="url(#rs-home-bundle-pfd33d7516f)">
+    <image xlink:href="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAMAAAAAOCAYAAAB5PhPDAAAA2ElEQVR4nO2YQRKDIAxFQ+9/na57gB4KByEmCgx2umrznlYj+Ris/pYxPV/vnLNI2eyBaCySy6LtTlPbd6m1aZ8jb8dn3Uzjclet+/Q1Z9qZ7pybn++qXen0O1nX15qr2nd0PndH9+25Cv5+2fW6Nnd/Wwd7ZnyuxXW1fZc7YjeudqzPaY0H49L6R87yhUcdIUBMegM00wL8A+ljA6x6APwQq99zpkAQmDwyAHMgiEIaGYA5EIT+BwCIAwaAwAynQABxwAAQGgwAYSnvOzEABIa3QCBxSZJkA9oEw66QXfI4AAAAAElFTkSuQmCC" id="rs-home-bundle-image0015605d19" transform="scale(1 -1) translate(0 -5.04)" x="767.52" y="-11.16" width="69.12" height="5.04" />
    </g>
   </g>
   <g id="rs-home-bundle-text_16">
    
-   <g style="fill: #bf4e1b" transform="translate(708.48 208.19255) scale(0.1 -0.1)">
+   <g style="fill: #bf4e1b" transform="translate(708.48 210.982238) scale(0.1 -0.1)">
     <defs>
      <path id="rs-home-bundle-NotoSansKR-Bold-5250" d="M 4365 5357  L 5222 5357  L 5222 845  L 4365 845  L 4365 5357  z M 3597 3885  L 4685 3885  L 4685 3206  L 3597 3206  L 3597 3885  z M 3597 2618  L 4685 2618  L 4685 1939  L 3597 1939  L 3597 2618  z M 275 4736  L 3533 4736  L 3533 4070  L 275 4070  L 275 4736  z M 1939 3859  Q 2349 3859 2662 3712  Q 2976 3565 3155 3302  Q 3334 3040 3334 2694  Q 3334 2355 3155 2092  Q 2976 1830 2662 1680  Q 2349 1530 1939 1530  Q 1542 1530 1225 1680  Q 909 1830 729 2092  Q 550 2355 550 2694  Q 550 3040 729 3302  Q 909 3565 1225 3712  Q 1542 3859 1939 3859  z M 1946 3206  Q 1683 3206 1520 3075  Q 1357 2944 1357 2694  Q 1357 2451 1520 2316  Q 1683 2182 1946 2182  Q 2202 2182 2368 2316  Q 2534 2451 2534 2694  Q 2534 2944 2368 3075  Q 2202 3206 1946 3206  z M 1517 5376  L 2374 5376  L 2374 4326  L 1517 4326  L 1517 5376  z M 1299 218  L 5350 218  L 5350 -467  L 1299 -467  L 1299 218  z M 1299 1216  L 2150 1216  L 2150 -102  L 1299 -102  L 1299 1216  z " transform="scale(0.015625)" />
      <path id="rs-home-bundle-NotoSansKR-Bold-43f8" d="M 4582 5363  L 5395 5363  L 5395 -563  L 4582 -563  L 4582 5363  z M 3878 3091  L 4858 3091  L 4858 2400  L 3878 2400  L 3878 3091  z M 3309 5267  L 4102 5267  L 4102 -301  L 3309 -301  L 3309 5267  z M 1318 4435  L 1965 4435  L 1965 3917  Q 1965 3366 1897 2857  Q 1830 2349 1680 1910  Q 1530 1472 1280 1126  Q 1030 781 659 563  L 147 1210  Q 589 1472 845 1888  Q 1101 2304 1209 2825  Q 1318 3347 1318 3917  L 1318 4435  z M 1491 4435  L 2138 4435  L 2138 3917  Q 2138 3398 2250 2912  Q 2362 2426 2621 2042  Q 2880 1658 3322 1427  L 2835 781  Q 2336 1050 2041 1523  Q 1747 1997 1619 2611  Q 1491 3226 1491 3917  L 1491 4435  z M 333 4762  L 3027 4762  L 3027 4077  L 333 4077  L 333 4762  z " transform="scale(0.015625)" />
@@ -619,21 +643,20 @@
   </g>
   <g id="rs-home-bundle-text_17">
    
-   <g style="fill: #bf4e1b" transform="translate(708.48 220.52005) scale(0.1 -0.1)">
+   <g style="fill: #bf4e1b" transform="translate(708.48 223.309738) scale(0.1 -0.1)">
     <defs>
      <path id="rs-home-bundle-Inter-Bold-510" d="M 377 0  L 377 709  L 2034 2243  Q 2245 2448 2389 2611  Q 2534 2775 2609 2933  Q 2684 3091 2684 3275  Q 2684 3480 2591 3628  Q 2498 3777 2336 3858  Q 2175 3939 1970 3939  Q 1757 3939 1598 3852  Q 1439 3766 1352 3604  Q 1266 3443 1266 3220  L 332 3220  Q 332 3677 538 4013  Q 745 4350 1118 4534  Q 1491 4718 1977 4718  Q 2477 4718 2848 4542  Q 3220 4366 3427 4054  Q 3634 3743 3634 3341  Q 3634 3077 3530 2820  Q 3427 2564 3163 2251  Q 2900 1939 2420 1502  L 1741 836  L 1741 805  L 3695 805  L 3695 0  L 377 0  z " transform="scale(0.015625)" />
      <path id="rs-home-bundle-Inter-Bold-57c" d="M 952 -59  Q 727 -59 567 101  Q 407 261 407 486  Q 407 709 567 868  Q 727 1027 952 1027  Q 1170 1027 1334 868  Q 1498 709 1498 486  Q 1498 336 1421 212  Q 1345 89 1222 15  Q 1100 -59 952 -59  z " transform="scale(0.015625)" />
      <path id="rs-home-bundle-Inter-Bold-50e" d="M 2202 -102  Q 1616 -100 1194 186  Q 773 473 546 1016  Q 320 1559 323 2323  Q 323 3084 549 3620  Q 775 4157 1196 4437  Q 1618 4718 2202 4718  Q 2786 4718 3208 4436  Q 3630 4155 3857 3619  Q 4084 3084 4082 2323  Q 4082 1557 3856 1013  Q 3630 470 3209 184  Q 2789 -102 2202 -102  z M 2202 714  Q 2602 714 2841 1116  Q 3080 1518 3077 2323  Q 3077 2852 2969 3204  Q 2861 3557 2664 3734  Q 2468 3911 2202 3911  Q 1805 3911 1566 3513  Q 1327 3116 1325 2323  Q 1325 1786 1433 1428  Q 1541 1070 1738 892  Q 1936 714 2202 714  z " transform="scale(0.015625)" />
-     <path id="rs-home-bundle-Inter-Bold-516" d="M 2164 -64  Q 1805 -61 1472 57  Q 1139 175 875 441  Q 611 707 458 1145  Q 305 1584 305 2223  Q 307 2809 440 3271  Q 573 3734 821 4057  Q 1070 4380 1418 4549  Q 1766 4718 2198 4718  Q 2664 4718 3020 4537  Q 3377 4357 3594 4048  Q 3811 3739 3857 3355  L 2886 3355  Q 2830 3598 2648 3736  Q 2466 3875 2198 3875  Q 1743 3875 1508 3479  Q 1273 3084 1268 2405  L 1300 2405  Q 1405 2611 1583 2758  Q 1761 2905 1989 2983  Q 2218 3061 2473 3061  Q 2886 3061 3209 2867  Q 3532 2673 3718 2334  Q 3905 1995 3905 1559  Q 3905 1086 3685 718  Q 3466 350 3074 142  Q 2682 -66 2164 -64  z M 2159 709  Q 2386 709 2565 818  Q 2745 927 2847 1113  Q 2950 1300 2950 1532  Q 2950 1764 2849 1948  Q 2748 2132 2570 2241  Q 2393 2350 2166 2350  Q 1995 2350 1851 2286  Q 1707 2223 1599 2109  Q 1491 1995 1429 1846  Q 1368 1698 1368 1530  Q 1368 1305 1471 1118  Q 1575 932 1753 820  Q 1932 709 2159 709  z " transform="scale(0.015625)" />
-     <path id="rs-home-bundle-Inter-Bold-513" d="M 307 818  L 307 1593  L 2250 4655  L 2918 4655  L 2918 3582  L 2523 3582  L 1298 1643  L 1298 1607  L 4059 1607  L 4059 818  L 307 818  z M 2541 0  L 2541 1055  L 2559 1398  L 2559 4655  L 3482 4655  L 3482 0  L 2541 0  z " transform="scale(0.015625)" />
+     <path id="rs-home-bundle-Inter-Bold-514" d="M 2077 -64  Q 1595 -64 1219 113  Q 843 291 622 602  Q 402 914 393 1316  L 1348 1316  Q 1364 1045 1575 877  Q 1786 709 2077 709  Q 2309 709 2487 812  Q 2666 916 2767 1101  Q 2868 1286 2868 1527  Q 2868 1773 2764 1959  Q 2661 2145 2479 2250  Q 2298 2355 2064 2357  Q 1859 2357 1667 2273  Q 1475 2189 1368 2043  L 493 2200  L 714 4655  L 3559 4655  L 3559 3850  L 1525 3850  L 1405 2684  L 1432 2684  Q 1555 2857 1802 2970  Q 2050 3084 2357 3084  Q 2777 3084 3106 2886  Q 3436 2689 3627 2344  Q 3818 2000 3816 1552  Q 3818 1082 3599 717  Q 3380 352 2987 144  Q 2595 -64 2077 -64  z " transform="scale(0.015625)" />
      <path id="rs-home-bundle-NotoSansKR-Bold-3d69" d="M 3283 4256  L 4493 4256  L 4493 3565  L 3283 3565  L 3283 4256  z M 1613 5056  L 2310 5056  L 2310 4499  Q 2310 3910 2134 3395  Q 1958 2880 1596 2496  Q 1235 2112 672 1920  L 218 2586  Q 717 2752 1024 3049  Q 1331 3347 1472 3721  Q 1613 4096 1613 4499  L 1613 5056  z M 1786 5056  L 2477 5056  L 2477 4448  Q 2477 4173 2553 3907  Q 2630 3642 2790 3405  Q 2950 3168 3200 2982  Q 3450 2797 3802 2682  L 3354 2016  Q 2822 2202 2473 2566  Q 2125 2931 1955 3414  Q 1786 3898 1786 4448  L 1786 5056  z M 1178 1568  L 5222 1568  L 5222 -570  L 4365 -570  L 4365 890  L 1178 890  L 1178 1568  z M 4365 5357  L 5222 5357  L 5222 1830  L 4365 1830  L 4365 5357  z " transform="scale(0.015625)" />
     </defs>
     <use xlink:href="#rs-home-bundle-Inter-Bold-510" />
     <use xlink:href="#rs-home-bundle-Inter-Bold-57c" transform="translate(63 0)" />
     <use xlink:href="#rs-home-bundle-Inter-Bold-50e" transform="translate(89.78125 0)" />
-    <use xlink:href="#rs-home-bundle-Inter-Bold-516" transform="translate(158.609375 0)" />
-    <use xlink:href="#rs-home-bundle-Inter-Bold-513" transform="translate(224.625 0)" />
-    <use xlink:href="#rs-home-bundle-NotoSansKR-Bold-3d69" transform="translate(292.421875 0)" />
+    <use xlink:href="#rs-home-bundle-Inter-Bold-510" transform="translate(158.609375 0)" />
+    <use xlink:href="#rs-home-bundle-Inter-Bold-514" transform="translate(221.609375 0)" />
+    <use xlink:href="#rs-home-bundle-NotoSansKR-Bold-3d69" transform="translate(286.0625 0)" />
    </g>
   </g>
   <g id="rs-home-bundle-text_18">
@@ -667,7 +690,7 @@
    <g style="fill: #5b6878" transform="translate(708.48 150.547154) scale(0.1 -0.1)">
     <defs>
      <path id="rs-home-bundle-Inter-Bold-512" d="M 2098 -64  Q 1589 -64 1192 112  Q 795 289 567 599  Q 339 909 332 1316  L 1323 1316  Q 1332 1145 1435 1017  Q 1539 889 1711 818  Q 1884 748 2100 748  Q 2325 748 2497 827  Q 2670 907 2768 1048  Q 2866 1189 2866 1373  Q 2866 1559 2762 1703  Q 2659 1848 2467 1929  Q 2275 2011 2011 2011  L 1577 2011  L 1577 2734  L 2011 2734  Q 2234 2734 2405 2811  Q 2577 2889 2672 3026  Q 2768 3164 2768 3348  Q 2768 3523 2685 3656  Q 2602 3789 2453 3864  Q 2305 3939 2107 3939  Q 1907 3939 1741 3867  Q 1575 3795 1475 3663  Q 1375 3532 1368 3355  L 425 3355  Q 432 3757 654 4063  Q 877 4370 1255 4544  Q 1634 4718 2111 4718  Q 2593 4718 2954 4543  Q 3316 4368 3517 4071  Q 3718 3775 3716 3407  Q 3718 3016 3474 2754  Q 3230 2493 2839 2423  L 2839 2386  Q 3352 2320 3621 2030  Q 3891 1741 3889 1307  Q 3891 909 3660 600  Q 3430 291 3025 113  Q 2620 -64 2098 -64  z " transform="scale(0.015625)" />
-     <path id="rs-home-bundle-Inter-Bold-514" d="M 2077 -64  Q 1595 -64 1219 113  Q 843 291 622 602  Q 402 914 393 1316  L 1348 1316  Q 1364 1045 1575 877  Q 1786 709 2077 709  Q 2309 709 2487 812  Q 2666 916 2767 1101  Q 2868 1286 2868 1527  Q 2868 1773 2764 1959  Q 2661 2145 2479 2250  Q 2298 2355 2064 2357  Q 1859 2357 1667 2273  Q 1475 2189 1368 2043  L 493 2200  L 714 4655  L 3559 4655  L 3559 3850  L 1525 3850  L 1405 2684  L 1432 2684  Q 1555 2857 1802 2970  Q 2050 3084 2357 3084  Q 2777 3084 3106 2886  Q 3436 2689 3627 2344  Q 3818 2000 3816 1552  Q 3818 1082 3599 717  Q 3380 352 2987 144  Q 2595 -64 2077 -64  z " transform="scale(0.015625)" />
+     <path id="rs-home-bundle-Inter-Bold-513" d="M 307 818  L 307 1593  L 2250 4655  L 2918 4655  L 2918 3582  L 2523 3582  L 1298 1643  L 1298 1607  L 4059 1607  L 4059 818  L 307 818  z M 2541 0  L 2541 1055  L 2559 1398  L 2559 4655  L 3482 4655  L 3482 0  L 2541 0  z " transform="scale(0.015625)" />
     </defs>
     <use xlink:href="#rs-home-bundle-Inter-Bold-512" />
     <use xlink:href="#rs-home-bundle-Inter-Bold-57c" transform="translate(63.84375 0)" />
@@ -739,26 +762,26 @@
   </g>
   <g id="rs-home-bundle-text_22">
    
-   <g style="fill: #5b6878" transform="translate(841.696875 16.952727) scale(0.09 -0.09)">
+   <g style="fill: #5b6878" transform="translate(841.17375 16.952727) scale(0.09 -0.09)">
     <defs>
      <path id="rs-home-bundle-Inter-Regular-54b" d="M 2227 0  L 2991 4655  L 3445 4655  L 2682 0  L 2227 0  z M 109 1291  L 182 1745  L 3655 1745  L 3582 1291  L 109 1291  z M 591 0  L 1355 4655  L 1809 4655  L 1045 0  L 591 0  z M 382 2909  L 455 3364  L 3927 3364  L 3855 2909  L 382 2909  z " transform="scale(0.015625)" />
-     <path id="rs-home-bundle-Inter-Regular-517" d="M 627 0  L 2709 4118  L 2709 4155  L 309 4155  L 309 4655  L 3291 4655  L 3291 4127  L 1218 0  L 627 0  z " transform="scale(0.015625)" />
+     <path id="rs-home-bundle-Inter-Regular-516" d="M 2027 -64  Q 1741 -59 1454 45  Q 1168 150 931 399  Q 695 648 552 1074  Q 409 1500 409 2145  Q 409 2764 525 3242  Q 641 3720 861 4048  Q 1082 4377 1394 4547  Q 1707 4718 2100 4718  Q 2491 4718 2796 4562  Q 3102 4407 3295 4129  Q 3489 3852 3545 3491  L 2991 3491  Q 2914 3805 2691 4011  Q 2468 4218 2100 4218  Q 1559 4218 1249 3747  Q 939 3277 936 2427  L 973 2427  Q 1100 2620 1276 2757  Q 1452 2895 1666 2970  Q 1880 3045 2118 3045  Q 2518 3045 2850 2846  Q 3182 2648 3382 2299  Q 3582 1950 3582 1500  Q 3582 1068 3388 710  Q 3195 352 2846 142  Q 2498 -68 2027 -64  z M 2027 436  Q 2314 436 2542 579  Q 2770 723 2903 964  Q 3036 1205 3036 1500  Q 3036 1789 2908 2026  Q 2780 2264 2556 2404  Q 2332 2545 2045 2545  Q 1830 2545 1643 2460  Q 1457 2375 1317 2227  Q 1177 2080 1097 1890  Q 1018 1700 1018 1491  Q 1018 1214 1149 973  Q 1280 732 1508 584  Q 1736 436 2027 436  z " transform="scale(0.015625)" />
     </defs>
     <use xlink:href="#rs-home-bundle-Inter-Regular-54b" />
-    <use xlink:href="#rs-home-bundle-Inter-Regular-512" transform="translate(63.0625 0)" />
-    <use xlink:href="#rs-home-bundle-Inter-Regular-517" transform="translate(126.703125 0)" />
+    <use xlink:href="#rs-home-bundle-Inter-Regular-516" transform="translate(63.0625 0)" />
+    <use xlink:href="#rs-home-bundle-Inter-Regular-513" transform="translate(125.421875 0)" />
    </g>
   </g>
   <g id="rs-home-bundle-text_23">
    
-   <g style="fill: #5b6878" transform="translate(752.797969 16.952727) scale(0.09 -0.09)">
+   <g style="fill: #5b6878" transform="translate(752.077969 16.952727) scale(0.09 -0.09)">
     <use xlink:href="#rs-home-bundle-Inter-Regular-54b" />
     <use xlink:href="#rs-home-bundle-Inter-Regular-510" transform="translate(63.0625 0)" />
    </g>
   </g>
   <g id="rs-home-bundle-text_24">
    
-   <g style="fill: #5b6878" transform="translate(613.47375 16.758281) scale(0.09 -0.09)">
+   <g style="fill: #5b6878" transform="translate(612.75375 16.758281) scale(0.09 -0.09)">
     <defs>
      <path id="rs-home-bundle-NotoSansKR-Regular-4890" d="M 1504 3814  L 1914 3814  L 1914 3514  Q 1914 3085 1824 2665  Q 1734 2246 1564 1868  Q 1395 1491 1148 1190  Q 902 890 582 704  L 269 1107  Q 557 1280 787 1542  Q 1018 1805 1178 2128  Q 1338 2451 1421 2806  Q 1504 3162 1504 3514  L 1504 3814  z M 1600 3814  L 2010 3814  L 2010 3514  Q 2010 3174 2093 2832  Q 2176 2490 2339 2186  Q 2502 1882 2729 1635  Q 2957 1389 3251 1229  L 2944 832  Q 2522 1069 2221 1485  Q 1920 1901 1760 2429  Q 1600 2957 1600 3514  L 1600 3814  z M 410 4218  L 3098 4218  L 3098 3776  L 410 3776  L 410 4218  z M 1504 5082  L 2010 5082  L 2010 3891  L 1504 3891  L 1504 5082  z M 4742 5293  L 5254 5293  L 5254 -499  L 4742 -499  L 4742 5293  z M 3827 2957  L 4941 2957  L 4941 2509  L 3827 2509  L 3827 2957  z M 3482 5171  L 3987 5171  L 3987 -205  L 3482 -205  L 3482 5171  z " transform="scale(0.015625)" />
      <path id="rs-home-bundle-NotoSansKR-Regular-4d29" d="M 570 2522  L 934 2522  Q 1395 2522 1744 2531  Q 2093 2541 2400 2576  Q 2707 2611 3027 2675  L 3085 2240  Q 2752 2176 2435 2141  Q 2118 2106 1760 2093  Q 1402 2080 934 2080  L 570 2080  L 570 2522  z M 570 4870  L 2803 4870  L 2803 4435  L 1082 4435  L 1082 2285  L 570 2285  L 570 4870  z M 922 3718  L 2739 3718  L 2739 3302  L 922 3302  L 922 3718  z M 4691 5286  L 5197 5286  L 5197 1779  L 4691 1779  L 4691 5286  z M 3757 3782  L 4845 3782  L 4845 3347  L 3757 3347  L 3757 3782  z M 3411 5178  L 3910 5178  L 3910 1818  L 3411 1818  L 3411 5178  z M 1318 1478  L 5197 1478  L 5197 -499  L 4672 -499  L 4672 1043  L 1318 1043  L 1318 1478  z " transform="scale(0.015625)" />
@@ -912,51 +935,63 @@
   <clipPath id="rs-home-bundle-p490fa17b95">
    <rect x="642.24" y="34.56" width="56.16" height="273.6" />
   </clipPath>
-  <clipPath id="rs-home-bundle-pee01f9c280">
-   <rect x="768.24" y="11.16" width="69.12" height="5.04" />
+  <clipPath id="rs-home-bundle-pfd33d7516f">
+   <rect x="767.52" y="11.16" width="69.12" height="5.04" />
   </clipPath>
  </defs>
 <g class="rs-h rs-line"><title>#2 기본 특징 6개 · 128번까지 이어 학습
 평균 오차 4.712석
 회차: 이어서 더 학습하기
 1정류장 1.698 · 2~3정류장 3.063 · 4~7정류장 5.223 · 8~15정류장 6.830
-채택되지 않았습니다</title><path d="M 86.87 236.24  L 252.64 138.83  L 403.06 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #aeb9c6; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 236.24  L 252.64 138.83  L 403.06 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#7 기본 특징 6개 · 얕은 나무(깊이 4)
+채택되지 않았습니다</title><path d="M 86.87 236.24  L 252.64 138.83  L 403.06 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #b0bac7; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 236.24  L 252.64 138.83  L 403.06 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#7 기본 특징 6개 · 얕은 나무(깊이 4)
 평균 오차 4.729석
 회차: 나무 깊이 비교
 1정류장 1.725 · 2~3정류장 3.078 · 4~7정류장 5.232 · 8~15정류장 6.851
-채택되지 않았습니다</title><path d="M 86.87 234.27  L 252.64 137.78  L 402.31 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #9eaab9; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 234.27  L 252.64 137.78  L 402.31 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#9 기본 특징 6개 · 깊은 나무(깊이 8)
+채택되지 않았습니다</title><path d="M 86.87 234.27  L 252.64 137.78  L 402.31 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #a2aebd; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 234.27  L 252.64 137.78  L 402.31 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#9 기본 특징 6개 · 깊은 나무(깊이 8)
 평균 오차 4.707석
 회차: 나무 깊이 비교
 1정류장 1.691 · 2~3정류장 3.063 · 4~7정류장 5.218 · 8~15정류장 6.823
-채택되지 않았습니다</title><path d="M 86.87 236.75  L 252.64 138.83  L 403.41 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #8e9bac; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 236.75  L 252.64 138.83  L 403.41 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#10 특징 32개 · 깊이 6
+채택되지 않았습니다</title><path d="M 86.87 236.75  L 252.64 138.83  L 403.41 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #95a2b2; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 236.75  L 252.64 138.83  L 403.41 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#10 특징 32개 · 깊이 6
 평균 오차 2.312석
 회차: 입력 특징 32개(1차)
 1정류장 1.337 · 2~3정류장 1.808 · 4~7정류장 2.499 · 8~15정류장 2.956
-입력 자료 문제로 결과를 폐기했습니다</title><path d="M 86.87 261.99  L 252.64 228.38  L 418.4 179.11  L 584.17 146.45  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #8592a5; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 261.99  L 252.64 228.38  L 418.4 179.11  L 584.17 146.45  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#11 특징 32개 · 깊이 8 · 1,024번 학습
+입력 자료 문제로 결과를 폐기했습니다</title><path d="M 86.87 261.99  L 252.64 228.38  L 418.4 179.11  L 584.17 146.45  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke-dasharray: 1.129629,1.694443; stroke-dashoffset: 0; stroke: #8d9aab; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 261.99  L 252.64 228.38  L 418.4 179.11  L 584.17 146.45  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#11 특징 32개 · 깊이 8 · 1,024번 학습
 평균 오차 2.109석
 회차: 입력 특징 32개(1차)
 1정류장 1.220 · 2~3정류장 1.663 · 4~7정류장 2.280 · 8~15정류장 2.686
-입력 자료 문제로 결과를 폐기했습니다</title><path d="M 86.87 270.33  L 252.64 238.71  L 418.4 194.73  L 584.17 165.74  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #7d8a9d; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 270.33  L 252.64 238.71  L 418.4 194.73  L 584.17 165.74  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#12 특징 32개 · 정류장 수요 뺌
+입력 자료 문제로 결과를 폐기했습니다</title><path d="M 86.87 270.33  L 252.64 238.71  L 418.4 194.73  L 584.17 165.74  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke-dasharray: 1.129629,1.694443; stroke-dashoffset: 0; stroke: #8693a5; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 270.33  L 252.64 238.71  L 418.4 194.73  L 584.17 165.74  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#12 특징 32개 · 정류장 수요 뺌
 평균 오차 2.137석
 회차: 입력 특징 32개(1차)
 1정류장 1.267 · 2~3정류장 1.717 · 4~7정류장 2.309 · 8~15정류장 2.688
-입력 자료 문제로 결과를 폐기했습니다</title><path d="M 86.87 266.95  L 252.64 234.9  L 418.4 192.61  L 584.17 165.62  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #738096; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 266.95  L 252.64 234.9  L 418.4 192.61  L 584.17 165.62  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#13 특징 32개 · 노선 코드 뺌
+입력 자료 문제로 결과를 폐기했습니다</title><path d="M 86.87 266.95  L 252.64 234.9  L 418.4 192.61  L 584.17 165.62  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke-dasharray: 1.129629,1.694443; stroke-dashoffset: 0; stroke: #7f8c9f; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 266.95  L 252.64 234.9  L 418.4 192.61  L 584.17 165.62  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#13 특징 32개 · 노선 코드 뺌
 평균 오차 2.188석
 회차: 입력 특징 32개(1차)
 1정류장 1.216 · 2~3정류장 1.699 · 4~7정류장 2.375 · 8~15정류장 2.820
-입력 자료 문제로 결과를 폐기했습니다</title><path d="M 86.87 270.63  L 252.64 236.17  L 418.4 187.92  L 584.17 156.18  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #6b788e; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 270.63  L 252.64 236.17  L 418.4 187.92  L 584.17 156.18  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#16 특징 32개 · 깊이 6
+입력 자료 문제로 결과를 폐기했습니다</title><path d="M 86.87 270.63  L 252.64 236.17  L 418.4 187.92  L 584.17 156.18  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke-dasharray: 1.129629,1.694443; stroke-dashoffset: 0; stroke: #778499; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 270.63  L 252.64 236.17  L 418.4 187.92  L 584.17 156.18  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#16 특징 32개 · 깊이 6
 평균 오차 2.251석
 회차: 입력 특징 32개
 1정류장 1.307 · 2~3정류장 1.761 · 4~7정류장 2.422 · 8~15정류장 2.885
-채택되지 않았습니다</title><path d="M 86.87 264.13  L 252.64 231.72  L 418.4 184.57  L 584.17 151.53  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #637087; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 264.13  L 252.64 231.72  L 418.4 184.57  L 584.17 151.53  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#18 특징 32개 · 정류장 수요 뺌
+채택되지 않았습니다</title><path d="M 86.87 264.13  L 252.64 231.72  L 418.4 184.57  L 584.17 151.53  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #707d93; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 264.13  L 252.64 231.72  L 418.4 184.57  L 584.17 151.53  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#18 특징 32개 · 정류장 수요 뺌
 평균 오차 2.124석
 회차: 입력 특징 32개
 1정류장 1.249 · 2~3정류장 1.704 · 4~7정류장 2.302 · 8~15정류장 2.671
-채택되지 않았습니다</title><path d="M 86.87 268.28  L 252.64 235.78  L 418.4 193.17  L 584.17 166.81  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #546178; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 268.28  L 252.64 235.78  L 418.4 193.17  L 584.17 166.81  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#19 특징 32개 · 노선 코드 뺌
+채택되지 않았습니다</title><path d="M 86.87 268.28  L 252.64 235.78  L 418.4 193.17  L 584.17 166.81  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #626f86; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 268.28  L 252.64 235.78  L 418.4 193.17  L 584.17 166.81  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#19 특징 32개 · 노선 코드 뺌
 평균 오차 2.147석
 회차: 입력 특징 32개
 1정류장 1.182 · 2~3정류장 1.670 · 4~7정류장 2.329 · 8~15정류장 2.772
-채택되지 않았습니다</title><path d="M 86.87 273.02  L 252.64 238.24  L 418.4 191.2  L 584.17 159.63  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #4d5a71; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 273.02  L 252.64 238.24  L 418.4 191.2  L 584.17 159.63  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#1 기본 특징 6개 · 64번 학습
+채택되지 않았습니다</title><path d="M 86.87 273.02  L 252.64 238.24  L 418.4 191.2  L 584.17 159.63  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #5d6a81; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 273.02  L 252.64 238.24  L 418.4 191.2  L 584.17 159.63  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#61 깊은 기준 모델
+평균 오차 2.042석
+회차: 깊이와 과적합 억제 비교
+1정류장 1.190 · 2~3정류장 1.612 · 4~7정류장 2.199 · 8~15정류장 2.605
+채택되지 않았습니다</title><path d="M 86.87 272.43  L 252.64 242.37  L 418.4 200.51  L 584.17 171.52  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #2c394b; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 272.43  L 252.64 242.37  L 418.4 200.51  L 584.17 171.52  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#62 얕은 깊이 대조
+평균 오차 2.055석
+회차: 깊이와 과적합 억제 비교
+1정류장 1.195 · 2~3정류장 1.625 · 4~7정류장 2.215 · 8~15정류장 2.618
+채택되지 않았습니다</title><path d="M 86.87 272.12  L 252.64 241.43  L 418.4 199.32  L 584.17 170.58  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #273445; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 272.12  L 252.64 241.43  L 418.4 199.32  L 584.17 170.58  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#64 강한 정규화
+평균 오차 2.050석
+회차: 깊이와 과적합 억제 비교
+1정류장 1.187 · 2~3정류장 1.624 · 4~7정류장 2.210 · 8~15정류장 2.612
+채택되지 않았습니다</title><path d="M 86.87 272.65  L 252.64 241.49  L 418.4 199.67  L 584.17 171.05  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #1f2b3a; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 272.65  L 252.64 241.49  L 418.4 199.67  L 584.17 171.05  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#1 기본 특징 6개 · 64번 학습
 평균 오차 4.731석
 회차: 첫 전체 자료 학습
 1정류장 1.740 · 2~3정류장 3.075 · 4~7정류장 5.238 · 8~15정류장 6.846
@@ -971,49 +1006,71 @@
 회차: 나무 깊이 비교
 1정류장 1.686 · 2~3정류장 3.061 · 4~7정류장 5.217 · 8~15정류장 6.822
 기준 모델 변경 3번째: 4.7051석 → 4.7049석
-채택되어 한때 기준 모델이었습니다</title><path d="M 86.87 237.11  L 252.64 139.01  L 403.5 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #f2ae8c; stroke-width: 1.4; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 237.11  L 252.64 139.01  L 403.5 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>지금 운영 중인 예보
-평균 오차 3.045석
-1정류장 1.527 · 2~3정류장 2.388 · 4~7정류장 3.363 · 8~15정류장 3.935</title><path d="M 86.87 248.41  L 252.64 187.02  L 418.4 117.47  L 584.17 76.66  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke-dasharray: 7.5,4.5; stroke-dashoffset: 0; stroke: #4e5866; stroke-width: 1.5; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 248.41  L 252.64 187.02  L 418.4 117.47  L 584.17 76.66  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#17 특징 32개 · 깊이 8 · 1,024번 학습
+채택되어 한때 기준 모델이었습니다</title><path d="M 86.87 237.11  L 252.64 139.01  L 403.5 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #f2ae8c; stroke-width: 1.4; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 237.11  L 252.64 139.01  L 403.5 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#17 특징 32개 · 깊이 8 · 1,024번 학습
 평균 오차 2.064석
 회차: 입력 특징 32개
 1정류장 1.197 · 2~3정류장 1.628 · 4~7정류장 2.227 · 8~15정류장 2.632
 기준 모델 변경 4번째: 4.705석 → 2.064석
-지금의 기준 모델입니다</title><path d="M 86.87 271.99  L 252.64 241.24  L 418.4 198.5  L 584.17 169.58  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #e0662e; stroke-width: 2.6; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 271.99  L 252.64 241.24  L 418.4 198.5  L 584.17 169.58  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#10 특징 32개 · 깊이 6
+채택되어 한때 기준 모델이었습니다</title><path d="M 86.87 271.99  L 252.64 241.24  L 418.4 198.5  L 584.17 169.58  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #f2ae8c; stroke-width: 1.4; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 271.99  L 252.64 241.24  L 418.4 198.5  L 584.17 169.58  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>지금 운영 중인 예보
+평균 오차 3.045석
+1정류장 1.527 · 2~3정류장 2.388 · 4~7정류장 3.363 · 8~15정류장 3.935</title><path d="M 86.87 248.41  L 252.64 187.02  L 418.4 117.47  L 584.17 76.66  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke-dasharray: 7.5,4.5; stroke-dashoffset: 0; stroke: #4e5866; stroke-width: 1.5; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 248.41  L 252.64 187.02  L 418.4 117.47  L 584.17 76.66  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#63 이동 제한 제거
+평균 오차 2.025석
+회차: 깊이와 과적합 억제 비교
+1정류장 1.161 · 2~3정류장 1.594 · 4~7정류장 2.187 · 8~15정류장 2.588
+기준 모델 변경 5번째: 2.064석 → 2.025석
+지금의 기준 모델입니다</title><path d="M 86.87 274.52  L 252.64 243.66  L 418.4 201.31  L 584.17 172.73  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #e0662e; stroke-width: 2.6; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 274.52  L 252.64 243.66  L 418.4 201.31  L 584.17 172.73  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#10 특징 32개 · 깊이 6
 평균 오차 2.312석
 회차: 입력 특징 32개(1차)
 1정류장 1.337 · 2~3정류장 1.808 · 4~7정류장 2.499 · 8~15정류장 2.956
-입력 자료 문제로 결과를 폐기했습니다</title><path d="M 653.47 192.42  L 687.17 192.42  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #8592a5; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 192.42  L 687.17 192.42  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#11 특징 32개 · 깊이 8 · 1,024번 학습
+입력 자료 문제로 결과를 폐기했습니다</title><path d="M 653.47 192.42  L 687.17 192.42  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke-dasharray: 1.2,1.8; stroke-dashoffset: 0; stroke: #8d9aab; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 192.42  L 687.17 192.42  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#11 특징 32개 · 깊이 8 · 1,024번 학습
 평균 오차 2.109석
 회차: 입력 특징 32개(1차)
 1정류장 1.220 · 2~3정류장 1.663 · 4~7정류장 2.280 · 8~15정류장 2.686
-입력 자료 문제로 결과를 폐기했습니다</title><path d="M 653.47 206.92  L 687.17 206.92  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #7d8a9d; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 206.92  L 687.17 206.92  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#12 특징 32개 · 정류장 수요 뺌
+입력 자료 문제로 결과를 폐기했습니다</title><path d="M 653.47 206.92  L 687.17 206.92  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke-dasharray: 1.2,1.8; stroke-dashoffset: 0; stroke: #8693a5; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 206.92  L 687.17 206.92  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#12 특징 32개 · 정류장 수요 뺌
 평균 오차 2.137석
 회차: 입력 특징 32개(1차)
 1정류장 1.267 · 2~3정류장 1.717 · 4~7정류장 2.309 · 8~15정류장 2.688
-입력 자료 문제로 결과를 폐기했습니다</title><path d="M 653.47 204.87  L 687.17 204.87  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #738096; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 204.87  L 687.17 204.87  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#13 특징 32개 · 노선 코드 뺌
+입력 자료 문제로 결과를 폐기했습니다</title><path d="M 653.47 204.87  L 687.17 204.87  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke-dasharray: 1.2,1.8; stroke-dashoffset: 0; stroke: #7f8c9f; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 204.87  L 687.17 204.87  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#13 특징 32개 · 노선 코드 뺌
 평균 오차 2.188석
 회차: 입력 특징 32개(1차)
 1정류장 1.216 · 2~3정류장 1.699 · 4~7정류장 2.375 · 8~15정류장 2.820
-입력 자료 문제로 결과를 폐기했습니다</title><path d="M 653.47 201.28  L 687.17 201.28  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #6b788e; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 201.28  L 687.17 201.28  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#16 특징 32개 · 깊이 6
+입력 자료 문제로 결과를 폐기했습니다</title><path d="M 653.47 201.28  L 687.17 201.28  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke-dasharray: 1.2,1.8; stroke-dashoffset: 0; stroke: #778499; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 201.28  L 687.17 201.28  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#16 특징 32개 · 깊이 6
 평균 오차 2.251석
 회차: 입력 특징 32개
 1정류장 1.307 · 2~3정류장 1.761 · 4~7정류장 2.422 · 8~15정류장 2.885
-채택되지 않았습니다</title><path d="M 653.47 196.78  L 687.17 196.78  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #637087; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 196.78  L 687.17 196.78  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#18 특징 32개 · 정류장 수요 뺌
+채택되지 않았습니다</title><path d="M 653.47 196.78  L 687.17 196.78  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #707d93; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 196.78  L 687.17 196.78  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#18 특징 32개 · 정류장 수요 뺌
 평균 오차 2.124석
 회차: 입력 특징 32개
 1정류장 1.249 · 2~3정류장 1.704 · 4~7정류장 2.302 · 8~15정류장 2.671
-채택되지 않았습니다</title><path d="M 653.47 205.82  L 687.17 205.82  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #546178; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 205.82  L 687.17 205.82  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#19 특징 32개 · 노선 코드 뺌
+채택되지 않았습니다</title><path d="M 653.47 205.82  L 687.17 205.82  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #626f86; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 205.82  L 687.17 205.82  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#19 특징 32개 · 노선 코드 뺌
 평균 오차 2.147석
 회차: 입력 특징 32개
 1정류장 1.182 · 2~3정류장 1.670 · 4~7정류장 2.329 · 8~15정류장 2.772
-채택되지 않았습니다</title><path d="M 653.47 204.21  L 687.17 204.21  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #4d5a71; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 204.21  L 687.17 204.21  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>지금 운영 중인 예보
-평균 오차 3.045석
-1정류장 1.527 · 2~3정류장 2.388 · 4~7정류장 3.363 · 8~15정류장 3.935</title><path d="M 647.86 140.14  L 692.78 140.14  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke-dasharray: 7.5,4.5; stroke-dashoffset: 0; stroke: #4e5866; stroke-width: 1.5; stroke-linecap: round;stroke-opacity:0" /><path d="M 647.86 140.14  L 692.78 140.14  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#17 특징 32개 · 깊이 8 · 1,024번 학습
+채택되지 않았습니다</title><path d="M 653.47 204.21  L 687.17 204.21  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #5d6a81; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 204.21  L 687.17 204.21  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#61 깊은 기준 모델
+평균 오차 2.042석
+회차: 깊이와 과적합 억제 비교
+1정류장 1.190 · 2~3정류장 1.612 · 4~7정류장 2.199 · 8~15정류장 2.605
+채택되지 않았습니다</title><path d="M 653.47 211.67  L 687.17 211.67  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #2c394b; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 211.67  L 687.17 211.67  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#62 얕은 깊이 대조
+평균 오차 2.055석
+회차: 깊이와 과적합 억제 비교
+1정류장 1.195 · 2~3정류장 1.625 · 4~7정류장 2.215 · 8~15정류장 2.618
+채택되지 않았습니다</title><path d="M 653.47 210.75  L 687.17 210.75  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #273445; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 210.75  L 687.17 210.75  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#64 강한 정규화
+평균 오차 2.050석
+회차: 깊이와 과적합 억제 비교
+1정류장 1.187 · 2~3정류장 1.624 · 4~7정류장 2.210 · 8~15정류장 2.612
+채택되지 않았습니다</title><path d="M 653.47 211.1  L 687.17 211.1  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #1f2b3a; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 211.1  L 687.17 211.1  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#17 특징 32개 · 깊이 8 · 1,024번 학습
 평균 오차 2.064석
 회차: 입력 특징 32개
 1정류장 1.197 · 2~3정류장 1.628 · 4~7정류장 2.227 · 8~15정류장 2.632
 기준 모델 변경 4번째: 4.705석 → 2.064석
-지금의 기준 모델입니다</title><path d="M 647.86 210.11  L 692.78 210.11  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #e0662e; stroke-width: 2.6; stroke-linecap: round;stroke-opacity:0" /><path d="M 647.86 210.11  L 692.78 210.11  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-pt"><title>#1 기본 특징 6개 · 64번 학습
+채택되어 한때 기준 모델이었습니다</title><path d="M 653.47 210.11  L 687.17 210.11  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #f2ae8c; stroke-width: 1.4; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 210.11  L 687.17 210.11  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>지금 운영 중인 예보
+평균 오차 3.045석
+1정류장 1.527 · 2~3정류장 2.388 · 4~7정류장 3.363 · 8~15정류장 3.935</title><path d="M 647.86 140.14  L 692.78 140.14  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke-dasharray: 7.5,4.5; stroke-dashoffset: 0; stroke: #4e5866; stroke-width: 1.5; stroke-linecap: round;stroke-opacity:0" /><path d="M 647.86 140.14  L 692.78 140.14  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-line"><title>#63 이동 제한 제거
+평균 오차 2.025석
+회차: 깊이와 과적합 억제 비교
+1정류장 1.161 · 2~3정류장 1.594 · 4~7정류장 2.187 · 8~15정류장 2.588
+기준 모델 변경 5번째: 2.064석 → 2.025석
+지금의 기준 모델입니다</title><path d="M 647.86 212.9  L 692.78 212.9  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #e0662e; stroke-width: 2.6; stroke-linecap: round;stroke-opacity:0" /><path d="M 647.86 212.9  L 692.78 212.9  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g><g class="rs-h rs-pt"><title>#1 기본 특징 6개 · 64번 학습
 평균 오차 4.731석
 회차: 첫 전체 자료 학습
 1정류장 1.740 · 2~3정류장 3.075 · 4~7정류장 5.238 · 8~15정류장 6.846
@@ -1022,7 +1079,7 @@
 평균 오차 4.712석
 회차: 이어서 더 학습하기
 1정류장 1.698 · 2~3정류장 3.063 · 4~7정류장 5.223 · 8~15정류장 6.830
-채택되지 않았습니다</title><path d="M 86.87 236.24  L 252.64 138.83  L 403.06 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #aeb9c6; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 235.25 L 96.95 236.49 L 76.79 236.49 L 76.79 235.25 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#3 기본 특징 6개 · 256번까지 이어 학습
+채택되지 않았습니다</title><path d="M 86.87 236.24  L 252.64 138.83  L 403.06 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #b0bac7; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 235.25 L 96.95 236.49 L 76.79 236.49 L 76.79 235.25 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#3 기본 특징 6개 · 256번까지 이어 학습
 평균 오차 4.705석
 회차: 이어서 더 학습하기
 1정류장 1.687 · 2~3정류장 3.059 · 4~7정류장 5.217 · 8~15정류장 6.824
@@ -1031,7 +1088,7 @@
 평균 오차 4.729석
 회차: 나무 깊이 비교
 1정류장 1.725 · 2~3정류장 3.078 · 4~7정류장 5.232 · 8~15정류장 6.851
-채택되지 않았습니다</title><path d="M 86.87 234.27  L 252.64 137.78  L 402.31 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #9eaab9; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 233.73 L 96.95 235.25 L 76.79 235.25 L 76.79 233.73 Z M 242.56 127.7 L 262.72 127.7 L 262.72 137.89 L 242.56 137.89 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#8 기본 특징 6개 · 깊이 6 새로 학습
+채택되지 않았습니다</title><path d="M 86.87 234.27  L 252.64 137.78  L 402.31 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #a2aebd; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 233.73 L 96.95 235.25 L 76.79 235.25 L 76.79 233.73 Z M 242.56 127.7 L 262.72 127.7 L 262.72 137.89 L 242.56 137.89 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#8 기본 특징 6개 · 깊이 6 새로 학습
 평균 오차 4.705석
 회차: 나무 깊이 비교
 1정류장 1.686 · 2~3정류장 3.061 · 4~7정류장 5.217 · 8~15정류장 6.822
@@ -1040,7 +1097,7 @@
 평균 오차 4.707석
 회차: 나무 깊이 비교
 1정류장 1.691 · 2~3정류장 3.063 · 4~7정류장 5.218 · 8~15정류장 6.823
-채택되지 않았습니다</title><path d="M 86.87 236.75  L 252.64 138.83  L 403.41 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #8e9bac; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 236.49 L 96.95 236.87 L 76.79 236.87 L 76.79 236.49 Z M 262.72 138.41 L 262.72 138.92 L 242.56 138.92 L 242.56 138.41 Z M 408.32 34.56 L 428.48 34.56 L 428.48 44.64 L 408.32 44.64 Z M 574.09 34.56 L 594.25 34.56 L 594.25 44.64 L 574.09 44.64 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#9 기본 특징 6개 · 깊은 나무(깊이 8)
+채택되지 않았습니다</title><path d="M 86.87 236.75  L 252.64 138.83  L 403.41 -1  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #95a2b2; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 236.49 L 96.95 236.87 L 76.79 236.87 L 76.79 236.49 Z M 262.72 138.41 L 262.72 138.92 L 242.56 138.92 L 242.56 138.41 Z M 408.32 34.56 L 428.48 34.56 L 428.48 44.64 L 408.32 44.64 Z M 574.09 34.56 L 594.25 34.56 L 594.25 44.64 L 574.09 44.64 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#9 기본 특징 6개 · 깊은 나무(깊이 8)
 평균 오차 4.707석
 회차: 나무 깊이 비교
 1정류장 1.691 · 2~3정류장 3.063 · 4~7정류장 5.218 · 8~15정류장 6.823
@@ -1048,226 +1105,260 @@
 평균 오차 2.312석
 회차: 입력 특징 32개(1차)
 1정류장 1.337 · 2~3정류장 1.808 · 4~7정류장 2.499 · 8~15정류장 2.956
-입력 자료 문제로 결과를 폐기했습니다</title><path d="M 86.87 261.99  L 252.64 228.38  L 418.4 179.11  L 584.17 146.45  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #8592a5; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 76.79 251.91 L 96.95 251.91 L 96.95 263.06 L 76.79 263.06 Z M 242.56 218.3 L 262.72 218.3 L 262.72 230.05 L 242.56 230.05 Z M 408.32 169.03 L 428.48 169.03 L 428.48 181.84 L 408.32 181.84 Z M 574.09 136.37 L 594.25 136.37 L 594.25 148.99 L 574.09 148.99 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#10 특징 32개 · 깊이 6
+입력 자료 문제로 결과를 폐기했습니다</title><path d="M 86.87 261.99  L 252.64 228.38  L 418.4 179.11  L 584.17 146.45  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke-dasharray: 1.129629,1.694443; stroke-dashoffset: 0; stroke: #8d9aab; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 76.79 251.91 L 96.95 251.91 L 96.95 263.06 L 76.79 263.06 Z M 242.56 218.3 L 262.72 218.3 L 262.72 230.05 L 242.56 230.05 Z M 408.32 169.03 L 428.48 169.03 L 428.48 181.84 L 408.32 181.84 Z M 574.09 136.37 L 594.25 136.37 L 594.25 148.99 L 574.09 148.99 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#10 특징 32개 · 깊이 6
 평균 오차 2.312석
 회차: 입력 특징 32개(1차)
 1정류장 1.337 · 2~3정류장 1.808 · 4~7정류장 2.499 · 8~15정류장 2.956
-입력 자료 문제로 결과를 폐기했습니다</title><path d="M 653.47 192.42  L 687.17 192.42  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #8592a5; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 660.24 182.34 L 680.4 182.34 L 680.4 194.6 L 660.24 194.6 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#11 특징 32개 · 깊이 8 · 1,024번 학습
+입력 자료 문제로 결과를 폐기했습니다</title><path d="M 653.47 192.42  L 687.17 192.42  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke-dasharray: 1.2,1.8; stroke-dashoffset: 0; stroke: #8d9aab; stroke-linecap: round;stroke-opacity:0" /><path d="M 660.24 182.34 L 680.4 182.34 L 680.4 194.6 L 660.24 194.6 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#11 특징 32개 · 깊이 8 · 1,024번 학습
 평균 오차 2.109석
 회차: 입력 특징 32개(1차)
 1정류장 1.220 · 2~3정류장 1.663 · 4~7정류장 2.280 · 8~15정류장 2.686
-입력 자료 문제로 결과를 폐기했습니다</title><path d="M 86.87 270.33  L 252.64 238.71  L 418.4 194.73  L 584.17 165.74  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #7d8a9d; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 269.31 L 96.95 270.48 L 76.79 270.48 L 76.79 269.31 Z M 262.72 238.47 L 262.72 239.38 L 242.56 239.38 L 242.56 238.47 Z M 428.48 193.95 L 428.48 196.02 L 408.32 196.02 L 408.32 193.95 Z M 594.25 165.68 L 594.25 166.26 L 574.09 166.26 L 574.09 165.68 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#11 특징 32개 · 깊이 8 · 1,024번 학습
+입력 자료 문제로 결과를 폐기했습니다</title><path d="M 86.87 270.33  L 252.64 238.71  L 418.4 194.73  L 584.17 165.74  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke-dasharray: 1.129629,1.694443; stroke-dashoffset: 0; stroke: #8693a5; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 269.31 L 96.95 270.48 L 76.79 270.48 L 76.79 269.31 Z M 262.72 238.47 L 262.72 239.38 L 242.56 239.38 L 242.56 238.47 Z M 428.48 193.95 L 428.48 196.02 L 408.32 196.02 L 408.32 193.95 Z M 594.25 165.68 L 594.25 166.26 L 574.09 166.26 L 574.09 165.68 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#11 특징 32개 · 깊이 8 · 1,024번 학습
 평균 오차 2.109석
 회차: 입력 특징 32개(1차)
 1정류장 1.220 · 2~3정류장 1.663 · 4~7정류장 2.280 · 8~15정류장 2.686
-입력 자료 문제로 결과를 폐기했습니다</title><path d="M 653.47 206.92  L 687.17 206.92  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #7d8a9d; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 206.37 L 680.4 208.48 L 660.24 208.48 L 660.24 206.37 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#12 특징 32개 · 정류장 수요 뺌
+입력 자료 문제로 결과를 폐기했습니다</title><path d="M 653.47 206.92  L 687.17 206.92  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke-dasharray: 1.2,1.8; stroke-dashoffset: 0; stroke: #8693a5; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 206.37 L 680.4 208.48 L 660.24 208.48 L 660.24 206.37 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#12 특징 32개 · 정류장 수요 뺌
 평균 오차 2.137석
 회차: 입력 특징 32개(1차)
 1정류장 1.267 · 2~3정류장 1.717 · 4~7정류장 2.309 · 8~15정류장 2.688
-입력 자료 문제로 결과를 폐기했습니다</title><path d="M 86.87 266.95  L 252.64 234.9  L 418.4 192.61  L 584.17 165.62  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #738096; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 265.54 L 96.95 267.61 L 76.79 267.61 L 76.79 265.54 Z M 262.72 233.31 L 262.72 235.34 L 242.56 235.34 L 242.56 233.31 Z M 428.48 191.91 L 428.48 192.89 L 408.32 192.89 L 408.32 191.91 Z M 594.25 162.63 L 594.25 165.68 L 574.09 165.68 L 574.09 162.63 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#12 특징 32개 · 정류장 수요 뺌
+입력 자료 문제로 결과를 폐기했습니다</title><path d="M 86.87 266.95  L 252.64 234.9  L 418.4 192.61  L 584.17 165.62  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke-dasharray: 1.129629,1.694443; stroke-dashoffset: 0; stroke: #7f8c9f; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 265.54 L 96.95 267.61 L 76.79 267.61 L 76.79 265.54 Z M 262.72 233.31 L 262.72 235.34 L 242.56 235.34 L 242.56 233.31 Z M 428.48 191.91 L 428.48 192.89 L 408.32 192.89 L 408.32 191.91 Z M 594.25 162.63 L 594.25 165.68 L 574.09 165.68 L 574.09 162.63 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#12 특징 32개 · 정류장 수요 뺌
 평균 오차 2.137석
 회차: 입력 특징 32개(1차)
 1정류장 1.267 · 2~3정류장 1.717 · 4~7정류장 2.309 · 8~15정류장 2.688
-입력 자료 문제로 결과를 폐기했습니다</title><path d="M 653.47 204.87  L 687.17 204.87  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #738096; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 204.54 L 680.4 205.09 L 660.24 205.09 L 660.24 204.54 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#13 특징 32개 · 노선 코드 뺌
+입력 자료 문제로 결과를 폐기했습니다</title><path d="M 653.47 204.87  L 687.17 204.87  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke-dasharray: 1.2,1.8; stroke-dashoffset: 0; stroke: #7f8c9f; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 204.54 L 680.4 205.09 L 660.24 205.09 L 660.24 204.54 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#13 특징 32개 · 노선 코드 뺌
 평균 오차 2.188석
 회차: 입력 특징 32개(1차)
 1정류장 1.216 · 2~3정류장 1.699 · 4~7정류장 2.375 · 8~15정류장 2.820
-입력 자료 문제로 결과를 폐기했습니다</title><path d="M 86.87 270.63  L 252.64 236.17  L 418.4 187.92  L 584.17 156.18  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #6b788e; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 270.48 L 96.95 271.02 L 76.79 271.02 L 76.79 270.48 Z M 262.72 235.97 L 262.72 237.2 L 242.56 237.2 L 242.56 235.97 Z M 428.48 186.25 L 428.48 189.39 L 408.32 189.39 L 408.32 186.25 Z M 594.25 153.85 L 594.25 157.61 L 574.09 157.61 L 574.09 153.85 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#13 특징 32개 · 노선 코드 뺌
+입력 자료 문제로 결과를 폐기했습니다</title><path d="M 86.87 270.63  L 252.64 236.17  L 418.4 187.92  L 584.17 156.18  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke-dasharray: 1.129629,1.694443; stroke-dashoffset: 0; stroke: #778499; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 270.48 L 96.95 271.02 L 76.79 271.02 L 76.79 270.48 Z M 262.72 235.97 L 262.72 237.2 L 242.56 237.2 L 242.56 235.97 Z M 428.48 186.25 L 428.48 189.39 L 408.32 189.39 L 408.32 186.25 Z M 594.25 153.85 L 594.25 157.61 L 574.09 157.61 L 574.09 153.85 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#13 특징 32개 · 노선 코드 뺌
 평균 오차 2.188석
 회차: 입력 특징 32개(1차)
 1정류장 1.216 · 2~3정류장 1.699 · 4~7정류장 2.375 · 8~15정류장 2.820
-입력 자료 문제로 결과를 폐기했습니다</title><path d="M 653.47 201.28  L 687.17 201.28  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke-dasharray: 1.228036,1.842054; stroke-dashoffset: 0; stroke: #6b788e; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 199.03 L 680.4 202.74 L 660.24 202.74 L 660.24 199.03 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#16 특징 32개 · 깊이 6
+입력 자료 문제로 결과를 폐기했습니다</title><path d="M 653.47 201.28  L 687.17 201.28  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke-dasharray: 1.2,1.8; stroke-dashoffset: 0; stroke: #778499; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 199.03 L 680.4 202.74 L 660.24 202.74 L 660.24 199.03 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#16 특징 32개 · 깊이 6
 평균 오차 2.251석
 회차: 입력 특징 32개
 1정류장 1.307 · 2~3정류장 1.761 · 4~7정류장 2.422 · 8~15정류장 2.885
-채택되지 않았습니다</title><path d="M 86.87 264.13  L 252.64 231.72  L 418.4 184.57  L 584.17 151.53  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #637087; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 263.06 L 96.95 265.54 L 76.79 265.54 L 76.79 263.06 Z M 262.72 230.05 L 262.72 233.31 L 242.56 233.31 L 242.56 230.05 Z M 428.48 181.84 L 428.48 186.25 L 408.32 186.25 L 408.32 181.84 Z M 594.25 148.99 L 594.25 153.85 L 574.09 153.85 L 574.09 148.99 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#16 특징 32개 · 깊이 6
+채택되지 않았습니다</title><path d="M 86.87 264.13  L 252.64 231.72  L 418.4 184.57  L 584.17 151.53  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #707d93; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 263.06 L 96.95 265.54 L 76.79 265.54 L 76.79 263.06 Z M 262.72 230.05 L 262.72 233.31 L 242.56 233.31 L 242.56 230.05 Z M 428.48 181.84 L 428.48 186.25 L 408.32 186.25 L 408.32 181.84 Z M 594.25 148.99 L 594.25 153.85 L 574.09 153.85 L 574.09 148.99 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#16 특징 32개 · 깊이 6
 평균 오차 2.251석
 회차: 입력 특징 32개
 1정류장 1.307 · 2~3정류장 1.761 · 4~7정류장 2.422 · 8~15정류장 2.885
-채택되지 않았습니다</title><path d="M 653.47 196.78  L 687.17 196.78  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #637087; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 194.6 L 680.4 199.03 L 660.24 199.03 L 660.24 194.6 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#17 특징 32개 · 깊이 8 · 1,024번 학습
+채택되지 않았습니다</title><path d="M 653.47 196.78  L 687.17 196.78  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #707d93; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 194.6 L 680.4 199.03 L 660.24 199.03 L 660.24 194.6 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#17 특징 32개 · 깊이 8 · 1,024번 학습
 평균 오차 2.064석
 회차: 입력 특징 32개
 1정류장 1.197 · 2~3정류장 1.628 · 4~7정류장 2.227 · 8~15정류장 2.632
 기준 모델 변경 4번째: 4.705석 → 2.064석
-지금의 기준 모델입니다</title><path d="M 86.87 271.99  L 252.64 241.24  L 418.4 198.5  L 584.17 169.58  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #e0662e; stroke-width: 2.6; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 271.7 L 96.95 272.16 L 76.79 272.16 L 76.79 271.7 Z M 262.72 241.18 L 262.72 241.29 L 242.56 241.29 L 242.56 241.18 Z M 428.48 198.42 L 428.48 198.52 L 408.32 198.52 L 408.32 198.42 Z M 594.25 169.44 L 594.25 169.61 L 574.09 169.61 L 574.09 169.44 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#17 특징 32개 · 깊이 8 · 1,024번 학습
+채택되어 한때 기준 모델이었습니다</title><path d="M 86.87 271.99  L 252.64 241.24  L 418.4 198.5  L 584.17 169.58  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #f2ae8c; stroke-width: 1.4; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 271.7 L 96.95 272.05 L 76.79 272.05 L 76.79 271.7 Z M 262.72 241.18 L 262.72 241.29 L 242.56 241.29 L 242.56 241.18 Z M 428.48 198.42 L 428.48 198.52 L 408.32 198.52 L 408.32 198.42 Z M 594.25 169.44 L 594.25 169.61 L 574.09 169.61 L 574.09 169.44 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#17 특징 32개 · 깊이 8 · 1,024번 학습
 평균 오차 2.064석
 회차: 입력 특징 32개
 1정류장 1.197 · 2~3정류장 1.628 · 4~7정류장 2.227 · 8~15정류장 2.632
 기준 모델 변경 4번째: 4.705석 → 2.064석
-지금의 기준 모델입니다</title><path d="M 647.86 210.11  L 692.78 210.11  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #e0662e; stroke-width: 2.6; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 210.07 L 680.4 210.15 L 660.24 210.15 L 660.24 210.07 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#18 특징 32개 · 정류장 수요 뺌
+채택되어 한때 기준 모델이었습니다</title><path d="M 653.47 210.11  L 687.17 210.11  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #f2ae8c; stroke-width: 1.4; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 210.07 L 680.4 210.15 L 660.24 210.15 L 660.24 210.07 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#18 특징 32개 · 정류장 수요 뺌
 평균 오차 2.124석
 회차: 입력 특징 32개
 1정류장 1.249 · 2~3정류장 1.704 · 4~7정류장 2.302 · 8~15정류장 2.671
-채택되지 않았습니다</title><path d="M 86.87 268.28  L 252.64 235.78  L 418.4 193.17  L 584.17 166.81  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #546178; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 267.61 L 96.95 269.31 L 76.79 269.31 L 76.79 267.61 Z M 262.72 235.34 L 262.72 235.97 L 242.56 235.97 L 242.56 235.34 Z M 428.48 192.89 L 428.48 193.95 L 408.32 193.95 L 408.32 192.89 Z M 594.25 166.8 L 594.25 167.56 L 574.09 167.56 L 574.09 166.8 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#18 특징 32개 · 정류장 수요 뺌
+채택되지 않았습니다</title><path d="M 86.87 268.28  L 252.64 235.78  L 418.4 193.17  L 584.17 166.81  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #626f86; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 267.61 L 96.95 269.31 L 76.79 269.31 L 76.79 267.61 Z M 262.72 235.34 L 262.72 235.97 L 242.56 235.97 L 242.56 235.34 Z M 428.48 192.89 L 428.48 193.95 L 408.32 193.95 L 408.32 192.89 Z M 594.25 166.8 L 594.25 167.56 L 574.09 167.56 L 574.09 166.8 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#18 특징 32개 · 정류장 수요 뺌
 평균 오차 2.124석
 회차: 입력 특징 32개
 1정류장 1.249 · 2~3정류장 1.704 · 4~7정류장 2.302 · 8~15정류장 2.671
-채택되지 않았습니다</title><path d="M 653.47 205.82  L 687.17 205.82  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #546178; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 205.57 L 680.4 206.37 L 660.24 206.37 L 660.24 205.57 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#19 특징 32개 · 노선 코드 뺌
+채택되지 않았습니다</title><path d="M 653.47 205.82  L 687.17 205.82  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #626f86; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 205.57 L 680.4 206.37 L 660.24 206.37 L 660.24 205.57 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#19 특징 32개 · 노선 코드 뺌
 평균 오차 2.147석
 회차: 입력 특징 32개
 1정류장 1.182 · 2~3정류장 1.670 · 4~7정류장 2.329 · 8~15정류장 2.772
-채택되지 않았습니다</title><path d="M 86.87 273.02  L 252.64 238.24  L 418.4 191.2  L 584.17 159.63  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #4d5a71; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 272.68 L 96.95 273.56 L 76.79 273.56 L 76.79 272.68 Z M 262.72 237.2 L 262.72 238.47 L 242.56 238.47 L 242.56 237.2 Z M 428.48 191.03 L 428.48 191.91 L 408.32 191.91 L 408.32 191.03 Z M 594.25 159.34 L 594.25 162.63 L 574.09 162.63 L 574.09 159.34 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#19 특징 32개 · 노선 코드 뺌
+채택되지 않았습니다</title><path d="M 86.87 273.02  L 252.64 238.24  L 418.4 191.2  L 584.17 159.63  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #5d6a81; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 272.84 L 96.95 273.56 L 76.79 273.56 L 76.79 272.84 Z M 262.72 237.2 L 262.72 238.47 L 242.56 238.47 L 242.56 237.2 Z M 428.48 191.03 L 428.48 191.91 L 408.32 191.91 L 408.32 191.03 Z M 594.25 159.34 L 594.25 162.63 L 574.09 162.63 L 574.09 159.34 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#19 특징 32개 · 노선 코드 뺌
 평균 오차 2.147석
 회차: 입력 특징 32개
 1정류장 1.182 · 2~3정류장 1.670 · 4~7정류장 2.329 · 8~15정류장 2.772
-채택되지 않았습니다</title><path d="M 653.47 204.21  L 687.17 204.21  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #4d5a71; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 202.74 L 680.4 204.54 L 660.24 204.54 L 660.24 202.74 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><a href="/attempts/AUTOLOOP_002/ABS_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_R1024/"><g class="rs-h rs-line"><title>#30 중앙값 맞춤 · 1,024번 학습
+채택되지 않았습니다</title><path d="M 653.47 204.21  L 687.17 204.21  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #5d6a81; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 202.74 L 680.4 204.54 L 660.24 204.54 L 660.24 202.74 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#61 깊은 기준 모델
+평균 오차 2.042석
+회차: 깊이와 과적합 억제 비교
+1정류장 1.190 · 2~3정류장 1.612 · 4~7정류장 2.199 · 8~15정류장 2.605
+채택되지 않았습니다</title><path d="M 86.87 272.43  L 252.64 242.37  L 418.4 200.51  L 584.17 171.52  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #2c394b; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 272.38 L 96.95 272.54 L 76.79 272.54 L 76.79 272.38 Z M 262.72 242.36 L 262.72 242.9 L 242.56 242.9 L 242.56 242.36 Z M 428.48 200.11 L 428.48 200.91 L 408.32 200.91 L 408.32 200.11 Z M 594.25 171.29 L 594.25 172.13 L 574.09 172.13 L 574.09 171.29 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#61 깊은 기준 모델
+평균 오차 2.042석
+회차: 깊이와 과적합 억제 비교
+1정류장 1.190 · 2~3정류장 1.612 · 4~7정류장 2.199 · 8~15정류장 2.605
+채택되지 않았습니다</title><path d="M 653.47 211.67  L 687.17 211.67  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #2c394b; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 211.65 L 680.4 212.01 L 660.24 212.01 L 660.24 211.65 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#62 얕은 깊이 대조
+평균 오차 2.055석
+회차: 깊이와 과적합 억제 비교
+1정류장 1.195 · 2~3정류장 1.625 · 4~7정류장 2.215 · 8~15정류장 2.618
+채택되지 않았습니다</title><path d="M 86.87 272.12  L 252.64 241.43  L 418.4 199.32  L 584.17 170.58  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #273445; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 272.05 L 96.95 272.23 L 76.79 272.23 L 76.79 272.05 Z M 262.72 241.39 L 262.72 241.46 L 242.56 241.46 L 242.56 241.39 Z M 428.48 199.14 L 428.48 199.5 L 408.32 199.5 L 408.32 199.14 Z M 594.25 170.41 L 594.25 170.82 L 574.09 170.82 L 574.09 170.41 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#62 얕은 깊이 대조
+평균 오차 2.055석
+회차: 깊이와 과적합 억제 비교
+1정류장 1.195 · 2~3정류장 1.625 · 4~7정류장 2.215 · 8~15정류장 2.618
+채택되지 않았습니다</title><path d="M 653.47 210.75  L 687.17 210.75  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #273445; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 210.64 L 680.4 210.93 L 660.24 210.93 L 660.24 210.64 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#63 이동 제한 제거
+평균 오차 2.025석
+회차: 깊이와 과적합 억제 비교
+1정류장 1.161 · 2~3정류장 1.594 · 4~7정류장 2.187 · 8~15정류장 2.588
+기준 모델 변경 5번째: 2.064석 → 2.025석
+지금의 기준 모델입니다</title><path d="M 86.87 274.52  L 252.64 243.66  L 418.4 201.31  L 584.17 172.73  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #e0662e; stroke-width: 2.6; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 274.31 L 96.95 274.56 L 76.79 274.56 L 76.79 274.31 Z M 262.72 243.59 L 262.72 244.22 L 242.56 244.22 L 242.56 243.59 Z M 428.48 200.91 L 428.48 211.39 L 408.32 211.39 L 408.32 200.91 Z M 594.25 172.13 L 594.25 182.81 L 574.09 182.81 L 574.09 172.13 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#63 이동 제한 제거
+평균 오차 2.025석
+회차: 깊이와 과적합 억제 비교
+1정류장 1.161 · 2~3정류장 1.594 · 4~7정류장 2.187 · 8~15정류장 2.588
+기준 모델 변경 5번째: 2.064석 → 2.025석
+지금의 기준 모델입니다</title><path d="M 647.86 212.9  L 692.78 212.9  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #e0662e; stroke-width: 2.6; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 212.63 L 680.4 222.98 L 660.24 222.98 L 660.24 212.63 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#64 강한 정규화
+평균 오차 2.050석
+회차: 깊이와 과적합 억제 비교
+1정류장 1.187 · 2~3정류장 1.624 · 4~7정류장 2.210 · 8~15정류장 2.612
+채택되지 않았습니다</title><path d="M 86.87 272.65  L 252.64 241.49  L 418.4 199.67  L 584.17 171.05  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #1f2b3a; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 272.54 L 96.95 272.84 L 76.79 272.84 L 76.79 272.54 Z M 262.72 241.46 L 262.72 241.63 L 242.56 241.63 L 242.56 241.46 Z M 428.48 199.5 L 428.48 199.69 L 408.32 199.69 L 408.32 199.5 Z M 594.25 170.82 L 594.25 171.29 L 574.09 171.29 L 574.09 170.82 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><g class="rs-h rs-pt"><title>#64 강한 정규화
+평균 오차 2.050석
+회차: 깊이와 과적합 억제 비교
+1정류장 1.187 · 2~3정류장 1.624 · 4~7정류장 2.210 · 8~15정류장 2.612
+채택되지 않았습니다</title><path d="M 653.47 211.1  L 687.17 211.1  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #1f2b3a; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 210.93 L 680.4 211.36 L 660.24 211.36 L 660.24 210.93 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g><a href="/attempts/AUTOLOOP_002/ABS_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_R1024/"><g class="rs-h rs-line"><title>#30 중앙값 맞춤 · 1,024번 학습
 평균 오차 2.060석
 회차: 학습 목표 바꾸기
 1정류장 1.105 · 2~3정류장 1.596 · 4~7정류장 2.243 · 8~15정류장 2.671
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 278.55  L 252.64 243.51  L 418.4 197.31  L 584.17 166.78  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #46536a; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 278.55  L 252.64 243.51  L 418.4 197.31  L 584.17 166.78  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_R2048/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_R2048/"><g class="rs-h rs-line"><title>#31 중앙값 맞춤 · 2,048번 학습
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 278.55  L 252.64 243.51  L 418.4 197.31  L 584.17 166.78  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #56637a; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 278.55  L 252.64 243.51  L 418.4 197.31  L 584.17 166.78  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_R2048/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_R2048/"><g class="rs-h rs-line"><title>#31 중앙값 맞춤 · 2,048번 학습
 평균 오차 2.033석
 회차: 학습 목표 바꾸기
 1정류장 1.104 · 2~3정류장 1.578 · 4~7정류장 2.210 · 8~15정류장 2.629
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 278.59  L 252.64 244.78  L 418.4 199.7  L 584.17 169.8  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #3f4c63; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 278.59  L 252.64 244.78  L 418.4 199.7  L 584.17 169.8  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_E03_R1024/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_E03_R1024/"><g class="rs-h rs-line"><title>#32 중앙값 맞춤 · 보폭 0.3
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 278.59  L 252.64 244.78  L 418.4 199.7  L 584.17 169.8  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #505d74; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 278.59  L 252.64 244.78  L 418.4 199.7  L 584.17 169.8  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_E03_R1024/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_E03_R1024/"><g class="rs-h rs-line"><title>#32 중앙값 맞춤 · 보폭 0.3
 평균 오차 2.063석
 회차: 학습 목표 바꾸기
 1정류장 1.160 · 2~3정류장 1.612 · 4~7정류장 2.234 · 8~15정류장 2.650
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 274.59  L 252.64 242.34  L 418.4 197.97  L 584.17 168.31  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #39465c; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 274.59  L 252.64 242.34  L 418.4 197.97  L 584.17 168.31  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/Q50_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/Q50_D8_R1024/"><g class="rs-h rs-line"><title>#33 중앙값 맞춤(분위 방식) · 1,024번 학습
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 274.59  L 252.64 242.34  L 418.4 197.97  L 584.17 168.31  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #4a576e; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 274.59  L 252.64 242.34  L 418.4 197.97  L 584.17 168.31  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/Q50_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/Q50_D8_R1024/"><g class="rs-h rs-line"><title>#33 중앙값 맞춤(분위 방식) · 1,024번 학습
 평균 오차 2.131석
 회차: 학습 목표 바꾸기
 1정류장 1.093 · 2~3정류장 1.644 · 4~7정류장 2.334 · 8~15정류장 2.780
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 279.4  L 252.64 240.05  L 418.4 190.85  L 584.17 159.05  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #344055; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 279.4  L 252.64 240.05  L 418.4 190.85  L 584.17 159.05  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/"><g class="rs-h rs-line"><title>#34 큰 오차 덜 반영(경계 2석) · 폭 제한 10
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 279.4  L 252.64 240.05  L 418.4 190.85  L 584.17 159.05  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #445168; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 279.4  L 252.64 240.05  L 418.4 190.85  L 584.17 159.05  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/"><g class="rs-h rs-line"><title>#34 큰 오차 덜 반영(경계 2석) · 폭 제한 10
 평균 오차 2.043석
 회차: 학습 목표 바꾸기
 1정류장 1.120 · 2~3정류장 1.597 · 4~7정류장 2.222 · 8~15정류장 2.629
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 277.48  L 252.64 243.42  L 418.4 198.85  L 584.17 169.79  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #2f3b4e; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 277.48  L 252.64 243.42  L 418.4 198.85  L 584.17 169.79  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/HUB6_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/HUB6_MDS10_D8_R1024/"><g class="rs-h rs-line"><title>#35 큰 오차 덜 반영(경계 6석) · 폭 제한 10
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 277.48  L 252.64 243.42  L 418.4 198.85  L 584.17 169.79  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #3e4b62; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 277.48  L 252.64 243.42  L 418.4 198.85  L 584.17 169.79  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/HUB6_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/HUB6_MDS10_D8_R1024/"><g class="rs-h rs-line"><title>#35 큰 오차 덜 반영(경계 6석) · 폭 제한 10
 평균 오차 2.060석
 회차: 학습 목표 바꾸기
 1정류장 1.167 · 2~3정류장 1.620 · 4~7정류장 2.229 · 8~15정류장 2.636
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 274.1  L 252.64 241.76  L 418.4 198.35  L 584.17 169.31  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #293647; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 274.1  L 252.64 241.76  L 418.4 198.35  L 584.17 169.31  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/SQ_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/SQ_MDS10_D8_R1024/"><g class="rs-h rs-line"><title>#36 평균 맞춤 · 폭 제한 10
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 274.1  L 252.64 241.76  L 418.4 198.35  L 584.17 169.31  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #39465c; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 274.1  L 252.64 241.76  L 418.4 198.35  L 584.17 169.31  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/SQ_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/SQ_MDS10_D8_R1024/"><g class="rs-h rs-line"><title>#36 평균 맞춤 · 폭 제한 10
 평균 오차 2.058석
 회차: 학습 목표 바꾸기
 1정류장 1.192 · 2~3정류장 1.626 · 4~7정류장 2.220 · 8~15정류장 2.623
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 272.34  L 252.64 241.34  L 418.4 198.95  L 584.17 170.24  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #243041; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 272.34  L 252.64 241.34  L 418.4 198.95  L 584.17 170.24  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/SQ_D8_R2048/" xlink:href="/attempts/AUTOLOOP_002/SQ_D8_R2048/"><g class="rs-h rs-line"><title>#37 평균 맞춤 · 2,048번 학습
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 272.34  L 252.64 241.34  L 418.4 198.95  L 584.17 170.24  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #354257; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 272.34  L 252.64 241.34  L 418.4 198.95  L 584.17 170.24  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/SQ_D8_R2048/" xlink:href="/attempts/AUTOLOOP_002/SQ_D8_R2048/"><g class="rs-h rs-line"><title>#37 평균 맞춤 · 2,048번 학습
 평균 오차 2.065석
 회차: 학습 목표 바꾸기
 1정류장 1.205 · 2~3정류장 1.629 · 4~7정류장 2.226 · 8~15정류장 2.631
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 271.41  L 252.64 241.12  L 418.4 198.54  L 584.17 169.65  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #1f2b3a; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 271.41  L 252.64 241.12  L 418.4 198.54  L 584.17 169.65  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_R1024/"><g class="rs-h rs-line"><title>#30 중앙값 맞춤 · 1,024번 학습
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 271.41  L 252.64 241.12  L 418.4 198.54  L 584.17 169.65  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #303d51; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 86.87 271.41  L 252.64 241.12  L 418.4 198.54  L 584.17 169.65  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_R1024/"><g class="rs-h rs-line"><title>#30 중앙값 맞춤 · 1,024번 학습
 평균 오차 2.060석
 회차: 학습 목표 바꾸기
 1정류장 1.105 · 2~3정류장 1.596 · 4~7정류장 2.243 · 8~15정류장 2.671
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 210.38  L 687.17 210.38  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #46536a; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 210.38  L 687.17 210.38  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_R2048/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_R2048/"><g class="rs-h rs-line"><title>#31 중앙값 맞춤 · 2,048번 학습
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 210.38  L 687.17 210.38  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #56637a; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 210.38  L 687.17 210.38  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_R2048/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_R2048/"><g class="rs-h rs-line"><title>#31 중앙값 맞춤 · 2,048번 학습
 평균 오차 2.033석
 회차: 학습 목표 바꾸기
 1정류장 1.104 · 2~3정류장 1.578 · 4~7정류장 2.210 · 8~15정류장 2.629
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 212.36  L 687.17 212.36  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #3f4c63; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 212.36  L 687.17 212.36  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_E03_R1024/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_E03_R1024/"><g class="rs-h rs-line"><title>#32 중앙값 맞춤 · 보폭 0.3
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 212.36  L 687.17 212.36  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #505d74; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 212.36  L 687.17 212.36  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_E03_R1024/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_E03_R1024/"><g class="rs-h rs-line"><title>#32 중앙값 맞춤 · 보폭 0.3
 평균 오차 2.063석
 회차: 학습 목표 바꾸기
 1정류장 1.160 · 2~3정류장 1.612 · 4~7정류장 2.234 · 8~15정류장 2.650
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 210.19  L 687.17 210.19  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #39465c; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 210.19  L 687.17 210.19  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/Q50_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/Q50_D8_R1024/"><g class="rs-h rs-line"><title>#33 중앙값 맞춤(분위 방식) · 1,024번 학습
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 210.19  L 687.17 210.19  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #4a576e; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 210.19  L 687.17 210.19  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/Q50_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/Q50_D8_R1024/"><g class="rs-h rs-line"><title>#33 중앙값 맞춤(분위 방식) · 1,024번 학습
 평균 오차 2.131석
 회차: 학습 목표 바꾸기
 1정류장 1.093 · 2~3정류장 1.644 · 4~7정류장 2.334 · 8~15정류장 2.780
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 205.32  L 687.17 205.32  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #344055; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 205.32  L 687.17 205.32  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/"><g class="rs-h rs-line"><title>#34 큰 오차 덜 반영(경계 2석) · 폭 제한 10
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 205.32  L 687.17 205.32  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #445168; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 205.32  L 687.17 205.32  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/"><g class="rs-h rs-line"><title>#34 큰 오차 덜 반영(경계 2석) · 폭 제한 10
 평균 오차 2.043석
 회차: 학습 목표 바꾸기
 1정류장 1.120 · 2~3정류장 1.597 · 4~7정류장 2.222 · 8~15정류장 2.629
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 211.62  L 687.17 211.62  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #2f3b4e; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 211.62  L 687.17 211.62  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/HUB6_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/HUB6_MDS10_D8_R1024/"><g class="rs-h rs-line"><title>#35 큰 오차 덜 반영(경계 6석) · 폭 제한 10
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 211.62  L 687.17 211.62  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #3e4b62; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 211.62  L 687.17 211.62  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/HUB6_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/HUB6_MDS10_D8_R1024/"><g class="rs-h rs-line"><title>#35 큰 오차 덜 반영(경계 6석) · 폭 제한 10
 평균 오차 2.060석
 회차: 학습 목표 바꾸기
 1정류장 1.167 · 2~3정류장 1.620 · 4~7정류장 2.229 · 8~15정류장 2.636
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 210.42  L 687.17 210.42  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #293647; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 210.42  L 687.17 210.42  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/SQ_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/SQ_MDS10_D8_R1024/"><g class="rs-h rs-line"><title>#36 평균 맞춤 · 폭 제한 10
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 210.42  L 687.17 210.42  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #39465c; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 210.42  L 687.17 210.42  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/SQ_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/SQ_MDS10_D8_R1024/"><g class="rs-h rs-line"><title>#36 평균 맞춤 · 폭 제한 10
 평균 오차 2.058석
 회차: 학습 목표 바꾸기
 1정류장 1.192 · 2~3정류장 1.626 · 4~7정류장 2.220 · 8~15정류장 2.623
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 210.54  L 687.17 210.54  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #243041; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 210.54  L 687.17 210.54  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/SQ_D8_R2048/" xlink:href="/attempts/AUTOLOOP_002/SQ_D8_R2048/"><g class="rs-h rs-line"><title>#37 평균 맞춤 · 2,048번 학습
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 210.54  L 687.17 210.54  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #354257; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 210.54  L 687.17 210.54  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/SQ_D8_R2048/" xlink:href="/attempts/AUTOLOOP_002/SQ_D8_R2048/"><g class="rs-h rs-line"><title>#37 평균 맞춤 · 2,048번 학습
 평균 오차 2.065석
 회차: 학습 목표 바꾸기
 1정류장 1.205 · 2~3정류장 1.629 · 4~7정류장 2.226 · 8~15정류장 2.631
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 210.03  L 687.17 210.03  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #1f2b3a; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 210.03  L 687.17 210.03  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_R1024/"><g class="rs-h rs-pt"><title>#30 중앙값 맞춤 · 1,024번 학습
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 210.03  L 687.17 210.03  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #303d51; stroke-linecap: round;stroke-opacity:0" /><path d="M 653.47 210.03  L 687.17 210.03  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-hit" style="fill:none;stroke:#000;stroke-opacity:0;stroke-width:7.20;stroke-linecap:round;stroke-linejoin:round" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_R1024/"><g class="rs-h rs-pt"><title>#30 중앙값 맞춤 · 1,024번 학습
 평균 오차 2.060석
 회차: 학습 목표 바꾸기
 1정류장 1.105 · 2~3정류장 1.596 · 4~7정류장 2.243 · 8~15정류장 2.671
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 278.55  L 252.64 243.51  L 418.4 197.31  L 584.17 166.78  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #46536a; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 278.01 L 96.95 278.57 L 76.79 278.57 L 76.79 278.01 Z M 262.72 243.47 L 262.72 244.14 L 242.56 244.14 L 242.56 243.47 Z M 428.48 196.02 L 428.48 197.64 L 408.32 197.64 L 408.32 196.02 Z M 594.25 166.26 L 594.25 166.8 L 574.09 166.8 L 574.09 166.26 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_R1024/"><g class="rs-h rs-pt"><title>#30 중앙값 맞춤 · 1,024번 학습
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 278.55  L 252.64 243.51  L 418.4 197.31  L 584.17 166.78  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #56637a; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 278.01 L 96.95 278.57 L 76.79 278.57 L 76.79 278.01 Z M 262.72 243.47 L 262.72 243.59 L 242.56 243.59 L 242.56 243.47 Z M 428.48 196.02 L 428.48 197.64 L 408.32 197.64 L 408.32 196.02 Z M 594.25 166.26 L 594.25 166.8 L 574.09 166.8 L 574.09 166.26 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_R1024/"><g class="rs-h rs-pt"><title>#30 중앙값 맞춤 · 1,024번 학습
 평균 오차 2.060석
 회차: 학습 목표 바꾸기
 1정류장 1.105 · 2~3정류장 1.596 · 4~7정류장 2.243 · 8~15정류장 2.671
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 210.38  L 687.17 210.38  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #46536a; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 210.29 L 680.4 210.4 L 660.24 210.4 L 660.24 210.29 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_R2048/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_R2048/"><g class="rs-h rs-pt"><title>#31 중앙값 맞춤 · 2,048번 학습
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 210.38  L 687.17 210.38  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #56637a; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 210.29 L 680.4 210.4 L 660.24 210.4 L 660.24 210.29 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_R2048/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_R2048/"><g class="rs-h rs-pt"><title>#31 중앙값 맞춤 · 2,048번 학습
 평균 오차 2.033석
 회차: 학습 목표 바꾸기
 1정류장 1.104 · 2~3정류장 1.578 · 4~7정류장 2.210 · 8~15정류장 2.629
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 278.59  L 252.64 244.78  L 418.4 199.7  L 584.17 169.8  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #3f4c63; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 278.57 L 96.95 279 L 76.79 279 L 76.79 278.57 Z M 262.72 244.14 L 262.72 254.86 L 242.56 254.86 L 242.56 244.14 Z M 428.48 199.33 L 428.48 209.78 L 408.32 209.78 L 408.32 199.33 Z M 594.25 169.8 L 594.25 170.02 L 574.09 170.02 L 574.09 169.8 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_R2048/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_R2048/"><g class="rs-h rs-pt"><title>#31 중앙값 맞춤 · 2,048번 학습
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 278.59  L 252.64 244.78  L 418.4 199.7  L 584.17 169.8  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #505d74; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 278.57 L 96.95 279 L 76.79 279 L 76.79 278.57 Z M 262.72 244.22 L 262.72 254.86 L 242.56 254.86 L 242.56 244.22 Z M 428.48 199.69 L 428.48 200.11 L 408.32 200.11 L 408.32 199.69 Z M 594.25 169.8 L 594.25 170.02 L 574.09 170.02 L 574.09 169.8 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_R2048/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_R2048/"><g class="rs-h rs-pt"><title>#31 중앙값 맞춤 · 2,048번 학습
 평균 오차 2.033석
 회차: 학습 목표 바꾸기
 1정류장 1.104 · 2~3정류장 1.578 · 4~7정류장 2.210 · 8~15정류장 2.629
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 212.36  L 687.17 212.36  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #3f4c63; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 211.99 L 680.4 222.44 L 660.24 222.44 L 660.24 211.99 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_E03_R1024/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_E03_R1024/"><g class="rs-h rs-pt"><title>#32 중앙값 맞춤 · 보폭 0.3
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 212.36  L 687.17 212.36  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #505d74; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 212.01 L 680.4 212.63 L 660.24 212.63 L 660.24 212.01 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_E03_R1024/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_E03_R1024/"><g class="rs-h rs-pt"><title>#32 중앙값 맞춤 · 보폭 0.3
 평균 오차 2.063석
 회차: 학습 목표 바꾸기
 1정류장 1.160 · 2~3정류장 1.612 · 4~7정류장 2.234 · 8~15정류장 2.650
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 274.59  L 252.64 242.34  L 418.4 197.97  L 584.17 168.31  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #39465c; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 274.34 L 96.95 276.03 L 76.79 276.03 L 76.79 274.34 Z M 262.72 242.05 L 262.72 242.88 L 242.56 242.88 L 242.56 242.05 Z M 428.48 197.64 L 428.48 198.16 L 408.32 198.16 L 408.32 197.64 Z M 594.25 167.56 L 594.25 168.81 L 574.09 168.81 L 574.09 167.56 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_E03_R1024/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_E03_R1024/"><g class="rs-h rs-pt"><title>#32 중앙값 맞춤 · 보폭 0.3
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 274.59  L 252.64 242.34  L 418.4 197.97  L 584.17 168.31  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #4a576e; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 274.56 L 96.95 276.03 L 76.79 276.03 L 76.79 274.56 Z M 262.72 242.05 L 262.72 242.36 L 242.56 242.36 L 242.56 242.05 Z M 428.48 197.64 L 428.48 198.16 L 408.32 198.16 L 408.32 197.64 Z M 594.25 167.56 L 594.25 168.81 L 574.09 168.81 L 574.09 167.56 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/ABS_D8_E03_R1024/" xlink:href="/attempts/AUTOLOOP_002/ABS_D8_E03_R1024/"><g class="rs-h rs-pt"><title>#32 중앙값 맞춤 · 보폭 0.3
 평균 오차 2.063석
 회차: 학습 목표 바꾸기
 1정류장 1.160 · 2~3정류장 1.612 · 4~7정류장 2.234 · 8~15정류장 2.650
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 210.19  L 687.17 210.19  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #39465c; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 210.15 L 680.4 210.29 L 660.24 210.29 L 660.24 210.15 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/Q50_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/Q50_D8_R1024/"><g class="rs-h rs-pt"><title>#33 중앙값 맞춤(분위 방식) · 1,024번 학습
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 210.19  L 687.17 210.19  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #4a576e; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 210.15 L 680.4 210.29 L 660.24 210.29 L 660.24 210.15 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/Q50_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/Q50_D8_R1024/"><g class="rs-h rs-pt"><title>#33 중앙값 맞춤(분위 방식) · 1,024번 학습
 평균 오차 2.131석
 회차: 학습 목표 바꾸기
 1정류장 1.093 · 2~3정류장 1.644 · 4~7정류장 2.334 · 8~15정류장 2.780
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 279.4  L 252.64 240.05  L 418.4 190.85  L 584.17 159.05  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #344055; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 279 L 96.95 289.48 L 76.79 289.48 L 76.79 279 Z M 262.72 239.38 L 262.72 240.59 L 242.56 240.59 L 242.56 239.38 Z M 428.48 189.39 L 428.48 191.03 L 408.32 191.03 L 408.32 189.39 Z M 594.25 157.61 L 594.25 159.34 L 574.09 159.34 L 574.09 157.61 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/Q50_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/Q50_D8_R1024/"><g class="rs-h rs-pt"><title>#33 중앙값 맞춤(분위 방식) · 1,024번 학습
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 279.4  L 252.64 240.05  L 418.4 190.85  L 584.17 159.05  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #445168; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 279 L 96.95 289.48 L 76.79 289.48 L 76.79 279 Z M 262.72 239.38 L 262.72 240.59 L 242.56 240.59 L 242.56 239.38 Z M 428.48 189.39 L 428.48 191.03 L 408.32 191.03 L 408.32 189.39 Z M 594.25 157.61 L 594.25 159.34 L 574.09 159.34 L 574.09 157.61 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/Q50_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/Q50_D8_R1024/"><g class="rs-h rs-pt"><title>#33 중앙값 맞춤(분위 방식) · 1,024번 학습
 평균 오차 2.131석
 회차: 학습 목표 바꾸기
 1정류장 1.093 · 2~3정류장 1.644 · 4~7정류장 2.334 · 8~15정류장 2.780
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 205.32  L 687.17 205.32  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #344055; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 205.09 L 680.4 205.57 L 660.24 205.57 L 660.24 205.09 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/"><g class="rs-h rs-pt"><title>#34 큰 오차 덜 반영(경계 2석) · 폭 제한 10
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 205.32  L 687.17 205.32  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #445168; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 205.09 L 680.4 205.57 L 660.24 205.57 L 660.24 205.09 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/"><g class="rs-h rs-pt"><title>#34 큰 오차 덜 반영(경계 2석) · 폭 제한 10
 평균 오차 2.043석
 회차: 학습 목표 바꾸기
 1정류장 1.120 · 2~3정류장 1.597 · 4~7정류장 2.222 · 8~15정류장 2.629
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 277.48  L 252.64 243.42  L 418.4 198.85  L 584.17 169.79  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #2f3b4e; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 276.03 L 96.95 278.01 L 76.79 278.01 L 76.79 276.03 Z M 262.72 242.88 L 262.72 243.47 L 242.56 243.47 L 242.56 242.88 Z M 428.48 198.7 L 428.48 198.9 L 408.32 198.9 L 408.32 198.7 Z M 594.25 169.72 L 594.25 169.8 L 574.09 169.8 L 574.09 169.72 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/"><g class="rs-h rs-pt"><title>#34 큰 오차 덜 반영(경계 2석) · 폭 제한 10
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 277.48  L 252.64 243.42  L 418.4 198.85  L 584.17 169.79  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #3e4b62; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 276.03 L 96.95 278.01 L 76.79 278.01 L 76.79 276.03 Z M 262.72 242.9 L 262.72 243.47 L 242.56 243.47 L 242.56 242.9 Z M 428.48 198.7 L 428.48 198.9 L 408.32 198.9 L 408.32 198.7 Z M 594.25 169.72 L 594.25 169.8 L 574.09 169.8 L 574.09 169.72 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/"><g class="rs-h rs-pt"><title>#34 큰 오차 덜 반영(경계 2석) · 폭 제한 10
 평균 오차 2.043석
 회차: 학습 목표 바꾸기
 1정류장 1.120 · 2~3정류장 1.597 · 4~7정류장 2.222 · 8~15정류장 2.629
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 211.62  L 687.17 211.62  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #2f3b4e; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 211.08 L 680.4 211.99 L 660.24 211.99 L 660.24 211.08 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/HUB6_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/HUB6_MDS10_D8_R1024/"><g class="rs-h rs-pt"><title>#35 큰 오차 덜 반영(경계 6석) · 폭 제한 10
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 211.62  L 687.17 211.62  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #3e4b62; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 211.36 L 680.4 211.65 L 660.24 211.65 L 660.24 211.36 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/HUB6_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/HUB6_MDS10_D8_R1024/"><g class="rs-h rs-pt"><title>#35 큰 오차 덜 반영(경계 6석) · 폭 제한 10
 평균 오차 2.060석
 회차: 학습 목표 바꾸기
 1정류장 1.167 · 2~3정류장 1.620 · 4~7정류장 2.229 · 8~15정류장 2.636
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 274.1  L 252.64 241.76  L 418.4 198.35  L 584.17 169.31  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #293647; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 273.56 L 96.95 274.34 L 76.79 274.34 L 76.79 273.56 Z M 262.72 241.55 L 262.72 242.05 L 242.56 242.05 L 242.56 241.55 Z M 428.48 198.16 L 428.48 198.42 L 408.32 198.42 L 408.32 198.16 Z M 594.25 168.81 L 594.25 169.44 L 574.09 169.44 L 574.09 168.81 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/HUB6_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/HUB6_MDS10_D8_R1024/"><g class="rs-h rs-pt"><title>#35 큰 오차 덜 반영(경계 6석) · 폭 제한 10
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 274.1  L 252.64 241.76  L 418.4 198.35  L 584.17 169.31  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #39465c; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 273.56 L 96.95 274.31 L 76.79 274.31 L 76.79 273.56 Z M 262.72 241.63 L 262.72 242.05 L 242.56 242.05 L 242.56 241.63 Z M 428.48 198.16 L 428.48 198.42 L 408.32 198.42 L 408.32 198.16 Z M 594.25 168.81 L 594.25 169.44 L 574.09 169.44 L 574.09 168.81 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/HUB6_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/HUB6_MDS10_D8_R1024/"><g class="rs-h rs-pt"><title>#35 큰 오차 덜 반영(경계 6석) · 폭 제한 10
 평균 오차 2.060석
 회차: 학습 목표 바꾸기
 1정류장 1.167 · 2~3정류장 1.620 · 4~7정류장 2.229 · 8~15정류장 2.636
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 210.42  L 687.17 210.42  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #293647; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 210.4 L 680.4 210.48 L 660.24 210.48 L 660.24 210.4 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/SQ_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/SQ_MDS10_D8_R1024/"><g class="rs-h rs-pt"><title>#36 평균 맞춤 · 폭 제한 10
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 210.42  L 687.17 210.42  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #39465c; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 210.4 L 680.4 210.48 L 660.24 210.48 L 660.24 210.4 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/SQ_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/SQ_MDS10_D8_R1024/"><g class="rs-h rs-pt"><title>#36 평균 맞춤 · 폭 제한 10
 평균 오차 2.058석
 회차: 학습 목표 바꾸기
 1정류장 1.192 · 2~3정류장 1.626 · 4~7정류장 2.220 · 8~15정류장 2.623
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 272.34  L 252.64 241.34  L 418.4 198.95  L 584.17 170.24  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #243041; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 272.16 L 96.95 272.68 L 76.79 272.68 L 76.79 272.16 Z M 262.72 241.29 L 262.72 241.55 L 242.56 241.55 L 242.56 241.29 Z M 428.48 198.9 L 428.48 199.33 L 408.32 199.33 L 408.32 198.9 Z M 594.25 170.02 L 594.25 180.32 L 574.09 180.32 L 574.09 170.02 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/SQ_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/SQ_MDS10_D8_R1024/"><g class="rs-h rs-pt"><title>#36 평균 맞춤 · 폭 제한 10
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 272.34  L 252.64 241.34  L 418.4 198.95  L 584.17 170.24  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #354257; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 272.23 L 96.95 272.38 L 76.79 272.38 L 76.79 272.23 Z M 262.72 241.29 L 262.72 241.39 L 242.56 241.39 L 242.56 241.29 Z M 428.48 198.9 L 428.48 199.14 L 408.32 199.14 L 408.32 198.9 Z M 594.25 170.02 L 594.25 170.41 L 574.09 170.41 L 574.09 170.02 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/SQ_MDS10_D8_R1024/" xlink:href="/attempts/AUTOLOOP_002/SQ_MDS10_D8_R1024/"><g class="rs-h rs-pt"><title>#36 평균 맞춤 · 폭 제한 10
 평균 오차 2.058석
 회차: 학습 목표 바꾸기
 1정류장 1.192 · 2~3정류장 1.626 · 4~7정류장 2.220 · 8~15정류장 2.623
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 210.54  L 687.17 210.54  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #243041; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 210.48 L 680.4 211.08 L 660.24 211.08 L 660.24 210.48 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/SQ_D8_R2048/" xlink:href="/attempts/AUTOLOOP_002/SQ_D8_R2048/"><g class="rs-h rs-pt"><title>#37 평균 맞춤 · 2,048번 학습
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 210.54  L 687.17 210.54  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #354257; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 210.48 L 680.4 210.64 L 660.24 210.64 L 660.24 210.48 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/SQ_D8_R2048/" xlink:href="/attempts/AUTOLOOP_002/SQ_D8_R2048/"><g class="rs-h rs-pt"><title>#37 평균 맞춤 · 2,048번 학습
 평균 오차 2.065석
 회차: 학습 목표 바꾸기
 1정류장 1.205 · 2~3정류장 1.629 · 4~7정류장 2.226 · 8~15정류장 2.631
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 271.41  L 252.64 241.12  L 418.4 198.54  L 584.17 169.65  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #1f2b3a; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 271.02 L 96.95 271.7 L 76.79 271.7 L 76.79 271.02 Z M 262.72 240.59 L 262.72 241.18 L 242.56 241.18 L 242.56 240.59 Z M 428.48 198.52 L 428.48 198.7 L 408.32 198.7 L 408.32 198.52 Z M 594.25 169.61 L 594.25 169.72 L 574.09 169.72 L 574.09 169.61 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/SQ_D8_R2048/" xlink:href="/attempts/AUTOLOOP_002/SQ_D8_R2048/"><g class="rs-h rs-pt"><title>#37 평균 맞춤 · 2,048번 학습
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 86.87 271.41  L 252.64 241.12  L 418.4 198.54  L 584.17 169.65  " clip-path="url(#rs-home-bundle-p786315a9f8)" class="rs-vis" style="fill: none; stroke: #303d51; stroke-width: 0.941357; stroke-linecap: round;stroke-opacity:0" /><path d="M 96.95 271.02 L 96.95 271.7 L 76.79 271.7 L 76.79 271.02 Z M 262.72 240.59 L 262.72 241.18 L 242.56 241.18 L 242.56 240.59 Z M 428.48 198.52 L 428.48 198.7 L 408.32 198.7 L 408.32 198.52 Z M 594.25 169.61 L 594.25 169.72 L 574.09 169.72 L 574.09 169.61 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a><a href="/attempts/AUTOLOOP_002/SQ_D8_R2048/" xlink:href="/attempts/AUTOLOOP_002/SQ_D8_R2048/"><g class="rs-h rs-pt"><title>#37 평균 맞춤 · 2,048번 학습
 평균 오차 2.065석
 회차: 학습 목표 바꾸기
 1정류장 1.205 · 2~3정류장 1.629 · 4~7정류장 2.226 · 8~15정류장 2.631
 채택되지 않았습니다
-눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 210.03  L 687.17 210.03  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #1f2b3a; stroke-width: 1.023363; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 208.48 L 680.4 210.07 L 660.24 210.07 L 660.24 208.48 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a></svg>
+눌러서 상세 글을 볼 수 있습니다</title><path d="M 653.47 210.03  L 687.17 210.03  " clip-path="url(#rs-home-bundle-p490fa17b95)" class="rs-vis" style="fill: none; stroke: #303d51; stroke-linecap: round;stroke-opacity:0" /><path d="M 680.4 208.48 L 680.4 210.07 L 660.24 210.07 L 660.24 208.48 Z" class="rs-hit" style="fill:#000;fill-opacity:0;stroke:none" /></g></a></svg>
