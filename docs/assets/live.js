@@ -76,6 +76,10 @@
     };
   }
 
+  function sameSectionOrder(current, fresh) {
+    return current.length === fresh.length && current.every((node, i) => node.id === fresh[i].id);
+  }
+
   // ------------------------------------------------------------------------------------------- page side
   function start(win, doc) {
     const body = doc.body;
@@ -84,6 +88,7 @@
     const served = new Map();
     const toggled = new Set();
     const OPEN_KEY = `rs-open:${win.location.pathname}`;
+    const FOCUS_KEY = `rs-focus:${win.location.pathname}`;
     let digest = body.dataset.digest;
     let lastContact = Date.now();
     let offline = false;
@@ -105,6 +110,9 @@
           if (d && d.tagName === "DETAILS") { d.open = open; toggled.add(id); }
         }
       }
+      const focusedId = win.sessionStorage.getItem(FOCUS_KEY);
+      win.sessionStorage.removeItem(FOCUS_KEY);
+      if (focusedId) doc.getElementById(focusedId)?.focus({ preventScroll: true });
     } catch (_) { /* storage may be unavailable */ }
 
     doc.addEventListener("click", (e) => {
@@ -146,7 +154,10 @@
       const node = doc.importNode(fresh, true);
       keepOpenState(node);
       if (win.siteCharts) await win.siteCharts.prepare(node);
+      const focused = doc.activeElement;
+      const focusId = focused && current.contains(focused) ? focused.id : null;
       current.replaceWith(node);
+      if (focusId) doc.getElementById(focusId)?.focus({ preventScroll: true });
       served.set(node.id, html);
       if (win.siteCharts) win.siteCharts.setup(node);
     }
@@ -204,6 +215,9 @@
         if (d && d.tagName === "DETAILS") open[id] = d.open;
       }
       try { win.sessionStorage.setItem(OPEN_KEY, JSON.stringify(open)); } catch (_) { /* ignore */ }
+      try {
+        if (doc.activeElement?.id) win.sessionStorage.setItem(FOCUS_KEY, doc.activeElement.id);
+      } catch (_) { /* storage may be unavailable */ }
       const url = new win.URL(win.location.href);
       url.searchParams.set("v", nextDigest);
       win.location.replace(url.href);
@@ -214,7 +228,9 @@
       if (changed === "js") { reloadKeepingState(fresh.body.dataset.digest); return false; }
       const freshLive = liveNodes(fresh);
       const freshIds = new Set(freshLive.map((n) => n.id));
-      const same = freshLive.every((n) => doc.getElementById(n.id)) && liveNodes(doc).every((n) => freshIds.has(n.id)) &&
+      const same = sameSectionOrder(liveNodes(doc), freshLive) &&
+        sameSectionOrder(listNodes(doc), listNodes(fresh)) &&
+        freshLive.every((n) => doc.getElementById(n.id)) && liveNodes(doc).every((n) => freshIds.has(n.id)) &&
         listNodes(fresh).every((l) => doc.getElementById(l.id));
       if (!same) { reloadKeepingState(fresh.body.dataset.digest); return false; }
       // Load all visible replacement charts before changing any displayed section.
@@ -287,5 +303,5 @@
     return { poller, check, get digest() { return digest; } };
   }
 
-  return { createPoller, backoff, start, MAX_MS };
+  return { createPoller, backoff, sameSectionOrder, start, MAX_MS };
 });
