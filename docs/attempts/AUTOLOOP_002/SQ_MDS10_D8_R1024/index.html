@@ -10,15 +10,15 @@
 <meta property="og:site_name" content="salmonbus 연구">
 <meta property="og:title" content="평균 맞춤 · 폭 제한 10 · 시도 상세 · salmonbus 연구">
 <meta property="og:url" content="https://research.dongkey.tech/attempts/AUTOLOOP_002/SQ_MDS10_D8_R1024/">
-<meta property="og:image" content="https://research.dongkey.tech/charts/home-progress.png?v=8a3ddcbddcba1352">
+<meta property="og:image" content="https://research.dongkey.tech/charts/home-progress.png?v=6c31b3ad81ad7625">
 <meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/favicon.svg?v=42a4ccc6ef62" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
-<link rel="stylesheet" href="/assets/site.css?v=c8969bcc4732" data-asset="css">
+<link rel="stylesheet" href="/assets/site.css?v=d72ecb7881c8" data-asset="css">
 <noscript><link rel="stylesheet" href="/assets/noscript.css?v=24fe7a57d410"></noscript>
-<script src="/assets/charts.js?v=c6141312e347" defer data-asset="js"></script>
-<script src="/assets/live.js?v=df47452db166" defer data-asset="js"></script>
+<script src="/assets/charts.js?v=dd96aa903a7f" defer data-asset="js"></script>
+<script src="/assets/live.js?v=5da23a36f6a1" defer data-asset="js"></script>
 </head>
-<body data-digest="c14e60c933fc9e52feb05f600f7f528fdef57e7a198975d07ca1121615316275" data-poll="60" data-version-url="/version.json">
+<body data-digest="784645c6ea506164924940f6205456b8c2b7f79c3b23fd442891957a3257f7bc" data-poll="60" data-version-url="/version.json">
 <a class="skip" href="#main">본문으로 건너뛰기</a>
 <header class="topbar">
   <div class="topbar__inner">
@@ -36,8 +36,37 @@
 <aside class="side" id="attempt-list" data-live aria-labelledby="side-title">
   <div class="side__head">
     <h2 class="side__title" id="side-title">발행된 시도</h2>
-    <span class="side__count">8개</span>
+    <span class="side__count">12개</span>
   </div>
+  <section class="side__group">
+    <h3 class="side__round">자동 루프 8회차 · 깊이와 과적합 억제 비교</h3>
+    <ul class="side__items">
+      <li>
+        <a class="side__item" href="/attempts/AUTOLOOP_008/SQ_D10_MDS10_4096/">
+          <span class="light light--red light--sm" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span>
+          <span class="side__name">깊은 기준 모델<span class="side__sub">#61</span></span>
+<span class="side__mae num">2.042</span>        </a>
+      </li>
+      <li>
+        <a class="side__item" href="/attempts/AUTOLOOP_008/SQ_D8_MDS10_2048/">
+          <span class="light light--red light--sm" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span>
+          <span class="side__name">얕은 깊이 대조<span class="side__sub">#62</span></span>
+<span class="side__mae num">2.055</span>        </a>
+      </li>
+      <li>
+        <a class="side__item" href="/attempts/AUTOLOOP_008/SQ_D10_NOCLIP_2048/">
+          <span class="light light--green light--sm" role="img" aria-label="채택" tabindex="0" data-tip="채택"></span>
+          <span class="side__name">이동 제한 제거<span class="side__sub">#63</span></span>
+<span class="side__mae num">2.025</span>        </a>
+      </li>
+      <li>
+        <a class="side__item" href="/attempts/AUTOLOOP_008/SQ_D10_REGULAR_2048/">
+          <span class="light light--red light--sm" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span>
+          <span class="side__name">강한 정규화<span class="side__sub">#64</span></span>
+<span class="side__mae num">2.050</span>        </a>
+      </li>
+    </ul>
+  </section>
   <section class="side__group">
     <h3 class="side__round">자동 루프 2회차 · 학습 목표 바꾸기</h3>
     <ul class="side__items">
@@ -3231,7 +3260,7 @@
     <div><dt>판본</dt><dd>1판</dd></div>
 <div><dt>발행</dt><dd>10월 23일 03:16</dd></div>    <div><dt>작성</dt><dd>10월 23일 02:27</dd></div>
     <div><dt>쓴 쪽</dt><dd><ul class="facts__list"><li>가설, 결과, 판정 이유, 배운 점: 감독 AI가 씀 · 10월 23일 02:27</li><li>설계 때 기대: 설계 AI 계획을 감독 AI가 다듬음 · 원문 10월 22일 02:05</li></ul></dd></div>
-    <div><dt>사실 문서</dt><dd><span class="mono">2a150ace</span> · 판본 4</dd></div>
+    <div><dt>사실 문서</dt><dd><span class="mono">2a150ace</span> · 판본 5</dd></div>
     <div><dt>근거 파일</dt><dd>작업자 지표 <span class="mono">4d40821f</span> · 작업자 진단 <span class="mono">a137c97f</span> · 장부 기록 <span class="mono">957aae7d</span> · 설계 계획 <span class="mono">f7d737d6</span> · 심사 출력 <span class="mono">de052c6e</span></dd></div>
   </dl>
 </section>
@@ -3240,7 +3269,7 @@
 <footer class="footer">
   <div class="footer__inner">
     <p>채택 = 다음 실험의 기준 모델 · 운영 예보 반영과 별개</p>
-    <p class="footer__meta" id="footer-meta" data-live>판본 4 · 10월 23일 12:10 · <a href="/THIRD-PARTY-LICENSES.txt">글꼴 라이선스</a></p>
+    <p class="footer__meta" id="footer-meta" data-live>판본 5 · 10월 23일 12:10 · <a href="/THIRD-PARTY-LICENSES.txt">글꼴 라이선스</a></p>
   </div>
 </footer>
 </body>

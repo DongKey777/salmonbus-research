@@ -33,7 +33,7 @@
     return boxes(figure).find((box) => getComputedStyle(box).display !== "none") || null;
   }
 
-  async function fill(box) {
+  async function fill(box, required = false) {
     const src = box.dataset.src;
     if (!src || box.dataset.loaded === src || box.dataset.loading === src) return;
     box.dataset.loading = src;
@@ -43,8 +43,10 @@
         box.innerHTML = text;
         box.dataset.loaded = src;
       }
-    } catch (_) {
+    } catch (err) {
       // The box keeps its size and stays empty; the next resize or page refresh tries again.
+      // A live replacement must retain the previous page until its visible charts are ready.
+      if (required) throw err;
     } finally {
       if (box.dataset.loading === src) delete box.dataset.loading;
     }
@@ -72,7 +74,7 @@
           box.innerHTML = same.innerHTML;
           box.dataset.loaded = box.dataset.src;
         } else if (kind === shownKind) {
-          jobs.push(fill(box));
+          jobs.push(fill(box, true));
         }
       }
     }

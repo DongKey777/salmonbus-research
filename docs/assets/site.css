@@ -1,5 +1,5 @@
-@font-face { font-family: "RS Noto Sans KR"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/noto-sans-kr-400.woff?v=1f6dd09c371f") format("woff"); }
-@font-face { font-family: "RS Noto Sans KR"; font-style: normal; font-weight: 700; font-display: swap; src: url("/assets/fonts/noto-sans-kr-700.woff?v=80a0fd1e489f") format("woff"); }
+@font-face { font-family: "RS Noto Sans KR"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/noto-sans-kr-400.woff?v=3f5176ea0d84") format("woff"); }
+@font-face { font-family: "RS Noto Sans KR"; font-style: normal; font-weight: 700; font-display: swap; src: url("/assets/fonts/noto-sans-kr-700.woff?v=82d3c0f4e735") format("woff"); }
 @font-face { font-family: "RS Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/inter-400.woff?v=e1352122d61b") format("woff"); }
 @font-face { font-family: "RS Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/inter-500.woff?v=92ee39578543") format("woff"); }
 @font-face { font-family: "RS Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("/assets/fonts/inter-600.woff?v=89e7a7fba89b") format("woff"); }
@@ -267,11 +267,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .index__round { font-size: 16px; font-weight: 700; padding-bottom: 10px; border-bottom: 2px solid var(--ink-700); }
 .index__label { color: var(--accent); font-size: 13px; font-weight: 500; margin-right: 8px; }
 .index__item { display: grid; grid-template-columns: 20px minmax(0, 1fr) auto 90px; gap: 16px; align-items: center; padding: 13px 0; border-bottom: 1px solid var(--ink-200); color: var(--ink-900); }
-.index__item:hover { text-decoration: none; background: var(--surface); }
+a.index__item:hover { text-decoration: none; background: var(--surface); }
 .index__name { font-weight: 500; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
 .index__order { font-family: var(--font-num); font-size: 12.5px; color: var(--ink-500); font-weight: 400; }
 .index__meta { font-size: 13px; color: var(--ink-500); }
 .index__mae { text-align: right; font-weight: 600; }
+.index__status { flex-basis: 100%; font-size: 12.5px; font-weight: 400; color: var(--ink-500); }
+.index__missing { text-align: right; font-size: 12px; color: var(--ink-500); }
 .unit { font-family: var(--font-ko); font-size: 12px; color: var(--ink-500); margin-left: 2px; font-weight: 400; }
 
 /* detail */

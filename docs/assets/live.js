@@ -87,6 +87,7 @@
     let digest = body.dataset.digest;
     let lastContact = Date.now();
     let offline = false;
+    let pending = false;
 
     const liveNodes = (root) => [...root.querySelectorAll("[data-live]")].filter((n) => n.id && !n.parentElement.closest("[data-live-list]"));
     const listNodes = (root) => [...root.querySelectorAll("[data-live-list]")].filter((n) => n.id);
@@ -196,24 +197,29 @@
       });
     }
 
-    function reloadKeepingState() {
+    function reloadKeepingState(nextDigest) {
       const open = {};
       for (const id of toggled) {
         const d = doc.getElementById(id);
         if (d && d.tagName === "DETAILS") open[id] = d.open;
       }
       try { win.sessionStorage.setItem(OPEN_KEY, JSON.stringify(open)); } catch (_) { /* ignore */ }
-      win.location.reload();
+      const url = new win.URL(win.location.href);
+      url.searchParams.set("v", nextDigest);
+      win.location.replace(url.href);
     }
 
     async function apply(fresh) {
       const changed = assetChanged(fresh);
-      if (changed === "js") { reloadKeepingState(); return; }
+      if (changed === "js") { reloadKeepingState(fresh.body.dataset.digest); return false; }
       const freshLive = liveNodes(fresh);
       const freshIds = new Set(freshLive.map((n) => n.id));
       const same = freshLive.every((n) => doc.getElementById(n.id)) && liveNodes(doc).every((n) => freshIds.has(n.id)) &&
         listNodes(fresh).every((l) => doc.getElementById(l.id));
-      if (!same) { reloadKeepingState(); return; }
+      if (!same) { reloadKeepingState(fresh.body.dataset.digest); return false; }
+      // Load all visible replacement charts before changing any displayed section.
+      // A failed chart fetch leaves the complete previous snapshot on screen for retry.
+      if (win.siteCharts) await win.siteCharts.prepare(fresh);
       if (changed === "css") await swapStylesheet(fresh);
       const mark = anchor();
       for (const node of freshLive) await swap(doc.getElementById(node.id), node);
@@ -221,6 +227,7 @@
       restore(mark);
       body.dataset.digest = fresh.body.dataset.digest;
       win.dispatchEvent(new win.CustomEvent("site:updated", { detail: { digest: body.dataset.digest } }));
+      return true;
     }
 
     function minutesAgo() {
@@ -231,10 +238,10 @@
       const status = doc.getElementById("live-status");
       const text = status && status.querySelector(".live__text");
       if (!text) return;
-      status.classList.toggle("is-offline", offline);
-      if (offline) {
+      status.classList.toggle("is-offline", offline || pending);
+      if (offline || pending) {
         if (!text.dataset.served) text.dataset.served = text.textContent;
-        text.textContent = `연결 끊김 · ${minutesAgo()}분 전 확인`;
+        text.textContent = pending && !offline ? "새 결과 반영 중 · 현재 화면 유지" : `연결 끊김 · ${minutesAgo()}분 전 확인`;
       } else if (text.dataset.served) {
         text.textContent = text.dataset.served;
         delete text.dataset.served;
@@ -242,27 +249,32 @@
     }
 
     async function check() {
-      let v;
       try {
         const res = await win.fetch(`${versionUrl}?t=${Date.now()}`, { cache: "no-store", headers: { Accept: "application/json" } });
         if (!res.ok) throw new Error(String(res.status));
-        v = await res.json();
+        const v = await res.json();
+        if (!v || !v.digest) throw new Error("VERSION_MISSING");
+        if (v.digest === digest) {
+          lastContact = Date.now();
+          offline = false; pending = false; showStatus();
+          return "same";
+        }
+        pending = true; offline = false; showStatus();
+        const page = await win.fetch(`${win.location.pathname}?v=${v.digest}`, { cache: "no-store", headers: { Accept: "text/html" } });
+        if (page.status === 404) return "gone";
+        if (!page.ok) throw new Error(String(page.status));
+        const fresh = new win.DOMParser().parseFromString(await page.text(), "text/html");
+        if (fresh.body.dataset.digest !== v.digest) return "stale";
+        if (!await apply(fresh)) return "reloading";
+        digest = v.digest;
+        lastContact = Date.now();
+        offline = false; pending = false; showStatus();
+        return "changed";
       } catch (err) {
         offline = true;
         showStatus();
         throw err;
       }
-      lastContact = Date.now();
-      if (offline) { offline = false; showStatus(); }
-      if (!v || !v.digest || v.digest === digest) return "same";
-      const res = await win.fetch(`${win.location.pathname}?v=${v.digest}`, { cache: "no-store", headers: { Accept: "text/html" } });
-      if (res.status === 404) { digest = v.digest; return "gone"; }
-      if (!res.ok) throw new Error(String(res.status));
-      const fresh = new win.DOMParser().parseFromString(await res.text(), "text/html");
-      if (fresh.body.dataset.digest !== v.digest) return "stale";
-      await apply(fresh);
-      digest = v.digest;
-      return "changed";
     }
 
     const poller = createPoller({
@@ -270,7 +282,7 @@
       setTimeout: (fn, ms) => win.setTimeout(fn, ms), clearTimeout: (t) => win.clearTimeout(t),
     });
     doc.addEventListener("visibilitychange", () => poller.visibility());
-    win.setInterval(() => { if (offline) showStatus(); }, 30000);
+    win.setInterval(() => { if (offline || pending) showStatus(); }, 30000);
     poller.start();
     return { poller, check, get digest() { return digest; } };
   }
