@@ -3,22 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>평균 맞춤 · 2,048번 학습 · 시도 상세 · salmonbus 연구</title>
+<title>제곱오차 최소화 · 2,048번 학습 · 시도 상세 · salmonbus 연구</title>
 <meta name="description" content="버스 남는 좌석 예보 모델의 자동 실험 현황">
 <link rel="canonical" href="https://research.dongkey.tech/attempts/AUTOLOOP_002/SQ_D8_R2048/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="salmonbus 연구">
-<meta property="og:title" content="평균 맞춤 · 2,048번 학습 · 시도 상세 · salmonbus 연구">
+<meta property="og:title" content="제곱오차 최소화 · 2,048번 학습 · 시도 상세 · salmonbus 연구">
 <meta property="og:url" content="https://research.dongkey.tech/attempts/AUTOLOOP_002/SQ_D8_R2048/">
-<meta property="og:image" content="https://research.dongkey.tech/charts/home-progress.png?v=6c31b3ad81ad7625">
+<meta property="og:image" content="https://research.dongkey.tech/charts/home-progress.png?v=d7979b39fa91e1ae">
 <meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/favicon.svg?v=42a4ccc6ef62" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
-<link rel="stylesheet" href="/assets/site.css?v=d72ecb7881c8" data-asset="css">
+<link rel="stylesheet" href="/assets/site.css?v=613b93a488bd" data-asset="css">
 <noscript><link rel="stylesheet" href="/assets/noscript.css?v=24fe7a57d410"></noscript>
 <script src="/assets/charts.js?v=dd96aa903a7f" defer data-asset="js"></script>
 <script src="/assets/live.js?v=5da23a36f6a1" defer data-asset="js"></script>
 </head>
-<body data-digest="784645c6ea506164924940f6205456b8c2b7f79c3b23fd442891957a3257f7bc" data-poll="60" data-version-url="/version.json">
+<body data-digest="c6c0114f2878fb09e711f0c7d81b08adfac728ec5073ae1a1dd8afa1a6cfeda0" data-poll="60" data-version-url="/version.json">
 <a class="skip" href="#main">본문으로 건너뛰기</a>
 <header class="topbar">
   <div class="topbar__inner">
@@ -56,7 +56,7 @@
       <li>
         <a class="side__item" href="/attempts/AUTOLOOP_008/SQ_D10_NOCLIP_2048/">
           <span class="light light--green light--sm" role="img" aria-label="채택" tabindex="0" data-tip="채택"></span>
-          <span class="side__name">이동 제한 제거<span class="side__sub">#63</span></span>
+          <span class="side__name">리프 출력 제한 해제<span class="side__sub">#63</span></span>
 <span class="side__mae num">2.025</span>        </a>
       </li>
       <li>
@@ -73,49 +73,49 @@
       <li>
         <a class="side__item" href="/attempts/AUTOLOOP_002/ABS_D8_R1024/">
           <span class="light light--red light--sm" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span>
-          <span class="side__name">중앙값 맞춤 · 1,024번 학습<span class="side__sub">#30</span></span>
+          <span class="side__name">절대오차 최소화 · 1,024번 학습<span class="side__sub">#30</span></span>
 <span class="side__mae num">2.060</span>        </a>
       </li>
       <li>
         <a class="side__item" href="/attempts/AUTOLOOP_002/ABS_D8_R2048/">
           <span class="light light--red light--sm" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span>
-          <span class="side__name">중앙값 맞춤 · 2,048번 학습<span class="side__sub">#31</span></span>
+          <span class="side__name">절대오차 최소화 · 2,048번 학습<span class="side__sub">#31</span></span>
 <span class="side__mae num">2.033</span>        </a>
       </li>
       <li>
         <a class="side__item" href="/attempts/AUTOLOOP_002/ABS_D8_E03_R1024/">
           <span class="light light--red light--sm" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span>
-          <span class="side__name">중앙값 맞춤 · 보폭 0.3<span class="side__sub">#32</span></span>
+          <span class="side__name">절대오차 최소화 · 학습률 0.3<span class="side__sub">#32</span></span>
 <span class="side__mae num">2.063</span>        </a>
       </li>
       <li>
         <a class="side__item" href="/attempts/AUTOLOOP_002/Q50_D8_R1024/">
           <span class="light light--red light--sm" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span>
-          <span class="side__name">중앙값 맞춤(분위 방식) · 1,024번 학습<span class="side__sub">#33</span></span>
+          <span class="side__name">중앙값 회귀 · 1,024번 학습<span class="side__sub">#33</span></span>
 <span class="side__mae num">2.131</span>        </a>
       </li>
       <li>
         <a class="side__item" href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/">
           <span class="light light--red light--sm" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span>
-          <span class="side__name">큰 오차 덜 반영(경계 2석) · 폭 제한 10<span class="side__sub">#34</span></span>
+          <span class="side__name">유사 후버 손실(계수 2) · 리프 출력 제한 10<span class="side__sub">#34</span></span>
 <span class="side__mae num">2.043</span>        </a>
       </li>
       <li>
         <a class="side__item" href="/attempts/AUTOLOOP_002/HUB6_MDS10_D8_R1024/">
           <span class="light light--red light--sm" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span>
-          <span class="side__name">큰 오차 덜 반영(경계 6석) · 폭 제한 10<span class="side__sub">#35</span></span>
+          <span class="side__name">유사 후버 손실(계수 6) · 리프 출력 제한 10<span class="side__sub">#35</span></span>
 <span class="side__mae num">2.060</span>        </a>
       </li>
       <li>
         <a class="side__item" href="/attempts/AUTOLOOP_002/SQ_MDS10_D8_R1024/">
           <span class="light light--red light--sm" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span>
-          <span class="side__name">평균 맞춤 · 폭 제한 10<span class="side__sub">#36</span></span>
+          <span class="side__name">제곱오차 최소화 · 리프 출력 제한 10<span class="side__sub">#36</span></span>
 <span class="side__mae num">2.058</span>        </a>
       </li>
       <li>
         <a class="side__item is-current" href="/attempts/AUTOLOOP_002/SQ_D8_R2048/" aria-current="page">
           <span class="light light--red light--sm" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span>
-          <span class="side__name">평균 맞춤 · 2,048번 학습<span class="side__sub">#37</span></span>
+          <span class="side__name">제곱오차 최소화 · 2,048번 학습<span class="side__sub">#37</span></span>
 <span class="side__mae num">2.065</span>        </a>
       </li>
     </ul>
@@ -134,7 +134,7 @@
     <span>자동 루프 2회차 · 학습 목표 바꾸기</span><span class="crumbs__sep" aria-hidden="true">›</span>
     <span>#37</span>
   </nav>
-  <h1 class="detail__title" id="detail-title">평균 맞춤 · 2,048번 학습</h1>
+  <h1 class="detail__title" id="detail-title">제곱오차 최소화 · 2,048번 학습</h1>
   <p class="detail__meta"><span>10월 22일 02:31 평가</span><span class="tag tag--scope">판정용 4일 기준</span></p>
   <div class="detail__status">
     <span class="detail__verdict"><span class="light light--red" role="img" aria-label="채택 안 됨" tabindex="0" data-tip="채택 안 됨"></span><strong>채택 안 됨</strong></span>
@@ -143,11 +143,11 @@
       data-tip="설계 끝남 · 검토 끝남 · 학습 끝남 · 채점 끝남 · 심사 끝남"><span class="step step--done" title="설계 끝남"></span><span class="step step--done" title="검토 끝남"></span><span class="step step--done" title="학습 끝남"></span><span class="step step--done" title="채점 끝남"></span><span class="step step--done" title="심사 끝남"></span></span><span class="detail__stage-text">모든 단계 끝남</span></span>
   </div>
   <ul class="chips" aria-label="설정">
-    <li><button type="button" class="chip" aria-describedby="chip-0"><span class="chip__label">목표</span> <span class="chip__value">평균 맞춤</span></button><span class="chip__tip" role="tooltip" id="chip-0"><strong>목표</strong>모델이 무엇을 맞추도록 학습하는지입니다. 평균 맞춤은 평균을, 중앙값 맞춤은 중앙값을 맞춥니다.</span></li>
+    <li><button type="button" class="chip" aria-describedby="chip-0"><span class="chip__label">목표</span> <span class="chip__value">제곱오차 최소화</span></button><span class="chip__tip" role="tooltip" id="chip-0"><strong>목표</strong>학습 중 줄이려는 오차의 계산 방식입니다. 제곱오차는 큰 오차에 더 큰 비중을 주고, 절대오차는 오차 크기를 그대로 반영합니다.</span></li>
     <li><button type="button" class="chip" aria-describedby="chip-1"><span class="chip__label">입력</span> <span class="chip__value">특징 32개</span></button><span class="chip__tip" role="tooltip" id="chip-1"><strong>입력</strong>모델이 보는 입력 특징의 수입니다.</span></li>
-    <li><button type="button" class="chip" aria-describedby="chip-2"><span class="chip__label">학습</span> <span class="chip__value">2,048번</span></button><span class="chip__tip" role="tooltip" id="chip-2"><strong>학습</strong>나무를 몇 번 더해 가며 학습했는지입니다.</span></li>
-    <li><button type="button" class="chip" aria-describedby="chip-3"><span class="chip__label">깊이</span> <span class="chip__value">8</span></button><span class="chip__tip" role="tooltip" id="chip-3"><strong>깊이</strong>나무 하나가 질문을 몇 단계까지 나누는지입니다.</span></li>
-    <li><button type="button" class="chip" aria-describedby="chip-4"><span class="chip__label">보폭</span> <span class="chip__value">0.1</span></button><span class="chip__tip" role="tooltip" id="chip-4"><strong>보폭</strong>나무를 하나 더할 때 예보를 얼마나 크게 고치는지입니다. 작을수록 천천히 배웁니다.</span></li>
+    <li><button type="button" class="chip" aria-describedby="chip-2"><span class="chip__label">학습</span> <span class="chip__value">2,048번</span></button><span class="chip__tip" role="tooltip" id="chip-2"><strong>학습</strong>결정트리를 몇 번 더해 가며 학습했는지입니다.</span></li>
+    <li><button type="button" class="chip" aria-describedby="chip-3"><span class="chip__label">트리 깊이</span> <span class="chip__value">8</span></button><span class="chip__tip" role="tooltip" id="chip-3"><strong>트리 깊이</strong>결정트리 하나에서 조건을 몇 단계까지 나눌 수 있는지 정합니다.</span></li>
+    <li><button type="button" class="chip" aria-describedby="chip-4"><span class="chip__label">학습률</span> <span class="chip__value">0.1</span></button><span class="chip__tip" role="tooltip" id="chip-4"><strong>학습률</strong>새 트리의 예측을 기존 예측에 얼마나 반영할지 정합니다.</span></li>
   </ul>
   <div class="keynums">
     <div class="keynum">
@@ -157,7 +157,7 @@
     <div class="keynum">
       <p class="keynum__label">비교한 기준 모델</p>
       <p class="keynum__value keynum__value--champ">2.064<span class="keynum__unit">석</span></p>
-      <p class="keynum__sub">특징 32개 · 깊이 8 · 1,024번 학습</p>
+      <p class="keynum__sub">특징 32개 · 트리 깊이 8 · 1,024번 학습</p>
     </div>
     <div class="keynum">
       <p class="keynum__label">기준 모델과 차이</p>
@@ -170,7 +170,7 @@
 <section class="dsec" id="sec-hypothesis" data-live aria-labelledby="h-hypothesis">
   <h2 class="dsec__title" id="h-hypothesis">가설</h2>
   <div class="authored" data-authored>
-<p class="authored__by"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 11.5 10.5 4l1.5 1.5L4.5 13H3v-1.5Zm8.4-8.4 1-1a1 1 0 0 1 1.4 0l.1.1a1 1 0 0 1 0 1.4l-1 1-1.5-1.5Z"/></svg>감독 AI가 씀</p>  <p class="authored__text">기준 모델은 남은 좌석의 평균을 맞추도록 학습합니다. 판정은 평균 오차로 하므로, 중앙값을 맞추면 오차가 줄고 만석 버스도 더 잘 맞힐 것이라고 봤습니다. 이 시도는 기준 모델을 그대로 두고 학습만 2,048번으로 늘린 대조 후보입니다. 중앙값 맞춤 후보의 개선이 학습 횟수 덕인지 가리려고 넣었습니다.</p>
+<p class="authored__by"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 11.5 10.5 4l1.5 1.5L4.5 13H3v-1.5Zm8.4-8.4 1-1a1 1 0 0 1 1.4 0l.1.1a1 1 0 0 1 0 1.4l-1 1-1.5-1.5Z"/></svg>감독 AI가 씀</p>  <p class="authored__text">기준 모델은 제곱오차를 줄여 남은 좌석 수의 평균을 추정하도록 학습합니다. 이번 회차에서는 중앙값을 추정하는 학습 방식으로 바꾸면 평균 오차가 줄고 만석 버스도 더 잘 맞힐 것이라고 봤습니다. 이 후보는 기준 모델의 제곱오차 최소화 방식과 다른 설정을 유지하고 학습 횟수만 2,048번으로 늘렸습니다. 절대오차 최소화 후보의 개선이 학습 횟수를 늘린 효과인지 확인하기 위한 비교 대상입니다.</p>
 </div>
 </section>
 
@@ -198,7 +198,7 @@
   <div class="chart-frame">
     <div class="chart-scroll" data-chart-scroll data-name="지표 변화 그림">
       <figure class="chart chart--detail chart--deltas" id="chart-deltas" data-figure aria-label="지표 변화 그림">
-        <div class="chart__v chart__wide" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/deltas.svg?v=76c00f2190a0c91f" data-loaded="/charts/AUTOLOOP_002/SQ_D8_R2048/deltas.svg?v=76c00f2190a0c91f"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="768" height="330" viewBox="0 0 552.96 237.6" version="1.1" class="rs-chart" role="img" aria-labelledby="rs-deltas-title rs-deltas-desc">
+        <div class="chart__v chart__wide" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/deltas.svg?v=1d1259114e19d6b4" data-loaded="/charts/AUTOLOOP_002/SQ_D8_R2048/deltas.svg?v=1d1259114e19d6b4"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="768" height="330" viewBox="0 0 552.96 237.6" version="1.1" class="rs-chart" role="img" aria-labelledby="rs-deltas-title rs-deltas-desc">
  <title id="rs-deltas-title">기준 모델 대비 지표 변화와 95% 구간</title><desc id="rs-deltas-desc">지표 5개 중 좋아진 지표 0개, 나빠진 지표 2개입니다.</desc><style>.rs-chart *{pointer-events:none}.rs-chart .rs-hit{pointer-events:all}.rs-chart .rs-h{cursor:default}.rs-chart a .rs-h{cursor:pointer}.rs-chart .rs-h:hover .rs-vis{stroke-opacity:1!important;stroke-width:2.2!important}.rs-chart .rs-area:hover .rs-hit{fill:#1F2B3A!important;fill-opacity:.05!important}</style><defs>
   <style type="text/css">.rs-chart *{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
@@ -1216,8 +1216,8 @@
   </clipPath>
  </defs>
 </svg></div>
-        <div class="chart__v chart__medium" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/deltas-medium.svg?v=b652f0f725d49166"></div>
-        <div class="chart__v chart__narrow" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/deltas-narrow.svg?v=3ab20b4f402f7a0f"></div>
+        <div class="chart__v chart__medium" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/deltas-medium.svg?v=4a7ca53642c2e751"></div>
+        <div class="chart__v chart__narrow" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/deltas-narrow.svg?v=bed6a047830af997"></div>
       </figure>
     </div>
   </div>
@@ -1242,7 +1242,7 @@
   <div class="chart-frame">
     <div class="chart-scroll" data-chart-scroll data-name="판정 지표 그림">
       <figure class="chart chart--detail chart--metrics" id="chart-metrics" data-figure aria-label="판정 지표 그림">
-        <div class="chart__v chart__wide" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/metrics.svg?v=474402e69c8f2915" data-loaded="/charts/AUTOLOOP_002/SQ_D8_R2048/metrics.svg?v=474402e69c8f2915"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="768" height="240" viewBox="0 0 552.96 172.8" version="1.1" class="rs-chart" role="img" aria-labelledby="rs-metrics-title rs-metrics-desc">
+        <div class="chart__v chart__wide" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/metrics.svg?v=00b48ecf8926ec4f" data-loaded="/charts/AUTOLOOP_002/SQ_D8_R2048/metrics.svg?v=00b48ecf8926ec4f"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="768" height="240" viewBox="0 0 552.96 172.8" version="1.1" class="rs-chart" role="img" aria-labelledby="rs-metrics-title rs-metrics-desc">
  <title id="rs-metrics-title">판정에 쓴 지표: 이번 시도, 기준 모델, 지금 운영 중인 예보</title><desc id="rs-metrics-desc">지표 5개, 그중 나빠진 지표 2개.</desc><style>.rs-chart *{pointer-events:none}.rs-chart .rs-hit{pointer-events:all}.rs-chart .rs-h{cursor:default}.rs-chart a .rs-h{cursor:pointer}.rs-chart .rs-h:hover .rs-vis{stroke-opacity:1!important;stroke-width:2.2!important}.rs-chart .rs-area:hover .rs-hit{fill:#1F2B3A!important;fill-opacity:.05!important}</style><defs>
   <style type="text/css">.rs-chart *{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
@@ -2029,8 +2029,8 @@
   </clipPath>
  </defs>
 </svg></div>
-        <div class="chart__v chart__medium" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/metrics-medium.svg?v=813c15c1f04720e3"></div>
-        <div class="chart__v chart__narrow" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/metrics-narrow.svg?v=6b880148566f20f6"></div>
+        <div class="chart__v chart__medium" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/metrics-medium.svg?v=92fa3f05de62ed70"></div>
+        <div class="chart__v chart__narrow" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/metrics-narrow.svg?v=ba08f9f747548004"></div>
       </figure>
     </div>
   </div>
@@ -2046,7 +2046,7 @@
   <div class="chart-frame">
     <div class="chart-scroll" data-chart-scroll data-name="시각별 그림">
       <figure class="chart chart--detail chart--by-hour" id="chart-by-hour" data-figure aria-label="시각별 그림">
-        <div class="chart__v chart__wide" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/by-hour.svg?v=693d1456ac397246" data-loaded="/charts/AUTOLOOP_002/SQ_D8_R2048/by-hour.svg?v=693d1456ac397246"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="768" height="300" viewBox="0 0 552.96 216" version="1.1" class="rs-chart" role="img" aria-labelledby="rs-by-hour-title rs-by-hour-desc">
+        <div class="chart__v chart__wide" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/by-hour.svg?v=fd67aa9c1105eeab" data-loaded="/charts/AUTOLOOP_002/SQ_D8_R2048/by-hour.svg?v=fd67aa9c1105eeab"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="768" height="300" viewBox="0 0 552.96 216" version="1.1" class="rs-chart" role="img" aria-labelledby="rs-by-hour-title rs-by-hour-desc">
  <title id="rs-by-hour-title">시각별 평균 오차</title><desc id="rs-by-hour-desc">시각 21개 중 이번 시도가 기준 모델보다 덜 틀린 것은 8개입니다.</desc><style>.rs-chart *{pointer-events:none}.rs-chart .rs-hit{pointer-events:all}.rs-chart .rs-h{cursor:default}.rs-chart a .rs-h{cursor:pointer}.rs-chart .rs-h:hover .rs-vis{stroke-opacity:1!important;stroke-width:2.2!important}.rs-chart .rs-area:hover .rs-hit{fill:#1F2B3A!important;fill-opacity:.05!important}</style><defs>
   <style type="text/css">.rs-chart *{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
@@ -2774,8 +2774,8 @@
   </clipPath>
  </defs>
 </svg></div>
-        <div class="chart__v chart__medium" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/by-hour-medium.svg?v=60297b2d5f3953bc"></div>
-        <div class="chart__v chart__narrow" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/by-hour-narrow.svg?v=43725eb0f372e2eb"></div>
+        <div class="chart__v chart__medium" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/by-hour-medium.svg?v=0a5132000532e29c"></div>
+        <div class="chart__v chart__narrow" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/by-hour-narrow.svg?v=50a7b3b67a92c9d4"></div>
       </figure>
     </div>
   </div>
@@ -2791,7 +2791,7 @@
   <div class="chart-frame">
     <div class="chart-scroll" data-chart-scroll data-name="거리별 그림">
       <figure class="chart chart--detail chart--by-horizon" id="chart-by-horizon" data-figure aria-label="거리별 그림">
-        <div class="chart__v chart__wide" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/by-horizon.svg?v=7d0fb0a7ade66177" data-loaded="/charts/AUTOLOOP_002/SQ_D8_R2048/by-horizon.svg?v=7d0fb0a7ade66177"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="768" height="260" viewBox="0 0 552.96 187.2" version="1.1" class="rs-chart" role="img" aria-labelledby="rs-by-horizon-title rs-by-horizon-desc">
+        <div class="chart__v chart__wide" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/by-horizon.svg?v=ab061a10a15ce283" data-loaded="/charts/AUTOLOOP_002/SQ_D8_R2048/by-horizon.svg?v=ab061a10a15ce283"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="768" height="260" viewBox="0 0 552.96 187.2" version="1.1" class="rs-chart" role="img" aria-labelledby="rs-by-horizon-title rs-by-horizon-desc">
  <title id="rs-by-horizon-title">거리 구간별 평균 오차</title><desc id="rs-by-horizon-desc">거리 구간 4개 중 이번 시도가 기준 모델보다 덜 틀린 것은 2개입니다.</desc><style>.rs-chart *{pointer-events:none}.rs-chart .rs-hit{pointer-events:all}.rs-chart .rs-h{cursor:default}.rs-chart a .rs-h{cursor:pointer}.rs-chart .rs-h:hover .rs-vis{stroke-opacity:1!important;stroke-width:2.2!important}.rs-chart .rs-area:hover .rs-hit{fill:#1F2B3A!important;fill-opacity:.05!important}</style><defs>
   <style type="text/css">.rs-chart *{stroke-linejoin: round; stroke-linecap: butt}</style>
  </defs>
@@ -3273,8 +3273,8 @@
   </clipPath>
  </defs>
 </svg></div>
-        <div class="chart__v chart__medium" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/by-horizon-medium.svg?v=17a16f472b18d0c4"></div>
-        <div class="chart__v chart__narrow" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/by-horizon-narrow.svg?v=37996892cfe04a0c"></div>
+        <div class="chart__v chart__medium" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/by-horizon-medium.svg?v=b6c6047a12ef3674"></div>
+        <div class="chart__v chart__narrow" data-src="/charts/AUTOLOOP_002/SQ_D8_R2048/by-horizon-narrow.svg?v=3cddb9faac003d83"></div>
       </figure>
     </div>
   </div>
@@ -3291,24 +3291,24 @@
     </dl>
   </div>
   <div class="authored" data-authored>
-<p class="authored__by"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 11.5 10.5 4l1.5 1.5L4.5 13H3v-1.5Zm8.4-8.4 1-1a1 1 0 0 1 1.4 0l.1.1a1 1 0 0 1 0 1.4l-1 1-1.5-1.5Z"/></svg>감독 AI가 씀</p>  <p class="authored__text">보호 지표인 노선 오차들이 나빠져 채택하지 않았습니다.</p>
+<p class="authored__by"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 11.5 10.5 4l1.5 1.5L4.5 13H3v-1.5Zm8.4-8.4 1-1a1 1 0 0 1 1.4 0l.1.1a1 1 0 0 1 0 1.4l-1 1-1.5-1.5Z"/></svg>감독 AI가 씀</p>  <p class="authored__text">악화되지 않아야 하는 보호 지표인 노선별 평균 오차와 처음 보는 노선의 오차가 나빠져 채택하지 않았습니다.</p>
 </div>
 </section>
 
 <section class="dsec" id="sec-lessons" data-live aria-labelledby="h-lessons">
   <h2 class="dsec__title" id="h-lessons">배운 점</h2>
   <div class="authored" data-authored>
-<p class="authored__by"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 11.5 10.5 4l1.5 1.5L4.5 13H3v-1.5Zm8.4-8.4 1-1a1 1 0 0 1 1.4 0l.1.1a1 1 0 0 1 0 1.4l-1 1-1.5-1.5Z"/></svg>감독 AI가 씀</p>  <ol class="authored__list"><li>학습만 늘리면 나아지지 않았고, 학습에 없던 노선에서는 오히려 나빠졌습니다.</li></ol>
+<p class="authored__by"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 11.5 10.5 4l1.5 1.5L4.5 13H3v-1.5Zm8.4-8.4 1-1a1 1 0 0 1 1.4 0l.1.1a1 1 0 0 1 0 1.4l-1 1-1.5-1.5Z"/></svg>감독 AI가 씀</p>  <ol class="authored__list"><li>학습 횟수만 늘렸을 때는 평균 오차가 개선되지 않았고, 학습에 없던 노선에서는 오히려 오차가 커졌습니다.</li></ol>
 </div>
 </section>
 
 <section class="dsec" id="sec-provenance" data-live aria-labelledby="h-provenance">
   <h2 class="dsec__title" id="h-provenance">작성 정보</h2>
   <dl class="facts">
-    <div><dt>판본</dt><dd>1판</dd></div>
-<div><dt>발행</dt><dd>10월 23일 02:03</dd></div>    <div><dt>작성</dt><dd>10월 22일 23:38</dd></div>
-    <div><dt>쓴 쪽</dt><dd><ul class="facts__list"><li>가설, 결과, 판정 이유, 배운 점: 감독 AI가 씀 · 10월 22일 23:38</li><li>설계 때 기대: 설계 AI 계획을 감독 AI가 다듬음 · 원문 10월 22일 02:05</li></ul></dd></div>
-    <div><dt>사실 문서</dt><dd><span class="mono">b623a03e</span> · 판본 5</dd></div>
+    <div><dt>판본</dt><dd>2판 · <a href="/attempts/AUTOLOOP_002/SQ_D8_R2048/" aria-current="page">2판</a>, <a href="/attempts/AUTOLOOP_002/SQ_D8_R2048/v1/">1판</a></dd></div>
+<div><dt>발행</dt><dd>10월 23일 13:54</dd></div>    <div><dt>작성</dt><dd>10월 23일 13:50</dd></div>
+    <div><dt>쓴 쪽</dt><dd><ul class="facts__list"><li>가설, 결과, 판정 이유, 배운 점: 감독 AI가 씀 · 10월 23일 13:50</li><li>설계 때 기대: 설계 AI 계획을 감독 AI가 다듬음 · 원문 10월 22일 02:05</li></ul></dd></div>
+    <div><dt>사실 문서</dt><dd><span class="mono">382f39b7</span> · 판본 6</dd></div>
     <div><dt>근거 파일</dt><dd>작업자 지표 <span class="mono">4d40821f</span> · 작업자 진단 <span class="mono">a137c97f</span> · 장부 기록 <span class="mono">957aae7d</span> · 설계 계획 <span class="mono">f7d737d6</span> · 심사 출력 <span class="mono">de052c6e</span></dd></div>
   </dl>
 </section>
@@ -3317,7 +3317,7 @@
 <footer class="footer">
   <div class="footer__inner">
     <p>채택 = 다음 실험의 기준 모델 · 운영 예보 반영과 별개</p>
-    <p class="footer__meta" id="footer-meta" data-live>판본 5 · 10월 23일 12:10 · <a href="/THIRD-PARTY-LICENSES.txt">글꼴 라이선스</a></p>
+    <p class="footer__meta" id="footer-meta" data-live>판본 6 · 10월 23일 12:10 · <a href="/THIRD-PARTY-LICENSES.txt">글꼴 라이선스</a></p>
   </div>
 </footer>
 </body>
