@@ -1,0 +1,460 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="768" height="260" viewBox="0 0 552.96 187.2" version="1.1" class="rs-chart" role="img" aria-labelledby="rs-by-horizon-title rs-by-horizon-desc">
+ <title id="rs-by-horizon-title">거리 구간별 평균 오차</title><desc id="rs-by-horizon-desc">거리 구간 4개 중 이번 시도가 기준 모델보다 덜 틀린 것은 4개입니다.</desc><style>.rs-chart *{pointer-events:none}.rs-chart .rs-hit{pointer-events:all}.rs-chart .rs-h{cursor:default}.rs-chart a .rs-h{cursor:pointer}.rs-chart .rs-h:hover .rs-vis{stroke-opacity:1!important;stroke-width:2.2!important}.rs-chart .rs-area:hover .rs-hit{fill:#1F2B3A!important;fill-opacity:.05!important}</style><defs>
+  <style type="text/css">.rs-chart *{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="rs-by-horizon-figure_1">
+  <g id="rs-by-horizon-patch_1">
+   <path d="M 0 187.2  L 552.96 187.2  L 552.96 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="rs-by-horizon-axes_1">
+   <g id="rs-by-horizon-patch_2">
+    <path d="M 46.08 125.28  L 541.44 125.28  L 541.44 21.6  L 46.08 21.6  z " style="fill: #ffffff" />
+   </g>
+   <g id="rs-by-horizon-matplotlib.axis_1">
+    <g id="rs-by-horizon-xtick_1">
+     <g id="rs-by-horizon-line2d_1" />
+    </g>
+    <g id="rs-by-horizon-xtick_2">
+     <g id="rs-by-horizon-line2d_2" />
+    </g>
+    <g id="rs-by-horizon-xtick_3">
+     <g id="rs-by-horizon-line2d_3" />
+    </g>
+    <g id="rs-by-horizon-xtick_4">
+     <g id="rs-by-horizon-line2d_4" />
+    </g>
+   </g>
+   <g id="rs-by-horizon-matplotlib.axis_2">
+    <g id="rs-by-horizon-ytick_1">
+     <g id="rs-by-horizon-line2d_5">
+      <path d="M 46.08 123.15  L 541.44 123.15  " clip-path="url(#rs-by-horizon-p2640955788)" style="fill: none; stroke: #e9edf2; stroke-width: 0.7; stroke-linecap: round" />
+     </g>
+     <g id="rs-by-horizon-line2d_6" />
+     <g id="rs-by-horizon-text_1">
+      
+      <g style="fill: #5b6878" transform="translate(36.899219 127.513178) scale(0.09 -0.09)">
+       <defs>
+        <path id="rs-by-horizon-Inter-Regular-50f" d="M 2118 4655  L 2118 0  L 1555 0  L 1555 4064  L 1527 4064  L 391 3309  L 391 3882  L 1555 4655  L 2118 4655  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-horizon-Inter-Regular-50f" />
+      </g>
+     </g>
+    </g>
+    <g id="rs-by-horizon-ytick_2">
+     <g id="rs-by-horizon-line2d_7">
+      <path d="M 46.08 90.98  L 541.44 90.98  " clip-path="url(#rs-by-horizon-p2640955788)" style="fill: none; stroke: #e9edf2; stroke-width: 0.7; stroke-linecap: round" />
+     </g>
+     <g id="rs-by-horizon-line2d_8" />
+     <g id="rs-by-horizon-text_2">
+      
+      <g style="fill: #5b6878" transform="translate(35.633594 95.343106) scale(0.09 -0.09)">
+       <defs>
+        <path id="rs-by-horizon-Inter-Regular-510" d="M 482 0  L 482 409  L 2018 2091  Q 2289 2386 2464 2605  Q 2639 2825 2724 3019  Q 2809 3214 2809 3427  Q 2809 3673 2692 3852  Q 2575 4032 2372 4129  Q 2170 4227 1918 4227  Q 1650 4227 1451 4117  Q 1252 4007 1144 3809  Q 1036 3611 1036 3345  L 500 3345  Q 500 3755 688 4064  Q 877 4373 1203 4545  Q 1530 4718 1936 4718  Q 2345 4718 2661 4545  Q 2977 4373 3156 4079  Q 3336 3786 3336 3427  Q 3336 3170 3244 2926  Q 3152 2682 2926 2383  Q 2700 2084 2300 1655  L 1255 536  L 1255 500  L 3418 500  L 3418 0  L 482 0  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-horizon-Inter-Regular-510" />
+      </g>
+     </g>
+    </g>
+    <g id="rs-by-horizon-ytick_3">
+     <g id="rs-by-horizon-line2d_9">
+      <path d="M 46.08 58.81  L 541.44 58.81  " clip-path="url(#rs-by-horizon-p2640955788)" style="fill: none; stroke: #e9edf2; stroke-width: 0.7; stroke-linecap: round" />
+     </g>
+     <g id="rs-by-horizon-line2d_10" />
+     <g id="rs-by-horizon-text_3">
+      
+      <g style="fill: #5b6878" transform="translate(35.352344 63.173035) scale(0.09 -0.09)">
+       <defs>
+        <path id="rs-by-horizon-Inter-Regular-512" d="M 2055 -64  Q 1605 -64 1253 90  Q 902 245 696 521  Q 491 798 473 1164  L 1045 1164  Q 1064 939 1200 776  Q 1336 614 1556 525  Q 1777 436 2045 436  Q 2345 436 2577 540  Q 2809 645 2941 831  Q 3073 1018 3073 1264  Q 3073 1520 2945 1717  Q 2818 1914 2572 2025  Q 2327 2136 1973 2136  L 1600 2136  L 1600 2636  L 1973 2636  Q 2250 2636 2460 2736  Q 2670 2836 2789 3018  Q 2909 3200 2909 3445  Q 2909 3682 2804 3857  Q 2700 4032 2510 4129  Q 2320 4227 2064 4227  Q 1823 4227 1610 4139  Q 1398 4052 1264 3887  Q 1130 3723 1118 3491  L 573 3491  Q 586 3857 793 4133  Q 1000 4409 1335 4563  Q 1670 4718 2073 4718  Q 2505 4718 2814 4544  Q 3123 4370 3289 4086  Q 3455 3802 3455 3473  Q 3455 3080 3249 2802  Q 3043 2525 2691 2418  L 2691 2382  Q 3132 2309 3379 2008  Q 3627 1707 3627 1264  Q 3627 884 3421 583  Q 3216 282 2861 109  Q 2507 -64 2055 -64  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-horizon-Inter-Regular-512" />
+      </g>
+     </g>
+    </g>
+    <g id="rs-by-horizon-ytick_4">
+     <g id="rs-by-horizon-line2d_11">
+      <path d="M 46.08 26.64  L 541.44 26.64  " clip-path="url(#rs-by-horizon-p2640955788)" style="fill: none; stroke: #e9edf2; stroke-width: 0.7; stroke-linecap: round" />
+     </g>
+     <g id="rs-by-horizon-line2d_12" />
+     <g id="rs-by-horizon-text_4">
+      
+      <g style="fill: #5b6878" transform="translate(35.301719 31.002963) scale(0.09 -0.09)">
+       <defs>
+        <path id="rs-by-horizon-Inter-Regular-513" d="M 373 955  L 373 1418  L 2418 4655  L 2755 4655  L 2755 3936  L 2527 3936  L 982 1491  L 982 1455  L 3736 1455  L 3736 955  L 373 955  z M 2564 0  L 2564 1095  L 2564 1311  L 2564 4655  L 3100 4655  L 3100 0  L 2564 0  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-horizon-Inter-Regular-513" />
+      </g>
+     </g>
+    </g>
+    <g id="rs-by-horizon-text_5">
+     
+     <g style="fill: #5b6878" transform="translate(11.196562 98.19) rotate(-90) scale(0.09 -0.09)">
+      <defs>
+       <path id="rs-by-horizon-NotoSansKR-Regular-5015" d="M 3597 4256  L 4838 4256  L 4838 3827  L 3597 3827  L 3597 4256  z M 3597 3219  L 4838 3219  L 4838 2784  L 3597 2784  L 3597 3219  z M 493 4858  L 3539 4858  L 3539 4422  L 493 4422  L 493 4858  z M 397 2061  L 333 2509  Q 813 2509 1392 2518  Q 1971 2528 2572 2560  Q 3174 2592 3718 2656  L 3744 2259  Q 3194 2170 2595 2128  Q 1997 2086 1430 2073  Q 864 2061 397 2061  z M 1062 4512  L 1581 4512  L 1581 2368  L 1062 2368  L 1062 4512  z M 2451 4512  L 2963 4512  L 2963 2368  L 2451 2368  L 2451 4512  z M 4550 5293  L 5082 5293  L 5082 1722  L 4550 1722  L 4550 5293  z M 3174 1600  Q 4077 1600 4589 1331  Q 5101 1062 5101 557  Q 5101 64 4589 -211  Q 4077 -486 3174 -486  Q 2278 -486 1763 -211  Q 1248 64 1248 557  Q 1248 1062 1763 1331  Q 2278 1600 3174 1600  z M 3174 1184  Q 2739 1184 2422 1110  Q 2106 1037 1939 896  Q 1773 755 1773 557  Q 1773 262 2144 96  Q 2515 -70 3174 -70  Q 3616 -70 3929 3  Q 4243 77 4409 217  Q 4576 358 4576 557  Q 4576 755 4409 896  Q 4243 1037 3929 1110  Q 3616 1184 3174 1184  z " transform="scale(0.015625)" />
+       <path id="rs-by-horizon-NotoSansKR-Regular-2a2c" d="M 979 4979  L 4666 4979  L 4666 4550  L 979 4550  L 979 4979  z M 320 2810  L 5568 2810  L 5568 2374  L 320 2374  L 320 2810  z M 2061 2534  L 2579 2534  L 2579 979  L 2061 979  L 2061 2534  z M 4365 4979  L 4890 4979  L 4890 4538  Q 4890 4160 4870 3693  Q 4851 3226 4717 2611  L 4198 2675  Q 4326 3277 4345 3721  Q 4365 4166 4365 4538  L 4365 4979  z M 954 64  L 5043 64  L 5043 -371  L 954 -371  L 954 64  z M 954 1446  L 1485 1446  L 1485 -38  L 954 -38  L 954 1446  z M 3597 2534  L 4115 2534  L 4115 979  L 3597 979  L 3597 2534  z " transform="scale(0.015625)" />
+       <path id="rs-by-horizon-NotoSansKR-Regular-1" transform="scale(0.015625)" />
+       <path id="rs-by-horizon-NotoSansKR-Regular-4270" d="M 2669 2022  L 3194 2022  L 3194 582  L 2669 582  L 2669 2022  z M 2931 4915  Q 3546 4915 4019 4726  Q 4493 4538 4765 4198  Q 5037 3859 5037 3398  Q 5037 2938 4765 2595  Q 4493 2253 4019 2067  Q 3546 1882 2931 1882  Q 2323 1882 1846 2067  Q 1370 2253 1101 2595  Q 832 2938 832 3398  Q 832 3859 1101 4198  Q 1370 4538 1846 4726  Q 2323 4915 2931 4915  z M 2931 4486  Q 2470 4486 2112 4352  Q 1754 4218 1549 3971  Q 1344 3725 1344 3398  Q 1344 3072 1549 2822  Q 1754 2573 2112 2438  Q 2470 2304 2931 2304  Q 3392 2304 3750 2438  Q 4109 2573 4317 2822  Q 4525 3072 4525 3398  Q 4525 3725 4317 3971  Q 4109 4218 3750 4352  Q 3392 4486 2931 4486  z M 320 685  L 5568 685  L 5568 243  L 320 243  L 320 685  z " transform="scale(0.015625)" />
+       <path id="rs-by-horizon-NotoSansKR-Regular-4874" d="M 1728 3917  L 2150 3917  L 2150 3418  Q 2150 2963 2032 2531  Q 1914 2099 1699 1728  Q 1485 1357 1197 1072  Q 909 787 563 621  L 262 1030  Q 582 1184 851 1433  Q 1120 1683 1315 2003  Q 1510 2323 1619 2684  Q 1728 3046 1728 3418  L 1728 3917  z M 1830 3917  L 2246 3917  L 2246 3418  Q 2246 3072 2352 2729  Q 2458 2387 2643 2083  Q 2829 1779 3088 1532  Q 3347 1286 3661 1133  L 3360 730  Q 3021 896 2742 1174  Q 2464 1453 2259 1808  Q 2054 2163 1942 2576  Q 1830 2989 1830 3418  L 1830 3917  z M 422 4288  L 3533 4288  L 3533 3859  L 422 3859  L 422 4288  z M 1722 5184  L 2253 5184  L 2253 4051  L 1722 4051  L 1722 5184  z M 4237 5293  L 4768 5293  L 4768 -499  L 4237 -499  L 4237 5293  z M 4646 2918  L 5715 2918  L 5715 2470  L 4646 2470  L 4646 2918  z " transform="scale(0.015625)" />
+       <path id="rs-by-horizon-NotoSansKR-Regular-9" d="M 1530 -1254  Q 1088 -538 838 252  Q 589 1043 589 1990  Q 589 2931 838 3724  Q 1088 4518 1530 5235  L 1888 5069  Q 1478 4384 1276 3593  Q 1075 2803 1075 1990  Q 1075 1171 1276 380  Q 1478 -410 1888 -1094  L 1530 -1254  z " transform="scale(0.015625)" />
+       <path id="rs-by-horizon-NotoSansKR-Regular-3d69" d="M 3290 4083  L 4659 4083  L 4659 3642  L 3290 3642  L 3290 4083  z M 1766 4998  L 2202 4998  L 2202 4390  Q 2202 3840 2003 3363  Q 1805 2886 1449 2531  Q 1094 2176 608 1990  L 326 2419  Q 768 2573 1091 2870  Q 1414 3168 1590 3561  Q 1766 3955 1766 4390  L 1766 4998  z M 1862 4998  L 2291 4998  L 2291 4365  Q 2291 4070 2393 3788  Q 2496 3507 2681 3267  Q 2867 3027 3126 2838  Q 3386 2650 3699 2541  L 3418 2118  Q 2950 2298 2598 2634  Q 2246 2970 2054 3414  Q 1862 3859 1862 4365  L 1862 4998  z M 1216 1549  L 5082 1549  L 5082 -499  L 4550 -499  L 4550 1120  L 1216 1120  L 1216 1549  z M 4550 5293  L 5082 5293  L 5082 1869  L 4550 1869  L 4550 5293  z " transform="scale(0.015625)" />
+       <path id="rs-by-horizon-NotoSansKR-Regular-a" d="M 634 -1254  L 269 -1094  Q 685 -410 889 380  Q 1094 1171 1094 1990  Q 1094 2803 889 3593  Q 685 4384 269 5069  L 634 5235  Q 1082 4518 1328 3724  Q 1574 2931 1574 1990  Q 1574 1043 1328 252  Q 1082 -538 634 -1254  z " transform="scale(0.015625)" />
+      </defs>
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-5015" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-2a2c" transform="translate(92 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-1" transform="translate(184 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-4270" transform="translate(206.40625 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-4874" transform="translate(298.40625 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-9" transform="translate(390.40625 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-3d69" transform="translate(424.203125 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-a" transform="translate(516.203125 0)" />
+     </g>
+    </g>
+   </g>
+   <g id="rs-by-horizon-line2d_13">
+    <path d="M 116.85 106.2  L 234.79 78.51  L 352.73 47.15  L 470.67 28.75  " clip-path="url(#rs-by-horizon-p2640955788)" style="fill: none; stroke-dasharray: 7,4.2; stroke-dashoffset: 0; stroke: #4e5866; stroke-width: 1.4; stroke-linecap: round" />
+   </g>
+   <g id="rs-by-horizon-FillBetweenPolyCollection_1">
+    <defs>
+     <path id="rs-by-horizon-m2f74f687bb" d="M 116.85 -69.23  L 116.85 -69.23  L 234.79 -83.15  L 352.73 -102.25  L 470.67 -115.13  L 470.67 -115.13  L 470.67 -114.6  L 352.73 -101.83  L 234.79 -82.93  L 116.85 -69.07  z " />
+    </defs>
+    <g clip-path="url(#rs-by-horizon-p2640955788)">
+     <use xlink:href="#rs-by-horizon-m2f74f687bb" x="0" y="187.2" style="fill: #0a8f3c; fill-opacity: 0.16" />
+    </g>
+   </g>
+   <g id="rs-by-horizon-FillBetweenPolyCollection_2" />
+   <g id="rs-by-horizon-line2d_14">
+    <path d="M 116.85 117.97  L 234.79 104.05  L 352.73 84.95  L 470.67 72.07  " clip-path="url(#rs-by-horizon-p2640955788)" style="fill: none; stroke: #e0662e; stroke-width: 1.8; stroke-linecap: round" />
+    <defs>
+     <path id="rs-by-horizon-m110f96559b" d="M 0 1.7  C 0.45 1.7 0.88 1.52 1.2 1.2  C 1.52 0.88 1.7 0.45 1.7 0  C 1.7 -0.45 1.52 -0.88 1.2 -1.2  C 0.88 -1.52 0.45 -1.7 0 -1.7  C -0.45 -1.7 -0.88 -1.52 -1.2 -1.2  C -1.52 -0.88 -1.7 -0.45 -1.7 0  C -1.7 0.45 -1.52 0.88 -1.2 1.2  C -0.88 1.52 -0.45 1.7 0 1.7  z " style="stroke: #ffffff; stroke-width: 0.5" />
+    </defs>
+    <g clip-path="url(#rs-by-horizon-p2640955788)">
+     <use xlink:href="#rs-by-horizon-m110f96559b" x="116.85" y="117.97" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-horizon-m110f96559b" x="234.79" y="104.05" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-horizon-m110f96559b" x="352.73" y="84.95" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-horizon-m110f96559b" x="470.67" y="72.07" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+    </g>
+   </g>
+   <g id="rs-by-horizon-line2d_15">
+    <path d="M 116.85 118.13  L 234.79 104.27  L 352.73 85.37  L 470.67 72.6  " clip-path="url(#rs-by-horizon-p2640955788)" style="fill: none; stroke: #2f62d0; stroke-width: 1.8; stroke-linecap: round" />
+    <defs>
+     <path id="rs-by-horizon-mff18a43fd2" d="M 0 1.7  C 0.45 1.7 0.88 1.52 1.2 1.2  C 1.52 0.88 1.7 0.45 1.7 0  C 1.7 -0.45 1.52 -0.88 1.2 -1.2  C 0.88 -1.52 0.45 -1.7 0 -1.7  C -0.45 -1.7 -0.88 -1.52 -1.2 -1.2  C -1.52 -0.88 -1.7 -0.45 -1.7 0  C -1.7 0.45 -1.52 0.88 -1.2 1.2  C -0.88 1.52 -0.45 1.7 0 1.7  z " style="stroke: #ffffff; stroke-width: 0.5" />
+    </defs>
+    <g clip-path="url(#rs-by-horizon-p2640955788)">
+     <use xlink:href="#rs-by-horizon-mff18a43fd2" x="116.85" y="118.13" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-horizon-mff18a43fd2" x="234.79" y="104.27" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-horizon-mff18a43fd2" x="352.73" y="85.37" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-horizon-mff18a43fd2" x="470.67" y="72.6" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+    </g>
+   </g>
+  </g>
+  <g id="rs-by-horizon-axes_2">
+   <g id="rs-by-horizon-patch_3">
+    <path d="M 46.08 154.08  L 541.44 154.08  L 541.44 131.04  L 46.08 131.04  z " style="fill: #ffffff" />
+   </g>
+   <g id="rs-by-horizon-matplotlib.axis_3">
+    <g id="rs-by-horizon-xtick_5">
+     <g id="rs-by-horizon-line2d_16" />
+     <g id="rs-by-horizon-text_6">
+      
+      <g style="fill: #5b6878" transform="translate(101.928214 166) scale(0.09 -0.09)">
+       <defs>
+        <path id="rs-by-horizon-NotoSansKR-Regular-12" d="M 563 0  L 563 486  L 1613 486  L 1613 3987  L 774 3987  L 774 4358  Q 1088 4416 1321 4499  Q 1555 4582 1747 4691  L 2195 4691  L 2195 486  L 3136 486  L 3136 0  L 563 0  z " transform="scale(0.015625)" />
+        <path id="rs-by-horizon-NotoSansKR-Regular-4461" d="M 3411 3789  L 4710 3789  L 4710 3347  L 3411 3347  L 3411 3789  z M 4550 5293  L 5082 5293  L 5082 1843  L 4550 1843  L 4550 5293  z M 3174 1664  Q 3776 1664 4208 1536  Q 4640 1408 4870 1168  Q 5101 928 5101 582  Q 5101 70 4585 -211  Q 4070 -493 3174 -493  Q 2278 -493 1763 -211  Q 1248 70 1248 582  Q 1248 928 1481 1168  Q 1715 1408 2147 1536  Q 2579 1664 3174 1664  z M 3174 1248  Q 2739 1248 2425 1171  Q 2112 1094 1942 947  Q 1773 800 1773 582  Q 1773 378 1942 230  Q 2112 83 2425 3  Q 2739 -77 3174 -77  Q 3616 -77 3926 3  Q 4237 83 4406 230  Q 4576 378 4576 582  Q 4576 800 4406 947  Q 4237 1094 3926 1171  Q 3616 1248 3174 1248  z M 1792 4704  L 2227 4704  L 2227 4237  Q 2227 3706 2025 3242  Q 1824 2778 1459 2429  Q 1094 2080 614 1894  L 339 2317  Q 666 2432 931 2630  Q 1197 2829 1392 3085  Q 1587 3341 1689 3635  Q 1792 3930 1792 4237  L 1792 4704  z M 1894 4704  L 2330 4704  L 2330 4243  Q 2330 3872 2502 3520  Q 2675 3168 2995 2899  Q 3315 2630 3731 2477  L 3462 2054  Q 2989 2227 2637 2556  Q 2285 2886 2089 3321  Q 1894 3757 1894 4243  L 1894 4704  z M 506 4870  L 3597 4870  L 3597 4435  L 506 4435  L 506 4870  z " transform="scale(0.015625)" />
+        <path id="rs-by-horizon-NotoSansKR-Regular-35a4" d="M 314 1843  L 5562 1843  L 5562 1414  L 314 1414  L 314 1843  z M 1677 1606  L 2208 1606  L 2208 -499  L 1677 -499  L 1677 1606  z M 3667 1606  L 4198 1606  L 4198 -499  L 3667 -499  L 3667 1606  z M 941 5069  L 4928 5069  L 4928 3578  L 1491 3578  L 1491 2579  L 960 2579  L 960 3981  L 4390 3981  L 4390 4634  L 941 4634  L 941 5069  z M 960 2867  L 5056 2867  L 5056 2432  L 960 2432  L 960 2867  z " transform="scale(0.015625)" />
+        <path id="rs-by-horizon-NotoSansKR-Regular-43f1" d="M 1747 4672  L 2182 4672  L 2182 4205  Q 2182 3667 1980 3212  Q 1779 2758 1417 2419  Q 1056 2080 563 1901  L 294 2323  Q 730 2477 1056 2761  Q 1382 3046 1564 3417  Q 1747 3789 1747 4205  L 1747 4672  z M 1843 4672  L 2278 4672  L 2278 4205  Q 2278 3827 2451 3488  Q 2624 3149 2937 2893  Q 3251 2637 3674 2490  L 3424 2074  Q 2938 2240 2586 2553  Q 2234 2867 2038 3292  Q 1843 3718 1843 4205  L 1843 4672  z M 454 4864  L 3552 4864  L 3552 4429  L 454 4429  L 454 4864  z M 4282 5293  L 4813 5293  L 4813 1805  L 4282 1805  L 4282 5293  z M 4666 3821  L 5664 3821  L 5664 3379  L 4666 3379  L 4666 3821  z M 2970 1645  Q 3558 1645 3984 1520  Q 4410 1395 4640 1158  Q 4870 922 4870 582  Q 4870 243 4640 6  Q 4410 -230 3984 -358  Q 3558 -486 2970 -486  Q 2381 -486 1952 -358  Q 1523 -230 1292 6  Q 1062 243 1062 582  Q 1062 922 1292 1158  Q 1523 1395 1952 1520  Q 2381 1645 2970 1645  z M 2970 1222  Q 2541 1222 2230 1145  Q 1920 1069 1753 928  Q 1587 787 1587 582  Q 1587 378 1753 234  Q 1920 90 2230 13  Q 2541 -64 2970 -64  Q 3398 -64 3705 13  Q 4013 90 4179 234  Q 4346 378 4346 582  Q 4346 787 4179 928  Q 4013 1069 3705 1145  Q 3398 1222 2970 1222  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-12" />
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-4461" transform="translate(55.5 0)" />
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-35a4" transform="translate(147.5 0)" />
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-43f1" transform="translate(239.5 0)" />
+      </g>
+     </g>
+    </g>
+    <g id="rs-by-horizon-xtick_6">
+     <g id="rs-by-horizon-line2d_17" />
+     <g id="rs-by-horizon-text_7">
+      
+      <g style="fill: #5b6878" transform="translate(214.876071 166) scale(0.09 -0.09)">
+       <defs>
+        <path id="rs-by-horizon-NotoSansKR-Regular-13" d="M 282 0  L 282 346  Q 1018 992 1494 1523  Q 1971 2054 2201 2512  Q 2432 2970 2432 3373  Q 2432 3642 2339 3853  Q 2246 4064 2054 4182  Q 1862 4301 1568 4301  Q 1280 4301 1033 4147  Q 787 3994 595 3757  L 256 4090  Q 538 4403 864 4588  Q 1190 4774 1638 4774  Q 2061 4774 2365 4604  Q 2669 4435 2838 4124  Q 3008 3814 3008 3398  Q 3008 2931 2774 2451  Q 2541 1971 2128 1475  Q 1715 979 1165 461  Q 1350 474 1552 490  Q 1754 506 1933 506  L 3232 506  L 3232 0  L 282 0  z " transform="scale(0.015625)" />
+        <path id="rs-by-horizon-NotoSansKR-Regular-5f" d="M 2406 1837  Q 2195 1837 2025 1929  Q 1856 2022 1709 2140  Q 1562 2259 1424 2352  Q 1286 2445 1133 2445  Q 979 2445 844 2342  Q 710 2240 589 2010  L 262 2240  Q 454 2579 688 2732  Q 922 2886 1152 2886  Q 1363 2886 1532 2793  Q 1702 2701 1846 2582  Q 1990 2464 2128 2371  Q 2266 2278 2419 2278  Q 2573 2278 2710 2377  Q 2848 2477 2970 2714  L 3296 2477  Q 3104 2144 2870 1990  Q 2637 1837 2406 1837  z " transform="scale(0.015625)" />
+        <path id="rs-by-horizon-NotoSansKR-Regular-14" d="M 1683 -83  Q 1318 -83 1040 6  Q 762 96 550 243  Q 339 390 186 563  L 486 941  Q 691 730 969 566  Q 1248 403 1645 403  Q 1926 403 2140 508  Q 2355 614 2476 809  Q 2598 1005 2598 1274  Q 2598 1555 2460 1766  Q 2323 1978 2003 2096  Q 1683 2214 1139 2214  L 1139 2662  Q 1626 2662 1907 2780  Q 2189 2899 2313 3104  Q 2438 3309 2438 3558  Q 2438 3898 2227 4099  Q 2016 4301 1645 4301  Q 1363 4301 1116 4173  Q 870 4045 672 3846  L 358 4218  Q 627 4461 944 4617  Q 1261 4774 1664 4774  Q 2061 4774 2371 4636  Q 2682 4499 2858 4236  Q 3034 3974 3034 3603  Q 3034 3174 2803 2892  Q 2573 2611 2202 2477  L 2202 2445  Q 2477 2381 2701 2221  Q 2925 2061 3059 1817  Q 3194 1574 3194 1254  Q 3194 838 2989 537  Q 2784 237 2445 77  Q 2106 -83 1683 -83  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-13" />
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-5f" transform="translate(55.5 0)" />
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-14" transform="translate(111 0)" />
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-4461" transform="translate(166.5 0)" />
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-35a4" transform="translate(258.5 0)" />
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-43f1" transform="translate(350.5 0)" />
+      </g>
+     </g>
+    </g>
+    <g id="rs-by-horizon-xtick_7">
+     <g id="rs-by-horizon-line2d_18" />
+     <g id="rs-by-horizon-text_8">
+      
+      <g style="fill: #5b6878" transform="translate(332.818929 166) scale(0.09 -0.09)">
+       <defs>
+        <path id="rs-by-horizon-NotoSansKR-Regular-15" d="M 2176 0  L 2176 3200  Q 2176 3373 2189 3622  Q 2202 3872 2208 4051  L 2182 4051  Q 2093 3885 2000 3709  Q 1907 3533 1805 3360  L 736 1760  L 3354 1760  L 3354 1293  L 128 1293  L 128 1677  L 2080 4691  L 2726 4691  L 2726 0  L 2176 0  z " transform="scale(0.015625)" />
+        <path id="rs-by-horizon-NotoSansKR-Regular-18" d="M 1267 0  Q 1299 666 1379 1226  Q 1459 1786 1612 2282  Q 1766 2778 2006 3245  Q 2246 3712 2592 4192  L 314 4192  L 314 4691  L 3251 4691  L 3251 4339  Q 2842 3808 2582 3321  Q 2323 2835 2179 2329  Q 2035 1824 1968 1257  Q 1901 691 1875 0  L 1267 0  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-15" />
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-5f" transform="translate(55.5 0)" />
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-18" transform="translate(111 0)" />
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-4461" transform="translate(166.5 0)" />
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-35a4" transform="translate(258.5 0)" />
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-43f1" transform="translate(350.5 0)" />
+      </g>
+     </g>
+    </g>
+    <g id="rs-by-horizon-xtick_8">
+     <g id="rs-by-horizon-line2d_19" />
+     <g id="rs-by-horizon-text_9">
+      
+      <g style="fill: #5b6878" transform="translate(448.264286 166) scale(0.09 -0.09)">
+       <defs>
+        <path id="rs-by-horizon-NotoSansKR-Regular-19" d="M 1792 -83  Q 1357 -83 1017 77  Q 678 237 486 518  Q 294 800 294 1165  Q 294 1478 419 1731  Q 544 1984 742 2166  Q 941 2349 1152 2464  L 1152 2490  Q 896 2669 707 2934  Q 518 3200 518 3571  Q 518 3930 688 4195  Q 858 4461 1149 4611  Q 1440 4762 1805 4762  Q 2208 4762 2496 4602  Q 2784 4442 2937 4166  Q 3091 3891 3091 3526  Q 3091 3283 2992 3065  Q 2893 2848 2752 2678  Q 2611 2509 2470 2394  L 2470 2362  Q 2675 2246 2854 2083  Q 3034 1920 3146 1686  Q 3258 1453 3258 1126  Q 3258 794 3075 515  Q 2893 237 2563 77  Q 2234 -83 1792 -83  z M 2112 2547  Q 2349 2758 2470 2998  Q 2592 3238 2592 3494  Q 2592 3731 2499 3916  Q 2406 4102 2227 4214  Q 2048 4326 1798 4326  Q 1472 4326 1261 4121  Q 1050 3917 1050 3571  Q 1050 3296 1200 3107  Q 1350 2918 1593 2787  Q 1837 2656 2112 2547  z M 1798 352  Q 2074 352 2275 454  Q 2477 557 2589 736  Q 2701 915 2701 1146  Q 2701 1382 2598 1552  Q 2496 1722 2326 1850  Q 2157 1978 1933 2080  Q 1709 2182 1459 2278  Q 1178 2099 995 1827  Q 813 1555 813 1216  Q 813 973 941 774  Q 1069 576 1296 464  Q 1523 352 1798 352  z " transform="scale(0.015625)" />
+        <path id="rs-by-horizon-NotoSansKR-Regular-16" d="M 1677 -83  Q 1312 -83 1033 6  Q 755 96 547 237  Q 339 378 173 538  L 467 922  Q 602 787 765 668  Q 928 550 1139 476  Q 1350 403 1619 403  Q 1894 403 2121 537  Q 2349 672 2483 921  Q 2618 1171 2618 1510  Q 2618 2010 2352 2294  Q 2086 2579 1645 2579  Q 1414 2579 1241 2508  Q 1069 2438 864 2304  L 550 2502  L 704 4691  L 2982 4691  L 2982 4192  L 1216 4192  L 1094 2835  Q 1248 2925 1417 2973  Q 1587 3021 1798 3021  Q 2189 3021 2509 2864  Q 2829 2707 3021 2374  Q 3213 2042 3213 1523  Q 3213 1011 2992 652  Q 2771 294 2419 105  Q 2067 -83 1677 -83  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-19" />
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-5f" transform="translate(55.5 0)" />
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-12" transform="translate(111 0)" />
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-16" transform="translate(166.5 0)" />
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-4461" transform="translate(222 0)" />
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-35a4" transform="translate(314 0)" />
+       <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-43f1" transform="translate(406 0)" />
+      </g>
+     </g>
+    </g>
+    <g id="rs-by-horizon-text_10">
+     
+     <g style="fill: #5b6878" transform="translate(235.906875 179) scale(0.09 -0.09)">
+      <defs>
+       <path id="rs-by-horizon-NotoSansKR-Regular-36f5" d="M 992 5050  L 4877 5050  L 4877 3085  L 992 3085  L 992 5050  z M 4358 4627  L 1510 4627  L 1510 3514  L 4358 3514  L 4358 4627  z M 320 2362  L 5549 2362  L 5549 1926  L 320 1926  L 320 2362  z M 2669 3194  L 3200 3194  L 3200 2195  L 2669 2195  L 2669 3194  z M 902 1331  L 4902 1331  L 4902 -499  L 4371 -499  L 4371 902  L 902 902  L 902 1331  z " transform="scale(0.015625)" />
+       <path id="rs-by-horizon-NotoSansKR-Regular-50a8" d="M 1773 2157  L 2304 2157  L 2304 506  L 1773 506  L 1773 2157  z M 3552 2150  L 4083 2150  L 4083 499  L 3552 499  L 3552 2150  z M 320 646  L 5568 646  L 5568 205  L 320 205  L 320 646  z M 781 4755  L 5075 4755  L 5075 4320  L 781 4320  L 781 4755  z M 794 2445  L 5062 2445  L 5062 2010  L 794 2010  L 794 2445  z M 1677 4403  L 2208 4403  L 2208 2355  L 1677 2355  L 1677 4403  z M 3648 4403  L 4173 4403  L 4173 2355  L 3648 2355  L 3648 4403  z " transform="scale(0.015625)" />
+       <path id="rs-by-horizon-NotoSansKR-Regular-2a98" d="M 4333 5293  L 4864 5293  L 4864 -499  L 4333 -499  L 4333 5293  z M 4691 2906  L 5728 2906  L 5728 2464  L 4691 2464  L 4691 2906  z M 1562 4666  L 2054 4666  Q 2054 4147 1990 3635  Q 1926 3123 1776 2630  Q 1626 2138 1366 1680  Q 1107 1222 717 806  L 294 1107  Q 646 1478 892 1888  Q 1139 2298 1286 2739  Q 1434 3181 1498 3651  Q 1562 4122 1562 4608  L 1562 4666  z M 480 4666  L 1760 4666  L 1760 4224  L 480 4224  L 480 4666  z M 3142 4666  L 3635 4666  Q 3635 4141 3587 3590  Q 3539 3040 3401 2489  Q 3264 1939 3017 1414  Q 2771 890 2368 422  L 1939 717  Q 2310 1139 2544 1612  Q 2778 2086 2906 2588  Q 3034 3091 3088 3603  Q 3142 4115 3142 4614  L 3142 4666  z M 2240 4666  L 3354 4666  L 3354 4224  L 2240 4224  L 2240 4666  z " transform="scale(0.015625)" />
+       <path id="rs-by-horizon-NotoSansKR-Regular-460c" d="M 1850 4461  L 2285 4461  L 2285 3526  Q 2285 3066 2157 2621  Q 2029 2176 1801 1782  Q 1574 1389 1273 1088  Q 973 787 627 614  L 320 1037  Q 634 1190 912 1452  Q 1190 1715 1401 2054  Q 1613 2394 1731 2771  Q 1850 3149 1850 3526  L 1850 4461  z M 1958 4461  L 2387 4461  L 2387 3526  Q 2387 3162 2505 2800  Q 2624 2438 2838 2121  Q 3053 1805 3331 1561  Q 3610 1318 3930 1178  L 3635 755  Q 3283 922 2976 1203  Q 2669 1485 2441 1853  Q 2214 2221 2086 2646  Q 1958 3072 1958 3526  L 1958 4461  z M 506 4698  L 3738 4698  L 3738 4256  L 506 4256  L 506 4698  z M 4525 5293  L 5056 5293  L 5056 -499  L 4525 -499  L 4525 5293  z " transform="scale(0.015625)" />
+       <path id="rs-by-horizon-NotoSansKR-Regular-2cf4" d="M 4282 5286  L 4813 5286  L 4813 2016  L 4282 2016  L 4282 5286  z M 4672 3962  L 5670 3962  L 5670 3520  L 4672 3520  L 4672 3962  z M 1165 1702  L 4813 1702  L 4813 -416  L 1165 -416  L 1165 1702  z M 4294 1280  L 1683 1280  L 1683 13  L 4294 13  L 4294 1280  z M 595 4998  L 1126 4998  L 1126 2682  L 595 2682  L 595 4998  z M 595 2899  L 1056 2899  Q 1683 2899 2336 2953  Q 2989 3008 3693 3155  L 3757 2714  Q 3027 2566 2364 2512  Q 1702 2458 1056 2458  L 595 2458  L 595 2899  z " transform="scale(0.015625)" />
+       <path id="rs-by-horizon-NotoSansKR-Regular-438c" d="M 320 2246  L 5549 2246  L 5549 1818  L 320 1818  L 320 2246  z M 992 64  L 4966 64  L 4966 -371  L 992 -371  L 992 64  z M 992 1306  L 1523 1306  L 1523 -64  L 992 -64  L 992 1306  z M 2931 5094  Q 3552 5094 4009 4956  Q 4467 4819 4716 4560  Q 4966 4301 4966 3942  Q 4966 3584 4716 3321  Q 4467 3059 4009 2921  Q 3552 2784 2931 2784  Q 2310 2784 1852 2921  Q 1395 3059 1145 3321  Q 896 3584 896 3942  Q 896 4301 1145 4560  Q 1395 4819 1852 4956  Q 2310 5094 2931 5094  z M 2931 4666  Q 2483 4666 2147 4579  Q 1811 4493 1625 4329  Q 1440 4166 1440 3942  Q 1440 3718 1625 3555  Q 1811 3392 2147 3305  Q 2483 3219 2931 3219  Q 3392 3219 3725 3305  Q 4058 3392 4240 3555  Q 4422 3718 4422 3942  Q 4422 4166 4240 4329  Q 4058 4493 3725 4579  Q 3392 4666 2931 4666  z " transform="scale(0.015625)" />
+       <path id="rs-by-horizon-NotoSansKR-Regular-3e64" d="M 2662 5088  L 3130 5088  L 3130 4762  Q 3130 4429 3002 4137  Q 2874 3846 2653 3603  Q 2432 3360 2137 3168  Q 1843 2976 1500 2848  Q 1158 2720 800 2662  L 582 3091  Q 902 3136 1206 3245  Q 1510 3354 1772 3510  Q 2035 3667 2236 3865  Q 2438 4064 2550 4291  Q 2662 4518 2662 4762  L 2662 5088  z M 2752 5088  L 3213 5088  L 3213 4762  Q 3213 4518 3328 4294  Q 3443 4070 3644 3872  Q 3846 3674 4108 3514  Q 4371 3354 4675 3245  Q 4979 3136 5293 3091  L 5082 2662  Q 4723 2720 4384 2851  Q 4045 2982 3747 3174  Q 3450 3366 3229 3609  Q 3008 3853 2880 4144  Q 2752 4435 2752 4762  L 2752 5088  z M 2662 1702  L 3187 1702  L 3187 -499  L 2662 -499  L 2662 1702  z M 320 2035  L 5549 2035  L 5549 1594  L 320 1594  L 320 2035  z " transform="scale(0.015625)" />
+      </defs>
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-36f5" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-50a8" transform="translate(92 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-1" transform="translate(184 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-4461" transform="translate(206.40625 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-35a4" transform="translate(298.40625 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-43f1" transform="translate(390.40625 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-2a98" transform="translate(482.40625 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-460c" transform="translate(574.40625 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-1" transform="translate(666.40625 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-2cf4" transform="translate(688.8125 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-438c" transform="translate(780.8125 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-1" transform="translate(872.8125 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-4461" transform="translate(895.21875 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-35a4" transform="translate(987.21875 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-43f1" transform="translate(1079.21875 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-1" transform="translate(1171.21875 0)" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-3e64" transform="translate(1193.625 0)" />
+     </g>
+    </g>
+   </g>
+   <g id="rs-by-horizon-matplotlib.axis_4">
+    <g id="rs-by-horizon-ytick_5">
+     <g id="rs-by-horizon-line2d_20">
+      <path d="M 46.08 154.08  L 541.44 154.08  " clip-path="url(#rs-by-horizon-peb85100bc4)" style="fill: none; stroke: #e9edf2; stroke-width: 0.7; stroke-linecap: round" />
+     </g>
+     <g id="rs-by-horizon-line2d_21" />
+     <g id="rs-by-horizon-text_11">
+      
+      <g style="fill: #5b6878" transform="translate(35.455 158.439375) scale(0.09 -0.09)">
+       <defs>
+        <path id="rs-by-horizon-Inter-Regular-50e" d="M 2000 -64  Q 1486 -64 1125 217  Q 764 498 573 1033  Q 382 1568 382 2327  Q 382 3082 574 3617  Q 766 4152 1128 4435  Q 1491 4718 2000 4718  Q 2509 4718 2871 4435  Q 3234 4152 3426 3617  Q 3618 3082 3618 2327  Q 3618 1568 3427 1033  Q 3236 498 2875 217  Q 2514 -64 2000 -64  z M 2000 436  Q 2509 436 2791 927  Q 3073 1418 3073 2327  Q 3073 2932 2944 3357  Q 2816 3782 2576 4004  Q 2336 4227 2000 4227  Q 1495 4227 1211 3730  Q 927 3234 927 2327  Q 927 1723 1054 1300  Q 1182 877 1421 656  Q 1661 436 2000 436  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-horizon-Inter-Regular-50e" />
+      </g>
+     </g>
+    </g>
+    <g id="rs-by-horizon-ytick_6">
+     <g id="rs-by-horizon-line2d_22">
+      <path d="M 46.08 140.15  L 541.44 140.15  " clip-path="url(#rs-by-horizon-peb85100bc4)" style="fill: none; stroke: #e9edf2; stroke-width: 0.7; stroke-linecap: round" />
+     </g>
+     <g id="rs-by-horizon-line2d_23" />
+     <g id="rs-by-horizon-text_12">
+      
+      <g style="fill: #5b6878" transform="translate(22.696094 144.511824) scale(0.09 -0.09)">
+       <defs>
+        <path id="rs-by-horizon-Inter-Regular-65c" d="M 2855 873  L 2855 1118  Q 2855 1373 2960 1585  Q 3066 1798 3269 1926  Q 3473 2055 3764 2055  Q 4059 2055 4259 1926  Q 4459 1798 4561 1585  Q 4664 1373 4664 1118  L 4664 873  Q 4664 618 4560 405  Q 4457 193 4256 64  Q 4055 -64 3764 -64  Q 3468 -64 3266 64  Q 3064 193 2959 405  Q 2855 618 2855 873  z M 3318 1118  L 3318 873  Q 3318 661 3418 494  Q 3518 327 3764 327  Q 4002 327 4101 494  Q 4200 661 4200 873  L 4200 1118  Q 4200 1330 4104 1497  Q 4009 1664 3764 1664  Q 3525 1664 3421 1497  Q 3318 1330 3318 1118  z M 536 3536  L 536 3782  Q 536 4036 642 4248  Q 748 4461 951 4589  Q 1155 4718 1445 4718  Q 1741 4718 1941 4589  Q 2141 4461 2243 4248  Q 2345 4036 2345 3782  L 2345 3536  Q 2345 3282 2242 3069  Q 2139 2857 1937 2728  Q 1736 2600 1445 2600  Q 1150 2600 947 2728  Q 745 2857 640 3069  Q 536 3282 536 3536  z M 1000 3782  L 1000 3536  Q 1000 3325 1100 3158  Q 1200 2991 1445 2991  Q 1684 2991 1783 3158  Q 1882 3325 1882 3536  L 1882 3782  Q 1882 3993 1786 4160  Q 1691 4327 1445 4327  Q 1207 4327 1103 4160  Q 1000 3993 1000 3782  z M 709 0  L 3909 4655  L 4427 4655  L 1227 0  L 709 0  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-horizon-Inter-Regular-510" />
+       <use xlink:href="#rs-by-horizon-Inter-Regular-50e" transform="translate(60.515625 0)" />
+       <use xlink:href="#rs-by-horizon-Inter-Regular-65c" transform="translate(123.015625 0)" />
+      </g>
+     </g>
+    </g>
+    <g id="rs-by-horizon-text_13">
+     
+     <g style="fill: #5b6878" transform="translate(11.88 150.84) rotate(-90) scale(0.09 -0.09)">
+      <defs>
+       <path id="rs-by-horizon-NotoSansKR-Regular-3a90" d="M 4525 5293  L 5056 5293  L 5056 -506  L 4525 -506  L 4525 5293  z M 646 4800  L 1178 4800  L 1178 3277  L 2848 3277  L 2848 4800  L 3373 4800  L 3373 890  L 646 890  L 646 4800  z M 1178 2854  L 1178 1331  L 2848 1331  L 2848 2854  L 1178 2854  z " transform="scale(0.015625)" />
+       <path id="rs-by-horizon-NotoSansKR-Regular-455d" d="M 2669 2400  L 3194 2400  L 3194 1389  L 2669 1389  L 2669 2400  z M 320 2586  L 5549 2586  L 5549 2150  L 320 2150  L 320 2586  z M 2931 1549  Q 3859 1549 4384 1286  Q 4909 1024 4909 531  Q 4909 45 4384 -220  Q 3859 -486 2931 -486  Q 2003 -486 1475 -220  Q 947 45 947 531  Q 947 1024 1475 1286  Q 2003 1549 2931 1549  z M 2931 1133  Q 2477 1133 2153 1062  Q 1830 992 1657 857  Q 1485 723 1485 531  Q 1485 339 1657 204  Q 1830 70 2153 -3  Q 2477 -77 2931 -77  Q 3386 -77 3709 -3  Q 4032 70 4205 204  Q 4378 339 4378 531  Q 4378 723 4205 857  Q 4032 992 3709 1062  Q 3386 1133 2931 1133  z M 2592 4813  L 3059 4813  L 3059 4640  Q 3059 4358 2940 4121  Q 2822 3885 2611 3683  Q 2400 3482 2115 3328  Q 1830 3174 1497 3075  Q 1165 2976 800 2931  L 608 3354  Q 922 3386 1213 3466  Q 1504 3546 1757 3664  Q 2010 3782 2195 3936  Q 2381 4090 2486 4269  Q 2592 4448 2592 4640  L 2592 4813  z M 2810 4813  L 3277 4813  L 3277 4640  Q 3277 4442 3382 4266  Q 3488 4090 3673 3939  Q 3859 3789 4112 3670  Q 4365 3552 4656 3469  Q 4947 3386 5261 3354  L 5069 2931  Q 4704 2976 4371 3075  Q 4038 3174 3753 3328  Q 3469 3482 3257 3680  Q 3046 3878 2928 4121  Q 2810 4365 2810 4640  L 2810 4813  z M 800 5024  L 5075 5024  L 5075 4595  L 800 4595  L 800 5024  z " transform="scale(0.015625)" />
+      </defs>
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-3a90" />
+      <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-455d" transform="translate(92 0)" />
+     </g>
+    </g>
+   </g>
+   <g id="rs-by-horizon-patch_4">
+    <path d="M 80.28 154.08  L 153.41 154.08  L 153.41 143.02  L 80.28 143.02  z " clip-path="url(#rs-by-horizon-peb85100bc4)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-horizon-patch_5">
+    <path d="M 198.23 154.08  L 271.35 154.08  L 271.35 139.35  L 198.23 139.35  z " clip-path="url(#rs-by-horizon-peb85100bc4)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-horizon-patch_6">
+    <path d="M 316.17 154.08  L 389.29 154.08  L 389.29 132.14  L 316.17 132.14  z " clip-path="url(#rs-by-horizon-peb85100bc4)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-horizon-patch_7">
+    <path d="M 434.11 154.08  L 507.24 154.08  L 507.24 132.17  L 434.11 132.17  z " clip-path="url(#rs-by-horizon-peb85100bc4)" style="fill: #c3ccd6" />
+   </g>
+  </g>
+  <g id="rs-by-horizon-h0" class="rs-h rs-area">
+   <title>1정류장
+이번 시도 1.156석
+기준 모델 1.161석 (차이 −0.005석)
+지금 운영 중인 예보 1.527석
+자료 비중 15.9%</title><path d="M 57.87 154.08  L 175.82 154.08  L 175.82 21.6  L 57.87 21.6  L 57.87 154.08  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-horizon-h1" class="rs-h rs-area">
+   <title>2~3정류장
+이번 시도 1.587석
+기준 모델 1.594석 (차이 −0.007석)
+지금 운영 중인 예보 2.388석
+자료 비중 21.2%</title><path d="M 175.82 154.08  L 293.76 154.08  L 293.76 21.6  L 175.82 21.6  L 175.82 154.08  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-horizon-h2" class="rs-h rs-area">
+   <title>4~7정류장
+이번 시도 2.175석
+기준 모델 2.187석 (차이 −0.013석)
+지금 운영 중인 예보 3.363석
+자료 비중 31.5%</title><path d="M 293.76 154.08  L 411.7 154.08  L 411.7 21.6  L 293.76 21.6  L 293.76 154.08  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-horizon-h3" class="rs-h rs-area">
+   <title>8~15정류장
+이번 시도 2.571석
+기준 모델 2.588석 (차이 −0.017석)
+지금 운영 중인 예보 3.935석
+자료 비중 31.5%</title><path d="M 411.7 154.08  L 529.65 154.08  L 529.65 21.6  L 411.7 21.6  L 411.7 154.08  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-horizon-legend_1">
+   <g id="rs-by-horizon-line2d_24">
+    <path d="M 41.76 10.53  L 49.86 10.53  L 57.96 10.53  " style="fill: none; stroke: #2f62d0; stroke-width: 1.8; stroke-linecap: round" />
+    <defs>
+     <path id="rs-by-horizon-m7fe7ca5f43" d="M 0 1.7  C 0.45 1.7 0.88 1.52 1.2 1.2  C 1.52 0.88 1.7 0.45 1.7 0  C 1.7 -0.45 1.52 -0.88 1.2 -1.2  C 0.88 -1.52 0.45 -1.7 0 -1.7  C -0.45 -1.7 -0.88 -1.52 -1.2 -1.2  C -1.52 -0.88 -1.7 -0.45 -1.7 0  C -1.7 0.45 -1.52 0.88 -1.2 1.2  C -0.88 1.52 -0.45 1.7 0 1.7  z " style="stroke: #ffffff" />
+    </defs>
+    <g>
+     <use xlink:href="#rs-by-horizon-m7fe7ca5f43" x="49.86" y="10.53" style="fill: #2f62d0; stroke: #ffffff" />
+    </g>
+   </g>
+   <g id="rs-by-horizon-text_14">
+    
+    <g style="fill: #5b6878" transform="translate(62.46 13.68) scale(0.09 -0.09)">
+     <defs>
+      <path id="rs-by-horizon-NotoSansKR-Regular-43c0" d="M 4525 5293  L 5056 5293  L 5056 -506  L 4525 -506  L 4525 5293  z M 2003 4845  Q 2432 4845 2761 4598  Q 3091 4352 3280 3897  Q 3469 3443 3469 2829  Q 3469 2214 3280 1760  Q 3091 1306 2761 1056  Q 2432 806 2003 806  Q 1574 806 1241 1056  Q 909 1306 720 1760  Q 531 2214 531 2829  Q 531 3443 720 3897  Q 909 4352 1241 4598  Q 1574 4845 2003 4845  z M 2003 4371  Q 1715 4371 1500 4182  Q 1286 3994 1164 3645  Q 1043 3296 1043 2829  Q 1043 2362 1164 2013  Q 1286 1664 1500 1472  Q 1715 1280 2003 1280  Q 2285 1280 2499 1472  Q 2714 1664 2835 2013  Q 2957 2362 2957 2829  Q 2957 3296 2835 3645  Q 2714 3994 2499 4182  Q 2285 4371 2003 4371  z " transform="scale(0.015625)" />
+      <path id="rs-by-horizon-NotoSansKR-Regular-38d4" d="M 3053 3661  L 4710 3661  L 4710 3226  L 3053 3226  L 3053 3661  z M 4550 5286  L 5082 5286  L 5082 1005  L 4550 1005  L 4550 5286  z M 1363 64  L 5216 64  L 5216 -371  L 1363 -371  L 1363 64  z M 1363 1421  L 1894 1421  L 1894 -154  L 1363 -154  L 1363 1421  z M 602 4902  L 1133 4902  L 1133 3885  L 2694 3885  L 2694 4902  L 3219 4902  L 3219 1990  L 602 1990  L 602 4902  z M 1133 3469  L 1133 2419  L 2694 2419  L 2694 3469  L 1133 3469  z " transform="scale(0.015625)" />
+      <path id="rs-by-horizon-NotoSansKR-Regular-3f28" d="M 1843 4794  L 2285 4794  L 2285 3757  Q 2285 3258 2160 2787  Q 2035 2317 1808 1910  Q 1581 1504 1277 1193  Q 973 883 614 704  L 288 1146  Q 614 1293 896 1568  Q 1178 1843 1389 2192  Q 1600 2541 1721 2944  Q 1843 3347 1843 3757  L 1843 4794  z M 1933 4794  L 2374 4794  L 2374 3757  Q 2374 3360 2492 2976  Q 2611 2592 2825 2249  Q 3040 1907 3318 1648  Q 3597 1389 3917 1242  L 3597 819  Q 3245 986 2944 1286  Q 2643 1587 2416 1977  Q 2189 2368 2061 2822  Q 1933 3277 1933 3757  L 1933 4794  z M 4525 5293  L 5056 5293  L 5056 -506  L 4525 -506  L 4525 5293  z " transform="scale(0.015625)" />
+      <path id="rs-by-horizon-NotoSansKR-Regular-3010" d="M 986 2586  L 4960 2586  L 4960 2157  L 986 2157  L 986 2586  z M 320 672  L 5568 672  L 5568 230  L 320 230  L 320 672  z M 2669 2400  L 3194 2400  L 3194 499  L 2669 499  L 2669 2400  z M 986 4832  L 4902 4832  L 4902 4390  L 1517 4390  L 1517 2394  L 986 2394  L 986 4832  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-43c0" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-38d4" transform="translate(92 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-1" transform="translate(184 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-3f28" transform="translate(206.40625 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-3010" transform="translate(298.40625 0)" />
+    </g>
+   </g>
+   <g id="rs-by-horizon-line2d_25">
+    <path d="M 109.3 10.53  L 117.4 10.53  L 125.5 10.53  " style="fill: none; stroke: #e0662e; stroke-width: 1.8; stroke-linecap: round" />
+    <defs>
+     <path id="rs-by-horizon-m048eeae30f" d="M 0 1.7  C 0.45 1.7 0.88 1.52 1.2 1.2  C 1.52 0.88 1.7 0.45 1.7 0  C 1.7 -0.45 1.52 -0.88 1.2 -1.2  C 0.88 -1.52 0.45 -1.7 0 -1.7  C -0.45 -1.7 -0.88 -1.52 -1.2 -1.2  C -1.52 -0.88 -1.7 -0.45 -1.7 0  C -1.7 0.45 -1.52 0.88 -1.2 1.2  C -0.88 1.52 -0.45 1.7 0 1.7  z " style="stroke: #ffffff" />
+    </defs>
+    <g>
+     <use xlink:href="#rs-by-horizon-m048eeae30f" x="117.4" y="10.53" style="fill: #e0662e; stroke: #ffffff" />
+    </g>
+   </g>
+   <g id="rs-by-horizon-text_15">
+    
+    <g style="fill: #5b6878" transform="translate(129.996562 13.68) scale(0.09 -0.09)">
+     <defs>
+      <path id="rs-by-horizon-NotoSansKR-Regular-2a7c" d="M 4538 5293  L 5069 5293  L 5069 -499  L 4538 -499  L 4538 5293  z M 2842 4666  L 3366 4666  Q 3366 4038 3216 3456  Q 3066 2874 2746 2352  Q 2426 1830 1914 1382  Q 1402 934 672 582  L 390 1011  Q 1229 1414 1773 1952  Q 2317 2490 2579 3152  Q 2842 3814 2842 4582  L 2842 4666  z M 659 4666  L 3066 4666  L 3066 4237  L 659 4237  L 659 4666  z " transform="scale(0.015625)" />
+      <path id="rs-by-horizon-NotoSansKR-Regular-454c" d="M 2592 4742  L 3059 4742  L 3059 4570  Q 3059 4205 2880 3897  Q 2701 3590 2390 3350  Q 2080 3110 1680 2953  Q 1280 2797 832 2733  L 634 3155  Q 941 3200 1232 3289  Q 1523 3379 1766 3510  Q 2010 3642 2195 3808  Q 2381 3974 2486 4166  Q 2592 4358 2592 4570  L 2592 4742  z M 2810 4742  L 3277 4742  L 3277 4570  Q 3277 4365 3382 4173  Q 3488 3981 3673 3811  Q 3859 3642 4105 3510  Q 4352 3379 4640 3289  Q 4928 3200 5235 3155  L 5037 2733  Q 4595 2797 4192 2953  Q 3789 3110 3481 3350  Q 3174 3590 2992 3897  Q 2810 4205 2810 4570  L 2810 4742  z M 800 5005  L 5075 5005  L 5075 4576  L 800 4576  L 800 5005  z M 314 2317  L 5562 2317  L 5562 1882  L 314 1882  L 314 2317  z M 2707 2042  L 3238 2042  L 3238 710  L 2707 710  L 2707 2042  z M 979 64  L 4979 64  L 4979 -371  L 979 -371  L 979 64  z M 979 1274  L 1510 1274  L 1510 -96  L 979 -96  L 979 1274  z " transform="scale(0.015625)" />
+      <path id="rs-by-horizon-NotoSansKR-Regular-36f4" d="M 320 685  L 5568 685  L 5568 243  L 320 243  L 320 685  z M 2669 2182  L 3194 2182  L 3194 563  L 2669 563  L 2669 2182  z M 934 4813  L 4928 4813  L 4928 2086  L 934 2086  L 934 4813  z M 4410 4384  L 1453 4384  L 1453 2509  L 4410 2509  L 4410 4384  z " transform="scale(0.015625)" />
+      <path id="rs-by-horizon-NotoSansKR-Regular-2fc4" d="M 4710 5286  L 5216 5286  L 5216 2214  L 4710 2214  L 4710 5286  z M 2438 4013  L 3853 4013  L 3853 3597  L 2438 3597  L 2438 4013  z M 3597 5171  L 4102 5171  L 4102 2266  L 3597 2266  L 3597 5171  z M 602 2925  L 966 2925  Q 1402 2925 1747 2934  Q 2093 2944 2409 2976  Q 2726 3008 3066 3072  L 3104 2643  Q 2758 2579 2435 2547  Q 2112 2515 1760 2505  Q 1408 2496 966 2496  L 602 2496  L 602 2925  z M 602 4960  L 2790 4960  L 2790 4531  L 1126 4531  L 1126 2650  L 602 2650  L 602 4960  z M 1376 1958  L 5216 1958  L 5216 602  L 1914 602  L 1914 -250  L 1389 -250  L 1389 1005  L 4698 1005  L 4698 1536  L 1376 1536  L 1376 1958  z M 1389 6  L 5427 6  L 5427 -422  L 1389 -422  L 1389 6  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-2a7c" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-454c" transform="translate(92 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-1" transform="translate(184 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-36f4" transform="translate(206.40625 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-2fc4" transform="translate(298.40625 0)" />
+    </g>
+   </g>
+   <g id="rs-by-horizon-line2d_26">
+    <path d="M 176.83 10.53  L 184.93 10.53  L 193.03 10.53  " style="fill: none; stroke-dasharray: 7,4.2; stroke-dashoffset: 0; stroke: #4e5866; stroke-width: 1.4; stroke-linecap: round" />
+   </g>
+   <g id="rs-by-horizon-text_16">
+    
+    <g style="fill: #5b6878" transform="translate(197.533125 13.68) scale(0.09 -0.09)">
+     <defs>
+      <path id="rs-by-horizon-NotoSansKR-Regular-2a54" d="M 986 4986  L 4710 4986  L 4710 4550  L 986 4550  L 986 4986  z M 320 2854  L 5568 2854  L 5568 2419  L 320 2419  L 320 2854  z M 4365 4986  L 4890 4986  L 4890 4557  Q 4890 4192 4864 3750  Q 4838 3309 4698 2701  L 4173 2733  Q 4314 3322 4339 3760  Q 4365 4198 4365 4557  L 4365 4986  z M 966 1632  L 4909 1632  L 4909 -422  L 966 -422  L 966 1632  z M 4384 1210  L 1485 1210  L 1485 13  L 4384 13  L 4384 1210  z " transform="scale(0.015625)" />
+      <path id="rs-by-horizon-NotoSansKR-Regular-4300" d="M 314 2355  L 5562 2355  L 5562 1920  L 314 1920  L 314 2355  z M 2714 2080  L 3251 2080  L 3251 749  L 2714 749  L 2714 2080  z M 986 70  L 4979 70  L 4979 -371  L 986 -371  L 986 70  z M 986 1318  L 1517 1318  L 1517 -51  L 986 -51  L 986 1318  z M 2931 5146  Q 3546 5146 4000 5005  Q 4454 4864 4707 4605  Q 4960 4346 4960 3981  Q 4960 3629 4707 3366  Q 4454 3104 4000 2963  Q 3546 2822 2931 2822  Q 2323 2822 1865 2963  Q 1408 3104 1155 3366  Q 902 3629 902 3981  Q 902 4346 1155 4605  Q 1408 4864 1865 5005  Q 2323 5146 2931 5146  z M 2931 4717  Q 2496 4717 2163 4627  Q 1830 4538 1648 4374  Q 1466 4211 1466 3981  Q 1466 3757 1648 3593  Q 1830 3430 2163 3344  Q 2496 3258 2931 3258  Q 3379 3258 3705 3344  Q 4032 3430 4214 3593  Q 4397 3757 4397 3981  Q 4397 4211 4214 4374  Q 4032 4538 3705 4627  Q 3379 4717 2931 4717  z " transform="scale(0.015625)" />
+      <path id="rs-by-horizon-NotoSansKR-Regular-424d" d="M 2957 4454  L 4717 4454  L 4717 4026  L 2957 4026  L 2957 4454  z M 2957 3123  L 4717 3123  L 4717 2688  L 2957 2688  L 2957 3123  z M 1901 4947  Q 2323 4947 2659 4771  Q 2995 4595 3190 4284  Q 3386 3974 3386 3571  Q 3386 3168 3190 2857  Q 2995 2547 2659 2371  Q 2323 2195 1901 2195  Q 1472 2195 1136 2371  Q 800 2547 605 2857  Q 410 3168 410 3571  Q 410 3974 605 4284  Q 800 4595 1136 4771  Q 1472 4947 1901 4947  z M 1901 4493  Q 1619 4493 1395 4377  Q 1171 4262 1043 4054  Q 915 3846 915 3571  Q 915 3302 1043 3094  Q 1171 2886 1395 2768  Q 1619 2650 1901 2650  Q 2182 2650 2403 2768  Q 2624 2886 2752 3094  Q 2880 3302 2880 3571  Q 2880 3846 2752 4054  Q 2624 4262 2403 4377  Q 2182 4493 1901 4493  z M 4550 5293  L 5082 5293  L 5082 1869  L 4550 1869  L 4550 5293  z M 3174 1728  Q 3776 1728 4205 1597  Q 4634 1466 4867 1219  Q 5101 973 5101 621  Q 5101 275 4867 25  Q 4634 -224 4205 -355  Q 3776 -486 3174 -486  Q 2579 -486 2147 -355  Q 1715 -224 1481 25  Q 1248 275 1248 621  Q 1248 973 1481 1219  Q 1715 1466 2147 1597  Q 2579 1728 3174 1728  z M 3174 1312  Q 2739 1312 2422 1229  Q 2106 1146 1936 992  Q 1766 838 1766 621  Q 1766 410 1936 256  Q 2106 102 2422 19  Q 2739 -64 3174 -64  Q 3616 -64 3929 19  Q 4243 102 4412 256  Q 4582 410 4582 621  Q 4582 838 4412 992  Q 4243 1146 3929 1229  Q 3616 1312 3174 1312  z " transform="scale(0.015625)" />
+      <path id="rs-by-horizon-NotoSansKR-Regular-43c4" d="M 4531 5286  L 5062 5286  L 5062 1062  L 4531 1062  L 4531 5286  z M 1344 64  L 5242 64  L 5242 -371  L 1344 -371  L 1344 64  z M 1344 1491  L 1875 1491  L 1875 -83  L 1344 -83  L 1344 1491  z M 1958 4883  Q 2394 4883 2733 4704  Q 3072 4525 3270 4201  Q 3469 3878 3469 3462  Q 3469 3046 3270 2723  Q 3072 2400 2733 2217  Q 2394 2035 1958 2035  Q 1530 2035 1187 2217  Q 845 2400 646 2723  Q 448 3046 448 3462  Q 448 3878 646 4201  Q 845 4525 1187 4704  Q 1530 4883 1958 4883  z M 1958 4422  Q 1677 4422 1453 4300  Q 1229 4179 1097 3961  Q 966 3744 966 3462  Q 966 3174 1097 2960  Q 1229 2746 1453 2624  Q 1677 2502 1958 2502  Q 2240 2502 2467 2624  Q 2694 2746 2822 2960  Q 2950 3174 2950 3462  Q 2950 3744 2822 3961  Q 2694 4179 2467 4300  Q 2240 4422 1958 4422  z " transform="scale(0.015625)" />
+      <path id="rs-by-horizon-NotoSansKR-Regular-4254" d="M 2624 3891  L 3757 3891  L 3757 3456  L 2624 3456  L 2624 3891  z M 2624 2131  L 3757 2131  L 3757 1690  L 2624 1690  L 2624 2131  z M 4730 5293  L 5242 5293  L 5242 -499  L 4730 -499  L 4730 5293  z M 3590 5171  L 4096 5171  L 4096 -205  L 3590 -205  L 3590 5171  z M 1619 4806  Q 1997 4806 2275 4563  Q 2554 4320 2707 3865  Q 2861 3411 2861 2797  Q 2861 2176 2707 1721  Q 2554 1267 2275 1020  Q 1997 774 1619 774  Q 1254 774 976 1020  Q 698 1267 544 1721  Q 390 2176 390 2797  Q 390 3411 544 3865  Q 698 4320 976 4563  Q 1254 4806 1619 4806  z M 1619 4314  Q 1395 4314 1225 4128  Q 1056 3942 966 3603  Q 877 3264 877 2797  Q 877 2330 966 1987  Q 1056 1645 1225 1459  Q 1395 1274 1619 1274  Q 1856 1274 2022 1459  Q 2189 1645 2281 1987  Q 2374 2330 2374 2797  Q 2374 3264 2281 3603  Q 2189 3942 2022 4128  Q 1856 4314 1619 4314  z " transform="scale(0.015625)" />
+      <path id="rs-by-horizon-NotoSansKR-Regular-3940" d="M 320 678  L 5568 678  L 5568 237  L 320 237  L 320 678  z M 2669 2067  L 3194 2067  L 3194 550  L 2669 550  L 2669 2067  z M 934 4883  L 1466 4883  L 1466 3853  L 4410 3853  L 4410 4883  L 4934 4883  L 4934 1920  L 934 1920  L 934 4883  z M 1466 3418  L 1466 2355  L 4410 2355  L 4410 3418  L 1466 3418  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-460c" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-2a54" transform="translate(92 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-1" transform="translate(184 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-4300" transform="translate(206.40625 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-424d" transform="translate(298.40625 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-1" transform="translate(390.40625 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-455d" transform="translate(412.8125 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-43c4" transform="translate(504.8125 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-1" transform="translate(596.8125 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-4254" transform="translate(619.21875 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-3940" transform="translate(711.21875 0)" />
+    </g>
+   </g>
+   <g id="rs-by-horizon-patch_8">
+    <path d="M 281.52 13.68  L 297.72 13.68  L 297.72 7.38  L 281.52 7.38  z " style="fill: #0a8f3c; opacity: 0.3" />
+   </g>
+   <g id="rs-by-horizon-text_17">
+    
+    <g style="fill: #5b6878" transform="translate(302.222812 13.68) scale(0.09 -0.09)">
+     <defs>
+      <path id="rs-by-horizon-NotoSansKR-Regular-2f30" d="M 4237 5293  L 4768 5293  L 4768 -506  L 4237 -506  L 4237 5293  z M 4646 3008  L 5715 3008  L 5715 2566  L 4646 2566  L 4646 3008  z M 570 1389  L 1024 1389  Q 1555 1389 2000 1405  Q 2445 1421 2857 1465  Q 3270 1510 3699 1587  L 3763 1133  Q 3315 1056 2896 1011  Q 2477 966 2022 953  Q 1568 941 1024 941  L 570 941  L 570 1389  z M 570 4730  L 3251 4730  L 3251 4294  L 1094 4294  L 1094 1184  L 570 1184  L 570 4730  z " transform="scale(0.015625)" />
+      <path id="rs-by-horizon-NotoSansKR-Regular-2fa8" d="M 634 2861  L 1062 2861  Q 1626 2861 2051 2873  Q 2477 2886 2841 2924  Q 3206 2963 3590 3040  L 3642 2618  Q 3258 2547 2880 2508  Q 2502 2470 2067 2454  Q 1632 2438 1062 2438  L 634 2438  L 634 2861  z M 634 4947  L 3270 4947  L 3270 4525  L 1158 4525  L 1158 2605  L 634 2605  L 634 4947  z M 2925 4006  L 4691 4006  L 4691 3597  L 2925 3597  L 2925 4006  z M 4550 5293  L 5075 5293  L 5075 2240  L 4550 2240  L 4550 5293  z M 1350 1958  L 5075 1958  L 5075 602  L 1888 602  L 1888 -269  L 1363 -269  L 1363 1005  L 4550 1005  L 4550 1536  L 1350 1536  L 1350 1958  z M 1363 6  L 5293 6  L 5293 -422  L 1363 -422  L 1363 6  z " transform="scale(0.015625)" />
+      <path id="rs-by-horizon-NotoSansKR-Regular-4f0c" d="M 1005 3437  L 4934 3437  L 4934 3053  L 1005 3053  L 1005 3437  z M 1005 5146  L 4902 5146  L 4902 4762  L 1536 4762  L 1536 3251  L 1005 3251  L 1005 5146  z M 1376 4301  L 4749 4301  L 4749 3930  L 1376 3930  L 1376 4301  z M 326 2618  L 5542 2618  L 5542 2208  L 326 2208  L 326 2618  z M 954 1766  L 4877 1766  L 4877 506  L 1485 506  L 1485 -211  L 966 -211  L 966 883  L 4358 883  L 4358 1376  L 954 1376  L 954 1766  z M 966 -38  L 5050 -38  L 5050 -435  L 966 -435  L 966 -38  z " transform="scale(0.015625)" />
+      <path id="rs-by-horizon-NotoSansKR-Regular-3608" d="M 4531 5286  L 5062 5286  L 5062 1856  L 4531 1856  L 4531 5286  z M 621 2573  L 1088 2573  Q 1613 2573 2064 2585  Q 2515 2598 2944 2640  Q 3373 2682 3834 2752  L 3898 2317  Q 3418 2240 2979 2198  Q 2541 2157 2083 2144  Q 1626 2131 1088 2131  L 621 2131  L 621 2573  z M 608 4941  L 3232 4941  L 3232 3360  L 1139 3360  L 1139 2304  L 621 2304  L 621 3776  L 2714 3776  L 2714 4512  L 608 4512  L 608 4941  z M 1325 1542  L 5062 1542  L 5062 -422  L 1325 -422  L 1325 1542  z M 4544 1114  L 1843 1114  L 1843 13  L 4544 13  L 4544 1114  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-2a7c" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-454c" transform="translate(92 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-1" transform="translate(184 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-36f4" transform="translate(206.40625 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-2fc4" transform="translate(298.40625 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-3940" transform="translate(390.40625 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-2f30" transform="translate(482.40625 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-1" transform="translate(574.40625 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-2fa8" transform="translate(596.8125 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-1" transform="translate(688.8125 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-4f0c" transform="translate(711.21875 0)" />
+     <use xlink:href="#rs-by-horizon-NotoSansKR-Regular-3608" transform="translate(803.21875 0)" />
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="rs-by-horizon-p2640955788">
+   <rect x="46.08" y="21.6" width="495.36" height="103.68" />
+  </clipPath>
+  <clipPath id="rs-by-horizon-peb85100bc4">
+   <rect x="46.08" y="131.04" width="495.36" height="23.04" />
+  </clipPath>
+ </defs>
+</svg>

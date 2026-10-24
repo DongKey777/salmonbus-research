@@ -1,5 +1,5 @@
-@font-face { font-family: "RS Noto Sans KR"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/noto-sans-kr-400.woff?v=458339d71361") format("woff"); }
-@font-face { font-family: "RS Noto Sans KR"; font-style: normal; font-weight: 700; font-display: swap; src: url("/assets/fonts/noto-sans-kr-700.woff?v=d568caeb43e8") format("woff"); }
+@font-face { font-family: "RS Noto Sans KR"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/noto-sans-kr-400.woff?v=ae8c762e0ddf") format("woff"); }
+@font-face { font-family: "RS Noto Sans KR"; font-style: normal; font-weight: 700; font-display: swap; src: url("/assets/fonts/noto-sans-kr-700.woff?v=c9726ba93195") format("woff"); }
 @font-face { font-family: "RS Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/inter-400.woff?v=e1352122d61b") format("woff"); }
 @font-face { font-family: "RS Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/inter-500.woff?v=92ee39578543") format("woff"); }
 @font-face { font-family: "RS Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("/assets/fonts/inter-600.woff?v=89e7a7fba89b") format("woff"); }
@@ -334,6 +334,7 @@ a.index__item:hover { text-decoration: none; background: var(--surface); }
 .authored { background: var(--sunk); border-radius: 10px; padding: 14px 18px; margin-top: 10px; }
 .authored__by { display: flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--accent); font-weight: 500; margin-bottom: 6px; }
 .authored__text { font-size: 15px; line-height: 1.8; color: var(--ink-800); white-space: pre-line; }
+.authored__text + .authored__text { margin-top: 12px; }
 .authored__list { list-style: decimal; padding-left: 20px; font-size: 15px; line-height: 1.8; color: var(--ink-800); }
 .authored__list li + li { margin-top: 6px; }
 

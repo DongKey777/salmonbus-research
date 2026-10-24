@@ -1,0 +1,690 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="360" height="360" viewBox="0 0 259.2 259.2" version="1.1" class="rs-chart" role="img" aria-labelledby="rs-by-hour-narrow-title rs-by-hour-narrow-desc">
+ <title id="rs-by-hour-narrow-title">시각별 평균 오차</title><desc id="rs-by-hour-narrow-desc">시각 21개 중 이번 시도가 기준 모델보다 덜 틀린 것은 5개입니다.</desc><style>.rs-chart *{pointer-events:none}.rs-chart .rs-hit{pointer-events:all}.rs-chart .rs-h{cursor:default}.rs-chart a .rs-h{cursor:pointer}.rs-chart .rs-h:hover .rs-vis{stroke-opacity:1!important;stroke-width:2.2!important}.rs-chart .rs-area:hover .rs-hit{fill:#1F2B3A!important;fill-opacity:.05!important}</style><defs>
+  <style type="text/css">.rs-chart *{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="rs-by-hour-narrow-figure_1">
+  <g id="rs-by-hour-narrow-patch_1">
+   <path d="M 0 259.2  L 259.2 259.2  L 259.2 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="rs-by-hour-narrow-axes_1">
+   <g id="rs-by-hour-narrow-patch_2">
+    <path d="M 28.8 185.61  L 250.56 185.61  L 250.56 71.11  L 28.8 71.11  z " style="fill: #ffffff" />
+   </g>
+   <g id="rs-by-hour-narrow-matplotlib.axis_1">
+    <g id="rs-by-hour-narrow-xtick_1">
+     <g id="rs-by-hour-narrow-line2d_1" />
+    </g>
+    <g id="rs-by-hour-narrow-xtick_2">
+     <g id="rs-by-hour-narrow-line2d_2" />
+    </g>
+    <g id="rs-by-hour-narrow-xtick_3">
+     <g id="rs-by-hour-narrow-line2d_3" />
+    </g>
+    <g id="rs-by-hour-narrow-xtick_4">
+     <g id="rs-by-hour-narrow-line2d_4" />
+    </g>
+    <g id="rs-by-hour-narrow-xtick_5">
+     <g id="rs-by-hour-narrow-line2d_5" />
+    </g>
+    <g id="rs-by-hour-narrow-xtick_6">
+     <g id="rs-by-hour-narrow-line2d_6" />
+    </g>
+    <g id="rs-by-hour-narrow-xtick_7">
+     <g id="rs-by-hour-narrow-line2d_7" />
+    </g>
+   </g>
+   <g id="rs-by-hour-narrow-matplotlib.axis_2">
+    <g id="rs-by-hour-narrow-ytick_1">
+     <g id="rs-by-hour-narrow-line2d_8">
+      <path d="M 28.8 181.84  L 250.56 181.84  " clip-path="url(#rs-by-hour-narrow-p4c69e9a85c)" style="fill: none; stroke: #e9edf2; stroke-width: 0.7; stroke-linecap: round" />
+     </g>
+     <g id="rs-by-hour-narrow-line2d_9" />
+     <g id="rs-by-hour-narrow-text_1">
+      
+      <g style="fill: #5b6878" transform="translate(19.27082 186.56342) scale(0.0975 -0.0975)">
+       <defs>
+        <path id="rs-by-hour-narrow-Inter-Regular-50f" d="M 2118 4655  L 2118 0  L 1555 0  L 1555 4064  L 1527 4064  L 391 3309  L 391 3882  L 1555 4655  L 2118 4655  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-hour-narrow-Inter-Regular-50f" />
+      </g>
+     </g>
+    </g>
+    <g id="rs-by-hour-narrow-ytick_2">
+     <g id="rs-by-hour-narrow-line2d_10">
+      <path d="M 28.8 148.96  L 250.56 148.96  " clip-path="url(#rs-by-hour-narrow-p4c69e9a85c)" style="fill: none; stroke: #e9edf2; stroke-width: 0.7; stroke-linecap: round" />
+     </g>
+     <g id="rs-by-hour-narrow-line2d_11" />
+     <g id="rs-by-hour-narrow-text_2">
+      
+      <g style="fill: #5b6878" transform="translate(17.899727 153.683501) scale(0.0975 -0.0975)">
+       <defs>
+        <path id="rs-by-hour-narrow-Inter-Regular-510" d="M 482 0  L 482 409  L 2018 2091  Q 2289 2386 2464 2605  Q 2639 2825 2724 3019  Q 2809 3214 2809 3427  Q 2809 3673 2692 3852  Q 2575 4032 2372 4129  Q 2170 4227 1918 4227  Q 1650 4227 1451 4117  Q 1252 4007 1144 3809  Q 1036 3611 1036 3345  L 500 3345  Q 500 3755 688 4064  Q 877 4373 1203 4545  Q 1530 4718 1936 4718  Q 2345 4718 2661 4545  Q 2977 4373 3156 4079  Q 3336 3786 3336 3427  Q 3336 3170 3244 2926  Q 3152 2682 2926 2383  Q 2700 2084 2300 1655  L 1255 536  L 1255 500  L 3418 500  L 3418 0  L 482 0  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-hour-narrow-Inter-Regular-510" />
+      </g>
+     </g>
+    </g>
+    <g id="rs-by-hour-narrow-ytick_3">
+     <g id="rs-by-hour-narrow-line2d_12">
+      <path d="M 28.8 116.08  L 250.56 116.08  " clip-path="url(#rs-by-hour-narrow-p4c69e9a85c)" style="fill: none; stroke: #e9edf2; stroke-width: 0.7; stroke-linecap: round" />
+     </g>
+     <g id="rs-by-hour-narrow-line2d_13" />
+     <g id="rs-by-hour-narrow-text_3">
+      
+      <g style="fill: #5b6878" transform="translate(17.595039 120.803582) scale(0.0975 -0.0975)">
+       <defs>
+        <path id="rs-by-hour-narrow-Inter-Regular-512" d="M 2055 -64  Q 1605 -64 1253 90  Q 902 245 696 521  Q 491 798 473 1164  L 1045 1164  Q 1064 939 1200 776  Q 1336 614 1556 525  Q 1777 436 2045 436  Q 2345 436 2577 540  Q 2809 645 2941 831  Q 3073 1018 3073 1264  Q 3073 1520 2945 1717  Q 2818 1914 2572 2025  Q 2327 2136 1973 2136  L 1600 2136  L 1600 2636  L 1973 2636  Q 2250 2636 2460 2736  Q 2670 2836 2789 3018  Q 2909 3200 2909 3445  Q 2909 3682 2804 3857  Q 2700 4032 2510 4129  Q 2320 4227 2064 4227  Q 1823 4227 1610 4139  Q 1398 4052 1264 3887  Q 1130 3723 1118 3491  L 573 3491  Q 586 3857 793 4133  Q 1000 4409 1335 4563  Q 1670 4718 2073 4718  Q 2505 4718 2814 4544  Q 3123 4370 3289 4086  Q 3455 3802 3455 3473  Q 3455 3080 3249 2802  Q 3043 2525 2691 2418  L 2691 2382  Q 3132 2309 3379 2008  Q 3627 1707 3627 1264  Q 3627 884 3421 583  Q 3216 282 2861 109  Q 2507 -64 2055 -64  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-hour-narrow-Inter-Regular-512" />
+      </g>
+     </g>
+    </g>
+    <g id="rs-by-hour-narrow-ytick_4">
+     <g id="rs-by-hour-narrow-line2d_14">
+      <path d="M 28.8 83.2  L 250.56 83.2  " clip-path="url(#rs-by-hour-narrow-p4c69e9a85c)" style="fill: none; stroke: #e9edf2; stroke-width: 0.7; stroke-linecap: round" />
+     </g>
+     <g id="rs-by-hour-narrow-line2d_15" />
+     <g id="rs-by-hour-narrow-text_4">
+      
+      <g style="fill: #5b6878" transform="translate(17.540195 87.923663) scale(0.0975 -0.0975)">
+       <defs>
+        <path id="rs-by-hour-narrow-Inter-Regular-513" d="M 373 955  L 373 1418  L 2418 4655  L 2755 4655  L 2755 3936  L 2527 3936  L 982 1491  L 982 1455  L 3736 1455  L 3736 955  L 373 955  z M 2564 0  L 2564 1095  L 2564 1311  L 2564 4655  L 3100 4655  L 3100 0  L 2564 0  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-hour-narrow-Inter-Regular-513" />
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="rs-by-hour-narrow-line2d_16">
+    <path d="M 35.08 134.64  L 45.54 122.99  L 56 79.01  L 66.46 82.16  L 76.92 95.25  L 87.38 99.4  L 97.84 127.21  L 108.3 136.49  L 118.76 138.52  L 129.22 137.23  L 139.68 135.03  L 150.14 132.64  L 160.6 114.68  L 171.06 107.7  L 181.52 92.03  L 191.98 111.39  L 202.44 111.03  L 212.9 113.68  L 223.36 113.97  L 233.82 134.09  L 244.28 144.53  " clip-path="url(#rs-by-hour-narrow-p4c69e9a85c)" style="fill: none; stroke-dasharray: 7,4.2; stroke-dashoffset: 0; stroke: #4e5866; stroke-width: 1.4; stroke-linecap: round" />
+   </g>
+   <g id="rs-by-hour-narrow-FillBetweenPolyCollection_1">
+    <path d="M 79.99 136.27  L 87.38 142.95  L 95.47 155.77  L 87.38 143.1  z " clip-path="url(#rs-by-hour-narrow-p4c69e9a85c)" style="fill: #0a8f3c; fill-opacity: 0.16" />
+    <path d="M 139.54 160.26  L 139.68 160.24  L 140.4 159.9  L 139.68 160.25  z " clip-path="url(#rs-by-hour-narrow-p4c69e9a85c)" style="fill: #0a8f3c; fill-opacity: 0.16" />
+    <path d="M 156.69 147.92  L 160.6 143.53  L 161.75 142.7  L 160.6 143.58  z " clip-path="url(#rs-by-hour-narrow-p4c69e9a85c)" style="fill: #0a8f3c; fill-opacity: 0.16" />
+    <path d="M 219.68 145.15  L 223.36 145.78  L 233.82 167.99  L 234.66 167.49  L 233.82 168.02  L 223.36 145.95  z " clip-path="url(#rs-by-hour-narrow-p4c69e9a85c)" style="fill: #0a8f3c; fill-opacity: 0.16" />
+   </g>
+   <g id="rs-by-hour-narrow-FillBetweenPolyCollection_2">
+    <path d="M 35.08 177.71  L 35.08 177.71  L 45.54 168.71  L 56 147.26  L 66.46 136.21  L 76.92 133.5  L 79.99 136.27  L 76.92 133.43  L 66.46 136  L 56 147.04  L 45.54 168.7  L 35.08 177.45  z " clip-path="url(#rs-by-hour-narrow-p4c69e9a85c)" style="fill: #d03b3b; fill-opacity: 0.18" />
+    <path d="M 95.47 155.77  L 97.84 159.53  L 108.3 165.25  L 118.76 159.74  L 129.22 161.54  L 139.54 160.26  L 129.22 161.09  L 118.76 159.46  L 108.3 165.2  L 97.84 159.48  z " clip-path="url(#rs-by-hour-narrow-p4c69e9a85c)" style="fill: #d03b3b; fill-opacity: 0.18" />
+    <path d="M 140.4 159.9  L 150.14 155.26  L 156.69 147.92  L 150.14 155.17  z " clip-path="url(#rs-by-hour-narrow-p4c69e9a85c)" style="fill: #d03b3b; fill-opacity: 0.18" />
+    <path d="M 161.75 142.7  L 171.06 135.91  L 181.52 126.85  L 191.98 141.78  L 202.44 143.01  L 212.9 143.98  L 219.68 145.15  L 212.9 143.67  L 202.44 142.23  L 191.98 141.04  L 181.52 125.91  L 171.06 135.49  z " clip-path="url(#rs-by-hour-narrow-p4c69e9a85c)" style="fill: #d03b3b; fill-opacity: 0.18" />
+    <path d="M 234.66 167.49  L 244.28 161.65  L 244.28 161.65  L 244.28 161.3  z " clip-path="url(#rs-by-hour-narrow-p4c69e9a85c)" style="fill: #d03b3b; fill-opacity: 0.18" />
+   </g>
+   <g id="rs-by-hour-narrow-line2d_17">
+    <path d="M 35.08 177.71  L 45.54 168.71  L 56 147.26  L 66.46 136.21  L 76.92 133.5  L 87.38 142.95  L 97.84 159.53  L 108.3 165.25  L 118.76 159.74  L 129.22 161.54  L 139.68 160.24  L 150.14 155.26  L 160.6 143.53  L 171.06 135.91  L 181.52 126.85  L 191.98 141.78  L 202.44 143.01  L 212.9 143.98  L 223.36 145.78  L 233.82 167.99  L 244.28 161.65  " clip-path="url(#rs-by-hour-narrow-p4c69e9a85c)" style="fill: none; stroke: #e0662e; stroke-width: 1.8; stroke-linecap: round" />
+    <defs>
+     <path id="rs-by-hour-narrow-m110f96559b" d="M 0 1.7  C 0.45 1.7 0.88 1.52 1.2 1.2  C 1.52 0.88 1.7 0.45 1.7 0  C 1.7 -0.45 1.52 -0.88 1.2 -1.2  C 0.88 -1.52 0.45 -1.7 0 -1.7  C -0.45 -1.7 -0.88 -1.52 -1.2 -1.2  C -1.52 -0.88 -1.7 -0.45 -1.7 0  C -1.7 0.45 -1.52 0.88 -1.2 1.2  C -0.88 1.52 -0.45 1.7 0 1.7  z " style="stroke: #ffffff; stroke-width: 0.5" />
+    </defs>
+    <g clip-path="url(#rs-by-hour-narrow-p4c69e9a85c)">
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="35.08" y="177.71" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="45.54" y="168.71" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="56" y="147.26" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="66.46" y="136.21" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="76.92" y="133.5" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="87.38" y="142.95" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="97.84" y="159.53" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="108.3" y="165.25" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="118.76" y="159.74" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="129.22" y="161.54" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="139.68" y="160.24" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="150.14" y="155.26" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="160.6" y="143.53" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="171.06" y="135.91" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="181.52" y="126.85" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="191.98" y="141.78" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="202.44" y="143.01" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="212.9" y="143.98" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="223.36" y="145.78" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="233.82" y="167.99" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-m110f96559b" x="244.28" y="161.65" style="fill: #e0662e; stroke: #ffffff; stroke-width: 0.5" />
+    </g>
+   </g>
+   <g id="rs-by-hour-narrow-line2d_18">
+    <path d="M 35.08 177.45  L 45.54 168.7  L 56 147.04  L 66.46 136  L 76.92 133.43  L 87.38 143.1  L 97.84 159.48  L 108.3 165.2  L 118.76 159.46  L 129.22 161.09  L 139.68 160.25  L 150.14 155.17  L 160.6 143.58  L 171.06 135.49  L 181.52 125.91  L 191.98 141.04  L 202.44 142.23  L 212.9 143.67  L 223.36 145.95  L 233.82 168.02  L 244.28 161.3  " clip-path="url(#rs-by-hour-narrow-p4c69e9a85c)" style="fill: none; stroke: #2f62d0; stroke-width: 1.8; stroke-linecap: round" />
+    <defs>
+     <path id="rs-by-hour-narrow-mff18a43fd2" d="M 0 1.7  C 0.45 1.7 0.88 1.52 1.2 1.2  C 1.52 0.88 1.7 0.45 1.7 0  C 1.7 -0.45 1.52 -0.88 1.2 -1.2  C 0.88 -1.52 0.45 -1.7 0 -1.7  C -0.45 -1.7 -0.88 -1.52 -1.2 -1.2  C -1.52 -0.88 -1.7 -0.45 -1.7 0  C -1.7 0.45 -1.52 0.88 -1.2 1.2  C -0.88 1.52 -0.45 1.7 0 1.7  z " style="stroke: #ffffff; stroke-width: 0.5" />
+    </defs>
+    <g clip-path="url(#rs-by-hour-narrow-p4c69e9a85c)">
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="35.08" y="177.45" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="45.54" y="168.7" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="56" y="147.04" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="66.46" y="136" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="76.92" y="133.43" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="87.38" y="143.1" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="97.84" y="159.48" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="108.3" y="165.2" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="118.76" y="159.46" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="129.22" y="161.09" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="139.68" y="160.25" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="150.14" y="155.17" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="160.6" y="143.58" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="171.06" y="135.49" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="181.52" y="125.91" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="191.98" y="141.04" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="202.44" y="142.23" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="212.9" y="143.67" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="223.36" y="145.95" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="233.82" y="168.02" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+     <use xlink:href="#rs-by-hour-narrow-mff18a43fd2" x="244.28" y="161.3" style="fill: #2f62d0; stroke: #ffffff; stroke-width: 0.5" />
+    </g>
+   </g>
+  </g>
+  <g id="rs-by-hour-narrow-axes_2">
+   <g id="rs-by-hour-narrow-patch_3">
+    <path d="M 28.8 237.88  L 250.56 237.88  L 250.56 211.97  L 28.8 211.97  z " style="fill: #ffffff" />
+   </g>
+   <g id="rs-by-hour-narrow-matplotlib.axis_3">
+    <g id="rs-by-hour-narrow-xtick_8">
+     <g id="rs-by-hour-narrow-line2d_19" />
+     <g id="rs-by-hour-narrow-text_5">
+      
+      <g style="fill: #5b6878" transform="translate(27.885601 250.465) scale(0.0975 -0.0975)">
+       <defs>
+        <path id="rs-by-hour-narrow-NotoSansKR-Regular-15" d="M 2176 0  L 2176 3200  Q 2176 3373 2189 3622  Q 2202 3872 2208 4051  L 2182 4051  Q 2093 3885 2000 3709  Q 1907 3533 1805 3360  L 736 1760  L 3354 1760  L 3354 1293  L 128 1293  L 128 1677  L 2080 4691  L 2726 4691  L 2726 0  L 2176 0  z " transform="scale(0.015625)" />
+        <path id="rs-by-hour-narrow-NotoSansKR-Regular-3f28" d="M 1843 4794  L 2285 4794  L 2285 3757  Q 2285 3258 2160 2787  Q 2035 2317 1808 1910  Q 1581 1504 1277 1193  Q 973 883 614 704  L 288 1146  Q 614 1293 896 1568  Q 1178 1843 1389 2192  Q 1600 2541 1721 2944  Q 1843 3347 1843 3757  L 1843 4794  z M 1933 4794  L 2374 4794  L 2374 3757  Q 2374 3360 2492 2976  Q 2611 2592 2825 2249  Q 3040 1907 3318 1648  Q 3597 1389 3917 1242  L 3597 819  Q 3245 986 2944 1286  Q 2643 1587 2416 1977  Q 2189 2368 2061 2822  Q 1933 3277 1933 3757  L 1933 4794  z M 4525 5293  L 5056 5293  L 5056 -506  L 4525 -506  L 4525 5293  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-15" />
+       <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-3f28" transform="translate(55.5 0)" />
+      </g>
+     </g>
+    </g>
+    <g id="rs-by-hour-narrow-xtick_9">
+     <g id="rs-by-hour-narrow-line2d_20" />
+     <g id="rs-by-hour-narrow-text_6">
+      
+      <g style="fill: #5b6878" transform="translate(59.266733 250.465) scale(0.0975 -0.0975)">
+       <defs>
+        <path id="rs-by-hour-narrow-NotoSansKR-Regular-18" d="M 1267 0  Q 1299 666 1379 1226  Q 1459 1786 1612 2282  Q 1766 2778 2006 3245  Q 2246 3712 2592 4192  L 314 4192  L 314 4691  L 3251 4691  L 3251 4339  Q 2842 3808 2582 3321  Q 2323 2835 2179 2329  Q 2035 1824 1968 1257  Q 1901 691 1875 0  L 1267 0  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-18" />
+       <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-3f28" transform="translate(55.5 0)" />
+      </g>
+     </g>
+    </g>
+    <g id="rs-by-hour-narrow-xtick_10">
+     <g id="rs-by-hour-narrow-line2d_21" />
+     <g id="rs-by-hour-narrow-text_7">
+      
+      <g style="fill: #5b6878" transform="translate(87.942241 250.465) scale(0.0975 -0.0975)">
+       <defs>
+        <path id="rs-by-hour-narrow-NotoSansKR-Regular-12" d="M 563 0  L 563 486  L 1613 486  L 1613 3987  L 774 3987  L 774 4358  Q 1088 4416 1321 4499  Q 1555 4582 1747 4691  L 2195 4691  L 2195 486  L 3136 486  L 3136 0  L 563 0  z " transform="scale(0.015625)" />
+        <path id="rs-by-hour-narrow-NotoSansKR-Regular-11" d="M 1779 -83  Q 1338 -83 1008 185  Q 678 454 499 998  Q 320 1542 320 2362  Q 320 3181 499 3715  Q 678 4250 1008 4512  Q 1338 4774 1779 4774  Q 2227 4774 2553 4508  Q 2880 4243 3059 3712  Q 3238 3181 3238 2362  Q 3238 1542 3059 998  Q 2880 454 2553 185  Q 2227 -83 1779 -83  z M 1779 390  Q 2048 390 2249 595  Q 2451 800 2563 1238  Q 2675 1677 2675 2362  Q 2675 3046 2563 3478  Q 2451 3910 2249 4112  Q 2048 4314 1779 4314  Q 1517 4314 1312 4112  Q 1107 3910 995 3478  Q 883 3046 883 2362  Q 883 1677 995 1238  Q 1107 800 1312 595  Q 1517 390 1779 390  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-12" />
+       <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-11" transform="translate(55.5 0)" />
+       <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-3f28" transform="translate(111 0)" />
+      </g>
+     </g>
+    </g>
+    <g id="rs-by-hour-narrow-xtick_11">
+     <g id="rs-by-hour-narrow-line2d_22" />
+     <g id="rs-by-hour-narrow-text_8">
+      
+      <g style="fill: #5b6878" transform="translate(119.323373 250.465) scale(0.0975 -0.0975)">
+       <defs>
+        <path id="rs-by-hour-narrow-NotoSansKR-Regular-14" d="M 1683 -83  Q 1318 -83 1040 6  Q 762 96 550 243  Q 339 390 186 563  L 486 941  Q 691 730 969 566  Q 1248 403 1645 403  Q 1926 403 2140 508  Q 2355 614 2476 809  Q 2598 1005 2598 1274  Q 2598 1555 2460 1766  Q 2323 1978 2003 2096  Q 1683 2214 1139 2214  L 1139 2662  Q 1626 2662 1907 2780  Q 2189 2899 2313 3104  Q 2438 3309 2438 3558  Q 2438 3898 2227 4099  Q 2016 4301 1645 4301  Q 1363 4301 1116 4173  Q 870 4045 672 3846  L 358 4218  Q 627 4461 944 4617  Q 1261 4774 1664 4774  Q 2061 4774 2371 4636  Q 2682 4499 2858 4236  Q 3034 3974 3034 3603  Q 3034 3174 2803 2892  Q 2573 2611 2202 2477  L 2202 2445  Q 2477 2381 2701 2221  Q 2925 2061 3059 1817  Q 3194 1574 3194 1254  Q 3194 838 2989 537  Q 2784 237 2445 77  Q 2106 -83 1683 -83  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-12" />
+       <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-14" transform="translate(55.5 0)" />
+       <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-3f28" transform="translate(111 0)" />
+      </g>
+     </g>
+    </g>
+    <g id="rs-by-hour-narrow-xtick_12">
+     <g id="rs-by-hour-narrow-line2d_23" />
+     <g id="rs-by-hour-narrow-text_9">
+      
+      <g style="fill: #5b6878" transform="translate(150.704505 250.465) scale(0.0975 -0.0975)">
+       <defs>
+        <path id="rs-by-hour-narrow-NotoSansKR-Regular-17" d="M 1926 -83  Q 1594 -83 1306 61  Q 1018 205 806 496  Q 595 787 476 1222  Q 358 1658 358 2240  Q 358 2925 499 3411  Q 640 3898 883 4198  Q 1126 4499 1440 4636  Q 1754 4774 2093 4774  Q 2458 4774 2726 4640  Q 2995 4506 3194 4294  L 2861 3936  Q 2726 4102 2528 4198  Q 2330 4294 2118 4294  Q 1786 4294 1510 4099  Q 1235 3904 1072 3456  Q 909 3008 909 2240  Q 909 1638 1027 1222  Q 1146 806 1373 592  Q 1600 378 1926 378  Q 2157 378 2333 512  Q 2509 646 2614 886  Q 2720 1126 2720 1440  Q 2720 1760 2627 1993  Q 2534 2227 2348 2352  Q 2163 2477 1875 2477  Q 1651 2477 1388 2333  Q 1126 2189 890 1837  L 870 2298  Q 1018 2490 1197 2627  Q 1376 2765 1577 2838  Q 1779 2912 1971 2912  Q 2368 2912 2659 2749  Q 2950 2586 3113 2259  Q 3277 1933 3277 1440  Q 3277 986 3091 643  Q 2906 301 2602 109  Q 2298 -83 1926 -83  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-12" />
+       <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-17" transform="translate(55.5 0)" />
+       <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-3f28" transform="translate(111 0)" />
+      </g>
+     </g>
+    </g>
+    <g id="rs-by-hour-narrow-xtick_13">
+     <g id="rs-by-hour-narrow-line2d_24" />
+     <g id="rs-by-hour-narrow-text_10">
+      
+      <g style="fill: #5b6878" transform="translate(182.085637 250.465) scale(0.0975 -0.0975)">
+       <defs>
+        <path id="rs-by-hour-narrow-NotoSansKR-Regular-1a" d="M 1504 -83  Q 1120 -83 841 54  Q 563 192 371 397  L 691 762  Q 845 595 1053 499  Q 1261 403 1485 403  Q 1722 403 1933 512  Q 2144 621 2307 873  Q 2470 1126 2563 1536  Q 2656 1946 2656 2547  Q 2656 3123 2537 3520  Q 2419 3917 2188 4118  Q 1958 4320 1632 4320  Q 1408 4320 1229 4185  Q 1050 4051 941 3814  Q 832 3578 832 3251  Q 832 2938 925 2704  Q 1018 2470 1206 2342  Q 1395 2214 1670 2214  Q 1907 2214 2166 2364  Q 2426 2515 2662 2861  L 2688 2394  Q 2547 2214 2364 2073  Q 2182 1933 1980 1856  Q 1779 1779 1574 1779  Q 1184 1779 893 1945  Q 602 2112 442 2441  Q 282 2771 282 3251  Q 282 3712 467 4054  Q 653 4397 957 4585  Q 1261 4774 1626 4774  Q 1965 4774 2253 4636  Q 2541 4499 2752 4220  Q 2963 3942 3084 3526  Q 3206 3110 3206 2547  Q 3206 1837 3065 1334  Q 2925 832 2681 518  Q 2438 205 2134 61  Q 1830 -83 1504 -83  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-12" />
+       <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-1a" transform="translate(55.5 0)" />
+       <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-3f28" transform="translate(111 0)" />
+      </g>
+     </g>
+    </g>
+    <g id="rs-by-hour-narrow-xtick_14">
+     <g id="rs-by-hour-narrow-line2d_25" />
+     <g id="rs-by-hour-narrow-text_11">
+      
+      <g style="fill: #5b6878" transform="translate(213.466769 250.465) scale(0.0975 -0.0975)">
+       <defs>
+        <path id="rs-by-hour-narrow-NotoSansKR-Regular-13" d="M 282 0  L 282 346  Q 1018 992 1494 1523  Q 1971 2054 2201 2512  Q 2432 2970 2432 3373  Q 2432 3642 2339 3853  Q 2246 4064 2054 4182  Q 1862 4301 1568 4301  Q 1280 4301 1033 4147  Q 787 3994 595 3757  L 256 4090  Q 538 4403 864 4588  Q 1190 4774 1638 4774  Q 2061 4774 2365 4604  Q 2669 4435 2838 4124  Q 3008 3814 3008 3398  Q 3008 2931 2774 2451  Q 2541 1971 2128 1475  Q 1715 979 1165 461  Q 1350 474 1552 490  Q 1754 506 1933 506  L 3232 506  L 3232 0  L 282 0  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-13" />
+       <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-13" transform="translate(55.5 0)" />
+       <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-3f28" transform="translate(111 0)" />
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="rs-by-hour-narrow-matplotlib.axis_4">
+    <g id="rs-by-hour-narrow-ytick_5">
+     <g id="rs-by-hour-narrow-line2d_26">
+      <path d="M 28.8 237.88  L 250.56 237.88  " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: none; stroke: #e9edf2; stroke-width: 0.7; stroke-linecap: round" />
+     </g>
+     <g id="rs-by-hour-narrow-line2d_27" />
+     <g id="rs-by-hour-narrow-text_12">
+      
+      <g style="fill: #5b6878" transform="translate(17.70625 242.607656) scale(0.0975 -0.0975)">
+       <defs>
+        <path id="rs-by-hour-narrow-Inter-Regular-50e" d="M 2000 -64  Q 1486 -64 1125 217  Q 764 498 573 1033  Q 382 1568 382 2327  Q 382 3082 574 3617  Q 766 4152 1128 4435  Q 1491 4718 2000 4718  Q 2509 4718 2871 4435  Q 3234 4152 3426 3617  Q 3618 3082 3618 2327  Q 3618 1568 3427 1033  Q 3236 498 2875 217  Q 2514 -64 2000 -64  z M 2000 436  Q 2509 436 2791 927  Q 3073 1418 3073 2327  Q 3073 2932 2944 3357  Q 2816 3782 2576 4004  Q 2336 4227 2000 4227  Q 1495 4227 1211 3730  Q 927 3234 927 2327  Q 927 1723 1054 1300  Q 1182 877 1421 656  Q 1661 436 2000 436  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-hour-narrow-Inter-Regular-50e" />
+      </g>
+     </g>
+    </g>
+    <g id="rs-by-hour-narrow-ytick_6">
+     <g id="rs-by-hour-narrow-line2d_28">
+      <path d="M 28.8 220.95  L 250.56 220.95  " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: none; stroke: #e9edf2; stroke-width: 0.7; stroke-linecap: round" />
+     </g>
+     <g id="rs-by-hour-narrow-line2d_29" />
+     <g id="rs-by-hour-narrow-text_13">
+      
+      <g style="fill: #5b6878" transform="translate(9.95043 225.676439) scale(0.0975 -0.0975)">
+       <defs>
+        <path id="rs-by-hour-narrow-Inter-Regular-514" d="M 1936 -64  Q 1536 -64 1215 95  Q 895 255 702 532  Q 509 809 491 1164  L 1036 1164  Q 1068 848 1324 642  Q 1580 436 1936 436  Q 2223 436 2446 570  Q 2670 705 2798 940  Q 2927 1175 2927 1473  Q 2927 1777 2794 2017  Q 2661 2257 2429 2395  Q 2198 2534 1900 2536  Q 1686 2539 1461 2472  Q 1236 2405 1091 2300  L 564 2364  L 845 4655  L 3264 4655  L 3264 4155  L 1318 4155  L 1155 2782  L 1182 2782  Q 1325 2895 1541 2970  Q 1757 3045 1991 3045  Q 2418 3045 2753 2842  Q 3089 2639 3281 2286  Q 3473 1934 3473 1482  Q 3473 1036 3274 687  Q 3075 339 2727 137  Q 2380 -64 1936 -64  z " transform="scale(0.015625)" />
+        <path id="rs-by-hour-narrow-Inter-Regular-65c" d="M 2855 873  L 2855 1118  Q 2855 1373 2960 1585  Q 3066 1798 3269 1926  Q 3473 2055 3764 2055  Q 4059 2055 4259 1926  Q 4459 1798 4561 1585  Q 4664 1373 4664 1118  L 4664 873  Q 4664 618 4560 405  Q 4457 193 4256 64  Q 4055 -64 3764 -64  Q 3468 -64 3266 64  Q 3064 193 2959 405  Q 2855 618 2855 873  z M 3318 1118  L 3318 873  Q 3318 661 3418 494  Q 3518 327 3764 327  Q 4002 327 4101 494  Q 4200 661 4200 873  L 4200 1118  Q 4200 1330 4104 1497  Q 4009 1664 3764 1664  Q 3525 1664 3421 1497  Q 3318 1330 3318 1118  z M 536 3536  L 536 3782  Q 536 4036 642 4248  Q 748 4461 951 4589  Q 1155 4718 1445 4718  Q 1741 4718 1941 4589  Q 2141 4461 2243 4248  Q 2345 4036 2345 3782  L 2345 3536  Q 2345 3282 2242 3069  Q 2139 2857 1937 2728  Q 1736 2600 1445 2600  Q 1150 2600 947 2728  Q 745 2857 640 3069  Q 536 3282 536 3536  z M 1000 3782  L 1000 3536  Q 1000 3325 1100 3158  Q 1200 2991 1445 2991  Q 1684 2991 1783 3158  Q 1882 3325 1882 3536  L 1882 3782  Q 1882 3993 1786 4160  Q 1691 4327 1445 4327  Q 1207 4327 1103 4160  Q 1000 3993 1000 3782  z M 709 0  L 3909 4655  L 4427 4655  L 1227 0  L 709 0  z " transform="scale(0.015625)" />
+       </defs>
+       <use xlink:href="#rs-by-hour-narrow-Inter-Regular-514" />
+       <use xlink:href="#rs-by-hour-narrow-Inter-Regular-65c" transform="translate(60.796875 0)" />
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="rs-by-hour-narrow-patch_4">
+    <path d="M 31.83 237.88  L 38.32 237.88  L 38.32 237.28  L 31.83 237.28  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-hour-narrow-patch_5">
+    <path d="M 42.29 237.88  L 48.78 237.88  L 48.78 230.98  L 42.29 230.98  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-hour-narrow-patch_6">
+    <path d="M 52.75 237.88  L 59.24 237.88  L 59.24 224.37  L 52.75 224.37  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-hour-narrow-patch_7">
+    <path d="M 63.21 237.88  L 69.7 237.88  L 69.7 219.73  L 63.21 219.73  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-hour-narrow-patch_8">
+    <path d="M 73.68 237.88  L 80.16 237.88  L 80.16 218.38  L 73.68 218.38  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-hour-narrow-patch_9">
+    <path d="M 84.14 237.88  L 90.62 237.88  L 90.62 218.08  L 84.14 218.08  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-hour-narrow-patch_10">
+    <path d="M 94.6 237.88  L 101.08 237.88  L 101.08 219.46  L 94.6 219.46  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-hour-narrow-patch_11">
+    <path d="M 105.06 237.88  L 111.54 237.88  L 111.54 220.62  L 105.06 220.62  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-hour-narrow-patch_12">
+    <path d="M 115.52 237.88  L 122 237.88  L 122 221.66  L 115.52 221.66  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-hour-narrow-patch_13">
+    <path d="M 125.98 237.88  L 132.46 237.88  L 132.46 222.17  L 125.98 222.17  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-hour-narrow-patch_14">
+    <path d="M 136.44 237.88  L 142.92 237.88  L 142.92 222.14  L 136.44 222.14  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-hour-narrow-patch_15">
+    <path d="M 146.9 237.88  L 153.38 237.88  L 153.38 221.94  L 146.9 221.94  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-hour-narrow-patch_16">
+    <path d="M 157.36 237.88  L 163.84 237.88  L 163.84 221.94  L 157.36 221.94  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-hour-narrow-patch_17">
+    <path d="M 167.82 237.88  L 174.3 237.88  L 174.3 221.73  L 167.82 221.73  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-hour-narrow-patch_18">
+    <path d="M 178.28 237.88  L 184.76 237.88  L 184.76 220.21  L 178.28 220.21  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-hour-narrow-patch_19">
+    <path d="M 188.74 237.88  L 195.22 237.88  L 195.22 213.37  L 188.74 213.37  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-hour-narrow-patch_20">
+    <path d="M 199.2 237.88  L 205.68 237.88  L 205.68 213.2  L 199.2 213.2  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-hour-narrow-patch_21">
+    <path d="M 209.66 237.88  L 216.15 237.88  L 216.15 215.87  L 209.66 215.87  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-hour-narrow-patch_22">
+    <path d="M 220.12 237.88  L 226.61 237.88  L 226.61 216.42  L 220.12 216.42  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-hour-narrow-patch_23">
+    <path d="M 230.58 237.88  L 237.07 237.88  L 237.07 226.2  L 230.58 226.2  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+   <g id="rs-by-hour-narrow-patch_24">
+    <path d="M 241.04 237.88  L 247.53 237.88  L 247.53 231.21  L 241.04 231.21  z " clip-path="url(#rs-by-hour-narrow-pcb3c11aebe)" style="fill: #c3ccd6" />
+   </g>
+  </g>
+  <g id="rs-by-hour-narrow-h0" class="rs-h rs-area">
+   <title>4시
+이번 시도 1.134석
+기준 모델 1.126석 (차이 +0.008석)
+지금 운영 중인 예보 2.436석
+자료 비중 0.2%</title><path d="M 29.85 237.88  L 40.31 237.88  L 40.31 71.11  L 29.85 71.11  L 29.85 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-h1" class="rs-h rs-area">
+   <title>5시
+이번 시도 1.400석
+기준 모델 1.399석 (차이 0.000석)
+지금 운영 중인 예보 2.790석
+자료 비중 2.0%</title><path d="M 40.31 237.88  L 50.77 237.88  L 50.77 71.11  L 40.31 71.11  L 40.31 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-h2" class="rs-h rs-area">
+   <title>6시
+이번 시도 2.058석
+기준 모델 2.052석 (차이 +0.007석)
+지금 운영 중인 예보 4.127석
+자료 비중 4.0%</title><path d="M 50.77 237.88  L 61.23 237.88  L 61.23 71.11  L 50.77 71.11  L 50.77 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-h3" class="rs-h rs-area">
+   <title>7시
+이번 시도 2.394석
+기준 모델 2.388석 (차이 +0.006석)
+지금 운영 중인 예보 4.032석
+자료 비중 5.4%</title><path d="M 61.23 237.88  L 71.69 237.88  L 71.69 71.11  L 61.23 71.11  L 61.23 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-h4" class="rs-h rs-area">
+   <title>8시
+이번 시도 2.472석
+기준 모델 2.470석 (차이 +0.002석)
+지금 운영 중인 예보 3.633석
+자료 비중 5.8%</title><path d="M 71.69 237.88  L 82.15 237.88  L 82.15 71.11  L 71.69 71.11  L 71.69 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-h5" class="rs-h rs-area">
+   <title>9시
+이번 시도 2.178석
+기준 모델 2.183석 (차이 −0.005석)
+지금 운영 중인 예보 3.507석
+자료 비중 5.9%</title><path d="M 82.15 237.88  L 92.61 237.88  L 92.61 71.11  L 82.15 71.11  L 82.15 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-h6" class="rs-h rs-area">
+   <title>10시
+이번 시도 1.680석
+기준 모델 1.679석 (차이 +0.001석)
+지금 운영 중인 예보 2.661석
+자료 비중 5.4%</title><path d="M 92.61 237.88  L 103.07 237.88  L 103.07 71.11  L 92.61 71.11  L 92.61 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-h7" class="rs-h rs-area">
+   <title>11시
+이번 시도 1.506석
+기준 모델 1.505석 (차이 +0.002석)
+지금 운영 중인 예보 2.379석
+자료 비중 5.1%</title><path d="M 103.07 237.88  L 113.53 237.88  L 113.53 71.11  L 103.07 71.11  L 103.07 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-h8" class="rs-h rs-area">
+   <title>12시
+이번 시도 1.681석
+기준 모델 1.672석 (차이 +0.008석)
+지금 운영 중인 예보 2.318석
+자료 비중 4.8%</title><path d="M 113.53 237.88  L 123.99 237.88  L 123.99 71.11  L 113.53 71.11  L 113.53 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-h9" class="rs-h rs-area">
+   <title>13시
+이번 시도 1.631석
+기준 모델 1.617석 (차이 +0.014석)
+지금 운영 중인 예보 2.357석
+자료 비중 4.6%</title><path d="M 123.99 237.88  L 134.45 237.88  L 134.45 71.11  L 123.99 71.11  L 123.99 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-h10" class="rs-h rs-area">
+   <title>14시
+이번 시도 1.657석
+기준 모델 1.657석 (차이 0.000석)
+지금 운영 중인 예보 2.424석
+자료 비중 4.7%</title><path d="M 134.45 237.88  L 144.91 237.88  L 144.91 71.11  L 134.45 71.11  L 134.45 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-h11" class="rs-h rs-area">
+   <title>15시
+이번 시도 1.811석
+기준 모델 1.808석 (차이 +0.003석)
+지금 운영 중인 예보 2.496석
+자료 비중 4.7%</title><path d="M 144.91 237.88  L 155.37 237.88  L 155.37 71.11  L 144.91 71.11  L 144.91 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-h12" class="rs-h rs-area">
+   <title>16시
+이번 시도 2.164석
+기준 모델 2.165석 (차이 −0.002석)
+지금 운영 중인 예보 3.043석
+자료 비중 4.7%</title><path d="M 155.37 237.88  L 165.83 237.88  L 165.83 71.11  L 155.37 71.11  L 155.37 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-h13" class="rs-h rs-area">
+   <title>17시
+이번 시도 2.410석
+기준 모델 2.397석 (차이 +0.013석)
+지금 운영 중인 예보 3.255석
+자료 비중 4.8%</title><path d="M 165.83 237.88  L 176.29 237.88  L 176.29 71.11  L 165.83 71.11  L 165.83 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-h14" class="rs-h rs-area">
+   <title>18시
+이번 시도 2.701석
+기준 모델 2.672석 (차이 +0.029석)
+지금 운영 중인 예보 3.731석
+자료 비중 5.2%</title><path d="M 176.29 237.88  L 186.75 237.88  L 186.75 71.11  L 176.29 71.11  L 176.29 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-h15" class="rs-h rs-area">
+   <title>19시
+이번 시도 2.241석
+기준 모델 2.218석 (차이 +0.023석)
+지금 운영 중인 예보 3.143석
+자료 비중 7.2%</title><path d="M 186.75 237.88  L 197.21 237.88  L 197.21 71.11  L 186.75 71.11  L 186.75 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-h16" class="rs-h rs-area">
+   <title>20시
+이번 시도 2.205석
+기준 모델 2.181석 (차이 +0.024석)
+지금 운영 중인 예보 3.154석
+자료 비중 7.3%</title><path d="M 197.21 237.88  L 207.67 237.88  L 207.67 71.11  L 197.21 71.11  L 197.21 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-h17" class="rs-h rs-area">
+   <title>21시
+이번 시도 2.161석
+기준 모델 2.151석 (차이 +0.009석)
+지금 운영 중인 예보 3.073석
+자료 비중 6.5%</title><path d="M 207.67 237.88  L 218.13 237.88  L 218.13 71.11  L 207.67 71.11  L 207.67 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-h18" class="rs-h rs-area">
+   <title>22시
+이번 시도 2.092석
+기준 모델 2.097석 (차이 −0.005석)
+지금 운영 중인 예보 3.064석
+자료 비중 6.3%</title><path d="M 218.13 237.88  L 228.59 237.88  L 228.59 71.11  L 218.13 71.11  L 218.13 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-h19" class="rs-h rs-area">
+   <title>23시
+이번 시도 1.420석
+기준 모델 1.421석 (차이 −0.001석)
+지금 운영 중인 예보 2.452석
+자료 비중 3.5%</title><path d="M 228.59 237.88  L 239.05 237.88  L 239.05 71.11  L 228.59 71.11  L 228.59 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-h20" class="rs-h rs-area">
+   <title>0시
+이번 시도 1.625석
+기준 모델 1.614석 (차이 +0.011석)
+지금 운영 중인 예보 2.135석
+자료 비중 2.0%</title><path d="M 239.05 237.88  L 249.51 237.88  L 249.51 71.11  L 239.05 71.11  L 239.05 237.88  z " style="fill:#000;fill-opacity:0;stroke:none" class="rs-hit" />
+  </g>
+  <g id="rs-by-hour-narrow-text_14">
+   
+   <g style="fill: #5b6878" transform="translate(8.64 61.284609) scale(0.0975 -0.0975)">
+    <defs>
+     <path id="rs-by-hour-narrow-NotoSansKR-Regular-5015" d="M 3597 4256  L 4838 4256  L 4838 3827  L 3597 3827  L 3597 4256  z M 3597 3219  L 4838 3219  L 4838 2784  L 3597 2784  L 3597 3219  z M 493 4858  L 3539 4858  L 3539 4422  L 493 4422  L 493 4858  z M 397 2061  L 333 2509  Q 813 2509 1392 2518  Q 1971 2528 2572 2560  Q 3174 2592 3718 2656  L 3744 2259  Q 3194 2170 2595 2128  Q 1997 2086 1430 2073  Q 864 2061 397 2061  z M 1062 4512  L 1581 4512  L 1581 2368  L 1062 2368  L 1062 4512  z M 2451 4512  L 2963 4512  L 2963 2368  L 2451 2368  L 2451 4512  z M 4550 5293  L 5082 5293  L 5082 1722  L 4550 1722  L 4550 5293  z M 3174 1600  Q 4077 1600 4589 1331  Q 5101 1062 5101 557  Q 5101 64 4589 -211  Q 4077 -486 3174 -486  Q 2278 -486 1763 -211  Q 1248 64 1248 557  Q 1248 1062 1763 1331  Q 2278 1600 3174 1600  z M 3174 1184  Q 2739 1184 2422 1110  Q 2106 1037 1939 896  Q 1773 755 1773 557  Q 1773 262 2144 96  Q 2515 -70 3174 -70  Q 3616 -70 3929 3  Q 4243 77 4409 217  Q 4576 358 4576 557  Q 4576 755 4409 896  Q 4243 1037 3929 1110  Q 3616 1184 3174 1184  z " transform="scale(0.015625)" />
+     <path id="rs-by-hour-narrow-NotoSansKR-Regular-2a2c" d="M 979 4979  L 4666 4979  L 4666 4550  L 979 4550  L 979 4979  z M 320 2810  L 5568 2810  L 5568 2374  L 320 2374  L 320 2810  z M 2061 2534  L 2579 2534  L 2579 979  L 2061 979  L 2061 2534  z M 4365 4979  L 4890 4979  L 4890 4538  Q 4890 4160 4870 3693  Q 4851 3226 4717 2611  L 4198 2675  Q 4326 3277 4345 3721  Q 4365 4166 4365 4538  L 4365 4979  z M 954 64  L 5043 64  L 5043 -371  L 954 -371  L 954 64  z M 954 1446  L 1485 1446  L 1485 -38  L 954 -38  L 954 1446  z M 3597 2534  L 4115 2534  L 4115 979  L 3597 979  L 3597 2534  z " transform="scale(0.015625)" />
+     <path id="rs-by-hour-narrow-NotoSansKR-Regular-1" transform="scale(0.015625)" />
+     <path id="rs-by-hour-narrow-NotoSansKR-Regular-4270" d="M 2669 2022  L 3194 2022  L 3194 582  L 2669 582  L 2669 2022  z M 2931 4915  Q 3546 4915 4019 4726  Q 4493 4538 4765 4198  Q 5037 3859 5037 3398  Q 5037 2938 4765 2595  Q 4493 2253 4019 2067  Q 3546 1882 2931 1882  Q 2323 1882 1846 2067  Q 1370 2253 1101 2595  Q 832 2938 832 3398  Q 832 3859 1101 4198  Q 1370 4538 1846 4726  Q 2323 4915 2931 4915  z M 2931 4486  Q 2470 4486 2112 4352  Q 1754 4218 1549 3971  Q 1344 3725 1344 3398  Q 1344 3072 1549 2822  Q 1754 2573 2112 2438  Q 2470 2304 2931 2304  Q 3392 2304 3750 2438  Q 4109 2573 4317 2822  Q 4525 3072 4525 3398  Q 4525 3725 4317 3971  Q 4109 4218 3750 4352  Q 3392 4486 2931 4486  z M 320 685  L 5568 685  L 5568 243  L 320 243  L 320 685  z " transform="scale(0.015625)" />
+     <path id="rs-by-hour-narrow-NotoSansKR-Regular-4874" d="M 1728 3917  L 2150 3917  L 2150 3418  Q 2150 2963 2032 2531  Q 1914 2099 1699 1728  Q 1485 1357 1197 1072  Q 909 787 563 621  L 262 1030  Q 582 1184 851 1433  Q 1120 1683 1315 2003  Q 1510 2323 1619 2684  Q 1728 3046 1728 3418  L 1728 3917  z M 1830 3917  L 2246 3917  L 2246 3418  Q 2246 3072 2352 2729  Q 2458 2387 2643 2083  Q 2829 1779 3088 1532  Q 3347 1286 3661 1133  L 3360 730  Q 3021 896 2742 1174  Q 2464 1453 2259 1808  Q 2054 2163 1942 2576  Q 1830 2989 1830 3418  L 1830 3917  z M 422 4288  L 3533 4288  L 3533 3859  L 422 3859  L 422 4288  z M 1722 5184  L 2253 5184  L 2253 4051  L 1722 4051  L 1722 5184  z M 4237 5293  L 4768 5293  L 4768 -499  L 4237 -499  L 4237 5293  z M 4646 2918  L 5715 2918  L 5715 2470  L 4646 2470  L 4646 2918  z " transform="scale(0.015625)" />
+     <path id="rs-by-hour-narrow-NotoSansKR-Regular-9" d="M 1530 -1254  Q 1088 -538 838 252  Q 589 1043 589 1990  Q 589 2931 838 3724  Q 1088 4518 1530 5235  L 1888 5069  Q 1478 4384 1276 3593  Q 1075 2803 1075 1990  Q 1075 1171 1276 380  Q 1478 -410 1888 -1094  L 1530 -1254  z " transform="scale(0.015625)" />
+     <path id="rs-by-hour-narrow-NotoSansKR-Regular-3d69" d="M 3290 4083  L 4659 4083  L 4659 3642  L 3290 3642  L 3290 4083  z M 1766 4998  L 2202 4998  L 2202 4390  Q 2202 3840 2003 3363  Q 1805 2886 1449 2531  Q 1094 2176 608 1990  L 326 2419  Q 768 2573 1091 2870  Q 1414 3168 1590 3561  Q 1766 3955 1766 4390  L 1766 4998  z M 1862 4998  L 2291 4998  L 2291 4365  Q 2291 4070 2393 3788  Q 2496 3507 2681 3267  Q 2867 3027 3126 2838  Q 3386 2650 3699 2541  L 3418 2118  Q 2950 2298 2598 2634  Q 2246 2970 2054 3414  Q 1862 3859 1862 4365  L 1862 4998  z M 1216 1549  L 5082 1549  L 5082 -499  L 4550 -499  L 4550 1120  L 1216 1120  L 1216 1549  z M 4550 5293  L 5082 5293  L 5082 1869  L 4550 1869  L 4550 5293  z " transform="scale(0.015625)" />
+     <path id="rs-by-hour-narrow-NotoSansKR-Regular-a" d="M 634 -1254  L 269 -1094  Q 685 -410 889 380  Q 1094 1171 1094 1990  Q 1094 2803 889 3593  Q 685 4384 269 5069  L 634 5235  Q 1082 4518 1328 3724  Q 1574 2931 1574 1990  Q 1574 1043 1328 252  Q 1082 -538 634 -1254  z " transform="scale(0.015625)" />
+    </defs>
+    <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-5015" />
+    <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-2a2c" transform="translate(92 0)" />
+    <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-1" transform="translate(184 0)" />
+    <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-4270" transform="translate(206.40625 0)" />
+    <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-4874" transform="translate(298.40625 0)" />
+    <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-9" transform="translate(390.40625 0)" />
+    <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-3d69" transform="translate(424.203125 0)" />
+    <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-a" transform="translate(516.203125 0)" />
+   </g>
+  </g>
+  <g id="rs-by-hour-narrow-text_15">
+   
+   <g style="fill: #5b6878" transform="translate(8.64 202.875) scale(0.0975 -0.0975)">
+    <defs>
+     <path id="rs-by-hour-narrow-NotoSansKR-Regular-43dc" d="M 1747 4461  L 2176 4461  L 2176 3526  Q 2176 3072 2048 2627  Q 1920 2182 1693 1788  Q 1466 1395 1171 1091  Q 877 787 538 614  L 224 1037  Q 538 1190 810 1456  Q 1082 1722 1293 2064  Q 1504 2406 1625 2780  Q 1747 3155 1747 3526  L 1747 4461  z M 1850 4461  L 2272 4461  L 2272 3526  Q 2272 3181 2384 2829  Q 2496 2477 2701 2157  Q 2906 1837 3178 1584  Q 3450 1331 3757 1178  L 3456 755  Q 3117 928 2822 1219  Q 2528 1510 2310 1881  Q 2093 2253 1971 2675  Q 1850 3098 1850 3526  L 1850 4461  z M 429 4698  L 3552 4698  L 3552 4256  L 429 4256  L 429 4698  z M 4237 5293  L 4768 5293  L 4768 -499  L 4237 -499  L 4237 5293  z M 4646 2957  L 5715 2957  L 5715 2509  L 4646 2509  L 4646 2957  z " transform="scale(0.015625)" />
+     <path id="rs-by-hour-narrow-NotoSansKR-Regular-3518" d="M 1786 1901  L 2304 1901  L 2304 480  L 1786 480  L 1786 1901  z M 3635 1907  L 4154 1907  L 4154 486  L 3635 486  L 3635 1907  z M 320 659  L 5568 659  L 5568 218  L 320 218  L 320 659  z M 960 4864  L 4915 4864  L 4915 3110  L 1498 3110  L 1498 1952  L 973 1952  L 973 3539  L 4390 3539  L 4390 4429  L 960 4429  L 960 4864  z M 973 2182  L 5050 2182  L 5050 1747  L 973 1747  L 973 2182  z " transform="scale(0.015625)" />
+     <path id="rs-by-hour-narrow-NotoSansKR-Regular-3a90" d="M 4525 5293  L 5056 5293  L 5056 -506  L 4525 -506  L 4525 5293  z M 646 4800  L 1178 4800  L 1178 3277  L 2848 3277  L 2848 4800  L 3373 4800  L 3373 890  L 646 890  L 646 4800  z M 1178 2854  L 1178 1331  L 2848 1331  L 2848 2854  L 1178 2854  z " transform="scale(0.015625)" />
+     <path id="rs-by-hour-narrow-NotoSansKR-Regular-455d" d="M 2669 2400  L 3194 2400  L 3194 1389  L 2669 1389  L 2669 2400  z M 320 2586  L 5549 2586  L 5549 2150  L 320 2150  L 320 2586  z M 2931 1549  Q 3859 1549 4384 1286  Q 4909 1024 4909 531  Q 4909 45 4384 -220  Q 3859 -486 2931 -486  Q 2003 -486 1475 -220  Q 947 45 947 531  Q 947 1024 1475 1286  Q 2003 1549 2931 1549  z M 2931 1133  Q 2477 1133 2153 1062  Q 1830 992 1657 857  Q 1485 723 1485 531  Q 1485 339 1657 204  Q 1830 70 2153 -3  Q 2477 -77 2931 -77  Q 3386 -77 3709 -3  Q 4032 70 4205 204  Q 4378 339 4378 531  Q 4378 723 4205 857  Q 4032 992 3709 1062  Q 3386 1133 2931 1133  z M 2592 4813  L 3059 4813  L 3059 4640  Q 3059 4358 2940 4121  Q 2822 3885 2611 3683  Q 2400 3482 2115 3328  Q 1830 3174 1497 3075  Q 1165 2976 800 2931  L 608 3354  Q 922 3386 1213 3466  Q 1504 3546 1757 3664  Q 2010 3782 2195 3936  Q 2381 4090 2486 4269  Q 2592 4448 2592 4640  L 2592 4813  z M 2810 4813  L 3277 4813  L 3277 4640  Q 3277 4442 3382 4266  Q 3488 4090 3673 3939  Q 3859 3789 4112 3670  Q 4365 3552 4656 3469  Q 4947 3386 5261 3354  L 5069 2931  Q 4704 2976 4371 3075  Q 4038 3174 3753 3328  Q 3469 3482 3257 3680  Q 3046 3878 2928 4121  Q 2810 4365 2810 4640  L 2810 4813  z M 800 5024  L 5075 5024  L 5075 4595  L 800 4595  L 800 5024  z " transform="scale(0.015625)" />
+    </defs>
+    <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-43dc" />
+    <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-3518" transform="translate(92 0)" />
+    <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-1" transform="translate(184 0)" />
+    <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-3a90" transform="translate(206.40625 0)" />
+    <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-455d" transform="translate(298.40625 0)" />
+   </g>
+  </g>
+  <g id="rs-by-hour-narrow-legend_1">
+   <g id="rs-by-hour-narrow-line2d_30">
+    <path d="M 8.64 10.93  L 17.41 10.93  L 26.19 10.93  " style="fill: none; stroke: #2f62d0; stroke-width: 1.8; stroke-linecap: round" />
+    <defs>
+     <path id="rs-by-hour-narrow-m7fe7ca5f43" d="M 0 1.7  C 0.45 1.7 0.88 1.52 1.2 1.2  C 1.52 0.88 1.7 0.45 1.7 0  C 1.7 -0.45 1.52 -0.88 1.2 -1.2  C 0.88 -1.52 0.45 -1.7 0 -1.7  C -0.45 -1.7 -0.88 -1.52 -1.2 -1.2  C -1.52 -0.88 -1.7 -0.45 -1.7 0  C -1.7 0.45 -1.52 0.88 -1.2 1.2  C -0.88 1.52 -0.45 1.7 0 1.7  z " style="stroke: #ffffff" />
+    </defs>
+    <g>
+     <use xlink:href="#rs-by-hour-narrow-m7fe7ca5f43" x="17.41" y="10.93" style="fill: #2f62d0; stroke: #ffffff" />
+    </g>
+   </g>
+   <g id="rs-by-hour-narrow-text_16">
+    
+    <g style="fill: #5b6878" transform="translate(31.065 14.34) scale(0.0975 -0.0975)">
+     <defs>
+      <path id="rs-by-hour-narrow-NotoSansKR-Regular-43c0" d="M 4525 5293  L 5056 5293  L 5056 -506  L 4525 -506  L 4525 5293  z M 2003 4845  Q 2432 4845 2761 4598  Q 3091 4352 3280 3897  Q 3469 3443 3469 2829  Q 3469 2214 3280 1760  Q 3091 1306 2761 1056  Q 2432 806 2003 806  Q 1574 806 1241 1056  Q 909 1306 720 1760  Q 531 2214 531 2829  Q 531 3443 720 3897  Q 909 4352 1241 4598  Q 1574 4845 2003 4845  z M 2003 4371  Q 1715 4371 1500 4182  Q 1286 3994 1164 3645  Q 1043 3296 1043 2829  Q 1043 2362 1164 2013  Q 1286 1664 1500 1472  Q 1715 1280 2003 1280  Q 2285 1280 2499 1472  Q 2714 1664 2835 2013  Q 2957 2362 2957 2829  Q 2957 3296 2835 3645  Q 2714 3994 2499 4182  Q 2285 4371 2003 4371  z " transform="scale(0.015625)" />
+      <path id="rs-by-hour-narrow-NotoSansKR-Regular-38d4" d="M 3053 3661  L 4710 3661  L 4710 3226  L 3053 3226  L 3053 3661  z M 4550 5286  L 5082 5286  L 5082 1005  L 4550 1005  L 4550 5286  z M 1363 64  L 5216 64  L 5216 -371  L 1363 -371  L 1363 64  z M 1363 1421  L 1894 1421  L 1894 -154  L 1363 -154  L 1363 1421  z M 602 4902  L 1133 4902  L 1133 3885  L 2694 3885  L 2694 4902  L 3219 4902  L 3219 1990  L 602 1990  L 602 4902  z M 1133 3469  L 1133 2419  L 2694 2419  L 2694 3469  L 1133 3469  z " transform="scale(0.015625)" />
+      <path id="rs-by-hour-narrow-NotoSansKR-Regular-3010" d="M 986 2586  L 4960 2586  L 4960 2157  L 986 2157  L 986 2586  z M 320 672  L 5568 672  L 5568 230  L 320 230  L 320 672  z M 2669 2400  L 3194 2400  L 3194 499  L 2669 499  L 2669 2400  z M 986 4832  L 4902 4832  L 4902 4390  L 1517 4390  L 1517 2394  L 986 2394  L 986 4832  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-43c0" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-38d4" transform="translate(92 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-1" transform="translate(184 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-3f28" transform="translate(206.40625 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-3010" transform="translate(298.40625 0)" />
+    </g>
+   </g>
+   <g id="rs-by-hour-narrow-line2d_31">
+    <path d="M 8.64 25.55  L 17.41 25.55  L 26.19 25.55  " style="fill: none; stroke: #e0662e; stroke-width: 1.8; stroke-linecap: round" />
+    <defs>
+     <path id="rs-by-hour-narrow-m048eeae30f" d="M 0 1.7  C 0.45 1.7 0.88 1.52 1.2 1.2  C 1.52 0.88 1.7 0.45 1.7 0  C 1.7 -0.45 1.52 -0.88 1.2 -1.2  C 0.88 -1.52 0.45 -1.7 0 -1.7  C -0.45 -1.7 -0.88 -1.52 -1.2 -1.2  C -1.52 -0.88 -1.7 -0.45 -1.7 0  C -1.7 0.45 -1.52 0.88 -1.2 1.2  C -0.88 1.52 -0.45 1.7 0 1.7  z " style="stroke: #ffffff" />
+    </defs>
+    <g>
+     <use xlink:href="#rs-by-hour-narrow-m048eeae30f" x="17.41" y="25.55" style="fill: #e0662e; stroke: #ffffff" />
+    </g>
+   </g>
+   <g id="rs-by-hour-narrow-text_17">
+    
+    <g style="fill: #5b6878" transform="translate(31.065 28.965) scale(0.0975 -0.0975)">
+     <defs>
+      <path id="rs-by-hour-narrow-NotoSansKR-Regular-2a7c" d="M 4538 5293  L 5069 5293  L 5069 -499  L 4538 -499  L 4538 5293  z M 2842 4666  L 3366 4666  Q 3366 4038 3216 3456  Q 3066 2874 2746 2352  Q 2426 1830 1914 1382  Q 1402 934 672 582  L 390 1011  Q 1229 1414 1773 1952  Q 2317 2490 2579 3152  Q 2842 3814 2842 4582  L 2842 4666  z M 659 4666  L 3066 4666  L 3066 4237  L 659 4237  L 659 4666  z " transform="scale(0.015625)" />
+      <path id="rs-by-hour-narrow-NotoSansKR-Regular-454c" d="M 2592 4742  L 3059 4742  L 3059 4570  Q 3059 4205 2880 3897  Q 2701 3590 2390 3350  Q 2080 3110 1680 2953  Q 1280 2797 832 2733  L 634 3155  Q 941 3200 1232 3289  Q 1523 3379 1766 3510  Q 2010 3642 2195 3808  Q 2381 3974 2486 4166  Q 2592 4358 2592 4570  L 2592 4742  z M 2810 4742  L 3277 4742  L 3277 4570  Q 3277 4365 3382 4173  Q 3488 3981 3673 3811  Q 3859 3642 4105 3510  Q 4352 3379 4640 3289  Q 4928 3200 5235 3155  L 5037 2733  Q 4595 2797 4192 2953  Q 3789 3110 3481 3350  Q 3174 3590 2992 3897  Q 2810 4205 2810 4570  L 2810 4742  z M 800 5005  L 5075 5005  L 5075 4576  L 800 4576  L 800 5005  z M 314 2317  L 5562 2317  L 5562 1882  L 314 1882  L 314 2317  z M 2707 2042  L 3238 2042  L 3238 710  L 2707 710  L 2707 2042  z M 979 64  L 4979 64  L 4979 -371  L 979 -371  L 979 64  z M 979 1274  L 1510 1274  L 1510 -96  L 979 -96  L 979 1274  z " transform="scale(0.015625)" />
+      <path id="rs-by-hour-narrow-NotoSansKR-Regular-36f4" d="M 320 685  L 5568 685  L 5568 243  L 320 243  L 320 685  z M 2669 2182  L 3194 2182  L 3194 563  L 2669 563  L 2669 2182  z M 934 4813  L 4928 4813  L 4928 2086  L 934 2086  L 934 4813  z M 4410 4384  L 1453 4384  L 1453 2509  L 4410 2509  L 4410 4384  z " transform="scale(0.015625)" />
+      <path id="rs-by-hour-narrow-NotoSansKR-Regular-2fc4" d="M 4710 5286  L 5216 5286  L 5216 2214  L 4710 2214  L 4710 5286  z M 2438 4013  L 3853 4013  L 3853 3597  L 2438 3597  L 2438 4013  z M 3597 5171  L 4102 5171  L 4102 2266  L 3597 2266  L 3597 5171  z M 602 2925  L 966 2925  Q 1402 2925 1747 2934  Q 2093 2944 2409 2976  Q 2726 3008 3066 3072  L 3104 2643  Q 2758 2579 2435 2547  Q 2112 2515 1760 2505  Q 1408 2496 966 2496  L 602 2496  L 602 2925  z M 602 4960  L 2790 4960  L 2790 4531  L 1126 4531  L 1126 2650  L 602 2650  L 602 4960  z M 1376 1958  L 5216 1958  L 5216 602  L 1914 602  L 1914 -250  L 1389 -250  L 1389 1005  L 4698 1005  L 4698 1536  L 1376 1536  L 1376 1958  z M 1389 6  L 5427 6  L 5427 -422  L 1389 -422  L 1389 6  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-2a7c" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-454c" transform="translate(92 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-1" transform="translate(184 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-36f4" transform="translate(206.40625 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-2fc4" transform="translate(298.40625 0)" />
+    </g>
+   </g>
+   <g id="rs-by-hour-narrow-line2d_32">
+    <path d="M 8.64 40.18  L 17.41 40.18  L 26.19 40.18  " style="fill: none; stroke-dasharray: 7,4.2; stroke-dashoffset: 0; stroke: #4e5866; stroke-width: 1.4; stroke-linecap: round" />
+   </g>
+   <g id="rs-by-hour-narrow-text_18">
+    
+    <g style="fill: #5b6878" transform="translate(31.065 43.59) scale(0.0975 -0.0975)">
+     <defs>
+      <path id="rs-by-hour-narrow-NotoSansKR-Regular-460c" d="M 1850 4461  L 2285 4461  L 2285 3526  Q 2285 3066 2157 2621  Q 2029 2176 1801 1782  Q 1574 1389 1273 1088  Q 973 787 627 614  L 320 1037  Q 634 1190 912 1452  Q 1190 1715 1401 2054  Q 1613 2394 1731 2771  Q 1850 3149 1850 3526  L 1850 4461  z M 1958 4461  L 2387 4461  L 2387 3526  Q 2387 3162 2505 2800  Q 2624 2438 2838 2121  Q 3053 1805 3331 1561  Q 3610 1318 3930 1178  L 3635 755  Q 3283 922 2976 1203  Q 2669 1485 2441 1853  Q 2214 2221 2086 2646  Q 1958 3072 1958 3526  L 1958 4461  z M 506 4698  L 3738 4698  L 3738 4256  L 506 4256  L 506 4698  z M 4525 5293  L 5056 5293  L 5056 -499  L 4525 -499  L 4525 5293  z " transform="scale(0.015625)" />
+      <path id="rs-by-hour-narrow-NotoSansKR-Regular-2a54" d="M 986 4986  L 4710 4986  L 4710 4550  L 986 4550  L 986 4986  z M 320 2854  L 5568 2854  L 5568 2419  L 320 2419  L 320 2854  z M 4365 4986  L 4890 4986  L 4890 4557  Q 4890 4192 4864 3750  Q 4838 3309 4698 2701  L 4173 2733  Q 4314 3322 4339 3760  Q 4365 4198 4365 4557  L 4365 4986  z M 966 1632  L 4909 1632  L 4909 -422  L 966 -422  L 966 1632  z M 4384 1210  L 1485 1210  L 1485 13  L 4384 13  L 4384 1210  z " transform="scale(0.015625)" />
+      <path id="rs-by-hour-narrow-NotoSansKR-Regular-4300" d="M 314 2355  L 5562 2355  L 5562 1920  L 314 1920  L 314 2355  z M 2714 2080  L 3251 2080  L 3251 749  L 2714 749  L 2714 2080  z M 986 70  L 4979 70  L 4979 -371  L 986 -371  L 986 70  z M 986 1318  L 1517 1318  L 1517 -51  L 986 -51  L 986 1318  z M 2931 5146  Q 3546 5146 4000 5005  Q 4454 4864 4707 4605  Q 4960 4346 4960 3981  Q 4960 3629 4707 3366  Q 4454 3104 4000 2963  Q 3546 2822 2931 2822  Q 2323 2822 1865 2963  Q 1408 3104 1155 3366  Q 902 3629 902 3981  Q 902 4346 1155 4605  Q 1408 4864 1865 5005  Q 2323 5146 2931 5146  z M 2931 4717  Q 2496 4717 2163 4627  Q 1830 4538 1648 4374  Q 1466 4211 1466 3981  Q 1466 3757 1648 3593  Q 1830 3430 2163 3344  Q 2496 3258 2931 3258  Q 3379 3258 3705 3344  Q 4032 3430 4214 3593  Q 4397 3757 4397 3981  Q 4397 4211 4214 4374  Q 4032 4538 3705 4627  Q 3379 4717 2931 4717  z " transform="scale(0.015625)" />
+      <path id="rs-by-hour-narrow-NotoSansKR-Regular-424d" d="M 2957 4454  L 4717 4454  L 4717 4026  L 2957 4026  L 2957 4454  z M 2957 3123  L 4717 3123  L 4717 2688  L 2957 2688  L 2957 3123  z M 1901 4947  Q 2323 4947 2659 4771  Q 2995 4595 3190 4284  Q 3386 3974 3386 3571  Q 3386 3168 3190 2857  Q 2995 2547 2659 2371  Q 2323 2195 1901 2195  Q 1472 2195 1136 2371  Q 800 2547 605 2857  Q 410 3168 410 3571  Q 410 3974 605 4284  Q 800 4595 1136 4771  Q 1472 4947 1901 4947  z M 1901 4493  Q 1619 4493 1395 4377  Q 1171 4262 1043 4054  Q 915 3846 915 3571  Q 915 3302 1043 3094  Q 1171 2886 1395 2768  Q 1619 2650 1901 2650  Q 2182 2650 2403 2768  Q 2624 2886 2752 3094  Q 2880 3302 2880 3571  Q 2880 3846 2752 4054  Q 2624 4262 2403 4377  Q 2182 4493 1901 4493  z M 4550 5293  L 5082 5293  L 5082 1869  L 4550 1869  L 4550 5293  z M 3174 1728  Q 3776 1728 4205 1597  Q 4634 1466 4867 1219  Q 5101 973 5101 621  Q 5101 275 4867 25  Q 4634 -224 4205 -355  Q 3776 -486 3174 -486  Q 2579 -486 2147 -355  Q 1715 -224 1481 25  Q 1248 275 1248 621  Q 1248 973 1481 1219  Q 1715 1466 2147 1597  Q 2579 1728 3174 1728  z M 3174 1312  Q 2739 1312 2422 1229  Q 2106 1146 1936 992  Q 1766 838 1766 621  Q 1766 410 1936 256  Q 2106 102 2422 19  Q 2739 -64 3174 -64  Q 3616 -64 3929 19  Q 4243 102 4412 256  Q 4582 410 4582 621  Q 4582 838 4412 992  Q 4243 1146 3929 1229  Q 3616 1312 3174 1312  z " transform="scale(0.015625)" />
+      <path id="rs-by-hour-narrow-NotoSansKR-Regular-43c4" d="M 4531 5286  L 5062 5286  L 5062 1062  L 4531 1062  L 4531 5286  z M 1344 64  L 5242 64  L 5242 -371  L 1344 -371  L 1344 64  z M 1344 1491  L 1875 1491  L 1875 -83  L 1344 -83  L 1344 1491  z M 1958 4883  Q 2394 4883 2733 4704  Q 3072 4525 3270 4201  Q 3469 3878 3469 3462  Q 3469 3046 3270 2723  Q 3072 2400 2733 2217  Q 2394 2035 1958 2035  Q 1530 2035 1187 2217  Q 845 2400 646 2723  Q 448 3046 448 3462  Q 448 3878 646 4201  Q 845 4525 1187 4704  Q 1530 4883 1958 4883  z M 1958 4422  Q 1677 4422 1453 4300  Q 1229 4179 1097 3961  Q 966 3744 966 3462  Q 966 3174 1097 2960  Q 1229 2746 1453 2624  Q 1677 2502 1958 2502  Q 2240 2502 2467 2624  Q 2694 2746 2822 2960  Q 2950 3174 2950 3462  Q 2950 3744 2822 3961  Q 2694 4179 2467 4300  Q 2240 4422 1958 4422  z " transform="scale(0.015625)" />
+      <path id="rs-by-hour-narrow-NotoSansKR-Regular-4254" d="M 2624 3891  L 3757 3891  L 3757 3456  L 2624 3456  L 2624 3891  z M 2624 2131  L 3757 2131  L 3757 1690  L 2624 1690  L 2624 2131  z M 4730 5293  L 5242 5293  L 5242 -499  L 4730 -499  L 4730 5293  z M 3590 5171  L 4096 5171  L 4096 -205  L 3590 -205  L 3590 5171  z M 1619 4806  Q 1997 4806 2275 4563  Q 2554 4320 2707 3865  Q 2861 3411 2861 2797  Q 2861 2176 2707 1721  Q 2554 1267 2275 1020  Q 1997 774 1619 774  Q 1254 774 976 1020  Q 698 1267 544 1721  Q 390 2176 390 2797  Q 390 3411 544 3865  Q 698 4320 976 4563  Q 1254 4806 1619 4806  z M 1619 4314  Q 1395 4314 1225 4128  Q 1056 3942 966 3603  Q 877 3264 877 2797  Q 877 2330 966 1987  Q 1056 1645 1225 1459  Q 1395 1274 1619 1274  Q 1856 1274 2022 1459  Q 2189 1645 2281 1987  Q 2374 2330 2374 2797  Q 2374 3264 2281 3603  Q 2189 3942 2022 4128  Q 1856 4314 1619 4314  z " transform="scale(0.015625)" />
+      <path id="rs-by-hour-narrow-NotoSansKR-Regular-3940" d="M 320 678  L 5568 678  L 5568 237  L 320 237  L 320 678  z M 2669 2067  L 3194 2067  L 3194 550  L 2669 550  L 2669 2067  z M 934 4883  L 1466 4883  L 1466 3853  L 4410 3853  L 4410 4883  L 4934 4883  L 4934 1920  L 934 1920  L 934 4883  z M 1466 3418  L 1466 2355  L 4410 2355  L 4410 3418  L 1466 3418  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-460c" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-2a54" transform="translate(92 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-1" transform="translate(184 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-4300" transform="translate(206.40625 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-424d" transform="translate(298.40625 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-1" transform="translate(390.40625 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-455d" transform="translate(412.8125 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-43c4" transform="translate(504.8125 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-1" transform="translate(596.8125 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-4254" transform="translate(619.21875 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-3940" transform="translate(711.21875 0)" />
+    </g>
+   </g>
+   <g id="rs-by-hour-narrow-patch_25">
+    <path d="M 121.08 14.34  L 138.63 14.34  L 138.63 7.51  L 121.08 7.51  z " style="fill: #0a8f3c; opacity: 0.3" />
+   </g>
+   <g id="rs-by-hour-narrow-text_19">
+    
+    <g style="fill: #5b6878" transform="translate(143.503828 14.34) scale(0.0975 -0.0975)">
+     <defs>
+      <path id="rs-by-hour-narrow-NotoSansKR-Regular-2f30" d="M 4237 5293  L 4768 5293  L 4768 -506  L 4237 -506  L 4237 5293  z M 4646 3008  L 5715 3008  L 5715 2566  L 4646 2566  L 4646 3008  z M 570 1389  L 1024 1389  Q 1555 1389 2000 1405  Q 2445 1421 2857 1465  Q 3270 1510 3699 1587  L 3763 1133  Q 3315 1056 2896 1011  Q 2477 966 2022 953  Q 1568 941 1024 941  L 570 941  L 570 1389  z M 570 4730  L 3251 4730  L 3251 4294  L 1094 4294  L 1094 1184  L 570 1184  L 570 4730  z " transform="scale(0.015625)" />
+      <path id="rs-by-hour-narrow-NotoSansKR-Regular-2fa8" d="M 634 2861  L 1062 2861  Q 1626 2861 2051 2873  Q 2477 2886 2841 2924  Q 3206 2963 3590 3040  L 3642 2618  Q 3258 2547 2880 2508  Q 2502 2470 2067 2454  Q 1632 2438 1062 2438  L 634 2438  L 634 2861  z M 634 4947  L 3270 4947  L 3270 4525  L 1158 4525  L 1158 2605  L 634 2605  L 634 4947  z M 2925 4006  L 4691 4006  L 4691 3597  L 2925 3597  L 2925 4006  z M 4550 5293  L 5075 5293  L 5075 2240  L 4550 2240  L 4550 5293  z M 1350 1958  L 5075 1958  L 5075 602  L 1888 602  L 1888 -269  L 1363 -269  L 1363 1005  L 4550 1005  L 4550 1536  L 1350 1536  L 1350 1958  z M 1363 6  L 5293 6  L 5293 -422  L 1363 -422  L 1363 6  z " transform="scale(0.015625)" />
+      <path id="rs-by-hour-narrow-NotoSansKR-Regular-4f0c" d="M 1005 3437  L 4934 3437  L 4934 3053  L 1005 3053  L 1005 3437  z M 1005 5146  L 4902 5146  L 4902 4762  L 1536 4762  L 1536 3251  L 1005 3251  L 1005 5146  z M 1376 4301  L 4749 4301  L 4749 3930  L 1376 3930  L 1376 4301  z M 326 2618  L 5542 2618  L 5542 2208  L 326 2208  L 326 2618  z M 954 1766  L 4877 1766  L 4877 506  L 1485 506  L 1485 -211  L 966 -211  L 966 883  L 4358 883  L 4358 1376  L 954 1376  L 954 1766  z M 966 -38  L 5050 -38  L 5050 -435  L 966 -435  L 966 -38  z " transform="scale(0.015625)" />
+      <path id="rs-by-hour-narrow-NotoSansKR-Regular-3608" d="M 4531 5286  L 5062 5286  L 5062 1856  L 4531 1856  L 4531 5286  z M 621 2573  L 1088 2573  Q 1613 2573 2064 2585  Q 2515 2598 2944 2640  Q 3373 2682 3834 2752  L 3898 2317  Q 3418 2240 2979 2198  Q 2541 2157 2083 2144  Q 1626 2131 1088 2131  L 621 2131  L 621 2573  z M 608 4941  L 3232 4941  L 3232 3360  L 1139 3360  L 1139 2304  L 621 2304  L 621 3776  L 2714 3776  L 2714 4512  L 608 4512  L 608 4941  z M 1325 1542  L 5062 1542  L 5062 -422  L 1325 -422  L 1325 1542  z M 4544 1114  L 1843 1114  L 1843 13  L 4544 13  L 4544 1114  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-2a7c" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-454c" transform="translate(92 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-1" transform="translate(184 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-36f4" transform="translate(206.40625 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-2fc4" transform="translate(298.40625 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-3940" transform="translate(390.40625 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-2f30" transform="translate(482.40625 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-1" transform="translate(574.40625 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-2fa8" transform="translate(596.8125 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-1" transform="translate(688.8125 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-4f0c" transform="translate(711.21875 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-3608" transform="translate(803.21875 0)" />
+    </g>
+   </g>
+   <g id="rs-by-hour-narrow-patch_26">
+    <path d="M 121.08 28.96  L 138.63 28.96  L 138.63 22.14  L 121.08 22.14  z " style="fill: #d03b3b; opacity: 0.3" />
+   </g>
+   <g id="rs-by-hour-narrow-text_20">
+    
+    <g style="fill: #5b6878" transform="translate(143.503828 28.965) scale(0.0975 -0.0975)">
+     <defs>
+      <path id="rs-by-hour-narrow-NotoSansKR-Regular-2fa0" d="M 608 1370  L 1050 1370  Q 1594 1370 2022 1386  Q 2451 1402 2838 1440  Q 3226 1478 3622 1555  L 3686 1120  Q 3270 1037 2873 998  Q 2477 960 2041 941  Q 1606 922 1050 922  L 608 922  L 608 1370  z M 608 4742  L 3238 4742  L 3238 4301  L 1139 4301  L 1139 1210  L 608 1210  L 608 4742  z M 4557 5293  L 5088 5293  L 5088 -506  L 4557 -506  L 4557 5293  z M 2899 3194  L 4781 3194  L 4781 2752  L 2899 2752  L 2899 3194  z " transform="scale(0.015625)" />
+     </defs>
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-2fa0" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-1" transform="translate(92 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-4f0c" transform="translate(114.40625 0)" />
+     <use xlink:href="#rs-by-hour-narrow-NotoSansKR-Regular-3608" transform="translate(206.40625 0)" />
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="rs-by-hour-narrow-p4c69e9a85c">
+   <rect x="28.8" y="71.11" width="221.76" height="114.495" />
+  </clipPath>
+  <clipPath id="rs-by-hour-narrow-pcb3c11aebe">
+   <rect x="28.8" y="211.97" width="221.76" height="25.92" />
+  </clipPath>
+ </defs>
+</svg>
