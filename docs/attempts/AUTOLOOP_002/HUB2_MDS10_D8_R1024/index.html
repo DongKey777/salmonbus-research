@@ -13,12 +13,12 @@
 <meta property="og:image" content="https://research.dongkey.tech/charts/home-progress.png?v=dbb4cf53a2e10688">
 <meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/favicon.svg?v=42a4ccc6ef62" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
-<link rel="stylesheet" href="/assets/site.css?v=b714ef003e83" data-asset="css">
+<link rel="stylesheet" href="/assets/site.css?v=0bc50bdb389a" data-asset="css">
 <noscript><link rel="stylesheet" href="/assets/noscript.css?v=24fe7a57d410"></noscript>
 <script src="/assets/charts.js?v=dd96aa903a7f" defer data-asset="js"></script>
 <script src="/assets/live.js?v=1cd63fc217fe" defer data-asset="js"></script>
 </head>
-<body data-digest="6c1d4ed8c4e9549abb920a5fa9dc34cb264a5ad6cf9a73e947f037464479fad4" data-poll="60" data-version-url="/version.json">
+<body data-digest="c9fd8d1022270e5afebaf1eca263c92bab83db25ade8afb60c80aaf7378b8b08" data-poll="60" data-version-url="/version.json">
 <a class="skip" href="#main">본문으로 건너뛰기</a>
 <header class="topbar">
   <div class="topbar__inner">
@@ -27,12 +27,15 @@
       <a href="/">홈</a>
       <a href="/progress/">개선 현황</a>
       <a href="/attempts/" aria-current="page">시도 상세</a>
-    </nav>
+<a href="/arrival/">도착 연구</a>    </nav>
     <p class="live" id="live-status" data-live aria-live="polite">
-<span class="live__dot" aria-hidden="true"></span><span class="live__text">갱신 10월 25일 01:20</span>    </p>
+<span class="live__dot" aria-hidden="true"></span><span class="live__text">기존 루프 자료 10월 25일 01:20</span>    </p>
   </div>
 </header>
 <main id="main" class="page page--split">
+<aside class="authored" aria-label="기존 연구의 정답 정의">
+  <p class="authored__text"><span class="tag tag--scope">기존 출발·통과 이후 정답</span> 이 기록은 목표 정류장 출발·통과 이후 관측 잔여석을 정답으로 사용합니다. 승하차 전 도착 잔여석 성능으로 해석할 수 없습니다. <a href="/arrival/">정답과 데이터가 다른 도착 연구 보기</a></p>
+</aside>
 <aside class="side" id="attempt-list" data-live aria-labelledby="side-title">
   <div class="side__head">
     <h2 class="side__title" id="side-title">발행된 시도</h2>
@@ -292,7 +295,7 @@
 <section class="dsec" id="sec-model" data-live aria-labelledby="h-model">
   <h2 class="dsec__title" id="h-model">모델이 좌석을 예측하는 방식</h2>
   <div class="authored" data-authored>
-<p class="authored__by"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 11.5 10.5 4l1.5 1.5L4.5 13H3v-1.5Zm8.4-8.4 1-1a1 1 0 0 1 1.4 0l.1.1a1 1 0 0 1 0 1.4l-1 1-1.5-1.5Z"/></svg>감독 AI가 씀</p>  <p class="authored__text">이 시도는 엑스지부스트 회귀 모델을 사용합니다. 이 모델은 현재 좌석 상태에서 목표 정류장에 도착했을 때의 잔여 좌석 수를 예측합니다. 현재 잔여 좌석과 목표까지의 정류장 수, 시각과 요일, 좌석 변화, 정류장 수요 등을 담은 입력 특징을 사용합니다. 트리가 조건에 따라 입력을 나누고 리프에서 보정값을 내면, 다음 트리가 그 예측에서 남은 손실을 줄이는 보정을 더하는 방식으로 학습합니다.</p>
+<p class="authored__by"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 11.5 10.5 4l1.5 1.5L4.5 13H3v-1.5Zm8.4-8.4 1-1a1 1 0 0 1 1.4 0l.1.1a1 1 0 0 1 0 1.4l-1 1-1.5-1.5Z"/></svg>감독 AI가 씀</p>  <p class="authored__text">이 시도는 엑스지부스트 회귀 모델을 사용합니다. 이 모델은 현재 좌석 상태에서 목표 정류장을 출발·통과한 뒤 관측된 잔여석 수를 예측합니다. 현재 잔여 좌석과 목표까지의 정류장 수, 시각과 요일, 좌석 변화, 정류장 수요 등을 담은 입력 특징을 사용합니다. 트리가 조건에 따라 입력을 나누고 리프에서 보정값을 내면, 다음 트리가 그 예측에서 남은 손실을 줄이는 보정을 더하는 방식으로 학습합니다. 정답은 통과 순번이 목표 정류장 순번과 같은 첫 관측값입니다. 따라서 이 글의 점수를 승하차 전 도착 잔여석의 정확도로 해석할 수는 없습니다.</p>
   <p class="authored__text">유사 후버 손실은 오차가 작을 때 제곱오차와 비슷하게 반응하고, 오차가 커질수록 절대오차에 가까운 형태로 완만하게 바뀝니다. 따라서 작은 오차를 세밀하게 줄이면서도 큰 오차가 학습을 지나치게 이끌지 않도록 조정합니다. 계수는 2로 설정해, 계수가 6인 후보보다 더 작은 오차 범위에서 큰 오차의 영향을 완화하도록 합니다. 이 계수는 반응이 바뀌는 범위를 정하며, 특정 좌석 수에서 오차를 잘라내는 기준은 아닙니다. 큰 오류도 손실에 계속 반영됩니다. 초기 예측은 학습 관측의 가중 중앙값으로 잡고, 이후 트리의 보정으로 바꿉니다.</p>
   <p class="authored__text">최대 깊이 8, 학습률 0.1로 1,024번 학습하며 리프 출력 제한은 10으로 둡니다. 이 제한은 각 트리의 리프가 제안하는 갱신 크기에 적용하고, 학습률은 그 보정을 기존 예측에 반영하는 비율을 정합니다. 최종 잔여 좌석 예측을 이 값으로 제한하는 설정은 아닙니다. 같은 리프 출력 제한을 둔 제곱오차 후보와 비교해야 손실을 바꾼 영향과 갱신을 제한한 영향을 나눌 수 있습니다.</p>
 </div>
@@ -3402,9 +3405,9 @@
 <section class="dsec" id="sec-provenance" data-live aria-labelledby="h-provenance">
   <h2 class="dsec__title" id="h-provenance">작성 정보</h2>
   <dl class="facts">
-    <div><dt>판본</dt><dd>3판 · <a href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/" aria-current="page">3판</a>, <a href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/v2/">2판</a>, <a href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/v1/">1판</a></dd></div>
-<div><dt>발행</dt><dd>10월 25일 01:42</dd></div>    <div><dt>작성</dt><dd>10월 25일 01:41</dd></div>
-    <div><dt>쓴 쪽</dt><dd><ul class="facts__list"><li>모델 설명, 가설, 결과, 판정 이유, 배운 점: 감독 AI가 씀 · 10월 25일 01:41</li><li>설계 때 기대: 설계 AI 계획을 감독 AI가 다듬음 · 원문 10월 22일 02:05</li></ul></dd></div>
+    <div><dt>판본</dt><dd>4판 · <a href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/" aria-current="page">4판</a>, <a href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/v3/">3판</a>, <a href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/v2/">2판</a>, <a href="/attempts/AUTOLOOP_002/HUB2_MDS10_D8_R1024/v1/">1판</a></dd></div>
+<div><dt>발행</dt><dd>10월 25일 04:10</dd></div>    <div><dt>작성</dt><dd>10월 25일 04:09</dd></div>
+    <div><dt>쓴 쪽</dt><dd><ul class="facts__list"><li>모델 설명, 가설, 결과, 판정 이유, 배운 점: 감독 AI가 씀 · 10월 25일 04:09</li><li>설계 때 기대: 설계 AI 계획을 감독 AI가 다듬음 · 원문 10월 22일 02:05</li></ul></dd></div>
     <div><dt>사실 문서</dt><dd><span class="mono">13713a72</span> · 판본 37</dd></div>
     <div><dt>근거 파일</dt><dd>작업자 지표 <span class="mono">4d40821f</span> · 작업자 진단 <span class="mono">a137c97f</span> · 장부 기록 <span class="mono">957aae7d</span> · 설계 계획 <span class="mono">f7d737d6</span> · 심사 출력 <span class="mono">de052c6e</span></dd></div>
   </dl>
@@ -3414,7 +3417,7 @@
 <footer class="footer">
   <div class="footer__inner">
     <p>채택 = 다음 실험의 기준 모델 · 운영 예보 반영과 별개</p>
-    <p class="footer__meta" id="footer-meta" data-live>판본 37 · 10월 25일 01:20 · <a href="/THIRD-PARTY-LICENSES.txt">글꼴 라이선스</a></p>
+    <p class="footer__meta" id="footer-meta" data-live>기존 루프 판본 37 · 10월 25일 01:20 · <a href="/THIRD-PARTY-LICENSES.txt">글꼴 라이선스</a></p>
   </div>
 </footer>
 </body>
