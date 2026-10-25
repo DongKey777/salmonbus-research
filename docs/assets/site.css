@@ -1,5 +1,5 @@
-@font-face { font-family: "RS Noto Sans KR"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/noto-sans-kr-400.woff?v=b30ceeb65726") format("woff"); }
-@font-face { font-family: "RS Noto Sans KR"; font-style: normal; font-weight: 700; font-display: swap; src: url("/assets/fonts/noto-sans-kr-700.woff?v=a1bb20d6c368") format("woff"); }
+@font-face { font-family: "RS Noto Sans KR"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/noto-sans-kr-400.woff?v=956493ffd592") format("woff"); }
+@font-face { font-family: "RS Noto Sans KR"; font-style: normal; font-weight: 700; font-display: swap; src: url("/assets/fonts/noto-sans-kr-700.woff?v=fe29582d8cc8") format("woff"); }
 @font-face { font-family: "RS Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/inter-400.woff?v=e1352122d61b") format("woff"); }
 @font-face { font-family: "RS Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/inter-500.woff?v=92ee39578543") format("woff"); }
 @font-face { font-family: "RS Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("/assets/fonts/inter-600.woff?v=89e7a7fba89b") format("woff"); }
@@ -128,6 +128,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .card--chart + .card--chart { margin-top: 16px; }
 .chart-frame { position: relative; container: chart / inline-size; }
 .chart-scroll { overflow-x: auto; overscroll-behavior-x: contain; }
+.arrival-risk-plot svg { display: block; width: 100%; max-width: 760px; height: auto; margin: 0 auto; }
 .chart-scroll:focus-visible { outline-offset: 4px; }
 .chart { margin: 0; }
 .chart__v { display: block; width: 100%; }
@@ -410,6 +411,7 @@ a.index__item:hover { text-decoration: none; background: var(--surface); }
   .changes td.changes__gap { grid-column: 2; text-align: right; }
 }
 @media (max-width: 600px) {
+  .arrival-risk-plot svg text { font-size: 20px; }
   .head__row .page__title { flex-basis: 100%; margin-right: 0; }
   .card--chart { padding: 12px 0; border-left: 0; border-right: 0; border-radius: 0; }
   .chart-hint { padding: 0 12px; }

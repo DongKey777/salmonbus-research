@@ -12,12 +12,12 @@
 <meta property="og:url" content="https://research.dongkey.tech/arrival/">
 <link rel="icon" href="/favicon.svg?v=42a4ccc6ef62" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
-<link rel="stylesheet" href="/assets/site.css?v=7e6c5fb99043" data-asset="css">
+<link rel="stylesheet" href="/assets/site.css?v=42c19ccf1269" data-asset="css">
 <noscript><link rel="stylesheet" href="/assets/noscript.css?v=24fe7a57d410"></noscript>
 <script src="/assets/charts.js?v=dd96aa903a7f" defer data-asset="js"></script>
 <script src="/assets/live.js?v=1cd63fc217fe" defer data-asset="js"></script>
 </head>
-<body data-digest="a6a36f8da5e2392921b8c649cc35e1640958722112684a32c3b5ba580867e7ff" data-poll="60" data-version-url="/version.json">
+<body data-digest="886c101f8d8497e584e0871fbf2ccdc62a82f28658c5e41455b2101037259939" data-poll="60" data-version-url="/version.json">
 <a class="skip" href="#main">본문으로 건너뛰기</a>
 <header class="topbar">
   <div class="topbar__inner">
@@ -43,7 +43,50 @@
     <p class="authored__text">목표 정류장의 <strong>첫 도착 상태에 표시된 잔여석</strong>을 예측합니다. 실제 승하차가 시작되기 전의 센서 값인지는 확인되지 않았습니다. 이 결과는 개인의 탑승 성공이나 별도 승차·하차 인원을 뜻하지 않습니다.</p>
     <p class="authored__text">기존 출발·통과 이후 연구와 정답·데이터·질문 분모가 다릅니다. 기존 기준 모델의 오차와 직접 비교하지 않습니다. 이번 도착 연구에서 채택한 모델은 없습니다.</p>
   </div>
-  <nav class="head__line" aria-label="도착 연구의 비교 범위"><a href="#arrival-full">전체 수집 범위 실험 · 3개 모델</a><a href="#arrival-pilot">제한 범위 연결 검증 · 6개 모델</a></nav>
+  <nav class="head__line" aria-label="도착 연구의 비교 범위"><a href="#arrival-risk">최신 과대예측 실험 · 6개 모델</a><a href="#arrival-full">전체 수집 범위 실험 · 3개 모델</a><a href="#arrival-pilot">제한 범위 연결 검증 · 6개 모델</a></nav>
+</section>
+<section class="dsec arrival-risk" id="arrival-risk" aria-labelledby="arrival-risk-title">
+  <div class="dsec__head">
+    <h2 class="dsec__title" id="arrival-risk-title">자리가 적을 때의 과대예측 줄이기</h2>
+    <span class="tag tag--scope">전체 수집 범위 · 같은 개발 질문</span>
+    <span class="tag tag--warn">개발 자료 재사용 · 채택 안 함</span>
+  </div>
+  <p class="authored__text">앞선 전체 범위 실험과 <strong>같은 학습·개발 자료</strong>에서 손실과 학습 비중을 바꾼 후보 3개를 기존 비교 모델 3개와 함께 평가했습니다. 새 후보는 목표 정류장 통계를 제외한 15개 특징을 사용하며, 학습 자료(TRAIN)에서 각각 한 번 학습했습니다.</p>
+  <div class="keynums">
+    <div><p class="keynum__label">학습 질문(TRAIN)</p><p class="keynum__value">496,475<span class="keynum__unit">개</span></p><p class="keynum__sub">새 후보 3개가 함께 사용한 자료</p></div>
+    <div><p class="keynum__label">재사용한 개발 질문(DEV)</p><p class="keynum__value">80,569<span class="keynum__unit">개</span></p><p class="keynum__sub">80,569방문 · 20개 노선</p></div>
+    <div><p class="keynum__label">실제 도착 표시 0~2석</p><p class="keynum__value">959<span class="keynum__unit">개</span></p><p class="keynum__sub">그중 0석 619개</p></div>
+  </div>
+  <h3 class="dsec__sub">전체 오차와 0~2석에서의 과대예측</h3>
+  <p class="authored__text">전체 MAE는 모든 개발 방문에 같은 비중을 줍니다. 노선별 MAE 평균은 먼저 노선마다 MAE를 구한 뒤 노선마다 같은 비중을 줍니다. 학습 가중치는 평가 비중에 적용하지 않았습니다.</p>
+  <div class="table-wrap"><table class="table table--stack">
+    <thead><tr><th scope="col">모델</th><th scope="col">전체 MAE</th><th scope="col">노선별 MAE 평균</th><th scope="col">0~2석 MAE</th><th scope="col">1석 이상 과대예측</th><th scope="col">3석 이상 과대예측</th><th scope="col">0석 감지율</th></tr></thead>
+    <tbody><tr><th scope="row">1. 현재 잔여석 유지<span class="table__sub">기존 비교 모델 · 같은 개발 평가 질문에 적용한 기준 모델</span></th><td data-label="전체 MAE" class="num">5.269</td><td data-label="노선 평균" class="num">4.234</td><td data-label="0~2석 MAE" class="num">14.214</td><td data-label="1석 이상" class="num">59.7%<span class="table__sub">573 / 959건</span></td><td data-label="3석 이상" class="num">54.0%<span class="table__sub">518 / 959건</span></td><td data-label="0석 감지율" class="num">40.4%<span class="table__sub">250 / 619건</span></td></tr><tr><th scope="row">2. 중간 정류장 순변화 반영<span class="table__sub">기존 비교 모델 · 목표 정류장 직전까지의 과거 순변화를 반영한 기준 모델</span></th><td data-label="전체 MAE" class="num">3.523</td><td data-label="노선 평균" class="num">3.479</td><td data-label="0~2석 MAE" class="num">7.199</td><td data-label="1석 이상" class="num">51.6%<span class="table__sub">495 / 959건</span></td><td data-label="3석 이상" class="num">45.0%<span class="table__sub">432 / 959건</span></td><td data-label="0석 감지율" class="num">48.9%<span class="table__sub">303 / 619건</span></td></tr><tr><th scope="row">3. HGB · 목표 정류장 통계 제외<span class="table__sub">기존 비교 모델 · 15개 특징 · 앞선 제곱오차 학습 결과</span></th><td data-label="전체 MAE" class="num">2.348</td><td data-label="노선 평균" class="num">2.920</td><td data-label="0~2석 MAE" class="num">9.086</td><td data-label="1석 이상" class="num">83.1%<span class="table__sub">797 / 959건</span></td><td data-label="3석 이상" class="num">71.9%<span class="table__sub">690 / 959건</span></td><td data-label="0석 감지율" class="num">22.8%<span class="table__sub">141 / 619건</span></td></tr><tr><th scope="row">4. HGB · 절대오차<span class="table__sub">새 학습 후보 · 절대오차 손실 · 행마다 같은 학습 비중</span></th><td data-label="전체 MAE" class="num">2.448</td><td data-label="노선 평균" class="num">2.618</td><td data-label="0~2석 MAE" class="num">9.656</td><td data-label="1석 이상" class="num">74.1%<span class="table__sub">711 / 959건</span></td><td data-label="3석 이상" class="num">64.9%<span class="table__sub">622 / 959건</span></td><td data-label="0석 감지율" class="num">34.9%<span class="table__sub">216 / 619건</span></td></tr><tr><th scope="row">5. HGB · 25% 분위수<span class="table__sub">새 학습 후보 · 과대예측에 더 큰 벌점 · 행마다 같은 학습 비중</span></th><td data-label="전체 MAE" class="num">3.025</td><td data-label="노선 평균" class="num">3.429</td><td data-label="0~2석 MAE" class="num">5.733</td><td data-label="1석 이상" class="num">61.5%<span class="table__sub">590 / 959건</span></td><td data-label="3석 이상" class="num">51.7%<span class="table__sub">496 / 959건</span></td><td data-label="0석 감지율" class="num">44.9%<span class="table__sub">278 / 619건</span></td></tr><tr><th scope="row">6. HGB · 0~2석 4배 가중<span class="table__sub">새 학습 후보 · 제곱오차 손실 · 정답 0~2석 학습 비중 4배</span></th><td data-label="전체 MAE" class="num">2.383</td><td data-label="노선 평균" class="num">3.191</td><td data-label="0~2석 MAE" class="num">6.654</td><td data-label="1석 이상" class="num">71.6%<span class="table__sub">687 / 959건</span></td><td data-label="3석 이상" class="num">58.7%<span class="table__sub">563 / 959건</span></td><td data-label="0석 감지율" class="num">35.1%<span class="table__sub">217 / 619건</span></td></tr></tbody>
+  </table></div>
+  <p class="keynum__sub">MAE는 평균 절대오차이며 석 단위로 낮을수록 좋습니다. 과대예측 비율은 실제 표시 0~2석 중 예측이 정답보다 각각 1석·3석 이상 높은 비율입니다. 0석 감지율은 실제 0석 중 예측이 2석 미만인 비율입니다. 각 비율의 건수와 분모를 함께 표시했으며, —는 분모가 없어 계산하지 않은 값입니다.</p>
+  <p class="keynum__sub">개발 질문의 정답 구성: 0석 619개 · 1석 171개 · 2석 169개 · 3석 이상 79,610개. 희소한 0~2석 구간의 결과는 전체 평균과 함께 읽습니다.</p>
+  <h3 class="dsec__sub">전체 MAE와 3석 이상 과대예측 비율</h3>
+  <div class="card card--chart"><div class="chart-scroll arrival-risk-plot" tabindex="0" role="region" aria-label="같은 개발 질문의 MAE와 과대예측 비교 그림">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 365" role="img" aria-labelledby="arrival-risk-plot-title arrival-risk-plot-desc">
+      <title id="arrival-risk-plot-title">같은 전체 범위 개발 질문에서 비교한 여섯 모델</title>
+      <desc id="arrival-risk-plot-desc">가로축은 전체 MAE, 세로축은 실제 0~2석 중 3석 이상 과대예측 비율입니다. 점의 번호는 표의 모델 번호이며 정확한 수치는 표에 있습니다. 회색은 기존 비교 모델, 파란색은 새 학습 후보입니다.</desc>
+      <g font-family="inherit" font-size="16" fill="#555C65">
+        <text x="70" y="25">3석 이상 과대예측 비율</text>
+<line x1="70" x2="510" y1="290" y2="290" stroke="#E3E5E8"/><text x="60" y="295" text-anchor="end">0%</text><line x1="70" x2="510" y1="230" y2="230" stroke="#E3E5E8"/><text x="60" y="235" text-anchor="end">25%</text><line x1="70" x2="510" y1="170" y2="170" stroke="#E3E5E8"/><text x="60" y="175" text-anchor="end">50%</text><line x1="70" x2="510" y1="110" y2="110" stroke="#E3E5E8"/><text x="60" y="115" text-anchor="end">75%</text><line x1="70" x2="510" y1="50" y2="50" stroke="#E3E5E8"/><text x="60" y="55" text-anchor="end">100%</text><line x1="70" x2="70" y1="50" y2="290" stroke="#EEEFF1"/><text x="70" y="320" text-anchor="middle">0</text><line x1="180" x2="180" y1="50" y2="290" stroke="#EEEFF1"/><text x="180" y="320" text-anchor="middle">1.5</text><line x1="290" x2="290" y1="50" y2="290" stroke="#EEEFF1"/><text x="290" y="320" text-anchor="middle">3</text><line x1="400" x2="400" y1="50" y2="290" stroke="#EEEFF1"/><text x="400" y="320" text-anchor="middle">4.5</text><line x1="510" x2="510" y1="50" y2="290" stroke="#EEEFF1"/><text x="510" y="320" text-anchor="middle">6</text>        <text x="290" y="352" text-anchor="middle">전체 MAE (석)</text>
+      </g>
+<g><title>1. 현재 잔여석 유지 · MAE 5.269석 · 과대예측 54.0%</title><line x1="456.38" y1="160.36" x2="470.38" y2="150.36" stroke="#555C65" stroke-opacity=".4"/><circle cx="456.38" cy="160.36" r="5" fill="#555C65"/><text x="470.38" y="150.36" font-family="inherit" font-size="17" font-weight="700" text-anchor="middle" fill="#555C65">1</text></g><g><title>2. 중간 정류장 순변화 반영 · MAE 3.523석 · 과대예측 45.0%</title><line x1="328.35" y1="181.89" x2="342.35" y2="171.89" stroke="#555C65" stroke-opacity=".4"/><circle cx="328.35" cy="181.89" r="5" fill="#555C65"/><text x="342.35" y="171.89" font-family="inherit" font-size="17" font-weight="700" text-anchor="middle" fill="#555C65">2</text></g><g><title>3. HGB · 목표 정류장 통계 제외 · MAE 2.348석 · 과대예측 71.9%</title><line x1="242.22" y1="117.32" x2="256.22" y2="107.32" stroke="#555C65" stroke-opacity=".4"/><circle cx="242.22" cy="117.32" r="5" fill="#555C65"/><text x="256.22" y="107.32" font-family="inherit" font-size="17" font-weight="700" text-anchor="middle" fill="#555C65">3</text></g><g><title>4. HGB · 절대오차 · MAE 2.448석 · 과대예측 64.9%</title><line x1="249.50" y1="134.34" x2="263.50" y2="154.34" stroke="#2D5BD0" stroke-opacity=".4"/><circle cx="249.50" cy="134.34" r="5" fill="#2D5BD0"/><text x="263.50" y="154.34" font-family="inherit" font-size="17" font-weight="700" text-anchor="middle" fill="#2D5BD0">4</text></g><g><title>5. HGB · 25% 분위수 · MAE 3.025석 · 과대예측 51.7%</title><line x1="291.80" y1="165.87" x2="305.80" y2="155.87" stroke="#2D5BD0" stroke-opacity=".4"/><circle cx="291.80" cy="165.87" r="5" fill="#2D5BD0"/><text x="305.80" y="155.87" font-family="inherit" font-size="17" font-weight="700" text-anchor="middle" fill="#2D5BD0">5</text></g><g><title>6. HGB · 0~2석 4배 가중 · MAE 2.383석 · 과대예측 58.7%</title><line x1="244.73" y1="149.10" x2="224.73" y2="139.10" stroke="#2D5BD0" stroke-opacity=".4"/><circle cx="244.73" cy="149.10" r="5" fill="#2D5BD0"/><text x="224.73" y="139.10" font-family="inherit" font-size="17" font-weight="700" text-anchor="middle" fill="#2D5BD0">6</text></g>    </svg>
+  </div></div>
+  <p class="keynum__sub">점 번호는 위 표와 같습니다. 회색은 기존 비교 모델, 파란색은 새 후보입니다. 왼쪽·아래일수록 이 두 지표가 낮습니다. 노선별 오차와 0석 감지율까지 함께 확인하며, 두 축만으로 모델을 채택하지 않습니다.</p>
+  <details class="datatable"><summary>큰 오차와 평균 부호 오차 보기</summary><div class="table-wrap"><table class="table table--stack"><thead><tr><th scope="col">모델</th><th scope="col">전체 RMSE</th><th scope="col">평균 부호 오차</th></tr></thead><tbody><tr><th scope="row">현재 잔여석 유지</th><td data-label="RMSE" class="num">9.270</td><td data-label="부호 오차" class="num">-1.333</td></tr><tr><th scope="row">중간 정류장 순변화 반영</th><td data-label="RMSE" class="num">6.451</td><td data-label="부호 오차" class="num">-1.395</td></tr><tr><th scope="row">HGB · 목표 정류장 통계 제외</th><td data-label="RMSE" class="num">3.917</td><td data-label="부호 오차" class="num">0.029</td></tr><tr><th scope="row">HGB · 절대오차</th><td data-label="RMSE" class="num">4.322</td><td data-label="부호 오차" class="num">0.305</td></tr><tr><th scope="row">HGB · 25% 분위수</th><td data-label="RMSE" class="num">4.805</td><td data-label="부호 오차" class="num">-1.857</td></tr><tr><th scope="row">HGB · 0~2석 4배 가중</th><td data-label="RMSE" class="num">3.989</td><td data-label="부호 오차" class="num">-0.147</td></tr></tbody></table></div><p class="keynum__sub">RMSE는 큰 오차에 더 민감하며 낮을수록 좋습니다. 부호 오차는 예측에서 정답을 뺀 평균으로, 양수면 평균적으로 좌석을 더 많이 예측했다는 뜻입니다. 모두 석 단위입니다.</p></details>
+  <h3 class="dsec__sub">새 후보가 바꾼 학습 방식</h3>
+  <div class="authored"><ol class="authored__list">
+    <li><strong>절대오차:</strong> 오차 크기를 그대로 줄입니다. 조건부 중앙값을 겨냥하므로, 큰 오차를 제곱해 반영하는 기존 HGB와 학습 목표가 다릅니다. 중앙값은 조건이 비슷한 정답 분포의 가운데 값입니다.</li>
+    <li><strong>25% 분위수:</strong> 조건부 정답 분포의 아래쪽 25% 지점을 겨냥합니다. 같은 크기의 오차라면 과대예측에 과소예측보다 3배 큰 벌점을 주는 손실입니다. 좌석 수 하나를 내며, 25%라는 숫자가 탑승 성공 확률이나 검증된 보장 수준을 뜻하지 않습니다.</li>
+    <li><strong>0~2석 4배 가중:</strong> 제곱오차를 사용하되 실제 도착 표시 0~2석인 학습 질문 4,881개에 나머지 질문의 4배 비중을 줍니다. 전체 학습 가중치 평균은 1이 되도록 정규화했습니다. 고정한 비중의 영향을 보는 실험이며, 실제 서비스 비용의 최적 비율로 정한 값은 아닙니다.</li>
+  </ol></div>
+  <p class="authored__text">중앙값·분위수 손실도 관측된 희소 구간의 정확도를 보장하지 않습니다. 여섯 모델 모두 점예측 모델이므로 확률 보정이나 Brier 점수는 계산하지 않았습니다. 아래 파일럿의 분포 모델은 별도 자료의 결과입니다.</p>
+  <p class="authored__text">앞선 결과를 본 뒤 같은 개발 자료(DEV)를 다시 사용한 탐색입니다. 신뢰구간과 새로운 기간의 성능은 확인하지 않았으며, 모델을 채택하거나 기존 연구 기준 모델을 바꾸지 않았습니다. 제한 범위 파일럿과 점수를 합치거나 개선 폭을 계산하지 않습니다.</p>
+  <p class="head__line"><a href="/data/arrival/risk/summary.json">과대예측 실험의 집계 결과와 계약 JSON</a><a href="#arrival-full">앞선 전체 범위 실험</a><a href="#arrival-pilot">제한 범위 연결 검증</a></p>
 </section>
 <section class="dsec arrival-full" id="arrival-full" aria-labelledby="arrival-full-title">
   <div class="dsec__head">
