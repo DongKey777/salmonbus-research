@@ -12,12 +12,12 @@
 <meta property="og:url" content="https://research.dongkey.tech/arrival/">
 <link rel="icon" href="/favicon.svg?v=42a4ccc6ef62" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
-<link rel="stylesheet" href="/assets/site.css?v=5a360adcc938" data-asset="css">
+<link rel="stylesheet" href="/assets/site.css?v=8bfd2a202db7" data-asset="css">
 <noscript><link rel="stylesheet" href="/assets/noscript.css?v=24fe7a57d410"></noscript>
 <script src="/assets/charts.js?v=dd96aa903a7f" defer data-asset="js"></script>
 <script src="/assets/live.js?v=1cd63fc217fe" defer data-asset="js"></script>
 </head>
-<body data-digest="dd365469bddb02aa3c6dd8cff680cedee33ee29e34bc8226f067eaf2381b259a" data-poll="60" data-version-url="/version.json">
+<body data-digest="d2c2bc9a93c45fe5734ea64e9f4950ef51dbfbd89f762ef433ccccd1a6a9bce8" data-poll="60" data-version-url="/version.json">
 <a class="skip" href="#main">본문으로 건너뛰기</a>
 <header class="topbar">
   <div class="topbar__inner">
@@ -37,13 +37,216 @@
   <div class="head__row">
     <h1 class="page__title">도착할 때 몇 석이 남을까</h1>
     <span class="tag tag--scope">도착 상태 대리 정답</span>
-    <span class="tag tag--warn">5회차 검증 완료 · 운영 채택 없음</span>
+    <span class="tag tag--warn">마지막 확인 때 진행 중 · 운영 채택 없음</span>
   </div>
   <div class="authored">
     <p class="authored__text">목표 정류장의 <strong>첫 도착 상태에 표시된 잔여석</strong>을 예측합니다. 실제 승하차가 시작되기 전의 센서 값인지는 확인되지 않았습니다. 이 결과는 개인의 탑승 성공이나 별도 승차·하차 인원을 뜻하지 않습니다.</p>
     <p class="authored__text">기존 출발·통과 이후 연구와 정답·데이터·질문 분모가 다릅니다. 기존 기준 모델의 오차와 직접 비교하지 않습니다. 이번 도착 연구에서 채택한 모델은 없습니다.</p>
   </div>
-  <nav class="head__line" aria-label="도착 연구의 비교 범위"><a href="#arrival-loop">자동 반복 연구 · 5/5회차</a><a href="#arrival-risk">최신 과대예측 실험 · 6개 모델</a><a href="#arrival-full">전체 수집 범위 실험 · 3개 모델</a><a href="#arrival-pilot">제한 범위 연결 검증 · 6개 모델</a></nav>
+  <nav class="head__line" aria-label="도착 연구의 비교 범위"><a href="#arrival-family">모델 계열 확장 · 2/5회차</a><a href="#arrival-loop">자동 반복 연구 · 5/5회차</a><a href="#arrival-risk">최신 과대예측 실험 · 6개 모델</a><a href="#arrival-full">전체 수집 범위 실험 · 3개 모델</a><a href="#arrival-pilot">제한 범위 연결 검증 · 6개 모델</a></nav>
+</section>
+<section class="dsec arrival-family" id="arrival-family" aria-labelledby="arrival-family-title">
+  <div class="dsec__head">
+    <h2 class="dsec__title" id="arrival-family-title">학습 방식을 넓힌 반복 실험</h2>
+    <span class="arrival-family__status arrival-family__status--live">마지막 확인 때 진행 중</span>
+    <span class="tag tag--warn">개발 자료 재사용 · 운영 반영 없음</span>
+  </div>
+  <p class="authored__text">세 가지 학습 방식을 먼저 비교한 뒤, 결과에 따라 두 후보를 추가로 선택합니다. 다섯 회차의 제안·학습·독립 평가와 다음 선택을 프로그램이 이어갑니다.</p>
+  <p class="arrival-family__intro">기존 HGB와 다른 학습 방식을 비교합니다. 같은 학습 질문 전체와 원래의 15개 입력 특징을 사용하고, 새 후보를 만들 때마다 별도로 저장·복원한 뒤 같은 개발 질문으로 평가합니다.</p>
+  <div class="arrival-family__runline">
+    <p><strong class="num">2 / 5</strong>회차 완료</p>
+<p>연구 기록 갱신 <time class="num" datetime="2026-10-25T13:35:56.171113+09:00">2026년 10월 25일 13:35:56 KST</time></p>  </div>
+  <dl class="arrival-family__counts" aria-label="이번 반복 실험의 학습 집계">
+    <div><dt>학습 계획</dt><dd>새 추정기 5회</dd></div>
+    <div><dt>학습 시작</dt><dd>2회</dd></div>
+    <div><dt>완료 검증</dt><dd>2회</dd></div>
+    <div><dt>학습 실패</dt><dd>확인된 실패 없음</dd></div>
+    <div><dt>결과 확인 불가</dt><dd>없음</dd></div>
+  </dl>
+
+  <div class="arrival-family__leader">
+    <div class="arrival-family__leader-copy">
+      <p class="arrival-family__eyebrow">다음 실험의 연구 기준 후보</p>
+      <h3>아직 선택하지 않음</h3>
+      <p>전체·노선별 오차, 0석 감지율, 1석 이상·3석 이상 과대예측의 다섯 조건을 모두 확인합니다. 조건에 맞는 후보가 없으면 선택하지 않습니다.</p>
+    </div>
+    <p class="arrival-family__leader-note">다섯 조건은 실험 전에 고정한 순변화 기준선과 비교합니다. 여기서 선택한 후보는 연구용이며, 운영 예보에 채택한 모델은 아닙니다.</p>
+  </div>
+
+  <div class="arrival-family__plots" aria-label="회차별 평균 오차와 두 과대예측 기준">
+    <figure class="arrival-family-plot" aria-labelledby="arrival-family-mae-plot-heading">
+      <figcaption id="arrival-family-mae-plot-heading">회차별 전체 평균 오차</figcaption>
+      <svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="arrival-family-mae-plot-title arrival-family-mae-plot-desc">
+        <title id="arrival-family-mae-plot-title">회차별 전체 평균 오차 · 회차별 결과</title>
+        <desc id="arrival-family-mae-plot-desc">가로축은 이번 실험 1~5회차, 세로축은 평균 절대오차입니다. 완료가 확인된 회차만 표시하며 점수가 없는 회차를 가로질러 연결하지 않습니다. 점선은 같은 개발 질문의 순변화 기준선 3.523석입니다. 각 회차의 정확한 값은 아래 시도에 있습니다.</desc>
+        <g class="arrival-family-plot__axis">
+          <text x="55" y="14">평균 절대오차</text>
+<line x1="55" x2="535" y1="212.0" y2="212.0"/><text x="45" y="217.0" text-anchor="end">0석</text><line x1="55" x2="535" y1="165.0" y2="165.0"/><text x="45" y="170.0" text-anchor="end">1석</text><line x1="55" x2="535" y1="118.0" y2="118.0"/><text x="45" y="123.0" text-anchor="end">2석</text><line x1="55" x2="535" y1="71.0" y2="71.0"/><text x="45" y="76.0" text-anchor="end">3석</text><line x1="55" x2="535" y1="24.0" y2="24.0"/><text x="45" y="29.0" text-anchor="end">4석</text><text x="55" y="242" text-anchor="middle">1회</text><text x="175" y="242" text-anchor="middle">2회</text><text x="295" y="242" text-anchor="middle">3회</text><text x="415" y="242" text-anchor="middle">4회</text><text x="535" y="242" text-anchor="middle">5회</text>        </g>
+        <line class="arrival-family-plot__reference" x1="55" x2="535" y1="46.423" y2="46.423"/>
+          <circle class="arrival-family-plot__point" cx="55" cy="46.807" r="5"><title>1회 · 순변화 기준선의 선형 잔차 보정 · 3.515석</title></circle>
+<line class="arrival-family-plot__line" x1="55" y1="46.807" x2="175" y2="95.342"/>          <circle class="arrival-family-plot__point" cx="175" cy="95.342" r="5"><title>2회 · 무작위 분할 트리 32개 · 2.482석</title></circle>
+      </svg>
+      <p class="arrival-family-plot__legend"><span class="arrival-family-plot__legend-dot" aria-hidden="true"></span>회차별 후보 <span class="arrival-family-plot__legend-rule" aria-hidden="true"></span>순변화 기준선 <strong>3.523석</strong></p>
+    </figure>
+    <figure class="arrival-family-plot" aria-labelledby="arrival-family-risk1-plot-heading">
+      <figcaption id="arrival-family-risk1-plot-heading">0~2석에서 1석 이상 과대예측</figcaption>
+      <svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="arrival-family-risk1-plot-title arrival-family-risk1-plot-desc">
+        <title id="arrival-family-risk1-plot-title">0~2석에서 1석 이상 과대예측 · 회차별 결과</title>
+        <desc id="arrival-family-risk1-plot-desc">가로축은 이번 실험 1~5회차, 세로축은 과대예측 비율입니다. 완료가 확인된 회차만 표시하며 점수가 없는 회차를 가로질러 연결하지 않습니다. 점선은 같은 개발 질문의 순변화 기준선 51.6%입니다. 각 회차의 정확한 값은 아래 시도에 있습니다.</desc>
+        <g class="arrival-family-plot__axis">
+          <text x="55" y="14">과대예측 비율</text>
+<line x1="55" x2="535" y1="212.0" y2="212.0"/><text x="45" y="217.0" text-anchor="end">0%</text><line x1="55" x2="535" y1="165.0" y2="165.0"/><text x="45" y="170.0" text-anchor="end">25%</text><line x1="55" x2="535" y1="118.0" y2="118.0"/><text x="45" y="123.0" text-anchor="end">50%</text><line x1="55" x2="535" y1="71.0" y2="71.0"/><text x="45" y="76.0" text-anchor="end">75%</text><line x1="55" x2="535" y1="24.0" y2="24.0"/><text x="45" y="29.0" text-anchor="end">100%</text><text x="55" y="242" text-anchor="middle">1회</text><text x="175" y="242" text-anchor="middle">2회</text><text x="295" y="242" text-anchor="middle">3회</text><text x="415" y="242" text-anchor="middle">4회</text><text x="535" y="242" text-anchor="middle">5회</text>        </g>
+        <line class="arrival-family-plot__reference" x1="55" x2="535" y1="114.961" y2="114.961"/>
+          <circle class="arrival-family-plot__point" cx="55" cy="24.0" r="5"><title>1회 · 순변화 기준선의 선형 잔차 보정 · 100.0%</title></circle>
+<line class="arrival-family-plot__line" x1="55" y1="24.0" x2="175" y2="45.956"/>          <circle class="arrival-family-plot__point" cx="175" cy="45.956" r="5"><title>2회 · 무작위 분할 트리 32개 · 88.3%</title></circle>
+      </svg>
+      <p class="arrival-family-plot__legend"><span class="arrival-family-plot__legend-dot" aria-hidden="true"></span>회차별 후보 <span class="arrival-family-plot__legend-rule" aria-hidden="true"></span>순변화 기준선 <strong>51.6%</strong></p>
+    </figure>
+    <figure class="arrival-family-plot" aria-labelledby="arrival-family-risk3-plot-heading">
+      <figcaption id="arrival-family-risk3-plot-heading">0~2석에서 3석 이상 과대예측</figcaption>
+      <svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="arrival-family-risk3-plot-title arrival-family-risk3-plot-desc">
+        <title id="arrival-family-risk3-plot-title">0~2석에서 3석 이상 과대예측 · 회차별 결과</title>
+        <desc id="arrival-family-risk3-plot-desc">가로축은 이번 실험 1~5회차, 세로축은 과대예측 비율입니다. 완료가 확인된 회차만 표시하며 점수가 없는 회차를 가로질러 연결하지 않습니다. 점선은 같은 개발 질문의 순변화 기준선 45.0%입니다. 각 회차의 정확한 값은 아래 시도에 있습니다.</desc>
+        <g class="arrival-family-plot__axis">
+          <text x="55" y="14">과대예측 비율</text>
+<line x1="55" x2="535" y1="212.0" y2="212.0"/><text x="45" y="217.0" text-anchor="end">0%</text><line x1="55" x2="535" y1="165.0" y2="165.0"/><text x="45" y="170.0" text-anchor="end">25%</text><line x1="55" x2="535" y1="118.0" y2="118.0"/><text x="45" y="123.0" text-anchor="end">50%</text><line x1="55" x2="535" y1="71.0" y2="71.0"/><text x="45" y="76.0" text-anchor="end">75%</text><line x1="55" x2="535" y1="24.0" y2="24.0"/><text x="45" y="29.0" text-anchor="end">100%</text><text x="55" y="242" text-anchor="middle">1회</text><text x="175" y="242" text-anchor="middle">2회</text><text x="295" y="242" text-anchor="middle">3회</text><text x="415" y="242" text-anchor="middle">4회</text><text x="535" y="242" text-anchor="middle">5회</text>        </g>
+        <line class="arrival-family-plot__reference" x1="55" x2="535" y1="127.312" y2="127.312"/>
+          <circle class="arrival-family-plot__point" cx="55" cy="25.372" r="5"><title>1회 · 순변화 기준선의 선형 잔차 보정 · 99.3%</title></circle>
+<line class="arrival-family-plot__line" x1="55" y1="25.372" x2="175" y2="65.756"/>          <circle class="arrival-family-plot__point" cx="175" cy="65.756" r="5"><title>2회 · 무작위 분할 트리 32개 · 77.8%</title></circle>
+      </svg>
+      <p class="arrival-family-plot__legend"><span class="arrival-family-plot__legend-dot" aria-hidden="true"></span>회차별 후보 <span class="arrival-family-plot__legend-rule" aria-hidden="true"></span>순변화 기준선 <strong>45.0%</strong></p>
+    </figure>
+  </div>
+  <p class="arrival-family__metric-note">세 그림 모두 낮을수록 좋습니다. 1석 이상 과대예측에는 3석 이상 과대예측도 포함됩니다. 큰 과대예측만 줄고 작은 과대예측은 늘 수 있어 두 기준을 함께 확인합니다. 점선은 기존 비교 결과이며 이번 학습 횟수에 포함하지 않습니다.</p>
+
+  <div class="arrival-family__cycles" aria-label="회차별 모델과 시도">
+    <details class="arrival-family-cycle" id="arrival-family-cycle-1">
+      <summary class="arrival-family-cycle__summary">
+        <span class="arrival-family-cycle__number"><span class="num">1</span>회</span>
+        <span class="arrival-family-cycle__heading">
+          <span class="arrival-family-cycle__title">순변화 기준선의 선형 잔차 보정</span>
+          <span class="arrival-family__status arrival-family__status--good">완료 확인</span>
+<span class="arrival-family-cycle__family">선형 잔차 보정</span><span class="arrival-family-cycle__description">순변화 기준선에 선형 회귀 보정을 더해 비교합니다.</span>        </span>
+        <span class="arrival-family-cycle__metric arrival-family-cycle__metric--mae"><span>전체 평균 오차</span><strong class="num">3.515석</strong></span>
+        <span class="arrival-family-cycle__metric arrival-family-cycle__metric--risk1"><span>0~2석 중<br>1석 이상 과대예측</span><strong class="num">100.0%</strong></span>
+        <span class="arrival-family-cycle__metric arrival-family-cycle__metric--risk3"><span>0~2석 중<br>3석 이상 과대예측</span><strong class="num">99.3%</strong></span>
+        <span class="arrival-family-cycle__toggle"><span class="arrival-family-cycle__show">시도 보기</span><span class="arrival-family-cycle__hide">접기</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></span>
+      </summary>
+      <div class="arrival-family-cycle__body">
+        <article class="arrival-family-trial" aria-labelledby="arrival-family-cycle-1-attempt-1">
+          <div class="arrival-family-trial__heading">
+            <p class="arrival-family-trial__number">1회 · 시도 1</p>
+            <h3 id="arrival-family-cycle-1-attempt-1">순변화 기준선의 선형 잔차 보정</h3>
+            <span class="arrival-family__status arrival-family__status--good">학습·복원·평가 확인</span>
+          </div>
+<p class="arrival-family-trial__description"><strong>선형 잔차 보정</strong><span>순변화 기준선이 남긴 오차를 선형 조합으로 학습합니다. 계수가 지나치게 커지지 않도록 규제 100를 적용합니다.</span></p>          <dl class="arrival-family-trial__metrics">
+            <div><dt>전체 MAE</dt><dd>3.515석</dd></div>
+            <div><dt>노선별 MAE 평균</dt><dd>3.235석</dd></div>
+            <div><dt>0~2석 MAE</dt><dd>11.890석</dd></div>
+            <div><dt>0~2석 중<br>1석 이상 과대예측</dt><dd>100.0%</dd></div>
+            <div><dt>0~2석 중<br>3석 이상 과대예측</dt><dd>99.3%</dd></div>
+            <div><dt>0석 감지율</dt><dd>0.0%</dd></div>
+          </dl>
+<p class="arrival-family-trial__review"><strong>연구 비교 조건 2/5 충족 · 결과 보존</strong><span>학습 저좌석 비중 1배 · 평가 질문은 같은 비중</span></p><dl class="arrival-family-trial__method">
+<div><dt>입력 처리</dt><dd>원래 특징 15개를 41열로 변환합니다. 노선 범주 27개와 수치 표준화 통계는 학습 자료에서만 정하며, 새 노선 범주에는 기존 노선 값을 붙이지 않습니다.</dd></div><div><dt>학습 횟수</dt><dd>새 추정기 학습 1회 · 입력 변환 학습 1회</dd></div>          </dl>        </article>
+      </div>
+    </details>
+    <details class="arrival-family-cycle" id="arrival-family-cycle-2" open>
+      <summary class="arrival-family-cycle__summary">
+        <span class="arrival-family-cycle__number"><span class="num">2</span>회</span>
+        <span class="arrival-family-cycle__heading">
+          <span class="arrival-family-cycle__title">무작위 분할 트리 32개</span>
+          <span class="arrival-family__status arrival-family__status--good">완료 확인</span>
+<span class="arrival-family-cycle__family">무작위 분할 트리</span><span class="arrival-family-cycle__description">무작위로 분할한 여러 결정 트리의 평균으로 좌석을 예측합니다.</span>        </span>
+        <span class="arrival-family-cycle__metric arrival-family-cycle__metric--mae"><span>전체 평균 오차</span><strong class="num">2.482석</strong></span>
+        <span class="arrival-family-cycle__metric arrival-family-cycle__metric--risk1"><span>0~2석 중<br>1석 이상 과대예측</span><strong class="num">88.3%</strong></span>
+        <span class="arrival-family-cycle__metric arrival-family-cycle__metric--risk3"><span>0~2석 중<br>3석 이상 과대예측</span><strong class="num">77.8%</strong></span>
+        <span class="arrival-family-cycle__toggle"><span class="arrival-family-cycle__show">시도 보기</span><span class="arrival-family-cycle__hide">접기</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></span>
+      </summary>
+      <div class="arrival-family-cycle__body">
+        <article class="arrival-family-trial" aria-labelledby="arrival-family-cycle-2-attempt-1">
+          <div class="arrival-family-trial__heading">
+            <p class="arrival-family-trial__number">2회 · 시도 1</p>
+            <h3 id="arrival-family-cycle-2-attempt-1">무작위 분할 트리 32개</h3>
+            <span class="arrival-family__status arrival-family__status--good">학습·복원·평가 확인</span>
+          </div>
+<p class="arrival-family-trial__description"><strong>무작위 분할 트리</strong><span>무작위 분할 트리 32개의 예측을 평균냅니다. 최대 깊이는 12, 말단 집단의 최소 학습 질문은 64개입니다.</span></p>          <dl class="arrival-family-trial__metrics">
+            <div><dt>전체 MAE</dt><dd>2.482석</dd></div>
+            <div><dt>노선별 MAE 평균</dt><dd>2.511석</dd></div>
+            <div><dt>0~2석 MAE</dt><dd>9.848석</dd></div>
+            <div><dt>0~2석 중<br>1석 이상 과대예측</dt><dd>88.3%</dd></div>
+            <div><dt>0~2석 중<br>3석 이상 과대예측</dt><dd>77.8%</dd></div>
+            <div><dt>0석 감지율</dt><dd>13.4%</dd></div>
+          </dl>
+<p class="arrival-family-trial__review"><strong>연구 비교 조건 2/5 충족 · 결과 보존</strong><span>학습 저좌석 비중 1배 · 평가 질문은 같은 비중</span></p><dl class="arrival-family-trial__method">
+<div><dt>입력 처리</dt><dd>원래 특징 15개를 41열로 변환합니다. 노선 범주 27개와 입력 변환은 학습 자료에서만 정하며, 새 노선 범주에는 기존 노선 값을 붙이지 않습니다.</dd></div><div><dt>학습 횟수</dt><dd>새 추정기 학습 1회 · 입력 변환 학습 1회 · 추정기 내부 트리 32개</dd></div>          </dl>        </article>
+      </div>
+    </details>
+    <details class="arrival-family-cycle" id="arrival-family-cycle-3">
+      <summary class="arrival-family-cycle__summary">
+        <span class="arrival-family-cycle__number"><span class="num">3</span>회</span>
+        <span class="arrival-family-cycle__heading">
+          <span class="arrival-family-cycle__title">0석·1~2석 판별을 결합한 보정</span>
+          <span class="arrival-family__status arrival-family__status--quiet">다음 후보 선택됨</span>
+<span class="arrival-family-cycle__family">저좌석 판별 보정</span><span class="arrival-family-cycle__description">0석·1~2석·3석 이상을 판별해 기존 LOW16의 점예측을 보정합니다.</span>        </span>
+        <span class="arrival-family-cycle__metric arrival-family-cycle__metric--mae"><span>전체 평균 오차</span><strong class="num">—</strong></span>
+        <span class="arrival-family-cycle__metric arrival-family-cycle__metric--risk1"><span>0~2석 중<br>1석 이상 과대예측</span><strong class="num">—</strong></span>
+        <span class="arrival-family-cycle__metric arrival-family-cycle__metric--risk3"><span>0~2석 중<br>3석 이상 과대예측</span><strong class="num">—</strong></span>
+        <span class="arrival-family-cycle__toggle"><span class="arrival-family-cycle__show">시도 보기</span><span class="arrival-family-cycle__hide">접기</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></span>
+      </summary>
+      <div class="arrival-family-cycle__body">
+<p class="arrival-family-cycle__empty">아직 완료가 확인된 시도가 없습니다. 학습과 평가의 완료를 검증한 뒤 점수를 표시합니다.</p><div class="arrival-family-cycle__proposal"><p class="arrival-family__eyebrow">이 회차의 제안</p><p><strong>0석·1~2석 판별을 결합한 보정</strong></p><p>0석·1~2석·3석 이상을 판별해 기존 LOW16의 점예측을 보정합니다.</p></div>      </div>
+    </details>
+    <details class="arrival-family-cycle" id="arrival-family-cycle-4">
+      <summary class="arrival-family-cycle__summary">
+        <span class="arrival-family-cycle__number"><span class="num">4</span>회</span>
+        <span class="arrival-family-cycle__heading">
+          <span class="arrival-family-cycle__title">다음 회차</span>
+          <span class="arrival-family__status arrival-family__status--quiet">이전 결과 대기</span>
+<span class="arrival-family-cycle__description">앞선 세 회차는 다른 학습 방식을 비교하고, 이후 두 회차는 검증된 결과에 따라 고릅니다.</span>        </span>
+        <span class="arrival-family-cycle__metric arrival-family-cycle__metric--mae"><span>전체 평균 오차</span><strong class="num">—</strong></span>
+        <span class="arrival-family-cycle__metric arrival-family-cycle__metric--risk1"><span>0~2석 중<br>1석 이상 과대예측</span><strong class="num">—</strong></span>
+        <span class="arrival-family-cycle__metric arrival-family-cycle__metric--risk3"><span>0~2석 중<br>3석 이상 과대예측</span><strong class="num">—</strong></span>
+        <span class="arrival-family-cycle__toggle"><span class="arrival-family-cycle__show">시도 보기</span><span class="arrival-family-cycle__hide">접기</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></span>
+      </summary>
+      <div class="arrival-family-cycle__body">
+<p class="arrival-family-cycle__empty">아직 완료가 확인된 시도가 없습니다. 학습과 평가의 완료를 검증한 뒤 점수를 표시합니다.</p>      </div>
+    </details>
+    <details class="arrival-family-cycle" id="arrival-family-cycle-5">
+      <summary class="arrival-family-cycle__summary">
+        <span class="arrival-family-cycle__number"><span class="num">5</span>회</span>
+        <span class="arrival-family-cycle__heading">
+          <span class="arrival-family-cycle__title">다음 회차</span>
+          <span class="arrival-family__status arrival-family__status--quiet">이전 결과 대기</span>
+<span class="arrival-family-cycle__description">앞선 세 회차는 다른 학습 방식을 비교하고, 이후 두 회차는 검증된 결과에 따라 고릅니다.</span>        </span>
+        <span class="arrival-family-cycle__metric arrival-family-cycle__metric--mae"><span>전체 평균 오차</span><strong class="num">—</strong></span>
+        <span class="arrival-family-cycle__metric arrival-family-cycle__metric--risk1"><span>0~2석 중<br>1석 이상 과대예측</span><strong class="num">—</strong></span>
+        <span class="arrival-family-cycle__metric arrival-family-cycle__metric--risk3"><span>0~2석 중<br>3석 이상 과대예측</span><strong class="num">—</strong></span>
+        <span class="arrival-family-cycle__toggle"><span class="arrival-family-cycle__show">시도 보기</span><span class="arrival-family-cycle__hide">접기</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></span>
+      </summary>
+      <div class="arrival-family-cycle__body">
+<p class="arrival-family-cycle__empty">아직 완료가 확인된 시도가 없습니다. 학습과 평가의 완료를 검증한 뒤 점수를 표시합니다.</p>      </div>
+    </details>
+  </div>
+  <p class="arrival-family__metric-note">MAE는 평균 절대오차로 낮을수록 좋습니다. 노선별 MAE 평균은 각 노선에 같은 비중을 줍니다. 과대예측은 실제 표시 0~2석 중 정답보다 각각 1석·3석 이상 높게 예측한 비율입니다. 0석 감지율은 실제 0석 중 예측이 2석 미만인 비율로 높을수록 좋습니다. —는 아직 검증된 값이 없다는 뜻입니다.</p>
+
+  <details class="arrival-family__methods">
+    <summary>이번에 비교하는 학습 방식</summary>
+    <dl>
+      <div><dt>선형 잔차 보정 · Ridge</dt><dd>순변화 기준선의 오차를 입력 특징의 선형 조합으로 보정합니다. 학습 자료에서만 입력 크기와 노선 범주를 정합니다.</dd></div>
+      <div><dt>무작위 분할 트리 · ExtraTrees</dt><dd>분할 방법이 다른 여러 트리의 예측을 평균냅니다. 한 번의 학습 안에서 만든 트리 수는 반복 실험 횟수와 구분합니다.</dd></div>
+      <div><dt>좌석 구간을 먼저 나누는 보정</dt><dd>0석·1~2석·3석 이상을 구분하는 분류기를 학습해 이전 LOW16의 좌석 예측을 보정합니다. LOW16은 다시 학습하지 않습니다. 결과는 좌석 수 하나이며, 검증된 좌석 확률분포나 탑승 성공 확률을 뜻하지 않습니다.</dd></div>
+    </dl>
+  </details>
+  <details class="arrival-family__references">
+    <summary>같은 개발 자료의 기존 비교 모델 11개 보기 <span>이번 학습 횟수에서 제외</span></summary>
+    <div class="table-wrap"><table class="table table--stack">
+      <thead><tr><th scope="col">비교 모델</th><th scope="col">전체 MAE</th><th scope="col">노선별 MAE 평균</th><th scope="col">0~2석 MAE</th><th scope="col">0~2석 중<br>1석 이상 과대예측</th><th scope="col">0~2석 중<br>3석 이상 과대예측</th><th scope="col">0석 감지율</th></tr></thead>
+      <tbody><tr><th scope="row">현재 잔여 좌석 유지<span class="table__sub">고정 계산 기준선</span></th><td data-label="전체 MAE" class="num">5.269석</td><td data-label="노선 평균" class="num">4.234석</td><td data-label="0~2석 MAE" class="num">14.214석</td><td data-label="1석 이상 과대예측" class="num">59.7%</td><td data-label="3석 이상 과대예측" class="num">54.0%</td><td data-label="0석 감지율" class="num">40.4%</td></tr><tr><th scope="row">중간 정류장 순변화 반영<span class="table__sub">고정 계산 기준선</span></th><td data-label="전체 MAE" class="num">3.523석</td><td data-label="노선 평균" class="num">3.479석</td><td data-label="0~2석 MAE" class="num">7.199석</td><td data-label="1석 이상 과대예측" class="num">51.6%</td><td data-label="3석 이상 과대예측" class="num">45.0%</td><td data-label="0석 감지율" class="num">48.9%</td></tr><tr><th scope="row">목표 정류장 이력 제외 HGB<span class="table__sub">기존 HGB</span></th><td data-label="전체 MAE" class="num">2.348석</td><td data-label="노선 평균" class="num">2.920석</td><td data-label="0~2석 MAE" class="num">9.086석</td><td data-label="1석 이상 과대예측" class="num">83.1%</td><td data-label="3석 이상 과대예측" class="num">71.9%</td><td data-label="0석 감지율" class="num">22.8%</td></tr><tr><th scope="row">절대오차 HGB<span class="table__sub">기존 HGB</span></th><td data-label="전체 MAE" class="num">2.448석</td><td data-label="노선 평균" class="num">2.618석</td><td data-label="0~2석 MAE" class="num">9.656석</td><td data-label="1석 이상 과대예측" class="num">74.1%</td><td data-label="3석 이상 과대예측" class="num">64.9%</td><td data-label="0석 감지율" class="num">34.9%</td></tr><tr><th scope="row">25% 분위수 HGB<span class="table__sub">기존 HGB</span></th><td data-label="전체 MAE" class="num">3.025석</td><td data-label="노선 평균" class="num">3.429석</td><td data-label="0~2석 MAE" class="num">5.733석</td><td data-label="1석 이상 과대예측" class="num">61.5%</td><td data-label="3석 이상 과대예측" class="num">51.7%</td><td data-label="0석 감지율" class="num">44.9%</td></tr><tr><th scope="row">저잔여 좌석 4배 가중 HGB<span class="table__sub">기존 HGB</span></th><td data-label="전체 MAE" class="num">2.383석</td><td data-label="노선 평균" class="num">3.191석</td><td data-label="0~2석 MAE" class="num">6.654석</td><td data-label="1석 이상 과대예측" class="num">71.6%</td><td data-label="3석 이상 과대예측" class="num">58.7%</td><td data-label="0석 감지율" class="num">35.1%</td></tr><tr><th scope="row">저잔여 좌석 8배 가중 HGB<span class="table__sub">기존 HGB</span></th><td data-label="전체 MAE" class="num">2.402석</td><td data-label="노선 평균" class="num">3.229석</td><td data-label="0~2석 MAE" class="num">5.172석</td><td data-label="1석 이상 과대예측" class="num">66.3%</td><td data-label="3석 이상 과대예측" class="num">47.0%</td><td data-label="0석 감지율" class="num">41.8%</td></tr><tr><th scope="row">저잔여 좌석 16배 가중 HGB<span class="table__sub">기존 HGB</span></th><td data-label="전체 MAE" class="num">2.503석</td><td data-label="노선 평균" class="num">3.305석</td><td data-label="0~2석 MAE" class="num">4.338석</td><td data-label="1석 이상 과대예측" class="num">60.8%</td><td data-label="3석 이상 과대예측" class="num">38.3%</td><td data-label="0석 감지율" class="num">51.1%</td></tr><tr><th scope="row">저잔여 좌석 16배·노선 균형 HGB<span class="table__sub">기존 HGB</span></th><td data-label="전체 MAE" class="num">2.514석</td><td data-label="노선 평균" class="num">3.363석</td><td data-label="0~2석 MAE" class="num">4.490석</td><td data-label="1석 이상 과대예측" class="num">63.6%</td><td data-label="3석 이상 과대예측" class="num">38.8%</td><td data-label="0석 감지율" class="num">49.8%</td></tr><tr><th scope="row">35% 분위수 HGB<span class="table__sub">기존 HGB</span></th><td data-label="전체 MAE" class="num">2.587석</td><td data-label="노선 평균" class="num">2.984석</td><td data-label="0~2석 MAE" class="num">7.295석</td><td data-label="1석 이상 과대예측" class="num">66.6%</td><td data-label="3석 이상 과대예측" class="num">58.1%</td><td data-label="0석 감지율" class="num">38.8%</td></tr><tr><th scope="row">저잔여 좌석 16배 가중 HGB · 256회<span class="table__sub">기존 HGB</span></th><td data-label="전체 MAE" class="num">2.439석</td><td data-label="노선 평균" class="num">3.364석</td><td data-label="0~2석 MAE" class="num">4.497석</td><td data-label="1석 이상 과대예측" class="num">61.5%</td><td data-label="3석 이상 과대예측" class="num">40.0%</td><td data-label="0석 감지율" class="num">51.2%</td></tr></tbody>
+    </table></div>
+  </details>
+  <p class="arrival-family__scope">학습 496,475질문, 개발 평가 80,569질문·20개 노선을 사용합니다. 실제 도착 표시 0~2석인 959질문도 같은 분모로 비교합니다. 학습 자료를 줄이지 않았으며 평가 비중은 모든 질문에서 같습니다. 같은 개발 자료를 반복해서 본 탐색으로, 새로운 기간의 성능이나 운영 적용을 보장하지 않습니다.</p>
+  <p class="head__line"><a href="/data/arrival/family/summary.json">학습 방식 확장 실험의 집계와 비교 조건 JSON</a><a href="#arrival-loop">앞선 HGB 반복 실험</a></p>
 </section>
 <section class="dsec arrival-loop" id="arrival-loop" aria-labelledby="arrival-loop-title">
   <div class="dsec__head">
