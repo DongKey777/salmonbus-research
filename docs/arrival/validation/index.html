@@ -1,0 +1,1069 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>시간 분할 검증 · 도착 연구 · salmonbus 연구</title>
+<meta name="description" content="버스 남는 좌석 예보 모델의 자동 실험 현황">
+<link rel="canonical" href="https://research.dongkey.tech/arrival/validation/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="salmonbus 연구">
+<meta property="og:title" content="시간 분할 검증 · 도착 연구 · salmonbus 연구">
+<meta property="og:url" content="https://research.dongkey.tech/arrival/validation/">
+<link rel="icon" href="/favicon.svg?v=42a4ccc6ef62" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="stylesheet" href="/assets/site.css?v=72a7e074967f" data-asset="css">
+<noscript><link rel="stylesheet" href="/assets/noscript.css?v=24fe7a57d410"></noscript>
+<script src="/assets/charts.js?v=dd96aa903a7f" defer data-asset="js"></script>
+<script src="/assets/live.js?v=b8d366c5c254" defer data-asset="js"></script>
+</head>
+<body data-digest="a799e01e54f8fa2552429fda5d62e6ed90ea6807701d817b19ee900aa20345aa" data-poll="60" data-version-url="/version.json">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="/"><span class="brand__mark">salmonbus</span> <span class="brand__sub">연구</span></a>
+    <nav class="nav" aria-label="주 메뉴">
+      <a href="/">홈</a>
+      <a href="/progress/">개선 현황</a>
+      <a href="/attempts/">시도 상세</a>
+<a href="/arrival/" aria-current="page">도착 연구</a>    </nav>
+    <p class="live" id="live-status" data-live aria-live="polite">
+<span class="live__dot" aria-hidden="true"></span><span class="live__text">시간 검증 갱신 2026년 10월 26일 12:50 KST</span>    </p>
+  </div>
+</header>
+<main id="main" class="page">
+<div id="arrival-temporal-content" class="arrival-hub arrival-temporal" data-live>
+  <div class="ah-masthead">
+    <div class="ah-masthead__line"><a class="ah-masthead__title" href="/arrival/">도착 잔여석 연구</a><span class="tag tag--scope">첫 도착 표시 기준</span></div>
+    <p>내 정류장에 도착할 때, 몇 석이 남을까.</p>
+  </div>
+  <nav class="ah-nav at-nav" aria-label="도착 연구 메뉴">
+<a href="/arrival/">연구 개요</a><a href="/arrival/progress/">개선 현황</a><a href="/arrival/models/">모델 비교</a><a href="/arrival/validation/" aria-current="page">시간 검증</a><a href="/arrival/method/">자료와 평가</a>  </nav>
+
+  <header class="ah-heading">
+    <div><p class="ah-eyebrow">기존 학습자료 안에서 시간을 나눈 별도 비교</p><h1>시간을 나눠 다시 검증했습니다</h1><p>앞쪽 기간으로 새 모델을 학습하고, 뒤쪽 기간에서 잔여석을 예측했습니다. 전체 정확도와 좌석 부족 상황의 오류를 함께 살펴봅니다.</p></div>
+    <div class="ah-heading__meta"><span class="ah-status">검증 완료</span><span>2026년 10월 26일 12:50 KST</span></div>
+  </header>
+
+  <section class="ah-current at-split" aria-labelledby="at-split-title">
+    <div class="ah-current__heading"><h2 id="at-split-title">앞선 학습 → 경계 제외 → 뒤쪽 검증</h2><span class="tag">기존 TRAIN 내부 검증</span></div>
+    <p class="ah-copy">기존 학습자료 496,475건을 시간 순서로 나눴습니다. 경계에 걸린 질문은 제외하고, 학습과 검증 사이의 질문·방문·운행 구간 겹침을 확인했습니다.</p>
+    <ol class="at-timeline" aria-label="시간에 따른 자료 분할">
+      <li class="at-timeline__fit"><span>앞쪽 학습</span><strong>396,644<small>건</small></strong><p>이 자료로 모델과 노선 범주를 새로 학습</p></li>
+      <li class="at-timeline__purged"><span>경계 제외</span><strong>4,072<small>건</small></strong><p>시간 경계를 넘는 질문 제외</p></li>
+      <li class="at-timeline__valid"><span>뒤쪽 검증</span><strong>95,759<small>건</small></strong><p>학습에 없던 4개 노선 포함</p></li>
+    </ol>
+    <p class="at-split__scope">새로 수집한 미노출 기간의 검증은 아닙니다. 기존 DEV와 봉인 H는 이번에 사용하지 않았으며, 기존 모델의 점수와 직접 비교하거나 연구 기준을 바꾸지 않습니다.</p>
+  </section>
+
+  <nav class="at-jump" aria-label="평가 집단으로 이동">
+<a href="#all"><strong>전체 질문</strong><span>95,759건 · 12개 노선</span></a><a href="#seen"><strong>학습에 있던 노선</strong><span>77,403건 · 8개 노선</span></a><a href="#unseen"><strong>학습에 없던 노선</strong><span>18,356건 · 4개 노선</span></a>    <a href="#at-routes"><strong>노선별 결과</strong><span>익명 노선 단위로 확인</span></a>
+  </nav>
+
+  <section class="ah-section" id="at-reading" aria-labelledby="at-reading-title">
+    <div class="ah-section-head"><h2 id="at-reading-title">수치는 이렇게 읽어 주세요</h2><a href="#at-method">학습 방식과 평가 범위</a></div>
+    <div class="at-reading-grid">
+      <div><h3>얼마나 틀렸는가</h3><p>평균 오차는 질문별 좌석 오차, 노선별 평균 오차는 각 노선의 오차를 같은 비중으로 평균한 값입니다. 두 값 모두 작을수록 좋습니다.</p></div>
+      <div><h3>자리가 적을 때 낙관했는가</h3><p>과대예측률은 실제 0~2석인 질문 중, 실제보다 1석 또는 3석 이상 많게 예측한 비율입니다. 분모를 함께 표시합니다.</p></div>
+      <div><h3>빈자리가 없음을 알아챘는가</h3><p>0석 감지율은 실제 0석인 질문 중 2석 미만으로 예측한 비율입니다. 개인의 탑승 확률은 아닙니다. 해당 질문이 없으면 —로 표시합니다.</p></div>
+    </div>
+  </section>
+
+  <section class="ah-section at-stratum" id="all" aria-labelledby="all-title">
+    <div class="ah-section-head"><div><p class="ah-eyebrow">동일한 뒤쪽 기간 · 다섯 예측 방식</p><h2 id="all-title">전체 질문</h2></div><a href="#at-reading">지표 설명</a></div>
+    <dl class="at-population"><div><dt>질문</dt><dd>95,759건</dd></div><div><dt>노선</dt><dd>12개</dd></div><div><dt>실제 0~2석</dt><dd>931건</dd></div><div><dt>실제 0석</dt><dd>668건</dd></div></dl>
+    <div class="at-table-wrap">
+  <table role="table" class="at-model-table" id="all-table">
+    <caption class="sr-only">전체 질문 주요 평가 지표. 목록은 성능 순위가 아닌 비교 방식 순서입니다.</caption>
+    <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">평균 오차</th><th role="columnheader" scope="col">노선별 평균 오차</th><th role="columnheader" scope="col">0~2석 평균 오차</th><th role="columnheader" scope="col">3석 이상 과대예측</th><th role="columnheader" scope="col">0석 감지율</th></tr></thead>
+    <tbody role="rowgroup">
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">현재 좌석 유지</span><span class="at-model-kind">계산 기준선</span><span class="at-model-description">현재 표시 좌석을 목표 정류장의 예측값으로 그대로 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">4.763</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">5.026</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">13.864</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">53.3%</span><small class="at-denominator">496 / 931건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">47.5%</span><small class="at-denominator">317 / 668건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">절대오차 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">학습에서 실제 0~2석 사례에 16배 비중을 주고 절대오차를 줄입니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.080</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.319</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">8.666</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">51.6%</span><small class="at-denominator">480 / 931건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">48.2%</span><small class="at-denominator">322 / 668건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">0.35 분위수 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">같은 학습 비중을 유지하며 낮은 쪽 예측을 유도하는 분위수 손실을 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.476</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.520</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">5.833</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">35.6%</span><small class="at-denominator">331 / 931건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">64.1%</span><small class="at-denominator">428 / 668건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 절대오차</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">새로 학습한 공통 좌석 구간 판별기와 절대오차 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.076</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.308</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">7.252</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">46.2%</span><small class="at-denominator">430 / 931건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">53.1%</span><small class="at-denominator">355 / 668건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 0.35 분위수</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">같은 좌석 구간 판별기와 분위수 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.483</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.522</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">5.173</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">31.3%</span><small class="at-denominator">291 / 931건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">67.4%</span><small class="at-denominator">450 / 668건</small></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<details class="at-additional">
+  <summary><span>보조 지표 보기</span><span class="at-additional__hint">RMSE · 평균 편향 · 1석 이상 과대예측</span><span class="at-chevron" aria-hidden="true"></span></summary>
+  <div class="at-additional__body">
+    <p class="ah-caption">RMSE는 큰 오차에 더 민감합니다. 평균 편향이 양수면 실제보다 많게, 음수면 적게 예측한 경향입니다.</p>
+    <div class="at-table-wrap">
+      <table role="table" class="at-model-table at-model-table--secondary">
+        <caption class="sr-only">전체 질문 보조 평가 지표</caption>
+        <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">RMSE</th><th role="columnheader" scope="col">평균 편향</th><th role="columnheader" scope="col">1석 이상 과대예측</th></tr></thead>
+        <tbody role="rowgroup"><tr role="row"><th role="rowheader" scope="row">현재 좌석 유지</th><td role="cell" data-label="RMSE"><span class="at-number">8.462</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.041</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">56.0%</span><small class="at-denominator">521 / 931건</small></td></tr><tr role="row"><th role="rowheader" scope="row">절대오차 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">5.302</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.395</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">69.1%</span><small class="at-denominator">643 / 931건</small></td></tr><tr role="row"><th role="rowheader" scope="row">0.35 분위수 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">5.690</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.764</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">45.6%</span><small class="at-denominator">425 / 931건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 절대오차</th><td role="cell" data-label="RMSE"><span class="at-number">5.291</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.470</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">58.1%</span><small class="at-denominator">541 / 931건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 0.35 분위수</th><td role="cell" data-label="RMSE"><span class="at-number">5.702</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.813</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">43.6%</span><small class="at-denominator">406 / 931건</small></td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</details>
+  </section>
+  <section class="ah-section at-stratum" id="seen" aria-labelledby="seen-title">
+    <div class="ah-section-head"><div><p class="ah-eyebrow">앞쪽 학습에도 등장했던 노선</p><h2 id="seen-title">학습에 있던 노선</h2></div><a href="#at-reading">지표 설명</a></div>
+    <dl class="at-population"><div><dt>질문</dt><dd>77,403건</dd></div><div><dt>노선</dt><dd>8개</dd></div><div><dt>실제 0~2석</dt><dd>818건</dd></div><div><dt>실제 0석</dt><dd>587건</dd></div></dl>
+    <div class="at-table-wrap">
+  <table role="table" class="at-model-table" id="seen-table">
+    <caption class="sr-only">학습에 있던 노선 주요 평가 지표. 목록은 성능 순위가 아닌 비교 방식 순서입니다.</caption>
+    <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">평균 오차</th><th role="columnheader" scope="col">노선별 평균 오차</th><th role="columnheader" scope="col">0~2석 평균 오차</th><th role="columnheader" scope="col">3석 이상 과대예측</th><th role="columnheader" scope="col">0석 감지율</th></tr></thead>
+    <tbody role="rowgroup">
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">현재 좌석 유지</span><span class="at-model-kind">계산 기준선</span><span class="at-model-description">현재 표시 좌석을 목표 정류장의 예측값으로 그대로 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">4.607</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">4.831</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">13.149</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">51.0%</span><small class="at-denominator">417 / 818건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">49.7%</span><small class="at-denominator">292 / 587건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">절대오차 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">학습에서 실제 0~2석 사례에 16배 비중을 주고 절대오차를 줄입니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.043</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.245</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">8.361</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">50.9%</span><small class="at-denominator">416 / 818건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">48.9%</span><small class="at-denominator">287 / 587건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">0.35 분위수 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">같은 학습 비중을 유지하며 낮은 쪽 예측을 유도하는 분위수 손실을 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.494</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.521</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">5.515</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">34.4%</span><small class="at-denominator">281 / 818건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">65.6%</span><small class="at-denominator">385 / 587건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 절대오차</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">새로 학습한 공통 좌석 구간 판별기와 절대오차 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.039</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.229</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">6.909</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">45.2%</span><small class="at-denominator">370 / 818건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">54.2%</span><small class="at-denominator">318 / 587건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 0.35 분위수</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">같은 좌석 구간 판별기와 분위수 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.500</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.519</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">4.844</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">30.0%</span><small class="at-denominator">245 / 818건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">69.2%</span><small class="at-denominator">406 / 587건</small></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<details class="at-additional">
+  <summary><span>보조 지표 보기</span><span class="at-additional__hint">RMSE · 평균 편향 · 1석 이상 과대예측</span><span class="at-chevron" aria-hidden="true"></span></summary>
+  <div class="at-additional__body">
+    <p class="ah-caption">RMSE는 큰 오차에 더 민감합니다. 평균 편향이 양수면 실제보다 많게, 음수면 적게 예측한 경향입니다.</p>
+    <div class="at-table-wrap">
+      <table role="table" class="at-model-table at-model-table--secondary">
+        <caption class="sr-only">학습에 있던 노선 보조 평가 지표</caption>
+        <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">RMSE</th><th role="columnheader" scope="col">평균 편향</th><th role="columnheader" scope="col">1석 이상 과대예측</th></tr></thead>
+        <tbody role="rowgroup"><tr role="row"><th role="rowheader" scope="row">현재 좌석 유지</th><td role="cell" data-label="RMSE"><span class="at-number">8.321</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.910</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">53.5%</span><small class="at-denominator">438 / 818건</small></td></tr><tr role="row"><th role="rowheader" scope="row">절대오차 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">5.238</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.370</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">68.7%</span><small class="at-denominator">562 / 818건</small></td></tr><tr role="row"><th role="rowheader" scope="row">0.35 분위수 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">5.751</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.793</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">44.6%</span><small class="at-denominator">365 / 818건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 절대오차</th><td role="cell" data-label="RMSE"><span class="at-number">5.230</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.449</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">57.8%</span><small class="at-denominator">473 / 818건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 0.35 분위수</th><td role="cell" data-label="RMSE"><span class="at-number">5.765</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.842</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">42.8%</span><small class="at-denominator">350 / 818건</small></td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</details>
+  </section>
+  <section class="ah-section at-stratum" id="unseen" aria-labelledby="unseen-title">
+    <div class="ah-section-head"><div><p class="ah-eyebrow">뒤쪽 검증에만 등장한 노선</p><h2 id="unseen-title">학습에 없던 노선</h2></div><a href="#at-reading">지표 설명</a></div>
+    <dl class="at-population"><div><dt>질문</dt><dd>18,356건</dd></div><div><dt>노선</dt><dd>4개</dd></div><div><dt>실제 0~2석</dt><dd>113건</dd></div><div><dt>실제 0석</dt><dd>81건</dd></div></dl>
+<p class="ah-note">이번 학습에 없던 노선의 결과를 따로 봅니다. 일부 노선의 질문이 적거나 좌석 부족 사례가 없을 수 있으므로, 질문 수와 지표별 분모를 함께 확인해 주세요.</p>    <div class="at-table-wrap">
+  <table role="table" class="at-model-table" id="unseen-table">
+    <caption class="sr-only">학습에 없던 노선 주요 평가 지표. 목록은 성능 순위가 아닌 비교 방식 순서입니다.</caption>
+    <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">평균 오차</th><th role="columnheader" scope="col">노선별 평균 오차</th><th role="columnheader" scope="col">0~2석 평균 오차</th><th role="columnheader" scope="col">3석 이상 과대예측</th><th role="columnheader" scope="col">0석 감지율</th></tr></thead>
+    <tbody role="rowgroup">
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">현재 좌석 유지</span><span class="at-model-kind">계산 기준선</span><span class="at-model-description">현재 표시 좌석을 목표 정류장의 예측값으로 그대로 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">5.422</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">5.416</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">19.035</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">69.9%</span><small class="at-denominator">79 / 113건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">30.9%</span><small class="at-denominator">25 / 81건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">절대오차 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">학습에서 실제 0~2석 사례에 16배 비중을 주고 절대오차를 줄입니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.238</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.468</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">10.871</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">56.6%</span><small class="at-denominator">64 / 113건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">43.2%</span><small class="at-denominator">35 / 81건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">0.35 분위수 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">같은 학습 비중을 유지하며 낮은 쪽 예측을 유도하는 분위수 손실을 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.401</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.517</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">8.139</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">44.2%</span><small class="at-denominator">50 / 113건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">53.1%</span><small class="at-denominator">43 / 81건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 절대오차</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">새로 학습한 공통 좌석 구간 판별기와 절대오차 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.234</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.466</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">9.734</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">53.1%</span><small class="at-denominator">60 / 113건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">45.7%</span><small class="at-denominator">37 / 81건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 0.35 분위수</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">같은 좌석 구간 판별기와 분위수 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.409</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.526</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">7.549</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">40.7%</span><small class="at-denominator">46 / 113건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">54.3%</span><small class="at-denominator">44 / 81건</small></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<details class="at-additional">
+  <summary><span>보조 지표 보기</span><span class="at-additional__hint">RMSE · 평균 편향 · 1석 이상 과대예측</span><span class="at-chevron" aria-hidden="true"></span></summary>
+  <div class="at-additional__body">
+    <p class="ah-caption">RMSE는 큰 오차에 더 민감합니다. 평균 편향이 양수면 실제보다 많게, 음수면 적게 예측한 경향입니다.</p>
+    <div class="at-table-wrap">
+      <table role="table" class="at-model-table at-model-table--secondary">
+        <caption class="sr-only">학습에 없던 노선 보조 평가 지표</caption>
+        <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">RMSE</th><th role="columnheader" scope="col">평균 편향</th><th role="columnheader" scope="col">1석 이상 과대예측</th></tr></thead>
+        <tbody role="rowgroup"><tr role="row"><th role="rowheader" scope="row">현재 좌석 유지</th><td role="cell" data-label="RMSE"><span class="at-number">9.032</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.592</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">73.5%</span><small class="at-denominator">83 / 113건</small></td></tr><tr role="row"><th role="rowheader" scope="row">절대오차 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">5.565</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.498</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">71.7%</span><small class="at-denominator">81 / 113건</small></td></tr><tr role="row"><th role="rowheader" scope="row">0.35 분위수 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">5.423</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.644</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">53.1%</span><small class="at-denominator">60 / 113건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 절대오차</th><td role="cell" data-label="RMSE"><span class="at-number">5.543</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.558</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">60.2%</span><small class="at-denominator">68 / 113건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 0.35 분위수</th><td role="cell" data-label="RMSE"><span class="at-number">5.429</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.687</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">49.6%</span><small class="at-denominator">56 / 113건</small></td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</details>
+  </section>
+
+  <section class="ah-section" id="at-routes" aria-labelledby="at-routes-title">
+    <div class="ah-section-head"><h2 id="at-routes-title">노선별 결과</h2><span class="ah-caption">노선을 열어 다섯 방식을 비교하세요</span></div>
+    <p class="ah-copy">질문 수가 많은 노선의 결과만 보지 않도록 개별 수치도 남겼습니다. R01~R12는 이 비교 안에서만 사용하는 익명 표기입니다.</p>
+    <div class="at-routes">
+      <details class="at-route" id="at-route-R01">
+        <summary><span class="at-route__name"><strong>R01</strong><span>학습에 있던 노선</span></span><span class="at-route__counts"><span>질문 <strong>22,926건</strong></span><span>실제 0~2석 <strong>111건</strong></span><span>실제 0석 <strong>93건</strong></span></span><span class="at-route__toggle"><span class="at-when-closed">결과 보기</span><span class="at-when-open">접기</span><span class="at-chevron" aria-hidden="true"></span></span></summary>
+        <div class="at-route__body"><div class="at-table-wrap">
+  <table role="table" class="at-model-table" id="at-route-R01-table">
+    <caption class="sr-only">R01 노선 주요 평가 지표. 목록은 성능 순위가 아닌 비교 방식 순서입니다.</caption>
+    <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">평균 오차</th><th role="columnheader" scope="col">노선별 평균 오차</th><th role="columnheader" scope="col">0~2석 평균 오차</th><th role="columnheader" scope="col">3석 이상 과대예측</th><th role="columnheader" scope="col">0석 감지율</th></tr></thead>
+    <tbody role="rowgroup">
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">현재 좌석 유지</span><span class="at-model-kind">계산 기준선</span><span class="at-model-description">현재 표시 좌석을 목표 정류장의 예측값으로 그대로 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">5.006</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">5.006</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">20.081</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">69.4%</span><small class="at-denominator">77 / 111건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">35.5%</span><small class="at-denominator">33 / 93건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">절대오차 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">학습에서 실제 0~2석 사례에 16배 비중을 주고 절대오차를 줄입니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">2.950</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">2.950</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">6.300</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">43.2%</span><small class="at-denominator">48 / 111건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">55.9%</span><small class="at-denominator">52 / 93건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">0.35 분위수 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">같은 학습 비중을 유지하며 낮은 쪽 예측을 유도하는 분위수 손실을 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.111</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.111</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">4.366</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">28.8%</span><small class="at-denominator">32 / 111건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">72.0%</span><small class="at-denominator">67 / 93건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 절대오차</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">새로 학습한 공통 좌석 구간 판별기와 절대오차 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">2.956</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">2.956</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">4.694</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">35.1%</span><small class="at-denominator">39 / 111건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">63.4%</span><small class="at-denominator">59 / 93건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 0.35 분위수</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">같은 좌석 구간 판별기와 분위수 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.114</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.114</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">3.375</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">24.3%</span><small class="at-denominator">27 / 111건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">76.3%</span><small class="at-denominator">71 / 93건</small></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<details class="at-additional">
+  <summary><span>보조 지표 보기</span><span class="at-additional__hint">RMSE · 평균 편향 · 1석 이상 과대예측</span><span class="at-chevron" aria-hidden="true"></span></summary>
+  <div class="at-additional__body">
+    <p class="ah-caption">RMSE는 큰 오차에 더 민감합니다. 평균 편향이 양수면 실제보다 많게, 음수면 적게 예측한 경향입니다.</p>
+    <div class="at-table-wrap">
+      <table role="table" class="at-model-table at-model-table--secondary">
+        <caption class="sr-only">R01 노선 보조 평가 지표</caption>
+        <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">RMSE</th><th role="columnheader" scope="col">평균 편향</th><th role="columnheader" scope="col">1석 이상 과대예측</th></tr></thead>
+        <tbody role="rowgroup"><tr role="row"><th role="rowheader" scope="row">현재 좌석 유지</th><td role="cell" data-label="RMSE"><span class="at-number">8.825</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.066</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">70.3%</span><small class="at-denominator">78 / 111건</small></td></tr><tr role="row"><th role="rowheader" scope="row">절대오차 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">5.217</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.581</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">51.4%</span><small class="at-denominator">57 / 111건</small></td></tr><tr role="row"><th role="rowheader" scope="row">0.35 분위수 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">5.250</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.620</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">39.6%</span><small class="at-denominator">44 / 111건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 절대오차</th><td role="cell" data-label="RMSE"><span class="at-number">5.230</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.628</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">45.0%</span><small class="at-denominator">50 / 111건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 0.35 분위수</th><td role="cell" data-label="RMSE"><span class="at-number">5.258</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.650</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">32.4%</span><small class="at-denominator">36 / 111건</small></td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</details></div>
+      </details>
+      <details class="at-route" id="at-route-R02">
+        <summary><span class="at-route__name"><strong>R02</strong><span>학습에 있던 노선</span></span><span class="at-route__counts"><span>질문 <strong>17,554건</strong></span><span>실제 0~2석 <strong>276건</strong></span><span>실제 0석 <strong>161건</strong></span></span><span class="at-route__toggle"><span class="at-when-closed">결과 보기</span><span class="at-when-open">접기</span><span class="at-chevron" aria-hidden="true"></span></span></summary>
+        <div class="at-route__body"><div class="at-table-wrap">
+  <table role="table" class="at-model-table" id="at-route-R02-table">
+    <caption class="sr-only">R02 노선 주요 평가 지표. 목록은 성능 순위가 아닌 비교 방식 순서입니다.</caption>
+    <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">평균 오차</th><th role="columnheader" scope="col">노선별 평균 오차</th><th role="columnheader" scope="col">0~2석 평균 오차</th><th role="columnheader" scope="col">3석 이상 과대예측</th><th role="columnheader" scope="col">0석 감지율</th></tr></thead>
+    <tbody role="rowgroup">
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">현재 좌석 유지</span><span class="at-model-kind">계산 기준선</span><span class="at-model-description">현재 표시 좌석을 목표 정류장의 예측값으로 그대로 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.427</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.427</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">8.768</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">45.7%</span><small class="at-denominator">126 / 276건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">52.8%</span><small class="at-denominator">85 / 161건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">절대오차 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">학습에서 실제 0~2석 사례에 16배 비중을 주고 절대오차를 줄입니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.545</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.545</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">7.274</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">51.1%</span><small class="at-denominator">141 / 276건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">46.0%</span><small class="at-denominator">74 / 161건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">0.35 분위수 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">같은 학습 비중을 유지하며 낮은 쪽 예측을 유도하는 분위수 손실을 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">4.285</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">4.285</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">4.216</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">31.5%</span><small class="at-denominator">87 / 276건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">67.7%</span><small class="at-denominator">109 / 161건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 절대오차</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">새로 학습한 공통 좌석 구간 판별기와 절대오차 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.552</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.552</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">6.033</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">46.0%</span><small class="at-denominator">127 / 276건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">52.8%</span><small class="at-denominator">85 / 161건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 0.35 분위수</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">같은 좌석 구간 판별기와 분위수 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">4.305</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">4.305</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">3.756</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">26.4%</span><small class="at-denominator">73 / 276건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">71.4%</span><small class="at-denominator">115 / 161건</small></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<details class="at-additional">
+  <summary><span>보조 지표 보기</span><span class="at-additional__hint">RMSE · 평균 편향 · 1석 이상 과대예측</span><span class="at-chevron" aria-hidden="true"></span></summary>
+  <div class="at-additional__body">
+    <p class="ah-caption">RMSE는 큰 오차에 더 민감합니다. 평균 편향이 양수면 실제보다 많게, 음수면 적게 예측한 경향입니다.</p>
+    <div class="at-table-wrap">
+      <table role="table" class="at-model-table at-model-table--secondary">
+        <caption class="sr-only">R02 노선 보조 평가 지표</caption>
+        <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">RMSE</th><th role="columnheader" scope="col">평균 편향</th><th role="columnheader" scope="col">1석 이상 과대예측</th></tr></thead>
+        <tbody role="rowgroup"><tr role="row"><th role="rowheader" scope="row">현재 좌석 유지</th><td role="cell" data-label="RMSE"><span class="at-number">6.193</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.035</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">50.7%</span><small class="at-denominator">140 / 276건</small></td></tr><tr role="row"><th role="rowheader" scope="row">절대오차 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">5.491</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.222</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">69.2%</span><small class="at-denominator">191 / 276건</small></td></tr><tr role="row"><th role="rowheader" scope="row">0.35 분위수 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">6.524</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-2.244</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">42.8%</span><small class="at-denominator">118 / 276건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 절대오차</th><td role="cell" data-label="RMSE"><span class="at-number">5.518</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.347</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">64.1%</span><small class="at-denominator">177 / 276건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 0.35 분위수</th><td role="cell" data-label="RMSE"><span class="at-number">6.571</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-2.319</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">44.6%</span><small class="at-denominator">123 / 276건</small></td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</details></div>
+      </details>
+      <details class="at-route" id="at-route-R03">
+        <summary><span class="at-route__name"><strong>R03</strong><span>학습에 있던 노선</span></span><span class="at-route__counts"><span>질문 <strong>7,106건</strong></span><span>실제 0~2석 <strong>61건</strong></span><span>실제 0석 <strong>40건</strong></span></span><span class="at-route__toggle"><span class="at-when-closed">결과 보기</span><span class="at-when-open">접기</span><span class="at-chevron" aria-hidden="true"></span></span></summary>
+        <div class="at-route__body"><div class="at-table-wrap">
+  <table role="table" class="at-model-table" id="at-route-R03-table">
+    <caption class="sr-only">R03 노선 주요 평가 지표. 목록은 성능 순위가 아닌 비교 방식 순서입니다.</caption>
+    <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">평균 오차</th><th role="columnheader" scope="col">노선별 평균 오차</th><th role="columnheader" scope="col">0~2석 평균 오차</th><th role="columnheader" scope="col">3석 이상 과대예측</th><th role="columnheader" scope="col">0석 감지율</th></tr></thead>
+    <tbody role="rowgroup">
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">현재 좌석 유지</span><span class="at-model-kind">계산 기준선</span><span class="at-model-description">현재 표시 좌석을 목표 정류장의 예측값으로 그대로 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">4.649</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">4.649</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">19.115</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">55.7%</span><small class="at-denominator">34 / 61건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">35.0%</span><small class="at-denominator">14 / 40건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">절대오차 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">학습에서 실제 0~2석 사례에 16배 비중을 주고 절대오차를 줄입니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">2.917</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">2.917</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">13.887</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">57.4%</span><small class="at-denominator">35 / 61건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">37.5%</span><small class="at-denominator">15 / 40건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">0.35 분위수 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">같은 학습 비중을 유지하며 낮은 쪽 예측을 유도하는 분위수 손실을 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.516</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.516</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">12.112</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">50.8%</span><small class="at-denominator">31 / 61건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">40.0%</span><small class="at-denominator">16 / 40건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 절대오차</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">새로 학습한 공통 좌석 구간 판별기와 절대오차 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">2.921</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">2.921</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">13.239</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">52.5%</span><small class="at-denominator">32 / 61건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">40.0%</span><small class="at-denominator">16 / 40건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 0.35 분위수</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">같은 좌석 구간 판별기와 분위수 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.522</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.522</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">11.746</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">45.9%</span><small class="at-denominator">28 / 61건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">40.0%</span><small class="at-denominator">16 / 40건</small></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<details class="at-additional">
+  <summary><span>보조 지표 보기</span><span class="at-additional__hint">RMSE · 평균 편향 · 1석 이상 과대예측</span><span class="at-chevron" aria-hidden="true"></span></summary>
+  <div class="at-additional__body">
+    <p class="ah-caption">RMSE는 큰 오차에 더 민감합니다. 평균 편향이 양수면 실제보다 많게, 음수면 적게 예측한 경향입니다.</p>
+    <div class="at-table-wrap">
+      <table role="table" class="at-model-table at-model-table--secondary">
+        <caption class="sr-only">R03 노선 보조 평가 지표</caption>
+        <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">RMSE</th><th role="columnheader" scope="col">평균 편향</th><th role="columnheader" scope="col">1석 이상 과대예측</th></tr></thead>
+        <tbody role="rowgroup"><tr role="row"><th role="rowheader" scope="row">현재 좌석 유지</th><td role="cell" data-label="RMSE"><span class="at-number">8.501</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.854</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">57.4%</span><small class="at-denominator">35 / 61건</small></td></tr><tr role="row"><th role="rowheader" scope="row">절대오차 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">5.160</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.348</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">68.9%</span><small class="at-denominator">42 / 61건</small></td></tr><tr role="row"><th role="rowheader" scope="row">0.35 분위수 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">5.937</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.768</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">57.4%</span><small class="at-denominator">35 / 61건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 절대오차</th><td role="cell" data-label="RMSE"><span class="at-number">5.165</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.384</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">65.6%</span><small class="at-denominator">40 / 61건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 0.35 분위수</th><td role="cell" data-label="RMSE"><span class="at-number">5.948</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.789</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">54.1%</span><small class="at-denominator">33 / 61건</small></td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</details></div>
+      </details>
+      <details class="at-route" id="at-route-R04">
+        <summary><span class="at-route__name"><strong>R04</strong><span>학습에 있던 노선</span></span><span class="at-route__counts"><span>질문 <strong>8,920건</strong></span><span>실제 0~2석 <strong>171건</strong></span><span>실제 0석 <strong>121건</strong></span></span><span class="at-route__toggle"><span class="at-when-closed">결과 보기</span><span class="at-when-open">접기</span><span class="at-chevron" aria-hidden="true"></span></span></summary>
+        <div class="at-route__body"><div class="at-table-wrap">
+  <table role="table" class="at-model-table" id="at-route-R04-table">
+    <caption class="sr-only">R04 노선 주요 평가 지표. 목록은 성능 순위가 아닌 비교 방식 순서입니다.</caption>
+    <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">평균 오차</th><th role="columnheader" scope="col">노선별 평균 오차</th><th role="columnheader" scope="col">0~2석 평균 오차</th><th role="columnheader" scope="col">3석 이상 과대예측</th><th role="columnheader" scope="col">0석 감지율</th></tr></thead>
+    <tbody role="rowgroup">
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">현재 좌석 유지</span><span class="at-model-kind">계산 기준선</span><span class="at-model-description">현재 표시 좌석을 목표 정류장의 예측값으로 그대로 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">5.887</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">5.887</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">15.269</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">61.4%</span><small class="at-denominator">105 / 171건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">37.2%</span><small class="at-denominator">45 / 121건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">절대오차 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">학습에서 실제 0~2석 사례에 16배 비중을 주고 절대오차를 줄입니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.166</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.166</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">10.035</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">57.9%</span><small class="at-denominator">99 / 171건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">43.8%</span><small class="at-denominator">53 / 121건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">0.35 분위수 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">같은 학습 비중을 유지하며 낮은 쪽 예측을 유도하는 분위수 손실을 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.521</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.521</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">7.343</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">44.4%</span><small class="at-denominator">76 / 171건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">59.5%</span><small class="at-denominator">72 / 121건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 절대오차</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">새로 학습한 공통 좌석 구간 판별기와 절대오차 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.115</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.115</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">7.703</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">49.7%</span><small class="at-denominator">85 / 171건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">51.2%</span><small class="at-denominator">62 / 121건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 0.35 분위수</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">같은 좌석 구간 판별기와 분위수 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.518</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.518</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">6.203</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">38.0%</span><small class="at-denominator">65 / 171건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">63.6%</span><small class="at-denominator">77 / 121건</small></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<details class="at-additional">
+  <summary><span>보조 지표 보기</span><span class="at-additional__hint">RMSE · 평균 편향 · 1석 이상 과대예측</span><span class="at-chevron" aria-hidden="true"></span></summary>
+  <div class="at-additional__body">
+    <p class="ah-caption">RMSE는 큰 오차에 더 민감합니다. 평균 편향이 양수면 실제보다 많게, 음수면 적게 예측한 경향입니다.</p>
+    <div class="at-table-wrap">
+      <table role="table" class="at-model-table at-model-table--secondary">
+        <caption class="sr-only">R04 노선 보조 평가 지표</caption>
+        <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">RMSE</th><th role="columnheader" scope="col">평균 편향</th><th role="columnheader" scope="col">1석 이상 과대예측</th></tr></thead>
+        <tbody role="rowgroup"><tr role="row"><th role="rowheader" scope="row">현재 좌석 유지</th><td role="cell" data-label="RMSE"><span class="at-number">9.807</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.171</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">64.3%</span><small class="at-denominator">110 / 171건</small></td></tr><tr role="row"><th role="rowheader" scope="row">절대오차 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">5.202</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">0.178</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">79.5%</span><small class="at-denominator">136 / 171건</small></td></tr><tr role="row"><th role="rowheader" scope="row">0.35 분위수 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">5.561</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.298</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">50.9%</span><small class="at-denominator">87 / 171건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 절대오차</th><td role="cell" data-label="RMSE"><span class="at-number">5.106</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">0.005</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">58.5%</span><small class="at-denominator">100 / 171건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 0.35 분위수</th><td role="cell" data-label="RMSE"><span class="at-number">5.562</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.412</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">48.0%</span><small class="at-denominator">82 / 171건</small></td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</details></div>
+      </details>
+      <details class="at-route" id="at-route-R05">
+        <summary><span class="at-route__name"><strong>R05</strong><span>학습에 있던 노선</span></span><span class="at-route__counts"><span>질문 <strong>14,659건</strong></span><span>실제 0~2석 <strong>143건</strong></span><span>실제 0석 <strong>129건</strong></span></span><span class="at-route__toggle"><span class="at-when-closed">결과 보기</span><span class="at-when-open">접기</span><span class="at-chevron" aria-hidden="true"></span></span></summary>
+        <div class="at-route__body"><div class="at-table-wrap">
+  <table role="table" class="at-model-table" id="at-route-R05-table">
+    <caption class="sr-only">R05 노선 주요 평가 지표. 목록은 성능 순위가 아닌 비교 방식 순서입니다.</caption>
+    <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">평균 오차</th><th role="columnheader" scope="col">노선별 평균 오차</th><th role="columnheader" scope="col">0~2석 평균 오차</th><th role="columnheader" scope="col">3석 이상 과대예측</th><th role="columnheader" scope="col">0석 감지율</th></tr></thead>
+    <tbody role="rowgroup">
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">현재 좌석 유지</span><span class="at-model-kind">계산 기준선</span><span class="at-model-description">현재 표시 좌석을 목표 정류장의 예측값으로 그대로 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">4.412</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">4.412</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">9.846</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">30.1%</span><small class="at-denominator">43 / 143건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">75.2%</span><small class="at-denominator">97 / 129건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">절대오차 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">학습에서 실제 0~2석 사례에 16배 비중을 주고 절대오차를 줄입니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">2.395</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">2.395</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">5.675</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">38.5%</span><small class="at-denominator">55 / 143건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">60.5%</span><small class="at-denominator">78 / 129건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">0.35 분위수 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">같은 학습 비중을 유지하며 낮은 쪽 예측을 유도하는 분위수 손실을 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.141</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.141</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">2.580</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">21.0%</span><small class="at-denominator">30 / 143건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">76.0%</span><small class="at-denominator">98 / 129건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 절대오차</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">새로 학습한 공통 좌석 구간 판별기와 절대오차 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">2.393</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">2.393</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">4.637</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">35.7%</span><small class="at-denominator">51 / 143건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">62.0%</span><small class="at-denominator">80 / 129건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 0.35 분위수</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">같은 좌석 구간 판별기와 분위수 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.146</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.146</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">2.226</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">19.6%</span><small class="at-denominator">28 / 143건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">79.8%</span><small class="at-denominator">103 / 129건</small></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<details class="at-additional">
+  <summary><span>보조 지표 보기</span><span class="at-additional__hint">RMSE · 평균 편향 · 1석 이상 과대예측</span><span class="at-chevron" aria-hidden="true"></span></summary>
+  <div class="at-additional__body">
+    <p class="ah-caption">RMSE는 큰 오차에 더 민감합니다. 평균 편향이 양수면 실제보다 많게, 음수면 적게 예측한 경향입니다.</p>
+    <div class="at-table-wrap">
+      <table role="table" class="at-model-table at-model-table--secondary">
+        <caption class="sr-only">R05 노선 보조 평가 지표</caption>
+        <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">RMSE</th><th role="columnheader" scope="col">평균 편향</th><th role="columnheader" scope="col">1석 이상 과대예측</th></tr></thead>
+        <tbody role="rowgroup"><tr role="row"><th role="rowheader" scope="row">현재 좌석 유지</th><td role="cell" data-label="RMSE"><span class="at-number">8.355</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.375</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">30.1%</span><small class="at-denominator">43 / 143건</small></td></tr><tr role="row"><th role="rowheader" scope="row">절대오차 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">4.554</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.856</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">62.2%</span><small class="at-denominator">89 / 143건</small></td></tr><tr role="row"><th role="rowheader" scope="row">0.35 분위수 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">5.524</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-2.247</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">31.5%</span><small class="at-denominator">45 / 143건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 절대오차</th><td role="cell" data-label="RMSE"><span class="at-number">4.546</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.894</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">46.2%</span><small class="at-denominator">66 / 143건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 0.35 분위수</th><td role="cell" data-label="RMSE"><span class="at-number">5.533</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-2.271</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">30.1%</span><small class="at-denominator">43 / 143건</small></td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</details></div>
+      </details>
+      <details class="at-route" id="at-route-R06">
+        <summary><span class="at-route__name"><strong>R06</strong><span>학습에 있던 노선</span></span><span class="at-route__counts"><span>질문 <strong>2,162건</strong></span><span>실제 0~2석 <strong>23건</strong></span><span>실제 0석 <strong>20건</strong></span></span><span class="at-route__toggle"><span class="at-when-closed">결과 보기</span><span class="at-when-open">접기</span><span class="at-chevron" aria-hidden="true"></span></span></summary>
+        <div class="at-route__body"><div class="at-table-wrap">
+  <table role="table" class="at-model-table" id="at-route-R06-table">
+    <caption class="sr-only">R06 노선 주요 평가 지표. 목록은 성능 순위가 아닌 비교 방식 순서입니다.</caption>
+    <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">평균 오차</th><th role="columnheader" scope="col">노선별 평균 오차</th><th role="columnheader" scope="col">0~2석 평균 오차</th><th role="columnheader" scope="col">3석 이상 과대예측</th><th role="columnheader" scope="col">0석 감지율</th></tr></thead>
+    <tbody role="rowgroup">
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">현재 좌석 유지</span><span class="at-model-kind">계산 기준선</span><span class="at-model-description">현재 표시 좌석을 목표 정류장의 예측값으로 그대로 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">5.709</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">5.709</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">12.652</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">52.2%</span><small class="at-denominator">12 / 23건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">50.0%</span><small class="at-denominator">10 / 20건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">절대오차 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">학습에서 실제 0~2석 사례에 16배 비중을 주고 절대오차를 줄입니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">2.656</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">2.656</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">9.319</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">60.9%</span><small class="at-denominator">14 / 23건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">35.0%</span><small class="at-denominator">7 / 20건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">0.35 분위수 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">같은 학습 비중을 유지하며 낮은 쪽 예측을 유도하는 분위수 손실을 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.276</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.276</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">4.029</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">39.1%</span><small class="at-denominator">9 / 23건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">50.0%</span><small class="at-denominator">10 / 20건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 절대오차</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">새로 학습한 공통 좌석 구간 판별기와 절대오차 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">2.644</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">2.644</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">8.462</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">60.9%</span><small class="at-denominator">14 / 23건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">35.0%</span><small class="at-denominator">7 / 20건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 0.35 분위수</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">같은 좌석 구간 판별기와 분위수 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.278</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.278</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">3.667</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">39.1%</span><small class="at-denominator">9 / 23건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">50.0%</span><small class="at-denominator">10 / 20건</small></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<details class="at-additional">
+  <summary><span>보조 지표 보기</span><span class="at-additional__hint">RMSE · 평균 편향 · 1석 이상 과대예측</span><span class="at-chevron" aria-hidden="true"></span></summary>
+  <div class="at-additional__body">
+    <p class="ah-caption">RMSE는 큰 오차에 더 민감합니다. 평균 편향이 양수면 실제보다 많게, 음수면 적게 예측한 경향입니다.</p>
+    <div class="at-table-wrap">
+      <table role="table" class="at-model-table at-model-table--secondary">
+        <caption class="sr-only">R06 노선 보조 평가 지표</caption>
+        <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">RMSE</th><th role="columnheader" scope="col">평균 편향</th><th role="columnheader" scope="col">1석 이상 과대예측</th></tr></thead>
+        <tbody role="rowgroup"><tr role="row"><th role="rowheader" scope="row">현재 좌석 유지</th><td role="cell" data-label="RMSE"><span class="at-number">9.755</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.122</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">52.2%</span><small class="at-denominator">12 / 23건</small></td></tr><tr role="row"><th role="rowheader" scope="row">절대오차 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">4.273</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.025</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">60.9%</span><small class="at-denominator">14 / 23건</small></td></tr><tr role="row"><th role="rowheader" scope="row">0.35 분위수 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">5.079</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.647</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">60.9%</span><small class="at-denominator">14 / 23건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 절대오차</th><td role="cell" data-label="RMSE"><span class="at-number">4.213</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.091</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">60.9%</span><small class="at-denominator">14 / 23건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 0.35 분위수</th><td role="cell" data-label="RMSE"><span class="at-number">5.076</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.691</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">52.2%</span><small class="at-denominator">12 / 23건</small></td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</details></div>
+      </details>
+      <details class="at-route" id="at-route-R07">
+        <summary><span class="at-route__name"><strong>R07</strong><span>학습에 있던 노선</span></span><span class="at-route__counts"><span>질문 <strong>2,776건</strong></span><span>실제 0~2석 <strong>25건</strong></span><span>실제 0석 <strong>16건</strong></span></span><span class="at-route__toggle"><span class="at-when-closed">결과 보기</span><span class="at-when-open">접기</span><span class="at-chevron" aria-hidden="true"></span></span></summary>
+        <div class="at-route__body"><div class="at-table-wrap">
+  <table role="table" class="at-model-table" id="at-route-R07-table">
+    <caption class="sr-only">R07 노선 주요 평가 지표. 목록은 성능 순위가 아닌 비교 방식 순서입니다.</caption>
+    <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">평균 오차</th><th role="columnheader" scope="col">노선별 평균 오차</th><th role="columnheader" scope="col">0~2석 평균 오차</th><th role="columnheader" scope="col">3석 이상 과대예측</th><th role="columnheader" scope="col">0석 감지율</th></tr></thead>
+    <tbody role="rowgroup">
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">현재 좌석 유지</span><span class="at-model-kind">계산 기준선</span><span class="at-model-description">현재 표시 좌석을 목표 정류장의 예측값으로 그대로 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">4.517</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">4.517</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">17.520</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">56.0%</span><small class="at-denominator">14 / 25건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">37.5%</span><small class="at-denominator">6 / 16건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">절대오차 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">학습에서 실제 0~2석 사례에 16배 비중을 주고 절대오차를 줄입니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.425</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.425</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">16.224</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">72.0%</span><small class="at-denominator">18 / 25건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">37.5%</span><small class="at-denominator">6 / 16건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">0.35 분위수 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">같은 학습 비중을 유지하며 낮은 쪽 예측을 유도하는 분위수 손실을 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.301</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.301</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">11.687</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">52.0%</span><small class="at-denominator">13 / 25건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">56.2%</span><small class="at-denominator">9 / 16건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 절대오차</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">새로 학습한 공통 좌석 구간 판별기와 절대오차 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.407</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.407</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">14.344</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">72.0%</span><small class="at-denominator">18 / 25건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">37.5%</span><small class="at-denominator">6 / 16건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 0.35 분위수</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">같은 좌석 구간 판별기와 분위수 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.295</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.295</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">10.364</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">48.0%</span><small class="at-denominator">12 / 25건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">56.2%</span><small class="at-denominator">9 / 16건</small></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<details class="at-additional">
+  <summary><span>보조 지표 보기</span><span class="at-additional__hint">RMSE · 평균 편향 · 1석 이상 과대예측</span><span class="at-chevron" aria-hidden="true"></span></summary>
+  <div class="at-additional__body">
+    <p class="ah-caption">RMSE는 큰 오차에 더 민감합니다. 평균 편향이 양수면 실제보다 많게, 음수면 적게 예측한 경향입니다.</p>
+    <div class="at-table-wrap">
+      <table role="table" class="at-model-table at-model-table--secondary">
+        <caption class="sr-only">R07 노선 보조 평가 지표</caption>
+        <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">RMSE</th><th role="columnheader" scope="col">평균 편향</th><th role="columnheader" scope="col">1석 이상 과대예측</th></tr></thead>
+        <tbody role="rowgroup"><tr role="row"><th role="rowheader" scope="row">현재 좌석 유지</th><td role="cell" data-label="RMSE"><span class="at-number">8.309</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.707</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">56.0%</span><small class="at-denominator">14 / 25건</small></td></tr><tr role="row"><th role="rowheader" scope="row">절대오차 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">6.121</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">1.442</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">100.0%</span><small class="at-denominator">25 / 25건</small></td></tr><tr role="row"><th role="rowheader" scope="row">0.35 분위수 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">5.664</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">0.055</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">68.0%</span><small class="at-denominator">17 / 25건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 절대오차</th><td role="cell" data-label="RMSE"><span class="at-number">6.070</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">1.376</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">80.0%</span><small class="at-denominator">20 / 25건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 0.35 분위수</th><td role="cell" data-label="RMSE"><span class="at-number">5.641</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">0.001</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">64.0%</span><small class="at-denominator">16 / 25건</small></td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</details></div>
+      </details>
+      <details class="at-route" id="at-route-R08">
+        <summary><span class="at-route__name"><strong>R08</strong><span>학습에 있던 노선</span></span><span class="at-route__counts"><span>질문 <strong>1,300건</strong></span><span>실제 0~2석 <strong>8건</strong></span><span>실제 0석 <strong>7건</strong></span></span><span class="at-route__toggle"><span class="at-when-closed">결과 보기</span><span class="at-when-open">접기</span><span class="at-chevron" aria-hidden="true"></span></span></summary>
+        <div class="at-route__body"><div class="at-table-wrap">
+  <table role="table" class="at-model-table" id="at-route-R08-table">
+    <caption class="sr-only">R08 노선 주요 평가 지표. 목록은 성능 순위가 아닌 비교 방식 순서입니다.</caption>
+    <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">평균 오차</th><th role="columnheader" scope="col">노선별 평균 오차</th><th role="columnheader" scope="col">0~2석 평균 오차</th><th role="columnheader" scope="col">3석 이상 과대예측</th><th role="columnheader" scope="col">0석 감지율</th></tr></thead>
+    <tbody role="rowgroup">
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">현재 좌석 유지</span><span class="at-model-kind">계산 기준선</span><span class="at-model-description">현재 표시 좌석을 목표 정류장의 예측값으로 그대로 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">5.042</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">5.042</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">24.125</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">75.0%</span><small class="at-denominator">6 / 8건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">28.6%</span><small class="at-denominator">2 / 7건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">절대오차 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">학습에서 실제 0~2석 사례에 16배 비중을 주고 절대오차를 줄입니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">4.903</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">4.903</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">17.235</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">75.0%</span><small class="at-denominator">6 / 8건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">28.6%</span><small class="at-denominator">2 / 7건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">0.35 분위수 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">같은 학습 비중을 유지하며 낮은 쪽 예측을 유도하는 분위수 손실을 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">4.016</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">4.016</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">14.329</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">37.5%</span><small class="at-denominator">3 / 8건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">57.1%</span><small class="at-denominator">4 / 7건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 절대오차</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">새로 학습한 공통 좌석 구간 판별기와 절대오차 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">4.847</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">4.847</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">15.525</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">50.0%</span><small class="at-denominator">4 / 8건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">42.9%</span><small class="at-denominator">3 / 7건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 0.35 분위수</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">같은 좌석 구간 판별기와 분위수 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.976</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.976</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">14.037</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">37.5%</span><small class="at-denominator">3 / 8건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">71.4%</span><small class="at-denominator">5 / 7건</small></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<details class="at-additional">
+  <summary><span>보조 지표 보기</span><span class="at-additional__hint">RMSE · 평균 편향 · 1석 이상 과대예측</span><span class="at-chevron" aria-hidden="true"></span></summary>
+  <div class="at-additional__body">
+    <p class="ah-caption">RMSE는 큰 오차에 더 민감합니다. 평균 편향이 양수면 실제보다 많게, 음수면 적게 예측한 경향입니다.</p>
+    <div class="at-table-wrap">
+      <table role="table" class="at-model-table at-model-table--secondary">
+        <caption class="sr-only">R08 노선 보조 평가 지표</caption>
+        <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">RMSE</th><th role="columnheader" scope="col">평균 편향</th><th role="columnheader" scope="col">1석 이상 과대예측</th></tr></thead>
+        <tbody role="rowgroup"><tr role="row"><th role="rowheader" scope="row">현재 좌석 유지</th><td role="cell" data-label="RMSE"><span class="at-number">9.139</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.192</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">75.0%</span><small class="at-denominator">6 / 8건</small></td></tr><tr role="row"><th role="rowheader" scope="row">절대오차 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">8.408</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.524</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">100.0%</span><small class="at-denominator">8 / 8건</small></td></tr><tr role="row"><th role="rowheader" scope="row">0.35 분위수 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">6.940</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.360</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">62.5%</span><small class="at-denominator">5 / 8건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 절대오차</th><td role="cell" data-label="RMSE"><span class="at-number">8.296</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.594</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">75.0%</span><small class="at-denominator">6 / 8건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 0.35 분위수</th><td role="cell" data-label="RMSE"><span class="at-number">6.844</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.412</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">62.5%</span><small class="at-denominator">5 / 8건</small></td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</details></div>
+      </details>
+      <details class="at-route" id="at-route-R09">
+        <summary><span class="at-route__name"><strong>R09</strong><span>학습에 없던 노선</span></span><span class="at-route__counts"><span>질문 <strong>3,582건</strong></span><span>실제 0~2석 <strong>39건</strong></span><span>실제 0석 <strong>28건</strong></span></span><span class="at-route__toggle"><span class="at-when-closed">결과 보기</span><span class="at-when-open">접기</span><span class="at-chevron" aria-hidden="true"></span></span></summary>
+        <div class="at-route__body"><div class="at-table-wrap">
+  <table role="table" class="at-model-table" id="at-route-R09-table">
+    <caption class="sr-only">R09 노선 주요 평가 지표. 목록은 성능 순위가 아닌 비교 방식 순서입니다.</caption>
+    <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">평균 오차</th><th role="columnheader" scope="col">노선별 평균 오차</th><th role="columnheader" scope="col">0~2석 평균 오차</th><th role="columnheader" scope="col">3석 이상 과대예측</th><th role="columnheader" scope="col">0석 감지율</th></tr></thead>
+    <tbody role="rowgroup">
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">현재 좌석 유지</span><span class="at-model-kind">계산 기준선</span><span class="at-model-description">현재 표시 좌석을 목표 정류장의 예측값으로 그대로 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">5.879</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">5.879</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">17.795</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">66.7%</span><small class="at-denominator">26 / 39건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">32.1%</span><small class="at-denominator">9 / 28건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">절대오차 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">학습에서 실제 0~2석 사례에 16배 비중을 주고 절대오차를 줄입니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">2.613</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">2.613</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">7.250</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">48.7%</span><small class="at-denominator">19 / 39건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">53.6%</span><small class="at-denominator">15 / 28건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">0.35 분위수 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">같은 학습 비중을 유지하며 낮은 쪽 예측을 유도하는 분위수 손실을 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.301</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.301</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">4.522</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">30.8%</span><small class="at-denominator">12 / 39건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">64.3%</span><small class="at-denominator">18 / 28건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 절대오차</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">새로 학습한 공통 좌석 구간 판별기와 절대오차 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">2.599</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">2.599</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">5.991</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">46.2%</span><small class="at-denominator">18 / 39건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">53.6%</span><small class="at-denominator">15 / 28건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 0.35 분위수</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">같은 좌석 구간 판별기와 분위수 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.316</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.316</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">3.982</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">30.8%</span><small class="at-denominator">12 / 39건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">64.3%</span><small class="at-denominator">18 / 28건</small></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<details class="at-additional">
+  <summary><span>보조 지표 보기</span><span class="at-additional__hint">RMSE · 평균 편향 · 1석 이상 과대예측</span><span class="at-chevron" aria-hidden="true"></span></summary>
+  <div class="at-additional__body">
+    <p class="ah-caption">RMSE는 큰 오차에 더 민감합니다. 평균 편향이 양수면 실제보다 많게, 음수면 적게 예측한 경향입니다.</p>
+    <div class="at-table-wrap">
+      <table role="table" class="at-model-table at-model-table--secondary">
+        <caption class="sr-only">R09 노선 보조 평가 지표</caption>
+        <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">RMSE</th><th role="columnheader" scope="col">평균 편향</th><th role="columnheader" scope="col">1석 이상 과대예측</th></tr></thead>
+        <tbody role="rowgroup"><tr role="row"><th role="rowheader" scope="row">현재 좌석 유지</th><td role="cell" data-label="RMSE"><span class="at-number">9.654</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.468</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">71.8%</span><small class="at-denominator">28 / 39건</small></td></tr><tr role="row"><th role="rowheader" scope="row">절대오차 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">4.180</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.257</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">53.8%</span><small class="at-denominator">21 / 39건</small></td></tr><tr role="row"><th role="rowheader" scope="row">0.35 분위수 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">5.088</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.967</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">38.5%</span><small class="at-denominator">15 / 39건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 절대오차</th><td role="cell" data-label="RMSE"><span class="at-number">4.117</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-0.370</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">53.8%</span><small class="at-denominator">21 / 39건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 0.35 분위수</th><td role="cell" data-label="RMSE"><span class="at-number">5.106</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-2.042</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">30.8%</span><small class="at-denominator">12 / 39건</small></td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</details></div>
+      </details>
+      <details class="at-route" id="at-route-R10">
+        <summary><span class="at-route__name"><strong>R10</strong><span>학습에 없던 노선</span></span><span class="at-route__counts"><span>질문 <strong>2,050건</strong></span><span>실제 0~2석 <strong>5건</strong></span><span>실제 0석 <strong>5건</strong></span></span><span class="at-route__toggle"><span class="at-when-closed">결과 보기</span><span class="at-when-open">접기</span><span class="at-chevron" aria-hidden="true"></span></span></summary>
+        <div class="at-route__body"><div class="at-table-wrap">
+  <table role="table" class="at-model-table" id="at-route-R10-table">
+    <caption class="sr-only">R10 노선 주요 평가 지표. 목록은 성능 순위가 아닌 비교 방식 순서입니다.</caption>
+    <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">평균 오차</th><th role="columnheader" scope="col">노선별 평균 오차</th><th role="columnheader" scope="col">0~2석 평균 오차</th><th role="columnheader" scope="col">3석 이상 과대예측</th><th role="columnheader" scope="col">0석 감지율</th></tr></thead>
+    <tbody role="rowgroup">
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">현재 좌석 유지</span><span class="at-model-kind">계산 기준선</span><span class="at-model-description">현재 표시 좌석을 목표 정류장의 예측값으로 그대로 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">5.697</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">5.697</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">23.600</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">100.0%</span><small class="at-denominator">5 / 5건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">0.0%</span><small class="at-denominator">0 / 5건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">절대오차 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">학습에서 실제 0~2석 사례에 16배 비중을 주고 절대오차를 줄입니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">4.840</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">4.840</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">12.876</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">80.0%</span><small class="at-denominator">4 / 5건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">20.0%</span><small class="at-denominator">1 / 5건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">0.35 분위수 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">같은 학습 비중을 유지하며 낮은 쪽 예측을 유도하는 분위수 손실을 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">4.260</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">4.260</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">8.580</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">40.0%</span><small class="at-denominator">2 / 5건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">60.0%</span><small class="at-denominator">3 / 5건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 절대오차</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">새로 학습한 공통 좌석 구간 판별기와 절대오차 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">4.842</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">4.842</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">12.020</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">80.0%</span><small class="at-denominator">4 / 5건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">20.0%</span><small class="at-denominator">1 / 5건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 0.35 분위수</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">같은 좌석 구간 판별기와 분위수 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">4.268</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">4.268</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">8.227</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">40.0%</span><small class="at-denominator">2 / 5건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">60.0%</span><small class="at-denominator">3 / 5건</small></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<details class="at-additional">
+  <summary><span>보조 지표 보기</span><span class="at-additional__hint">RMSE · 평균 편향 · 1석 이상 과대예측</span><span class="at-chevron" aria-hidden="true"></span></summary>
+  <div class="at-additional__body">
+    <p class="ah-caption">RMSE는 큰 오차에 더 민감합니다. 평균 편향이 양수면 실제보다 많게, 음수면 적게 예측한 경향입니다.</p>
+    <div class="at-table-wrap">
+      <table role="table" class="at-model-table at-model-table--secondary">
+        <caption class="sr-only">R10 노선 보조 평가 지표</caption>
+        <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">RMSE</th><th role="columnheader" scope="col">평균 편향</th><th role="columnheader" scope="col">1석 이상 과대예측</th></tr></thead>
+        <tbody role="rowgroup"><tr role="row"><th role="rowheader" scope="row">현재 좌석 유지</th><td role="cell" data-label="RMSE"><span class="at-number">9.867</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-2.011</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">100.0%</span><small class="at-denominator">5 / 5건</small></td></tr><tr role="row"><th role="rowheader" scope="row">절대오차 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">8.017</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.394</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">100.0%</span><small class="at-denominator">5 / 5건</small></td></tr><tr role="row"><th role="rowheader" scope="row">0.35 분위수 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">7.076</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.671</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">60.0%</span><small class="at-denominator">3 / 5건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 절대오차</th><td role="cell" data-label="RMSE"><span class="at-number">8.013</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.432</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">80.0%</span><small class="at-denominator">4 / 5건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 0.35 분위수</th><td role="cell" data-label="RMSE"><span class="at-number">7.085</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.702</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">60.0%</span><small class="at-denominator">3 / 5건</small></td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</details></div>
+      </details>
+      <details class="at-route" id="at-route-R11">
+        <summary><span class="at-route__name"><strong>R11</strong><span>학습에 없던 노선</span></span><span class="at-route__counts"><span>질문 <strong>7,532건</strong></span><span>실제 0~2석 <strong>68건</strong></span><span>실제 0석 <strong>48건</strong></span></span><span class="at-route__toggle"><span class="at-when-closed">결과 보기</span><span class="at-when-open">접기</span><span class="at-chevron" aria-hidden="true"></span></span></summary>
+        <div class="at-route__body"><div class="at-table-wrap">
+  <table role="table" class="at-model-table" id="at-route-R11-table">
+    <caption class="sr-only">R11 노선 주요 평가 지표. 목록은 성능 순위가 아닌 비교 방식 순서입니다.</caption>
+    <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">평균 오차</th><th role="columnheader" scope="col">노선별 평균 오차</th><th role="columnheader" scope="col">0~2석 평균 오차</th><th role="columnheader" scope="col">3석 이상 과대예측</th><th role="columnheader" scope="col">0석 감지율</th></tr></thead>
+    <tbody role="rowgroup">
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">현재 좌석 유지</span><span class="at-model-kind">계산 기준선</span><span class="at-model-description">현재 표시 좌석을 목표 정류장의 예측값으로 그대로 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">6.163</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">6.163</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">19.338</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">69.1%</span><small class="at-denominator">47 / 68건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">33.3%</span><small class="at-denominator">16 / 48건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">절대오차 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">학습에서 실제 0~2석 사례에 16배 비중을 주고 절대오차를 줄입니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">2.911</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">2.911</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">12.718</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">58.8%</span><small class="at-denominator">40 / 68건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">39.6%</span><small class="at-denominator">19 / 48건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">0.35 분위수 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">같은 학습 비중을 유지하며 낮은 쪽 예측을 유도하는 분위수 손실을 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.453</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.453</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">10.077</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">51.5%</span><small class="at-denominator">35 / 68건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">45.8%</span><small class="at-denominator">22 / 48건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 절대오차</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">새로 학습한 공통 좌석 구간 판별기와 절대오차 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">2.903</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">2.903</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">11.617</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">54.4%</span><small class="at-denominator">37 / 68건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">43.8%</span><small class="at-denominator">21 / 48건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 0.35 분위수</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">같은 좌석 구간 판별기와 분위수 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.459</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.459</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">9.436</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">45.6%</span><small class="at-denominator">31 / 68건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">47.9%</span><small class="at-denominator">23 / 48건</small></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<details class="at-additional">
+  <summary><span>보조 지표 보기</span><span class="at-additional__hint">RMSE · 평균 편향 · 1석 이상 과대예측</span><span class="at-chevron" aria-hidden="true"></span></summary>
+  <div class="at-additional__body">
+    <p class="ah-caption">RMSE는 큰 오차에 더 민감합니다. 평균 편향이 양수면 실제보다 많게, 음수면 적게 예측한 경향입니다.</p>
+    <div class="at-table-wrap">
+      <table role="table" class="at-model-table at-model-table--secondary">
+        <caption class="sr-only">R11 노선 보조 평가 지표</caption>
+        <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">RMSE</th><th role="columnheader" scope="col">평균 편향</th><th role="columnheader" scope="col">1석 이상 과대예측</th></tr></thead>
+        <tbody role="rowgroup"><tr role="row"><th role="rowheader" scope="row">현재 좌석 유지</th><td role="cell" data-label="RMSE"><span class="at-number">9.770</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.414</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">72.1%</span><small class="at-denominator">49 / 68건</small></td></tr><tr role="row"><th role="rowheader" scope="row">절대오차 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">4.745</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">0.535</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">79.4%</span><small class="at-denominator">54 / 68건</small></td></tr><tr role="row"><th role="rowheader" scope="row">0.35 분위수 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">5.349</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.278</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">60.3%</span><small class="at-denominator">41 / 68건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 절대오차</th><td role="cell" data-label="RMSE"><span class="at-number">4.703</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">0.465</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">61.8%</span><small class="at-denominator">42 / 68건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 0.35 분위수</th><td role="cell" data-label="RMSE"><span class="at-number">5.345</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.327</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">58.8%</span><small class="at-denominator">40 / 68건</small></td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</details></div>
+      </details>
+      <details class="at-route" id="at-route-R12">
+        <summary><span class="at-route__name"><strong>R12</strong><span>학습에 없던 노선</span></span><span class="at-route__counts"><span>질문 <strong>5,192건</strong></span><span>실제 0~2석 <strong>1건</strong></span><span>실제 0석 <strong>0건</strong></span></span><span class="at-route__toggle"><span class="at-when-closed">결과 보기</span><span class="at-when-open">접기</span><span class="at-chevron" aria-hidden="true"></span></span></summary>
+        <div class="at-route__body"><div class="at-table-wrap">
+  <table role="table" class="at-model-table" id="at-route-R12-table">
+    <caption class="sr-only">R12 노선 주요 평가 지표. 목록은 성능 순위가 아닌 비교 방식 순서입니다.</caption>
+    <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">평균 오차</th><th role="columnheader" scope="col">노선별 평균 오차</th><th role="columnheader" scope="col">0~2석 평균 오차</th><th role="columnheader" scope="col">3석 이상 과대예측</th><th role="columnheader" scope="col">0석 감지율</th></tr></thead>
+    <tbody role="rowgroup">
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">현재 좌석 유지</span><span class="at-model-kind">계산 기준선</span><span class="at-model-description">현재 표시 좌석을 목표 정류장의 예측값으로 그대로 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.923</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.923</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">24.000</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">100.0%</span><small class="at-denominator">1 / 1건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">—</span><small class="at-denominator">0 / 0건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">절대오차 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">학습에서 실제 0~2석 사례에 16배 비중을 주고 절대오차를 줄입니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.510</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.510</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">16.466</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">100.0%</span><small class="at-denominator">1 / 1건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">—</span><small class="at-denominator">0 / 0건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">0.35 분위수 예측기</span><span class="at-model-kind">새 학습</span><span class="at-model-description">같은 학습 비중을 유지하며 낮은 쪽 예측을 유도하는 분위수 손실을 사용합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.054</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.054</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">15.187</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">100.0%</span><small class="at-denominator">1 / 1건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">—</span><small class="at-denominator">0 / 0건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 절대오차</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">새로 학습한 공통 좌석 구간 판별기와 절대오차 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.518</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.518</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">16.244</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">100.0%</span><small class="at-denominator">1 / 1건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">—</span><small class="at-denominator">0 / 0건</small></td>
+      </tr>
+      <tr role="row">
+        <th role="rowheader" scope="row"><span class="at-model-label">좌석 구간 판별기 + 0.35 분위수</span><span class="at-model-kind">이번 학습 모델 조합</span><span class="at-model-description">같은 좌석 구간 판별기와 분위수 예측기를 조합합니다.</span></th>
+        <td role="cell" data-label="평균 오차"><span class="at-number">3.062</span><small>석</small></td>
+        <td role="cell" data-label="노선별 평균 오차"><span class="at-number">3.062</span><small>석</small></td>
+        <td role="cell" data-label="0~2석 평균 오차"><span class="at-number">14.980</span><small>석</small></td>
+        <td role="cell" data-label="3석 이상 과대예측"><span class="at-rate">100.0%</span><small class="at-denominator">1 / 1건</small></td>
+        <td role="cell" data-label="0석 감지율"><span class="at-rate">—</span><small class="at-denominator">0 / 0건</small></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<details class="at-additional">
+  <summary><span>보조 지표 보기</span><span class="at-additional__hint">RMSE · 평균 편향 · 1석 이상 과대예측</span><span class="at-chevron" aria-hidden="true"></span></summary>
+  <div class="at-additional__body">
+    <p class="ah-caption">RMSE는 큰 오차에 더 민감합니다. 평균 편향이 양수면 실제보다 많게, 음수면 적게 예측한 경향입니다.</p>
+    <div class="at-table-wrap">
+      <table role="table" class="at-model-table at-model-table--secondary">
+        <caption class="sr-only">R12 노선 보조 평가 지표</caption>
+        <thead role="rowgroup"><tr role="row"><th role="columnheader" scope="col">비교 방식</th><th role="columnheader" scope="col">RMSE</th><th role="columnheader" scope="col">평균 편향</th><th role="columnheader" scope="col">1석 이상 과대예측</th></tr></thead>
+        <tbody role="rowgroup"><tr role="row"><th role="rowheader" scope="row">현재 좌석 유지</th><td role="cell" data-label="RMSE"><span class="at-number">6.871</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.769</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">100.0%</span><small class="at-denominator">1 / 1건</small></td></tr><tr role="row"><th role="rowheader" scope="row">절대오차 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">6.277</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.810</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">100.0%</span><small class="at-denominator">1 / 1건</small></td></tr><tr role="row"><th role="rowheader" scope="row">0.35 분위수 예측기</th><td role="cell" data-label="RMSE"><span class="at-number">4.984</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.943</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">100.0%</span><small class="at-denominator">1 / 1건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 절대오차</th><td role="cell" data-label="RMSE"><span class="at-number">6.283</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.826</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">100.0%</span><small class="at-denominator">1 / 1건</small></td></tr><tr role="row"><th role="rowheader" scope="row">좌석 구간 판별기 + 0.35 분위수</th><td role="cell" data-label="RMSE"><span class="at-number">4.996</span><small>석</small></td><td role="cell" data-label="평균 편향"><span class="at-number">-1.958</span><small>석</small></td><td role="cell" data-label="1석 이상 과대예측"><span class="at-rate">100.0%</span><small class="at-denominator">1 / 1건</small></td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</details></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="ah-section" id="at-method" aria-labelledby="at-method-title">
+    <div class="ah-section-head"><h2 id="at-method-title">어떤 방식으로 다시 학습했나</h2></div>
+    <div class="at-method-grid">
+      <article class="ah-panel"><h3>세 모델을 학습해 다섯 결과를 비교</h3><p>현재 좌석을 그대로 유지하는 기준선, 절대 오차 회귀, 35% 분위수 회귀, 그리고 두 회귀에 같은 좌석 구간 판별기를 결합한 방식입니다.</p><p>회귀 모델 두 개와 공유 판별기 한 개를 새로 학습했습니다. 결합 방식마다 판별기를 다시 학습하지 않았습니다.</p></article>
+      <article class="ah-panel"><h3>현재 상황을 나타내는 기본 특징만 사용</h3><p>기본 입력 특징은 10개입니다. 좌석 구간 판별기는 학습자료의 23개 노선을 범주로 변환한 32개 입력 열을 사용합니다.</p><p>선언된 관측 시각을 기준으로 입력을 구성했습니다. 운영 DB에 실제로 기록된 시각까지 재현한 검증은 아닙니다. 도착 정답에서 만든 과거 이력 특징과 기존 저장 모델은 사용하지 않았습니다.</p></article>
+      <article class="ah-panel"><h3>부족한 좌석을 더 신중하게 예측</h3><p>두 회귀는 학습 중 실제 0~2석인 질문에 16배 가중치를 줍니다. 절대 오차 방식과, 상대적으로 낮은 좌석 수를 예측하는 35% 분위수 방식을 비교합니다.</p><p>평가는 질문마다 같은 비중입니다. 학습 가중치가 검증 점수의 가중치로 이어지지는 않습니다.</p></article>
+      <article class="ah-panel"><h3>결합 결과는 하나의 좌석 수 추정치</h3><p>판별기의 0석·1~2석·3석 이상 점수에 학습자료의 구간별 대표값과 회귀 예측을 결합합니다.</p><p>분류 점수는 보정된 확률이 아니며, 결합된 분위수 예측도 전체 분포의 35% 분위수로 해석할 수 없습니다. 개인 탑승 확률은 계산하지 않았습니다.</p></article>
+    </div>
+  </section>
+
+  <aside class="ah-scope at-scope">
+    <strong>이번 결과로 말할 수 있는 범위</strong>
+    <p>기존 학습자료를 시간 순서로 나눴을 때 다섯 방식의 오차가 어떻게 달라지는지 확인했습니다. 처음 보는 노선의 결과도 별도로 표시했습니다.</p>
+    <p>이전 연구의 개발자료·모델·과거 순변화 기준선은 이번 비교에 사용하지 않았습니다. 기존 26개 방식과 평가 질문·특징이 달라 점수를 나란히 놓아 순위를 정하지 않습니다. 새 기간의 일반화 성능과 운영 채택은 아직 검증하지 않았습니다.</p>
+    <p>정답은 목표 정류장의 첫 도착 표시 잔여석입니다. 실제 승하차가 시작되기 전의 좌석임을 확인한 센서 정답은 아닙니다.</p>
+    <a href="/arrival/method/">도착 정답과 기존 연구의 평가 방식 보기 →</a>
+  </aside>
+</div>
+</main>
+<footer class="footer">
+  <div class="footer__inner">
+    <p>채택 = 다음 실험의 기준 모델 · 운영 예보 반영과 별개</p>
+    <p class="footer__meta" id="footer-meta" data-live>시간 분할 검증 · 2026년 10월 26일 12:50 KST · <a href="/THIRD-PARTY-LICENSES.txt">글꼴 라이선스</a></p>
+  </div>
+</footer>
+</body>
+</html>
