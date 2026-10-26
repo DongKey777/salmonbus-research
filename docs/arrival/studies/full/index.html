@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>전체 수집 범위 비교 · 도착 연구 · salmonbus 연구</title>
+<meta name="description" content="버스 남는 좌석 예보 모델의 자동 실험 현황">
+<link rel="canonical" href="https://research.dongkey.tech/arrival/studies/full/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="salmonbus 연구">
+<meta property="og:title" content="전체 수집 범위 비교 · 도착 연구 · salmonbus 연구">
+<meta property="og:url" content="https://research.dongkey.tech/arrival/studies/full/">
+<link rel="icon" href="/favicon.svg?v=42a4ccc6ef62" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="stylesheet" href="/assets/site.css?v=5ec4d2cc0cae" data-asset="css">
+<noscript><link rel="stylesheet" href="/assets/noscript.css?v=24fe7a57d410"></noscript>
+<script src="/assets/charts.js?v=dd96aa903a7f" defer data-asset="js"></script>
+<script src="/assets/live.js?v=b8d366c5c254" defer data-asset="js"></script>
+</head>
+<body data-digest="41b6c8093d814f7fdb163d22f9ac355190b4d84131d5a019411415612fd28ee2" data-poll="60" data-version-url="/version.json">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="/"><span class="brand__mark">salmonbus</span> <span class="brand__sub">연구</span></a>
+    <nav class="nav" aria-label="주 메뉴">
+      <a href="/">홈</a>
+      <a href="/progress/">개선 현황</a>
+      <a href="/attempts/">시도 상세</a>
+<a href="/arrival/" aria-current="page">도착 연구</a>    </nav>
+    <p class="live" id="live-status" data-live aria-live="polite">
+<span class="live__dot" aria-hidden="true"></span><span class="live__text">도착 연구 갱신 10월 26일 10:14</span>    </p>
+  </div>
+</header>
+<main id="main" class="page">
+<div id="arrival-hub-content" class="arrival-hub" data-live>
+<div class="ah-masthead">
+  <div class="ah-masthead__line"><a class="ah-masthead__title" href="/arrival/">도착 잔여석 연구</a><span class="tag tag--scope">첫 도착 표시 기준</span></div>
+  <p>내 정류장에 도착할 때, 몇 석이 남을까.</p>
+</div>
+<nav class="ah-nav" aria-label="도착 연구 메뉴">
+<a href="/arrival/">개요</a><a href="/arrival/progress/" aria-current="page">개선 현황</a><a href="/arrival/models/">모델 비교</a><a href="/arrival/method/">자료와 평가</a></nav>
+<p class="ah-breadcrumb"><a href="/arrival/progress/">개선 현황</a><span aria-hidden="true">/</span><span>고정 비교</span></p>
+<header class="ah-heading"><div><p class="ah-eyebrow">연구 상세</p><h1>전체 수집 범위 비교</h1><p>사용 가능한 전체 수집 범위에서 두 계산 기준선과 학습 모델을 같은 질문으로 비교했습니다.</p></div><span class="ah-status">비교 완료</span></header>
+<div class="ah-study-intro"><p>새 학습 <strong>1회</strong></p><p>같은 개발 자료에서 비교한 연구입니다. 운영 반영 없음.</p></div><nav class="ah-model-chips" aria-label="이 연구의 모델 설명"><a href="/arrival/models/persistence-point/">현재 잔여 좌석 유지 <span aria-hidden="true">↗</span></a><a href="/arrival/models/flow-adjusted-point/">중간 정류장 순변화 반영 <span aria-hidden="true">↗</span></a><a href="/arrival/models/no-target-history/">목표 정류장 이력 제외 HGB <span aria-hidden="true">↗</span></a></nav><div class="ah-study-report">
+<section class="dsec arrival-full" id="arrival-full" aria-labelledby="arrival-full-title">
+  <div class="dsec__head">
+    <h2 class="dsec__title" id="arrival-full-title">전체 수집 범위 실험</h2>
+    <span class="tag tag--scope">조건을 통과한 자료만 사용</span>
+    <span class="tag tag--warn">개발 평가 · 채택 안 함</span>
+  </div>
+  <p class="authored__text"><strong>전체 수집 범위에서 조건을 통과한 자료</strong>로 후보 하나를 새로 학습하고 기준 모델 두 개와 비교했습니다. 모든 원 관측을 학습에 쓴 것은 아닙니다. 아래 수치는 이 자료의 개발 평가 질문만 집계하며, 제한 범위 연결 검증의 점수와 순위를 합치거나 개선 폭을 계산하지 않습니다.</p>
+  <div class="keynums">
+    <div><p class="keynum__label">이 자료의 학습 질문(TRAIN)</p><p class="keynum__value">496,475<span class="keynum__unit">개</span></p><p class="keynum__sub">새 후보를 학습한 질문</p></div>
+    <div><p class="keynum__label">이 자료의 개발 평가 질문(DEV)</p><p class="keynum__value">80,569<span class="keynum__unit">개</span></p><p class="keynum__sub">80,569방문 · 20개 노선</p></div>
+    <div><p class="keynum__label">이 자료에서 비교한 모델</p><p class="keynum__value">3<span class="keynum__unit">개</span></p><p class="keynum__sub">새 학습 후보 1개 · 기준 모델 2개 · 채택 없음</p></div>
+  </div>
+  <h3 class="dsec__sub">수집 관측과 학습·평가 질문의 구분</h3>
+  <div class="table-wrap"><table class="table table--stack">
+    <thead><tr><th scope="col">범위</th><th scope="col">규모</th><th scope="col">의미</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">수집 목록의 관측</th><td data-label="규모" class="num">10,916,217행</td><td data-label="의미">전체 수집 범위를 확인한 목록상의 관측 수</td></tr>
+      <tr><th scope="row">자료 준비에 허용된 관측</th><td data-label="규모" class="num">9,188,859행</td><td data-label="의미">입력 조건을 통과해 자료 준비에 사용한 관측 수</td></tr>
+      <tr><th scope="row">좌석 값을 사용하지 않은 관측</th><td data-label="규모" class="num">1,727,358행</td><td data-label="의미">좌석 값은 읽지 않고, 방문 경계 확인에만 사용한 관측 수</td></tr>
+      <tr><th scope="row">라벨 방문</th><td data-label="규모" class="num">577,306건</td><td data-label="의미">도착 대리 정답을 구성한 방문 수</td></tr>
+    </tbody>
+  </table></div>
+  <p class="authored__text">관측 행, 라벨 방문, 학습·평가 질문은 서로 다른 집계 단계입니다. 라벨 방문 수를 원 관측 행 수로 나누어 확보율로 해석하지 않습니다.</p>
+  <h3 class="dsec__sub">같은 개발 평가 질문에서의 좌석 오차</h3>
+  <div class="table-wrap"><table class="table table--stack">
+    <thead><tr><th scope="col">모델</th><th scope="col">전체 MAE</th><th scope="col">전체 RMSE</th><th scope="col">0~2석 MAE</th><th scope="col">노선별 MAE 평균</th></tr></thead>
+    <tbody><tr><th scope="row">현재 잔여석 유지<span class="table__sub">같은 개발 평가 질문에 적용한 기준 모델</span></th><td data-label="전체 MAE" class="num">5.269</td><td data-label="전체 RMSE" class="num">9.270</td><td data-label="0~2석 MAE" class="num">14.214</td><td data-label="노선 평균" class="num">4.234</td></tr><tr><th scope="row">중간 정류장 순변화 반영<span class="table__sub">목표 정류장 직전까지의 과거 순변화를 반영한 기준 모델</span></th><td data-label="전체 MAE" class="num">3.523</td><td data-label="전체 RMSE" class="num">6.451</td><td data-label="0~2석 MAE" class="num">7.199</td><td data-label="노선 평균" class="num">3.479</td></tr><tr><th scope="row">HGB · 목표 정류장 통계 제외<span class="table__sub">목표 정류장의 과거 통계 3개를 제외한 15개 특징으로 새로 학습</span></th><td data-label="전체 MAE" class="num">2.348</td><td data-label="전체 RMSE" class="num">3.917</td><td data-label="0~2석 MAE" class="num">9.086</td><td data-label="노선 평균" class="num">2.920</td></tr></tbody>
+  </table></div>
+  <p class="authored__text">모든 오차는 석 단위이며 낮을수록 좋습니다. 전체 MAE는 각 방문에 같은 비중을 줍니다. 노선별 MAE 평균은 먼저 노선마다 MAE를 계산한 뒤 각 노선에 같은 비중을 줍니다. 방문이 많은 노선이 전체 결과에 미치는 영향과 구분해 읽을 수 있습니다.</p>
+  <p class="authored__text">HGB는 앞선 결정 트리들이 남긴 예측 오차를 다음 트리가 보완하는 모델입니다. 이번 후보는 기본 특징과 중간 구간의 순변화를 사용하고, 목표 정류장의 과거 통계 3개는 제외했습니다. 15개 특징으로 학습 자료(TRAIN)에서 한 번 학습했습니다.</p>
+  <h3 class="dsec__sub">자리가 적을 때의 과대예측과 0석 감지</h3>
+  <p class="authored__text">도착 표시 잔여석이 0~2석인 질문은 959개, 그중 0석인 질문은 619개입니다. 각 비율 옆에 해당 건수와 분모를 함께 적었습니다.</p>
+  <div class="table-wrap"><table class="table table--stack">
+    <thead><tr><th scope="col">모델</th><th scope="col">1석 이상 과대예측</th><th scope="col">3석 이상 과대예측</th><th scope="col">0석 감지율</th><th scope="col">평균 부호 오차</th></tr></thead>
+    <tbody><tr><th scope="row">현재 잔여석 유지</th><td data-label="1석 이상" class="num">59.7%<span class="table__sub">573 / 959건</span></td><td data-label="3석 이상" class="num">54.0%<span class="table__sub">518 / 959건</span></td><td data-label="0석 감지율" class="num">40.4%<span class="table__sub">250 / 619건</span></td><td data-label="부호 오차" class="num">-1.333</td></tr><tr><th scope="row">중간 정류장 순변화 반영</th><td data-label="1석 이상" class="num">51.6%<span class="table__sub">495 / 959건</span></td><td data-label="3석 이상" class="num">45.0%<span class="table__sub">432 / 959건</span></td><td data-label="0석 감지율" class="num">48.9%<span class="table__sub">303 / 619건</span></td><td data-label="부호 오차" class="num">-1.395</td></tr><tr><th scope="row">HGB · 목표 정류장 통계 제외</th><td data-label="1석 이상" class="num">83.1%<span class="table__sub">797 / 959건</span></td><td data-label="3석 이상" class="num">71.9%<span class="table__sub">690 / 959건</span></td><td data-label="0석 감지율" class="num">22.8%<span class="table__sub">141 / 619건</span></td><td data-label="부호 오차" class="num">0.029</td></tr></tbody>
+  </table></div>
+  <p class="authored__text">과대예측 비율은 실제 표시 0~2석인 질문 안에서 계산합니다. 0석 감지율은 실제 0석인 질문 중 예측이 2석 미만인 비율입니다. 평균 부호 오차는 예측에서 정답을 뺀 값의 평균으로, 양수면 평균적으로 더 많은 좌석을 예측했다는 뜻입니다. —는 해당 질문이 없어 계산하지 않은 값입니다.</p>
+  <div class="authored">
+    <p class="authored__text">세 모델 모두 좌석 수 하나를 내는 점예측 모델입니다. Brier와 확률 보정 지표는 없습니다. 아래 분포 모델의 확률 지표는 제한 범위 연결 검증에만 속합니다.</p>
+    <p class="authored__text">파일럿에서 얻은 가설을 바탕으로 개발 평가 자료를 다시 활용한 탐색입니다. 다른 기간의 성능이나 실제 승하차 전 센서 시점은 검증하지 않았으며, 새 모델을 채택하지 않았습니다.</p>
+  </div>
+  <p class="head__line"><a href="/data/arrival/full/summary.json">전체 수집 범위 실험의 집계 결과와 계약 JSON</a><a href="/arrival/studies/pilot/">제한 범위 연결 검증으로 이동</a></p>
+</section>
+</div>
+<p class="ah-bottom-link"><a href="/arrival/progress/">← 전체 연구와 시도로 돌아가기</a></p>
+</div>
+</main>
+<footer class="footer">
+  <div class="footer__inner">
+    <p>채택 = 다음 실험의 기준 모델 · 운영 예보 반영과 별개</p>
+    <p class="footer__meta" id="footer-meta" data-live>도착 연구 · 2026년 10월 26일 10:14:09 KST · <a href="/THIRD-PARTY-LICENSES.txt">글꼴 라이선스</a></p>
+  </div>
+</footer>
+</body>
+</html>

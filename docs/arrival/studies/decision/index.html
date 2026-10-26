@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>좌석 부족 상황의 예측 연구 · 도착 연구 · salmonbus 연구</title>
+<meta name="description" content="버스 남는 좌석 예보 모델의 자동 실험 현황">
+<link rel="canonical" href="https://research.dongkey.tech/arrival/studies/decision/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="salmonbus 연구">
+<meta property="og:title" content="좌석 부족 상황의 예측 연구 · 도착 연구 · salmonbus 연구">
+<meta property="og:url" content="https://research.dongkey.tech/arrival/studies/decision/">
+<link rel="icon" href="/favicon.svg?v=42a4ccc6ef62" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="stylesheet" href="/assets/site.css?v=5ec4d2cc0cae" data-asset="css">
+<noscript><link rel="stylesheet" href="/assets/noscript.css?v=24fe7a57d410"></noscript>
+<script src="/assets/charts.js?v=dd96aa903a7f" defer data-asset="js"></script>
+<script src="/assets/live.js?v=b8d366c5c254" defer data-asset="js"></script>
+</head>
+<body data-digest="41b6c8093d814f7fdb163d22f9ac355190b4d84131d5a019411415612fd28ee2" data-poll="60" data-version-url="/version.json">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="/"><span class="brand__mark">salmonbus</span> <span class="brand__sub">연구</span></a>
+    <nav class="nav" aria-label="주 메뉴">
+      <a href="/">홈</a>
+      <a href="/progress/">개선 현황</a>
+      <a href="/attempts/">시도 상세</a>
+<a href="/arrival/" aria-current="page">도착 연구</a>    </nav>
+    <p class="live" id="live-status" data-live aria-live="polite">
+<span class="live__dot" aria-hidden="true"></span><span class="live__text">도착 연구 갱신 10월 26일 10:14</span>    </p>
+  </div>
+</header>
+<main id="main" class="page">
+<div id="arrival-hub-content" class="arrival-hub" data-live>
+<div class="ah-masthead">
+  <div class="ah-masthead__line"><a class="ah-masthead__title" href="/arrival/">도착 잔여석 연구</a><span class="tag tag--scope">첫 도착 표시 기준</span></div>
+  <p>내 정류장에 도착할 때, 몇 석이 남을까.</p>
+</div>
+<nav class="ah-nav" aria-label="도착 연구 메뉴">
+<a href="/arrival/">개요</a><a href="/arrival/progress/" aria-current="page">개선 현황</a><a href="/arrival/models/">모델 비교</a><a href="/arrival/method/">자료와 평가</a></nav>
+<p class="ah-breadcrumb"><a href="/arrival/progress/">개선 현황</a><span aria-hidden="true">/</span><span>자동 반복</span></p>
+<header class="ah-heading"><div><p class="ah-eyebrow">연구 상세</p><h1>좌석 부족 상황의 예측 연구</h1><p>모든 학습 질문을 유지하며 좌석 부족 사례를 더 반영한 손실과 판별기 조합을 비교했습니다.</p></div><span class="ah-status">4회차 검증 완료</span></header>
+<div class="ah-study-intro"><p>새 학습 <strong>2회</strong> · 저장 모델 조합 <strong>2회</strong></p><p>같은 개발 자료에서 비교한 연구입니다. 운영 반영 없음.</p></div><nav class="ah-model-chips" aria-label="이 연구의 모델 설명"><a href="/arrival/models/low16-abs/">좌석 부족 사례를 더 반영 · 절대오차 <span aria-hidden="true">↗</span></a><a href="/arrival/models/g160-low16-abs/">절대오차 모델과 좌석 구간 판별기 조합 <span aria-hidden="true">↗</span></a><a href="/arrival/models/low16-q35/">과대예측에 더 큰 손실 · 0.35 분위수 <span aria-hidden="true">↗</span></a><a href="/arrival/models/g160-low16-q35/">0.35 분위수 모델과 좌석 구간 판별기 조합 <span aria-hidden="true">↗</span></a></nav><div class="ah-study-report">
+<section class="dsec arrival-decision" id="arrival-decision" aria-labelledby="arrival-decision-title">
+  <div class="dsec__head">
+    <h2 class="dsec__title" id="arrival-decision-title">좌석 부족 상황을 더 반영한 예측 비교</h2>
+    <span class="arrival-decision__status arrival-decision__status--good">4회차 검증 완료</span>
+    <span class="tag tag--warn">개발 자료 재사용 · 운영 반영 없음</span>
+  </div>
+  <p class="authored__text">평균 오차와 좌석 부족 상황의 과대예측을 함께 줄일 수 있는지 확인합니다. 새 예측기 두 개와 저장 판별기 조합 두 개를 비교합니다.</p>
+  <p class="arrival-decision__intro">모든 학습 질문을 유지하며 0~2석 사례에 더 비중을 줍니다. 절대오차 방식과 과대예측에 더 큰 손실을 주는 방식을 같은 조건에서 비교합니다.</p>
+  <div class="arrival-decision__runline">
+    <p><strong class="num">4 / 4</strong>회차 완료</p>
+<p>연구 기록 갱신 <time class="num" datetime="2026-10-26T10:14:09.216843+09:00">2026년 10월 26일 10:14:09 KST</time></p>  </div>
+  <dl class="arrival-decision__counts" aria-label="이번 실험의 학습과 재사용 집계">
+<div><dt>새 학습 계획</dt><dd>최대 2회<span>후보 순서 고정</span></dd></div><div><dt>학습 시작</dt><dd>2회<span>시작 경계 확인</span></dd></div><div><dt>완료 검증</dt><dd>2회<span>학습·복원·평가 수락</span></dd></div><div><dt>저장 모델 조합</dt><dd>2개<span>추가 fit 없음</span></dd></div><div><dt>학습 실패</dt><dd>확인된 실패 없음<span>실패 기록 보존</span></dd></div><div><dt>결과 확인 불가</dt><dd>없음<span>불명은 성공으로 세지 않음</span></dd></div>  </dl>
+  <div class="arrival-decision__stages" aria-label="비교할 예측 방식">
+<div><p class="arrival-decision__eyebrow">1회차 학습 → 2회차 조합</p><h3>절대오차 방식</h3><p>좌석이 적게 남은 사례를 더 반영하면서 예측과 정답의 차이를 줄입니다.</p></div><div><p class="arrival-decision__eyebrow">3회차 학습 → 4회차 조합</p><h3>과대예측에 더 큰 손실</h3><p>가중 분포의 0.35 분위수를 목표로 합니다. 판별기와 조합한 값은 분위수로 해석하지 않습니다.</p></div>  </div>
+
+  <details class="arrival-decision__policy" open>
+    <summary>연구 기준 후보를 고르는 조건 <span>결과를 보기 전에 고정한 기준</span></summary>
+    <p>고정 순변화 기준선에 비해 아래 다섯 조건을 모두 충족해야 합니다.</p>
+    <dl class="arrival-decision__criteria">
+<div><dt>전체 평균 오차</dt><dd><strong class="num">3.523석</strong><span>이하</span><small>고정 순변화 기준선과 비교 · 실제 판정은 반올림 전 값 사용</small></dd></div><div><dt>노선별 평균 오차</dt><dd><strong class="num">3.479석</strong><span>이하</span><small>고정 순변화 기준선과 비교 · 실제 판정은 반올림 전 값 사용</small></dd></div><div><dt>0~2석 중 1석 이상 과대예측</dt><dd><strong class="num">51.6%</strong><span>이하</span><small>고정 순변화 기준선과 비교 · 실제 판정은 반올림 전 값 사용</small></dd></div><div><dt>0~2석 중 3석 이상 과대예측</dt><dd><strong class="num">45.0%</strong><span>이하</span><small>고정 순변화 기준선과 비교 · 실제 판정은 반올림 전 값 사용</small></dd></div><div><dt>0석 감지율</dt><dd><strong class="num">48.9%</strong><span>이상</span><small>고정 순변화 기준선과 비교 · 실제 판정은 반올림 전 값 사용</small></dd></div>    </dl>
+    <p class="arrival-decision__policy-selection">조건을 충족한 모델은 1석 이상 과대예측 건수, 3석 이상 건수, 전체 오차, 노선별 평균 오차, 0석 감지 건수, 고정 모델 ID 순서로 비교합니다.</p>
+  </details>
+
+  <div class="arrival-decision__leader">
+    <div class="arrival-decision__leader-copy">
+      <p class="arrival-decision__eyebrow">다음 실험의 연구 기준 후보</p>
+      <h3>0.35 분위수 모델과 좌석 구간 판별기 조합</h3>
+      <p>기존 20개 학습 모델과 새 후보 중 다섯 조건을 함께 충족한 연구 기준 후보입니다. 운영 모델을 바꾸지 않습니다.</p>
+    </div>
+<dl class="arrival-decision__leader-metrics">
+      <div><dt>전체 평균 오차</dt><dd>2.994석</dd></div>
+      <div><dt>0~2석 중<br>1석 이상 과대예측</dt><dd>28.7%</dd></div>
+      <div><dt>0~2석 중<br>3석 이상 과대예측</dt><dd>20.2%</dd></div>
+    </dl>    <p class="arrival-decision__leader-note">평균 오차만으로 후보를 바꾸지 않습니다. 좌석 부족 상황의 과대예측과 0석 감지율도 함께 확인합니다. 연구 기준 후보는 운영 예보에 채택한 모델이 아닙니다.</p>
+  </div>
+
+  <div class="arrival-decision__plots" aria-label="회차별 평균 오차와 두 과대예측 기준">
+    <figure class="arrival-decision-plot" aria-labelledby="arrival-decision-mae-plot-heading">
+      <figcaption id="arrival-decision-mae-plot-heading">회차별 전체 평균 오차</figcaption>
+      <svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="arrival-decision-mae-plot-title arrival-decision-mae-plot-desc">
+        <title id="arrival-decision-mae-plot-title">회차별 전체 평균 오차 · 회차별 결과</title>
+        <desc id="arrival-decision-mae-plot-desc">가로축은 이번 실험 회차, 세로축은 평균 절대오차입니다. 완료가 확인된 회차만 표시합니다. 빈 원은 저장 모델 조합, 채운 원은 새 학습이며 점들을 개선 추세선으로 연결하지 않습니다. 점선은 같은 개발 질문의 순변화 기준선 3.523석입니다. 각 회차의 정확한 값은 아래 시도에 있습니다.</desc>
+        <g class="arrival-decision-plot__axis">
+          <text x="55" y="14">평균 절대오차</text>
+<line x1="55" x2="535" y1="212.0" y2="212.0"/><text x="45" y="217.0" text-anchor="end">0석</text><line x1="55" x2="535" y1="165.0" y2="165.0"/><text x="45" y="170.0" text-anchor="end">1석</text><line x1="55" x2="535" y1="118.0" y2="118.0"/><text x="45" y="123.0" text-anchor="end">2석</text><line x1="55" x2="535" y1="71.0" y2="71.0"/><text x="45" y="76.0" text-anchor="end">3석</text><line x1="55" x2="535" y1="24.0" y2="24.0"/><text x="45" y="29.0" text-anchor="end">4석</text><text x="55" y="242" text-anchor="middle">1회</text><text x="215" y="242" text-anchor="middle">2회</text><text x="375" y="242" text-anchor="middle">3회</text><text x="535" y="242" text-anchor="middle">4회</text>        </g>
+        <line class="arrival-decision-plot__reference" x1="55" x2="535" y1="46.423" y2="46.423"/>
+<circle class="arrival-decision-plot__point" cx="55" cy="88.823" r="5"><title>1회 · 좌석 부족 사례를 더 반영 · 절대오차 · 2.621석</title></circle><circle class="arrival-decision-plot__point arrival-decision-plot__point--reused" cx="215" cy="88.435" r="5"><title>2회 · 절대오차 모델과 좌석 구간 판별기 조합 · 2.629석</title></circle><circle class="arrival-decision-plot__point" cx="375" cy="71.929" r="5"><title>3회 · 과대예측에 더 큰 손실 · 0.35 분위수 · 2.980석</title></circle><circle class="arrival-decision-plot__point arrival-decision-plot__point--reused" cx="535" cy="71.302" r="5"><title>4회 · 0.35 분위수 모델과 좌석 구간 판별기 조합 · 2.994석</title></circle>      </svg>
+      <p class="arrival-decision-plot__legend"><span class="arrival-decision-plot__legend-dot" aria-hidden="true"></span>새 학습 <span class="arrival-decision-plot__legend-dot arrival-decision-plot__legend-dot--reused" aria-hidden="true"></span>저장 모델 조합 <span class="arrival-decision-plot__legend-rule" aria-hidden="true"></span>순변화 기준선 <strong>3.523석</strong></p>
+    </figure>
+    <figure class="arrival-decision-plot" aria-labelledby="arrival-decision-risk1-plot-heading">
+      <figcaption id="arrival-decision-risk1-plot-heading">0~2석에서 1석 이상 과대예측</figcaption>
+      <svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="arrival-decision-risk1-plot-title arrival-decision-risk1-plot-desc">
+        <title id="arrival-decision-risk1-plot-title">0~2석에서 1석 이상 과대예측 · 회차별 결과</title>
+        <desc id="arrival-decision-risk1-plot-desc">가로축은 이번 실험 회차, 세로축은 과대예측 비율입니다. 완료가 확인된 회차만 표시합니다. 빈 원은 저장 모델 조합, 채운 원은 새 학습이며 점들을 개선 추세선으로 연결하지 않습니다. 점선은 같은 개발 질문의 순변화 기준선 51.6%입니다. 각 회차의 정확한 값은 아래 시도에 있습니다.</desc>
+        <g class="arrival-decision-plot__axis">
+          <text x="55" y="14">과대예측 비율</text>
+<line x1="55" x2="535" y1="212.0" y2="212.0"/><text x="45" y="217.0" text-anchor="end">0%</text><line x1="55" x2="535" y1="165.0" y2="165.0"/><text x="45" y="170.0" text-anchor="end">25%</text><line x1="55" x2="535" y1="118.0" y2="118.0"/><text x="45" y="123.0" text-anchor="end">50%</text><line x1="55" x2="535" y1="71.0" y2="71.0"/><text x="45" y="76.0" text-anchor="end">75%</text><line x1="55" x2="535" y1="24.0" y2="24.0"/><text x="45" y="29.0" text-anchor="end">100%</text><text x="55" y="242" text-anchor="middle">1회</text><text x="215" y="242" text-anchor="middle">2회</text><text x="375" y="242" text-anchor="middle">3회</text><text x="535" y="242" text-anchor="middle">4회</text>        </g>
+        <line class="arrival-decision-plot__reference" x1="55" x2="535" y1="114.961" y2="114.961"/>
+<circle class="arrival-decision-plot__point" cx="55" cy="133.585" r="5"><title>1회 · 좌석 부족 사례를 더 반영 · 절대오차 · 41.7%</title></circle><circle class="arrival-decision-plot__point arrival-decision-plot__point--reused" cx="215" cy="140.054" r="5"><title>2회 · 절대오차 모델과 좌석 구간 판별기 조합 · 38.3%</title></circle><circle class="arrival-decision-plot__point" cx="375" cy="156.717" r="5"><title>3회 · 과대예측에 더 큰 손실 · 0.35 분위수 · 29.4%</title></circle><circle class="arrival-decision-plot__point arrival-decision-plot__point--reused" cx="535" cy="158.09" r="5"><title>4회 · 0.35 분위수 모델과 좌석 구간 판별기 조합 · 28.7%</title></circle>      </svg>
+      <p class="arrival-decision-plot__legend"><span class="arrival-decision-plot__legend-dot" aria-hidden="true"></span>새 학습 <span class="arrival-decision-plot__legend-dot arrival-decision-plot__legend-dot--reused" aria-hidden="true"></span>저장 모델 조합 <span class="arrival-decision-plot__legend-rule" aria-hidden="true"></span>순변화 기준선 <strong>51.6%</strong></p>
+    </figure>
+    <figure class="arrival-decision-plot" aria-labelledby="arrival-decision-risk3-plot-heading">
+      <figcaption id="arrival-decision-risk3-plot-heading">0~2석에서 3석 이상 과대예측</figcaption>
+      <svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="arrival-decision-risk3-plot-title arrival-decision-risk3-plot-desc">
+        <title id="arrival-decision-risk3-plot-title">0~2석에서 3석 이상 과대예측 · 회차별 결과</title>
+        <desc id="arrival-decision-risk3-plot-desc">가로축은 이번 실험 회차, 세로축은 과대예측 비율입니다. 완료가 확인된 회차만 표시합니다. 빈 원은 저장 모델 조합, 채운 원은 새 학습이며 점들을 개선 추세선으로 연결하지 않습니다. 점선은 같은 개발 질문의 순변화 기준선 45.0%입니다. 각 회차의 정확한 값은 아래 시도에 있습니다.</desc>
+        <g class="arrival-decision-plot__axis">
+          <text x="55" y="14">과대예측 비율</text>
+<line x1="55" x2="535" y1="212.0" y2="212.0"/><text x="45" y="217.0" text-anchor="end">0%</text><line x1="55" x2="535" y1="165.0" y2="165.0"/><text x="45" y="170.0" text-anchor="end">25%</text><line x1="55" x2="535" y1="118.0" y2="118.0"/><text x="45" y="123.0" text-anchor="end">50%</text><line x1="55" x2="535" y1="71.0" y2="71.0"/><text x="45" y="76.0" text-anchor="end">75%</text><line x1="55" x2="535" y1="24.0" y2="24.0"/><text x="45" y="29.0" text-anchor="end">100%</text><text x="55" y="242" text-anchor="middle">1회</text><text x="215" y="242" text-anchor="middle">2회</text><text x="375" y="242" text-anchor="middle">3회</text><text x="535" y="242" text-anchor="middle">4회</text>        </g>
+        <line class="arrival-decision-plot__reference" x1="55" x2="535" y1="127.312" y2="127.312"/>
+<circle class="arrival-decision-plot__point" cx="55" cy="157.306" r="5"><title>1회 · 좌석 부족 사례를 더 반영 · 절대오차 · 29.1%</title></circle><circle class="arrival-decision-plot__point arrival-decision-plot__point--reused" cx="215" cy="163.187" r="5"><title>2회 · 절대오차 모델과 좌석 구간 판별기 조합 · 26.0%</title></circle><circle class="arrival-decision-plot__point" cx="375" cy="169.46" r="5"><title>3회 · 과대예측에 더 큰 손실 · 0.35 분위수 · 22.6%</title></circle><circle class="arrival-decision-plot__point arrival-decision-plot__point--reused" cx="535" cy="173.969" r="5"><title>4회 · 0.35 분위수 모델과 좌석 구간 판별기 조합 · 20.2%</title></circle>      </svg>
+      <p class="arrival-decision-plot__legend"><span class="arrival-decision-plot__legend-dot" aria-hidden="true"></span>새 학습 <span class="arrival-decision-plot__legend-dot arrival-decision-plot__legend-dot--reused" aria-hidden="true"></span>저장 모델 조합 <span class="arrival-decision-plot__legend-rule" aria-hidden="true"></span>순변화 기준선 <strong>45.0%</strong></p>
+    </figure>
+  </div>
+  <p class="arrival-decision__metric-note">세 그림 모두 낮을수록 좋습니다. 1석 이상 과대예측에는 3석 이상 과대예측도 포함됩니다. 큰 과대예측만 줄고 작은 과대예측은 늘 수 있어 두 기준을 함께 확인합니다. 점선은 기존 비교 결과이며 이번 학습 횟수에 포함하지 않습니다.</p>
+
+  <div class="arrival-decision__cycles" aria-label="회차별 학습과 저장 모델 조합">
+    <details class="arrival-decision-cycle" id="arrival-decision-cycle-1">
+      <summary class="arrival-decision-cycle__summary">
+        <span class="arrival-decision-cycle__number"><span class="num">1</span>회</span>
+        <span class="arrival-decision-cycle__heading">
+          <span class="arrival-decision-cycle__title">좌석 부족 사례를 더 반영 · 절대오차</span>
+          <span class="arrival-decision__status arrival-decision__status--good">완료 확인</span>
+          <span class="arrival-decision-cycle__family">가중 손실로 새 학습</span>
+<span class="arrival-decision-cycle__description">전체 학습 자료를 유지하면서 좌석 부족 사례에 더 비중을 주고, 절대오차 방식으로 새 예측기를 학습합니다.</span>        </span>
+        <span class="arrival-decision-cycle__metric arrival-decision-cycle__metric--mae"><span>전체 평균 오차</span><strong class="num">2.621석</strong></span>
+        <span class="arrival-decision-cycle__metric arrival-decision-cycle__metric--risk1"><span>0~2석 중<br>1석 이상 과대예측</span><strong class="num">41.7%</strong></span>
+        <span class="arrival-decision-cycle__metric arrival-decision-cycle__metric--risk3"><span>0~2석 중<br>3석 이상 과대예측</span><strong class="num">29.1%</strong></span>
+        <span class="arrival-decision-cycle__toggle"><span class="arrival-decision-cycle__show">시도 보기</span><span class="arrival-decision-cycle__hide">접기</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></span>
+      </summary>
+      <div class="arrival-decision-cycle__body">
+        <article class="arrival-decision-trial" data-trial-kind="WEIGHTED_EXPERT_FIT" aria-labelledby="arrival-decision-cycle-1-attempt-1">
+          <div class="arrival-decision-trial__heading">
+            <p class="arrival-decision-trial__number">1회 · 시도 1</p>
+            <h3 id="arrival-decision-cycle-1-attempt-1">좌석 부족 사례를 더 반영 · 절대오차</h3>
+            <span class="arrival-decision__status arrival-decision__status--good">학습·복원·평가 확인</span>
+          </div>
+<p class="arrival-decision-trial__description"><strong>좌석 부족 사례를 더 반영한 예측기</strong><span>전체 학습 질문을 사용하며 실제 0~2석 사례의 비중을 나머지의 16배로 둡니다. 절대오차 손실로 가중 분포의 중간값을 목표로 학습합니다.</span></p>          <dl class="arrival-decision-trial__metrics">
+            <div><dt>전체 MAE</dt><dd>2.621석</dd></div>
+            <div><dt>노선별 MAE 평균</dt><dd>2.807석</dd></div>
+            <div><dt>0~2석 MAE</dt><dd>3.905석</dd></div>
+            <div><dt>0~2석 중<br>1석 이상 과대예측</dt><dd>41.7%</dd></div>
+            <div><dt>0~2석 중<br>3석 이상 과대예측</dt><dd>29.1%</dd></div>
+            <div><dt>0석 감지율</dt><dd>68.3%</dd></div>
+          </dl>
+<p class="arrival-decision-trial__review"><strong>다섯 연구 비교 조건 충족 · 운영 채택 아님</strong><span>기준선과 비교한 다섯 조건을 함께 확인합니다. 연구 기준 후보는 기존 모델을 포함해 고릅니다.</span></p>          <dl class="arrival-decision-trial__method" aria-label="학습과 조합의 정확한 범위">
+<div><dt>이번 회차 새 학습</dt><dd>496,475질문 · 전체 학습 질문 사용</dd></div><div><dt>학습 가중치</dt><dd>학습 정답 0~2석 16배 · 나머지 1배 · 전체 평균 비중 1로 정규화</dd></div><div><dt>입력 특징</dt><dd>예측기 15개</dd></div><div><dt>같은 개발 평가</dt><dd>80,569질문 · 질문별 동일 비중</dd></div>          </dl>
+        </article>
+      </div>
+    </details>
+    <details class="arrival-decision-cycle" id="arrival-decision-cycle-2">
+      <summary class="arrival-decision-cycle__summary">
+        <span class="arrival-decision-cycle__number"><span class="num">2</span>회</span>
+        <span class="arrival-decision-cycle__heading">
+          <span class="arrival-decision-cycle__title">절대오차 모델과 좌석 구간 판별기 조합</span>
+          <span class="arrival-decision__status arrival-decision__status--good">완료 확인</span>
+          <span class="arrival-decision-cycle__family">저장 모델 조합 · 새 학습 없음</span>
+<span class="arrival-decision-cycle__description">앞 회차 예측기를 고정하고, 저장된 160단계 좌석 구간 판별기와 조합합니다.</span>        </span>
+        <span class="arrival-decision-cycle__metric arrival-decision-cycle__metric--mae"><span>전체 평균 오차</span><strong class="num">2.629석</strong></span>
+        <span class="arrival-decision-cycle__metric arrival-decision-cycle__metric--risk1"><span>0~2석 중<br>1석 이상 과대예측</span><strong class="num">38.3%</strong></span>
+        <span class="arrival-decision-cycle__metric arrival-decision-cycle__metric--risk3"><span>0~2석 중<br>3석 이상 과대예측</span><strong class="num">26.0%</strong></span>
+        <span class="arrival-decision-cycle__toggle"><span class="arrival-decision-cycle__show">시도 보기</span><span class="arrival-decision-cycle__hide">접기</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></span>
+      </summary>
+      <div class="arrival-decision-cycle__body">
+        <article class="arrival-decision-trial" data-trial-kind="REUSED_COMPOSITION" aria-labelledby="arrival-decision-cycle-2-attempt-1">
+          <div class="arrival-decision-trial__heading">
+            <p class="arrival-decision-trial__number">2회 · 시도 1</p>
+            <h3 id="arrival-decision-cycle-2-attempt-1">절대오차 모델과 좌석 구간 판별기 조합</h3>
+            <span class="arrival-decision__status arrival-decision__status--good">복원·조합·평가 확인</span>
+          </div>
+<p class="arrival-decision-trial__description"><strong>저장 모델 조합</strong><span>앞 회차에서 새로 학습한 예측값에 저장된 좌석 구간 판별기의 점수를 적용합니다. 추가 학습은 없습니다. 0석은 0, 1~2석은 저장된 학습 평균, 3석 이상 구간은 새 예측값으로 조합합니다.</span></p>          <dl class="arrival-decision-trial__metrics">
+            <div><dt>전체 MAE</dt><dd>2.629석</dd></div>
+            <div><dt>노선별 MAE 평균</dt><dd>2.927석</dd></div>
+            <div><dt>0~2석 MAE</dt><dd>3.500석</dd></div>
+            <div><dt>0~2석 중<br>1석 이상 과대예측</dt><dd>38.3%</dd></div>
+            <div><dt>0~2석 중<br>3석 이상 과대예측</dt><dd>26.0%</dd></div>
+            <div><dt>0석 감지율</dt><dd>73.2%</dd></div>
+          </dl>
+<p class="arrival-decision-trial__review"><strong>다섯 연구 비교 조건 충족 · 운영 채택 아님</strong><span>기준선과 비교한 다섯 조건을 함께 확인합니다. 연구 기준 후보는 기존 모델을 포함해 고릅니다.</span></p>          <dl class="arrival-decision-trial__method" aria-label="학습과 조합의 정확한 범위">
+<div><dt>이번 회차 새 학습</dt><dd>없음 · 앞 회차 예측기와 저장 판별기 조합</dd></div><div><dt>재사용 예측기의 학습 범위</dt><dd>496,475질문 · 앞 회차의 전체 TRAIN 학습 결과</dd></div><div><dt>학습 가중치</dt><dd>추가 가중치 학습 없음 · 앞 회차 예측값 재사용</dd></div><div><dt>입력 특징</dt><dd>예측기 15개 · 저장 판별기 41개</dd></div><div><dt>같은 개발 평가</dt><dd>80,569질문 · 질문별 동일 비중</dd></div>          </dl>
+        </article>
+      </div>
+    </details>
+    <details class="arrival-decision-cycle" id="arrival-decision-cycle-3">
+      <summary class="arrival-decision-cycle__summary">
+        <span class="arrival-decision-cycle__number"><span class="num">3</span>회</span>
+        <span class="arrival-decision-cycle__heading">
+          <span class="arrival-decision-cycle__title">과대예측에 더 큰 손실 · 0.35 분위수</span>
+          <span class="arrival-decision__status arrival-decision__status--good">완료 확인</span>
+          <span class="arrival-decision-cycle__family">가중 손실로 새 학습</span>
+<span class="arrival-decision-cycle__description">같은 학습 자료·가중치·입력을 유지하며, 과대예측에 더 큰 손실을 주는 방식으로 바꿉니다.</span>        </span>
+        <span class="arrival-decision-cycle__metric arrival-decision-cycle__metric--mae"><span>전체 평균 오차</span><strong class="num">2.980석</strong></span>
+        <span class="arrival-decision-cycle__metric arrival-decision-cycle__metric--risk1"><span>0~2석 중<br>1석 이상 과대예측</span><strong class="num">29.4%</strong></span>
+        <span class="arrival-decision-cycle__metric arrival-decision-cycle__metric--risk3"><span>0~2석 중<br>3석 이상 과대예측</span><strong class="num">22.6%</strong></span>
+        <span class="arrival-decision-cycle__toggle"><span class="arrival-decision-cycle__show">시도 보기</span><span class="arrival-decision-cycle__hide">접기</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></span>
+      </summary>
+      <div class="arrival-decision-cycle__body">
+        <article class="arrival-decision-trial" data-trial-kind="WEIGHTED_EXPERT_FIT" aria-labelledby="arrival-decision-cycle-3-attempt-1">
+          <div class="arrival-decision-trial__heading">
+            <p class="arrival-decision-trial__number">3회 · 시도 1</p>
+            <h3 id="arrival-decision-cycle-3-attempt-1">과대예측에 더 큰 손실 · 0.35 분위수</h3>
+            <span class="arrival-decision__status arrival-decision__status--good">학습·복원·평가 확인</span>
+          </div>
+<p class="arrival-decision-trial__description"><strong>좌석 부족 사례를 더 반영한 예측기</strong><span>학습 자료와 16배 비중을 유지하고 0.35 분위수 손실로 바꿉니다. 같은 크기 오차에서 과대예측의 손실은 0.65, 과소예측은 0.35입니다. 원래 모집단의 35% 보장이나 예측 구간을 뜻하지 않습니다.</span></p>          <dl class="arrival-decision-trial__metrics">
+            <div><dt>전체 MAE</dt><dd>2.980석</dd></div>
+            <div><dt>노선별 MAE 평균</dt><dd>3.248석</dd></div>
+            <div><dt>0~2석 MAE</dt><dd>2.846석</dd></div>
+            <div><dt>0~2석 중<br>1석 이상 과대예측</dt><dd>29.4%</dd></div>
+            <div><dt>0~2석 중<br>3석 이상 과대예측</dt><dd>22.6%</dd></div>
+            <div><dt>0석 감지율</dt><dd>76.6%</dd></div>
+          </dl>
+<p class="arrival-decision-trial__review"><strong>다섯 연구 비교 조건 충족 · 운영 채택 아님</strong><span>기준선과 비교한 다섯 조건을 함께 확인합니다. 연구 기준 후보는 기존 모델을 포함해 고릅니다.</span></p>          <dl class="arrival-decision-trial__method" aria-label="학습과 조합의 정확한 범위">
+<div><dt>이번 회차 새 학습</dt><dd>496,475질문 · 전체 학습 질문 사용</dd></div><div><dt>학습 가중치</dt><dd>학습 정답 0~2석 16배 · 나머지 1배 · 전체 평균 비중 1로 정규화</dd></div><div><dt>입력 특징</dt><dd>예측기 15개</dd></div><div><dt>같은 개발 평가</dt><dd>80,569질문 · 질문별 동일 비중</dd></div>          </dl>
+        </article>
+      </div>
+    </details>
+    <details class="arrival-decision-cycle" id="arrival-decision-cycle-4" open>
+      <summary class="arrival-decision-cycle__summary">
+        <span class="arrival-decision-cycle__number"><span class="num">4</span>회</span>
+        <span class="arrival-decision-cycle__heading">
+          <span class="arrival-decision-cycle__title">0.35 분위수 모델과 좌석 구간 판별기 조합</span>
+          <span class="arrival-decision__status arrival-decision__status--good">완료 확인</span>
+          <span class="arrival-decision-cycle__family">저장 모델 조합 · 새 학습 없음</span>
+<span class="arrival-decision-cycle__description">앞 회차 예측기를 고정하고, 같은 좌석 구간 판별기와 조합합니다.</span>        </span>
+        <span class="arrival-decision-cycle__metric arrival-decision-cycle__metric--mae"><span>전체 평균 오차</span><strong class="num">2.994석</strong></span>
+        <span class="arrival-decision-cycle__metric arrival-decision-cycle__metric--risk1"><span>0~2석 중<br>1석 이상 과대예측</span><strong class="num">28.7%</strong></span>
+        <span class="arrival-decision-cycle__metric arrival-decision-cycle__metric--risk3"><span>0~2석 중<br>3석 이상 과대예측</span><strong class="num">20.2%</strong></span>
+        <span class="arrival-decision-cycle__toggle"><span class="arrival-decision-cycle__show">시도 보기</span><span class="arrival-decision-cycle__hide">접기</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></span>
+      </summary>
+      <div class="arrival-decision-cycle__body">
+        <article class="arrival-decision-trial" data-trial-kind="REUSED_COMPOSITION" aria-labelledby="arrival-decision-cycle-4-attempt-1">
+          <div class="arrival-decision-trial__heading">
+            <p class="arrival-decision-trial__number">4회 · 시도 1</p>
+            <h3 id="arrival-decision-cycle-4-attempt-1">0.35 분위수 모델과 좌석 구간 판별기 조합</h3>
+            <span class="arrival-decision__status arrival-decision__status--good">복원·조합·평가 확인</span>
+          </div>
+<p class="arrival-decision-trial__description"><strong>저장 모델 조합</strong><span>앞 회차에서 새로 학습한 예측값에 저장된 좌석 구간 판별기의 점수를 적용합니다. 추가 학습은 없습니다. 0석은 0, 1~2석은 저장된 학습 평균, 3석 이상 구간은 새 예측값으로 조합합니다.</span></p>          <dl class="arrival-decision-trial__metrics">
+            <div><dt>전체 MAE</dt><dd>2.994석</dd></div>
+            <div><dt>노선별 MAE 평균</dt><dd>3.380석</dd></div>
+            <div><dt>0~2석 MAE</dt><dd>2.618석</dd></div>
+            <div><dt>0~2석 중<br>1석 이상 과대예측</dt><dd>28.7%</dd></div>
+            <div><dt>0~2석 중<br>3석 이상 과대예측</dt><dd>20.2%</dd></div>
+            <div><dt>0석 감지율</dt><dd>78.2%</dd></div>
+          </dl>
+<p class="arrival-decision-trial__review"><strong>다섯 연구 비교 조건 충족 · 운영 채택 아님</strong><span>기준선과 비교한 다섯 조건을 함께 확인합니다. 연구 기준 후보는 기존 모델을 포함해 고릅니다.</span></p>          <dl class="arrival-decision-trial__method" aria-label="학습과 조합의 정확한 범위">
+<div><dt>이번 회차 새 학습</dt><dd>없음 · 앞 회차 예측기와 저장 판별기 조합</dd></div><div><dt>재사용 예측기의 학습 범위</dt><dd>496,475질문 · 앞 회차의 전체 TRAIN 학습 결과</dd></div><div><dt>학습 가중치</dt><dd>추가 가중치 학습 없음 · 앞 회차 예측값 재사용</dd></div><div><dt>입력 특징</dt><dd>예측기 15개 · 저장 판별기 41개</dd></div><div><dt>같은 개발 평가</dt><dd>80,569질문 · 질문별 동일 비중</dd></div>          </dl>
+        </article>
+      </div>
+    </details>
+  </div>
+  <p class="arrival-decision__metric-note">MAE는 평균 절대오차로 낮을수록 좋습니다. 노선별 MAE 평균은 각 노선에 같은 비중을 줍니다. 과대예측은 실제 표시 0~2석 중 정답보다 각각 1석·3석 이상 높게 예측한 비율입니다. 0석 감지율은 실제 0석 중 예측이 2석 미만인 비율로 높을수록 좋습니다. —는 아직 검증된 값이 없다는 뜻입니다.</p>
+  <details class="arrival-decision__methods">
+    <summary>학습 방식과 판별기 조합은 어떻게 다른가요?</summary>
+    <dl><div><dt>좌석 부족 사례를 더 반영</dt><dd>학습 정답 0~2석에 16배, 나머지에 1배 비중을 준 뒤 평균을 1로 맞춥니다. 평가 질문에는 이 가중치를 적용하지 않습니다.</dd></div><div><dt>절대오차와 0.35 분위수</dt><dd>절대오차는 가중 분포의 중간값을 목표로 합니다. 0.35 분위수 손실은 같은 크기 과대예측을 과소예측보다 더 크게 다룹니다. 비중을 바꾼 분포이므로 원래 모집단의 분위수나 확률 보장을 뜻하지 않습니다.</dd></div><div><dt>저장 판별기와 조합</dt><dd>저장된 Gate160의 0석·1~2석·3석 이상 점수로 새 예측값을 조합합니다. 점수가 보정된 확률이거나 조합 결과가 분위수·좌석 분포·탑승 성공률이라는 주장은 하지 않습니다.</dd></div></dl>
+  </details>
+  <details class="arrival-decision__references">
+    <summary>같은 개발 자료의 기존 비교 모델 22개 보기 <span>저장된 비교 결과 · 이번 새 학습에서 제외</span></summary>
+    <div class="table-wrap"><table class="table table--stack">
+      <thead><tr><th scope="col">비교 모델</th><th scope="col">전체 MAE</th><th scope="col">노선별 MAE 평균</th><th scope="col">0~2석 MAE</th><th scope="col">0~2석 중<br>1석 이상 과대예측</th><th scope="col">0~2석 중<br>3석 이상 과대예측</th><th scope="col">0석 감지율</th></tr></thead>
+      <tbody><tr><th scope="row">현재 잔여 좌석 유지<span class="table__sub">고정 계산 기준선</span></th><td data-label="전체 MAE" class="num">5.269석</td><td data-label="노선 평균" class="num">4.234석</td><td data-label="0~2석 MAE" class="num">14.214석</td><td data-label="1석 이상 과대예측" class="num">59.7%</td><td data-label="3석 이상 과대예측" class="num">54.0%</td><td data-label="0석 감지율" class="num">40.4%</td></tr><tr><th scope="row">중간 정류장 순변화 반영<span class="table__sub">고정 계산 기준선</span></th><td data-label="전체 MAE" class="num">3.523석</td><td data-label="노선 평균" class="num">3.479석</td><td data-label="0~2석 MAE" class="num">7.199석</td><td data-label="1석 이상 과대예측" class="num">51.6%</td><td data-label="3석 이상 과대예측" class="num">45.0%</td><td data-label="0석 감지율" class="num">48.9%</td></tr><tr><th scope="row">목표 정류장 이력 제외 HGB<span class="table__sub">기존 연구 모델</span></th><td data-label="전체 MAE" class="num">2.348석</td><td data-label="노선 평균" class="num">2.920석</td><td data-label="0~2석 MAE" class="num">9.086석</td><td data-label="1석 이상 과대예측" class="num">83.1%</td><td data-label="3석 이상 과대예측" class="num">71.9%</td><td data-label="0석 감지율" class="num">22.8%</td></tr><tr><th scope="row">절대오차 HGB<span class="table__sub">기존 연구 모델</span></th><td data-label="전체 MAE" class="num">2.448석</td><td data-label="노선 평균" class="num">2.618석</td><td data-label="0~2석 MAE" class="num">9.656석</td><td data-label="1석 이상 과대예측" class="num">74.1%</td><td data-label="3석 이상 과대예측" class="num">64.9%</td><td data-label="0석 감지율" class="num">34.9%</td></tr><tr><th scope="row">25% 분위수 HGB<span class="table__sub">기존 연구 모델</span></th><td data-label="전체 MAE" class="num">3.025석</td><td data-label="노선 평균" class="num">3.429석</td><td data-label="0~2석 MAE" class="num">5.733석</td><td data-label="1석 이상 과대예측" class="num">61.5%</td><td data-label="3석 이상 과대예측" class="num">51.7%</td><td data-label="0석 감지율" class="num">44.9%</td></tr><tr><th scope="row">저잔여 좌석 4배 가중 HGB<span class="table__sub">기존 연구 모델</span></th><td data-label="전체 MAE" class="num">2.383석</td><td data-label="노선 평균" class="num">3.191석</td><td data-label="0~2석 MAE" class="num">6.654석</td><td data-label="1석 이상 과대예측" class="num">71.6%</td><td data-label="3석 이상 과대예측" class="num">58.7%</td><td data-label="0석 감지율" class="num">35.1%</td></tr><tr><th scope="row">저잔여 좌석 8배 가중 HGB<span class="table__sub">기존 연구 모델</span></th><td data-label="전체 MAE" class="num">2.402석</td><td data-label="노선 평균" class="num">3.229석</td><td data-label="0~2석 MAE" class="num">5.172석</td><td data-label="1석 이상 과대예측" class="num">66.3%</td><td data-label="3석 이상 과대예측" class="num">47.0%</td><td data-label="0석 감지율" class="num">41.8%</td></tr><tr><th scope="row">저잔여 좌석 16배 가중 HGB<span class="table__sub">기존 연구 모델</span></th><td data-label="전체 MAE" class="num">2.503석</td><td data-label="노선 평균" class="num">3.305석</td><td data-label="0~2석 MAE" class="num">4.338석</td><td data-label="1석 이상 과대예측" class="num">60.8%</td><td data-label="3석 이상 과대예측" class="num">38.3%</td><td data-label="0석 감지율" class="num">51.1%</td></tr><tr><th scope="row">저잔여 좌석 16배·노선 균형 HGB<span class="table__sub">기존 연구 모델</span></th><td data-label="전체 MAE" class="num">2.514석</td><td data-label="노선 평균" class="num">3.363석</td><td data-label="0~2석 MAE" class="num">4.490석</td><td data-label="1석 이상 과대예측" class="num">63.6%</td><td data-label="3석 이상 과대예측" class="num">38.8%</td><td data-label="0석 감지율" class="num">49.8%</td></tr><tr><th scope="row">35% 분위수 HGB<span class="table__sub">기존 연구 모델</span></th><td data-label="전체 MAE" class="num">2.587석</td><td data-label="노선 평균" class="num">2.984석</td><td data-label="0~2석 MAE" class="num">7.295석</td><td data-label="1석 이상 과대예측" class="num">66.6%</td><td data-label="3석 이상 과대예측" class="num">58.1%</td><td data-label="0석 감지율" class="num">38.8%</td></tr><tr><th scope="row">저잔여 좌석 16배 가중 HGB · 256회<span class="table__sub">기존 연구 모델</span></th><td data-label="전체 MAE" class="num">2.439석</td><td data-label="노선 평균" class="num">3.364석</td><td data-label="0~2석 MAE" class="num">4.497석</td><td data-label="1석 이상 과대예측" class="num">61.5%</td><td data-label="3석 이상 과대예측" class="num">40.0%</td><td data-label="0석 감지율" class="num">51.2%</td></tr><tr><th scope="row">순변화 기준선의 선형 잔차 보정<span class="table__sub">기존 연구 모델</span></th><td data-label="전체 MAE" class="num">3.515석</td><td data-label="노선 평균" class="num">3.235석</td><td data-label="0~2석 MAE" class="num">11.890석</td><td data-label="1석 이상 과대예측" class="num">100.0%</td><td data-label="3석 이상 과대예측" class="num">99.3%</td><td data-label="0석 감지율" class="num">0.0%</td></tr><tr><th scope="row">무작위 분할 트리 32개<span class="table__sub">기존 연구 모델</span></th><td data-label="전체 MAE" class="num">2.482석</td><td data-label="노선 평균" class="num">2.511석</td><td data-label="0~2석 MAE" class="num">9.848석</td><td data-label="1석 이상 과대예측" class="num">88.3%</td><td data-label="3석 이상 과대예측" class="num">77.8%</td><td data-label="0석 감지율" class="num">13.4%</td></tr><tr><th scope="row">0석·1~2석 판별을 결합한 보정<span class="table__sub">기존 연구 모델</span></th><td data-label="전체 MAE" class="num">2.514석</td><td data-label="노선 평균" class="num">3.368석</td><td data-label="0~2석 MAE" class="num">3.727석</td><td data-label="1석 이상 과대예측" class="num">49.3%</td><td data-label="3석 이상 과대예측" class="num">31.4%</td><td data-label="0석 감지율" class="num">63.2%</td></tr><tr><th scope="row">저좌석 판별 보정 · 160회 학습<span class="table__sub">기존 연구 모델</span></th><td data-label="전체 MAE" class="num">2.516석</td><td data-label="노선 평균" class="num">3.409석</td><td data-label="0~2석 MAE" class="num">3.694석</td><td data-label="1석 이상 과대예측" class="num">48.8%</td><td data-label="3석 이상 과대예측" class="num">31.4%</td><td data-label="0석 감지율" class="num">63.3%</td></tr><tr><th scope="row">무작위 분할 트리 48개<span class="table__sub">기존 연구 모델</span></th><td data-label="전체 MAE" class="num">2.405석</td><td data-label="노선 평균" class="num">2.530석</td><td data-label="0~2석 MAE" class="num">9.734석</td><td data-label="1석 이상 과대예측" class="num">88.0%</td><td data-label="3석 이상 과대예측" class="num">76.6%</td><td data-label="0석 감지율" class="num">13.7%</td></tr><tr><th scope="row">G96 분류 보정 + 원래 HGB 회귀값<span class="table__sub">기존 연구 모델</span></th><td data-label="전체 MAE" class="num">2.330석</td><td data-label="노선 평균" class="num">2.967석</td><td data-label="0~2석 MAE" class="num">6.782석</td><td data-label="1석 이상 과대예측" class="num">65.5%</td><td data-label="3석 이상 과대예측" class="num">53.0%</td><td data-label="0석 감지율" class="num">42.8%</td></tr><tr><th scope="row">G160 분류 보정 + 원래 HGB 회귀값<span class="table__sub">기존 연구 모델</span></th><td data-label="전체 MAE" class="num">2.330석</td><td data-label="노선 평균" class="num">3.013석</td><td data-label="0~2석 MAE" class="num">6.683석</td><td data-label="1석 이상 과대예측" class="num">65.2%</td><td data-label="3석 이상 과대예측" class="num">53.3%</td><td data-label="0석 감지율" class="num">44.3%</td></tr><tr><th scope="row">G96 분류 보정 + 무작위 분할 트리 회귀값<span class="table__sub">기존 연구 모델</span></th><td data-label="전체 MAE" class="num">2.378석</td><td data-label="노선 평균" class="num">2.565석</td><td data-label="0~2석 MAE" class="num">7.188석</td><td data-label="1석 이상 과대예측" class="num">65.8%</td><td data-label="3석 이상 과대예측" class="num">54.4%</td><td data-label="0석 감지율" class="num">41.5%</td></tr><tr><th scope="row">G160 분류 보정 + 무작위 분할 트리 회귀값<span class="table__sub">기존 연구 모델</span></th><td data-label="전체 MAE" class="num">2.377석</td><td data-label="노선 평균" class="num">2.617석</td><td data-label="0~2석 MAE" class="num">7.050석</td><td data-label="1석 이상 과대예측" class="num">64.9%</td><td data-label="3석 이상 과대예측" class="num">53.7%</td><td data-label="0석 감지율" class="num">43.8%</td></tr><tr><th scope="row">G160 분류 보정 + 3석 이상 전담 HGB · 제곱오차<span class="table__sub">기존 연구 모델</span></th><td data-label="전체 MAE" class="num">2.325석</td><td data-label="노선 평균" class="num">2.905석</td><td data-label="0~2석 MAE" class="num">8.080석</td><td data-label="1석 이상 과대예측" class="num">69.0%</td><td data-label="3석 이상 과대예측" class="num">59.9%</td><td data-label="0석 감지율" class="num">38.3%</td></tr><tr><th scope="row">G160 분류 보정 + 3석 이상 전담 HGB · 절대오차<span class="table__sub">기존 연구 모델</span></th><td data-label="전체 MAE" class="num">2.471석</td><td data-label="노선 평균" class="num">2.721석</td><td data-label="0~2석 MAE" class="num">8.895석</td><td data-label="1석 이상 과대예측" class="num">70.8%</td><td data-label="3석 이상 과대예측" class="num">62.0%</td><td data-label="0석 감지율" class="num">38.6%</td></tr></tbody>
+    </table></div>
+  </details>
+  <p class="arrival-decision__scope">학습 전체 496,475질문, 개발 평가 80,569질문·20개 노선을 사용합니다. 실제 표시 0~2석 959질문을 같은 분모로 비교합니다. 이번 새 예측기는 전체 학습 질문을 사용하며 앞선 3석 이상 조건부 학습과 구분합니다. 같은 개발 자료를 다시 본 탐색으로, 새로운 기간의 성능이나 운영 적용을 보장하지 않습니다.</p>
+  <p class="head__line"><a href="/data/arrival/decision/summary.json">좌석 부족 상황을 반영한 비교의 집계 JSON</a><a href="/arrival/studies/deep/">앞선 조합·조건부 학습 비교</a></p>
+</section>
+</div>
+<p class="ah-bottom-link"><a href="/arrival/progress/">← 전체 연구와 시도로 돌아가기</a></p>
+</div>
+</main>
+<footer class="footer">
+  <div class="footer__inner">
+    <p>채택 = 다음 실험의 기준 모델 · 운영 예보 반영과 별개</p>
+    <p class="footer__meta" id="footer-meta" data-live>도착 연구 · 2026년 10월 26일 10:14:09 KST · <a href="/THIRD-PARTY-LICENSES.txt">글꼴 라이선스</a></p>
+  </div>
+</footer>
+</body>
+</html>

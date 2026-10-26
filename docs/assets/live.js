@@ -305,3 +305,36 @@
 
   return { createPoller, backoff, sameSectionOrder, start, MAX_MS };
 });
+
+/* Progressive model filters. All model links and rows are present without JS. */
+(() => {
+  'use strict';
+  const root = () => document.getElementById('arrival-hub-content');
+  function applyFilter(scope) {
+    if (!scope) return;
+    const filter = scope.querySelector('[data-arrival-filter]');
+    if (!filter) return;
+    filter.hidden = false;
+    const query = (filter.querySelector('[data-model-search]')?.value || '').trim().toLocaleLowerCase('ko');
+    const kind = filter.querySelector('[data-model-kind]')?.value || 'all';
+    const rows = scope.querySelectorAll('[data-arrival-model]');
+    let count = 0;
+    rows.forEach(row => {
+      const match = (kind === 'all' || row.dataset.kind === kind) && (row.dataset.search || '').toLocaleLowerCase('ko').includes(query);
+      row.hidden = !match;
+      if (match) count += 1;
+    });
+    const counter = filter.querySelector('[data-model-count]');
+    if (counter) counter.textContent = `${rows.length}개 중 ${count}개 표시`;
+    const empty = scope.querySelector('[data-model-empty]');
+    if (empty) empty.hidden = count !== 0;
+  }
+  document.addEventListener('input', event => {
+    if (event.target instanceof Element && event.target.matches('[data-model-search]')) applyFilter(root());
+  });
+  document.addEventListener('change', event => {
+    if (event.target instanceof Element && event.target.matches('[data-model-kind]')) applyFilter(root());
+  });
+  window.addEventListener('site:updated', () => applyFilter(root()));
+  applyFilter(root());
+})();

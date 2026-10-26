@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>G160 분류 보정 + 3석 이상 전담 HGB · 제곱오차 · 도착 연구 · salmonbus 연구</title>
+<meta name="description" content="버스 남는 좌석 예보 모델의 자동 실험 현황">
+<link rel="canonical" href="https://research.dongkey.tech/arrival/models/g160-high-sq/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="salmonbus 연구">
+<meta property="og:title" content="G160 분류 보정 + 3석 이상 전담 HGB · 제곱오차 · 도착 연구 · salmonbus 연구">
+<meta property="og:url" content="https://research.dongkey.tech/arrival/models/g160-high-sq/">
+<link rel="icon" href="/favicon.svg?v=42a4ccc6ef62" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="stylesheet" href="/assets/site.css?v=5ec4d2cc0cae" data-asset="css">
+<noscript><link rel="stylesheet" href="/assets/noscript.css?v=24fe7a57d410"></noscript>
+<script src="/assets/charts.js?v=dd96aa903a7f" defer data-asset="js"></script>
+<script src="/assets/live.js?v=b8d366c5c254" defer data-asset="js"></script>
+</head>
+<body data-digest="41b6c8093d814f7fdb163d22f9ac355190b4d84131d5a019411415612fd28ee2" data-poll="60" data-version-url="/version.json">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="/"><span class="brand__mark">salmonbus</span> <span class="brand__sub">연구</span></a>
+    <nav class="nav" aria-label="주 메뉴">
+      <a href="/">홈</a>
+      <a href="/progress/">개선 현황</a>
+      <a href="/attempts/">시도 상세</a>
+<a href="/arrival/" aria-current="page">도착 연구</a>    </nav>
+    <p class="live" id="live-status" data-live aria-live="polite">
+<span class="live__dot" aria-hidden="true"></span><span class="live__text">도착 연구 갱신 10월 26일 10:14</span>    </p>
+  </div>
+</header>
+<main id="main" class="page">
+<div id="arrival-hub-content" class="arrival-hub" data-live>
+<div class="ah-masthead">
+  <div class="ah-masthead__line"><a class="ah-masthead__title" href="/arrival/">도착 잔여석 연구</a><span class="tag tag--scope">첫 도착 표시 기준</span></div>
+  <p>내 정류장에 도착할 때, 몇 석이 남을까.</p>
+</div>
+<nav class="ah-nav" aria-label="도착 연구 메뉴">
+<a href="/arrival/">개요</a><a href="/arrival/progress/">개선 현황</a><a href="/arrival/models/" aria-current="page">모델 비교</a><a href="/arrival/method/">자료와 평가</a></nav>
+<p class="ah-breadcrumb"><a href="/arrival/models/">모델 목록</a><span aria-hidden="true">/</span><a href="/arrival/studies/deep/">모델 조합 심층 연구</a></p>
+<header class="ah-heading"><div><p class="ah-eyebrow">조건부 HGB · 새 학습</p><h1>G160 분류 보정 + 3석 이상 전담 HGB · 제곱오차</h1><p>TRAIN 중 실제 도착 좌석이 3석 이상인 사례만으로 HGB를 학습합니다. 판별기는 재사용하고 새 전문가의 손실함수는 제곱오차입니다. DEV의 정답으로 예측 경로를 선택하지 않습니다.</p></div></header>
+<section class="ah-current ah-current--model" aria-label="같은 개발 자료에서 얻은 결과"><dl class="ah-keynums"><div><dt>전체 평균 오차</dt><dd data-arrival-metric="mae" data-model-id="G160_HIGH_SQ">2.325<small>석</small></dd><p>DEV 80,569질문</p></div><div><dt>노선별 평균 오차</dt><dd data-arrival-metric="macro" data-model-id="G160_HIGH_SQ">2.905<small>석</small></dd><p>노선마다 같은 비중으로 계산</p></div><div><dt>0~2석 중 3석 이상 과대예측</dt><dd data-arrival-metric="risk3" data-model-id="G160_HIGH_SQ">59.9%</dd><p>실제 0~2석 959질문</p></div><div><dt>0석 감지율</dt><dd data-arrival-metric="recall" data-model-id="G160_HIGH_SQ">38.3%</dd><p>실제 0석 중 2석 미만으로 예측</p></div></dl></section>
+<div class="ah-model-layout"><div>
+<section class="ah-section ah-section--first"><h2>어떻게 예측하나요?</h2><p class="ah-prose">좌석 구간 판별기의 점수와 구간별 좌석 예측값을 조합합니다. 최종 값은 0~70석 범위의 점예측이며, 보정된 확률이나 분위수·탑승 성공률로 해석하지 않습니다.</p><h3>학습에서 줄이려는 오차</h3><p class="ah-prose">제곱오차</p></section>
+<section class="ah-section"><h2>무엇으로 학습했나요?</h2><dl class="ah-facts"><div><dt>새 학습</dt><dd>491,594질문</dd></div><div><dt>개발 평가</dt><dd>80,569질문 · 질문별 같은 비중</dd></div><div><dt>예측기 학습 범위</dt><dd>실제 학습 정답 3석 이상만 사용</dd></div><div><dt>재사용</dt><dd>새 추정기 학습 1회 · 판별기 재사용 · 새 입력 변환 학습 없음</dd></div><div><dt>입력 특징</dt><dd>판별기 41개 · 좌석 예측기 15개</dd></div><div><dt>평가 자료</dt><dd>도착 정답을 구성한 동일 DEV 80,569질문을 사용했습니다. 연구 과정에서 반복 확인한 자료입니다.</dd></div></dl><details class="ah-parameters"><summary>고정한 모델 설정 보기</summary><dl class="ah-facts"><div><dt>학습 손실</dt><dd class="num">squared_error</dd></div><div><dt>트리 추가 단계</dt><dd class="num">128</dd></div><div><dt>오차 반영 비율</dt><dd class="num">0.1</dd></div><div><dt>트리 최대 깊이</dt><dd class="num">6</dd></div><div><dt>트리 말단 집단 최대 수</dt><dd class="num">31</dd></div><div><dt>말단 집단 최소 질문 수</dt><dd class="num">20</dd></div><div><dt>규제 강도</dt><dd class="num">1</dd></div></dl><p class="ah-caption">학습 전에 고정한 설정입니다. 트리 추가 단계는 학습을 반복하는 횟수이며, 오차 반영 비율은 새 트리의 예측을 더하는 크기입니다.</p></details></section>
+<section class="ah-section"><h2>이 결과를 어떻게 판단했나요?</h2><p class="ah-prose">해당 연구의 비교 조건을 충족하지 못해 결과를 보존했습니다.</p><p class="ah-prose">같은 개발 평가 자료를 재사용한 연구 결과입니다. 새로운 기간의 성능과 운영 적용은 검증하지 않았습니다.</p><a class="ah-inline-link" href="/arrival/studies/deep/">모델 조합 심층 연구 판단 근거 보기 <span aria-hidden="true">→</span></a></section>
+</div><aside class="ah-model-aside"><h2>좌석 부족 상황을 따로 보면</h2><dl><div><dt>0~2석 평균 오차</dt><dd data-arrival-metric="lowMae" data-model-id="G160_HIGH_SQ">8.080<small>석</small></dd></div><div><dt>1석 이상 과대예측</dt><dd data-arrival-metric="risk1" data-model-id="G160_HIGH_SQ">69.0%</dd></div><div><dt>3석 이상 과대예측</dt><dd data-arrival-metric="risk3" data-model-id="G160_HIGH_SQ">59.9%</dd></div></dl><p>과대예측 두 지표의 분모는 실제 0~2석인 959질문입니다. 3석 이상 과대예측은 1석 이상에 포함됩니다.</p><a href="/arrival/method/#arrival-metrics">지표 읽는 법 <span aria-hidden="true">→</span></a></aside></div>
+<aside class="ah-scope"><strong>설명과 결과의 범위</strong><p>완료한 연구 기록의 모델 설정과 집계 결과를 바탕으로 정리했습니다. 새로운 기간의 검증 결과나 운영 적용을 뜻하지 않습니다. 실제 승하차 전 시점의 잔여석과 개인 탑승 성공 여부는 확인되지 않았습니다.</p></aside>
+</div>
+</main>
+<footer class="footer">
+  <div class="footer__inner">
+    <p>채택 = 다음 실험의 기준 모델 · 운영 예보 반영과 별개</p>
+    <p class="footer__meta" id="footer-meta" data-live>도착 연구 · 2026년 10월 26일 10:14:09 KST · <a href="/THIRD-PARTY-LICENSES.txt">글꼴 라이선스</a></p>
+  </div>
+</footer>
+</body>
+</html>

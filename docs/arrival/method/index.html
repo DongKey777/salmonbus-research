@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>자료와 평가 · 도착 연구 · salmonbus 연구</title>
+<meta name="description" content="버스 남는 좌석 예보 모델의 자동 실험 현황">
+<link rel="canonical" href="https://research.dongkey.tech/arrival/method/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="salmonbus 연구">
+<meta property="og:title" content="자료와 평가 · 도착 연구 · salmonbus 연구">
+<meta property="og:url" content="https://research.dongkey.tech/arrival/method/">
+<link rel="icon" href="/favicon.svg?v=42a4ccc6ef62" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="stylesheet" href="/assets/site.css?v=5ec4d2cc0cae" data-asset="css">
+<noscript><link rel="stylesheet" href="/assets/noscript.css?v=24fe7a57d410"></noscript>
+<script src="/assets/charts.js?v=dd96aa903a7f" defer data-asset="js"></script>
+<script src="/assets/live.js?v=b8d366c5c254" defer data-asset="js"></script>
+</head>
+<body data-digest="41b6c8093d814f7fdb163d22f9ac355190b4d84131d5a019411415612fd28ee2" data-poll="60" data-version-url="/version.json">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="/"><span class="brand__mark">salmonbus</span> <span class="brand__sub">연구</span></a>
+    <nav class="nav" aria-label="주 메뉴">
+      <a href="/">홈</a>
+      <a href="/progress/">개선 현황</a>
+      <a href="/attempts/">시도 상세</a>
+<a href="/arrival/" aria-current="page">도착 연구</a>    </nav>
+    <p class="live" id="live-status" data-live aria-live="polite">
+<span class="live__dot" aria-hidden="true"></span><span class="live__text">도착 연구 갱신 10월 26일 10:14</span>    </p>
+  </div>
+</header>
+<main id="main" class="page">
+<div id="arrival-hub-content" class="arrival-hub" data-live>
+<div class="ah-masthead">
+  <div class="ah-masthead__line"><a class="ah-masthead__title" href="/arrival/">도착 잔여석 연구</a><span class="tag tag--scope">첫 도착 표시 기준</span></div>
+  <p>내 정류장에 도착할 때, 몇 석이 남을까.</p>
+</div>
+<nav class="ah-nav" aria-label="도착 연구 메뉴">
+<a href="/arrival/">개요</a><a href="/arrival/progress/">개선 현황</a><a href="/arrival/models/">모델 비교</a><a href="/arrival/method/" aria-current="page">자료와 평가</a></nav>
+<section class="ah-heading"><div><p class="ah-eyebrow">정답 · 자료 · 비교 기준</p><h1>도착 연구는 이렇게 읽습니다</h1><p>무엇을 예측했는지, 어떤 질문끼리 비교했는지를 먼저 확인합니다.</p></div></section>
+<div class="ah-method-layout"><nav class="ah-method-index" aria-label="자료와 지표 목차"><a href="#arrival-target">도착 정답</a><a href="#arrival-data">학습·평가 자료</a><a href="#arrival-metrics">지표 읽는 법</a><a href="#arrival-selection">후보 선택</a><a href="#arrival-limits">아직 확인하지 못한 점</a></nav><div>
+<section class="ah-section ah-section--first" id="arrival-target"><p class="ah-eyebrow">예측 목적</p><h2>내 정류장의 첫 도착 표시 잔여석</h2><p class="ah-prose">버스가 목표 정류장에 처음 도착한 상태에 표시된 잔여석을 정답으로 사용합니다. 출발·통과 이후 잔여석을 사용했던 기존 연구와 정답이 다릅니다.</p><p class="ah-prose">이 표시가 실제 승하차 시작 전 센서 값인지는 확인되지 않았습니다. 따라서 도착 상태의 대리 정답으로 부릅니다. 좌석 순변화만으로 총 승차·총 하차 인원을 구분하거나 개인의 탑승 성공을 측정할 수는 없습니다.</p><div class="ah-target-flow" aria-label="질문과 정답의 시간 순서"><div><span>예측 시점</span><strong>현재 관측과 과거 통계</strong><p>기록된 시각을 기준으로 과거 정보만 입력</p></div><span aria-hidden="true">→</span><div><span>목표 정류장</span><strong>첫 도착 표시 잔여석</strong><p>이후 확인한 값을 정답으로 평가</p></div></div></section>
+<section class="ah-section" id="arrival-data"><p class="ah-eyebrow">자료 구성</p><h2>학습과 개발 평가를 시간순으로 나눕니다</h2><p class="ah-prose">도착 정답과 질문을 구성한 뒤 학습 자료와 개발 평가 자료를 나눴습니다. 방문마다 가능한 예측 거리에서 질문 하나를 남겨 반복 조회가 많은 방문에 평가 비중이 쏠리지 않도록 했습니다.</p><dl class="ah-data-counts"><div><dt>학습 자료 · TRAIN</dt><dd>496,475<small>질문</small></dd><p>모델 학습과 과거 통계 구성</p></div><div><dt>개발 평가 · DEV</dt><dd>80,569<small>질문</small></dd><p>같은 질문으로 모델 비교</p></div><div><dt>평가 노선</dt><dd>20<small>개</small></dd><p>노선별 평균도 함께 확인</p></div><div><dt>실제 도착 표시 0~2석</dt><dd>959<small>질문</small></dd><p>좌석 부족 상황의 과대예측 평가</p></div></dl><p class="ah-prose">과거 통계는 학습 자료에서 확정한 값으로 고정하며, 예측 시점보다 늦게 확정된 관측은 특징에 넣지 않습니다. 일부 연구는 전체 학습 자료의 비중을 조정하거나 조건에 해당하는 행으로만 추가 전문가를 학습했습니다. 모델 설명에서 실제 사용 범위를 구분합니다.</p><p class="ah-note">제한 범위 파일럿은 별도 자료입니다. 파일럿 6개 방식의 점수와 전체 범위 26개 방식의 점수를 합쳐 순위를 만들지 않습니다. <a href="/arrival/studies/pilot/">파일럿 기록 보기</a></p></section>
+<section class="ah-section" id="arrival-metrics"><p class="ah-eyebrow">숫자 해석</p><h2>같이 읽어야 하는 지표</h2><dl class="ah-definition-list"><div><dt>전체 평균 오차 · MAE <span>석 · 낮을수록 좋음</span></dt><dd>예측 좌석과 실제 표시 좌석의 차이를 절댓값으로 평균합니다. 전체적인 정확도를 보여주지만, 자리가 적은 상황의 문제를 혼자 설명하지는 못합니다.</dd></div><div><dt>노선별 평균 오차 · Macro MAE <span>석 · 낮을수록 좋음</span></dt><dd>각 노선의 평균 오차를 구한 뒤 노선마다 같은 비중으로 평균합니다. 질문 수가 많은 노선에 전체 수치가 치우치는지 확인합니다.</dd></div><div><dt>0~2석 평균 오차 <span>석 · 낮을수록 좋음</span></dt><dd>실제 도착 표시가 0~2석인 질문에서만 평균 오차를 계산합니다. 전체 평균 오차와 질문 분모가 다릅니다.</dd></div><div><dt>1석·3석 이상 과대예측 <span>% · 낮을수록 좋음</span></dt><dd>실제 0~2석인데 예측을 정답보다 각각 1석 이상, 3석 이상 높게 한 비율입니다. 3석 이상인 경우는 1석 이상에도 포함됩니다.</dd></div><div><dt>0석 감지율 <span>% · 높을수록 좋음</span></dt><dd>실제 0석인 질문 중 좌석 예측을 2석 미만으로 낸 비율입니다. 정확히 0석이라고 예측한 비율이나 탑승 성공 확률이 아닙니다.</dd></div></dl></section>
+<section class="ah-section" id="arrival-selection"><p class="ah-eyebrow">연구 판단</p><h2>평균 오차가 작다고 바로 선택하지 않습니다</h2><p class="ah-prose">각 연구에서 결과를 보기 전에 비교 기준을 고정했습니다. 전체·노선별 오차와 좌석 부족 상황의 과대예측, 0석 감지율을 함께 확인합니다. 연구마다 바꾼 기준은 해당 연구 상세에 남겼습니다.</p><p class="ah-prose">조건을 통과한 후보를 다음 실험의 연구 기준으로 선택할 수 있습니다. 선택되지 않은 모델도 삭제하지 않고 목록에 남겨 평균 오차와 위험 사이의 차이를 비교할 수 있게 했습니다. 연구 기준 후보 선택은 운영 예보 반영과 별개입니다.</p><a class="ah-inline-link" href="/arrival/progress/">연구별 판단 과정 보기 <span aria-hidden="true">→</span></a></section>
+<section class="ah-section" id="arrival-limits"><p class="ah-eyebrow">해석의 범위</p><h2>새 기간의 성능은 아직 확인되지 않았습니다</h2><ul class="ah-bullet-list"><li>같은 개발 평가 자료를 여러 번 사용했습니다. 반복 비교에서 좋아진 결과가 새로운 기간에도 유지된다고 단정하지 않습니다.</li><li>현재 표시된 연구는 운영에 채택되지 않았습니다. 기존 출발 연구의 기준 모델이나 점수와 직접 비교하지 않습니다.</li><li>분류 점수나 여러 예측의 조합을 검증된 좌석 확률 분포로 해석하지 않습니다. 확률을 평가한 파일럿 모델은 별도 범위로 표시합니다.</li><li>입력 원자료의 전체 행 수, 학습 질문 수와 정답 방문 수는 다른 단위입니다. 각 단계에서 실제로 사용한 분모를 기준으로 읽어야 합니다.</li></ul></section>
+</div></div>
+</div>
+</main>
+<footer class="footer">
+  <div class="footer__inner">
+    <p>채택 = 다음 실험의 기준 모델 · 운영 예보 반영과 별개</p>
+    <p class="footer__meta" id="footer-meta" data-live>도착 연구 · 2026년 10월 26일 10:14:09 KST · <a href="/THIRD-PARTY-LICENSES.txt">글꼴 라이선스</a></p>
+  </div>
+</footer>
+</body>
+</html>
