@@ -1,5 +1,5 @@
-@font-face { font-family: "RS Noto Sans KR"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/noto-sans-kr-400.woff?v=609c40b55162") format("woff"); }
-@font-face { font-family: "RS Noto Sans KR"; font-style: normal; font-weight: 700; font-display: swap; src: url("/assets/fonts/noto-sans-kr-700.woff?v=df1bc6268626") format("woff"); }
+@font-face { font-family: "RS Noto Sans KR"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/noto-sans-kr-400.woff?v=16b131958f48") format("woff"); }
+@font-face { font-family: "RS Noto Sans KR"; font-style: normal; font-weight: 700; font-display: swap; src: url("/assets/fonts/noto-sans-kr-700.woff?v=fd043948f60a") format("woff"); }
 @font-face { font-family: "RS Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("/assets/fonts/inter-400.woff?v=e1352122d61b") format("woff"); }
 @font-face { font-family: "RS Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("/assets/fonts/inter-500.woff?v=92ee39578543") format("woff"); }
 @font-face { font-family: "RS Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("/assets/fonts/inter-600.woff?v=89e7a7fba89b") format("woff"); }
@@ -1043,6 +1043,7 @@ a.index__item:hover { text-decoration: none; background: var(--surface); }
 .arrival-hub { --ah-space: 32px; }
 .arrival-hub [hidden] { display: none !important; }
 .arrival-hub section[id], .arrival-hub article[id], .arrival-hub details[id] { scroll-margin-top: 90px; }
+.arrival-hub #arrival-legacy31-comparison { scroll-margin-top: 90px; }
 .ah-masthead { padding-top: 32px; }
 .ah-masthead__line { display: flex; gap: 10px 14px; flex-wrap: wrap; align-items: center; }
 .ah-masthead__title { color: var(--ink-900); font-size: 21px; font-weight: 700; letter-spacing: -.025em; }
@@ -1234,6 +1235,8 @@ a.index__item:hover { text-decoration: none; background: var(--surface); }
   .ah-masthead__title { font-size: 19px; }
   .ah-nav { gap: 25px; margin-top: 14px; }
   .ah-nav a { font-size: 13px; }
+  .arrival-hub .ah-nav { flex-wrap: wrap; row-gap: 0; }
+  .arrival-hub.arrival-legacy31 [id], .arrival-hub #arrival-legacy31-comparison { scroll-margin-top: 184px; }
   .ah-heading { padding-top: 26px; padding-bottom: 20px; }
   .ah-heading h1 { font-size: 25px; }
   .ah-heading > div > p:last-child:not(.ah-eyebrow) { font-size: 13px; }
