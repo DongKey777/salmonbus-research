@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>연구 파이프라인 · salmonbus 연구</title>
+<meta name="description" content="버스 남는 좌석 예보 모델의 자동 실험 현황">
+<link rel="canonical" href="https://research.dongkey.tech/pipeline/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="salmonbus 연구">
+<meta property="og:title" content="연구 파이프라인 · salmonbus 연구">
+<meta property="og:url" content="https://research.dongkey.tech/pipeline/">
+<link rel="icon" href="/favicon.svg?v=42a4ccc6ef62" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="stylesheet" href="/assets/site.css?v=0ecadbda4388" data-asset="css">
+<noscript><link rel="stylesheet" href="/assets/noscript.css?v=24fe7a57d410"></noscript>
+<script src="/assets/charts.js?v=dd96aa903a7f" defer data-asset="js"></script>
+<script src="/assets/live.js?v=1ab7c7c161e7" defer data-asset="js"></script>
+</head>
+<body data-digest="e1b2d15231c01c151df4157007a27edcb6756fee346599ce00565fb70dd88bb8" data-poll="60" data-version-url="/version.json">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="/"><span class="brand__mark">salmonbus</span> <span class="brand__sub">연구</span></a>
+    <nav class="nav" aria-label="주 메뉴">
+      <a href="/">홈</a>
+      <a href="/pipeline/" aria-current="page">연구 흐름</a>
+      <a href="/progress/">개선 현황</a>
+      <a href="/attempts/">시도 상세</a>
+<a href="/arrival/">도착 연구</a>    </nav>
+    <p class="live" id="live-status" data-live aria-live="polite">
+<span class="live__dot" aria-hidden="true"></span><span class="live__text">입력 확장 검증 갱신 2026년 10월 26일 20:46 KST</span>    </p>
+  </div>
+</header>
+<main id="main" class="page">
+<div id="pipeline-content" class="pipeline-view" data-live>
+  <header class="pp-intro">
+    <div><p class="pp-kicker">SALMONBUS · 연구 흐름</p><h1>나눠서 준비하고,<br>근거를 모아 진행합니다.</h1><p class="pp-lead">버스가 목표 정류장에 도착할 때 표시될 잔여석.<br class="pp-wide-break"> 그 예측을 만들고, 비교하고, 기록하는 과정입니다.</p></div>
+    <aside class="pp-receipt" aria-label="마지막 완료 실행">
+      <span class="pp-receipt__label">마지막 완료 기록</span>
+<h2>내부 검증 완료 · 개발 평가 미실행</h2><p>두 시간 구간의 조건을 함께 충족한 후보가 없어, 추가 전체 학습과 개발 평가를 진행하지 않았습니다. 기존 연구 기준을 유지합니다.</p><a href="/arrival/validation/feature-loop/">실제 시도와 판단 보기 <span aria-hidden="true">↗</span></a><small>2026년 10월 26일 20:46 KST</small>
+    </aside>
+  </header>
+  <nav class="pp-section-nav" aria-label="연구 흐름 안내"><a href="#pipeline-flow">실험은 어떻게 이어지나</a><a href="#pipeline-roles">누가 무엇을 맡나</a><a href="#pipeline-legacy">이전 LLM 루프와의 차이</a></nav>
+
+  <section id="pipeline-flow" class="pp-section">
+    <div class="pp-section-head"><div><p class="pp-kicker">도착 연구 · 현재 구현된 경로</p><h2>앞 단계의 근거가<br class="pp-mobile-break"> 다음 단계를 엽니다.</h2></div><p>단계를 선택하면 설명을 볼 수 있습니다.<br>화면 선택으로 학습이 시작되지는 않습니다.</p></div>
+    <ol class="pp-stations" aria-label="연구 단계">
+<li><a class="pp-station" id="pipeline-tab-contract" href="#pipeline-panel-contract" data-pipeline-step="contract"><span class="pp-stop" aria-hidden="true">1</span><span class="pp-station__title">질문과 기준</span><span class="pp-owner pp-owner--human">사람 · AI</span><span class="pp-station__brief">무엇을 맞힐지 먼저 정합니다.</span></a></li><li><a class="pp-station" id="pipeline-tab-input" href="#pipeline-panel-input" data-pipeline-step="input"><span class="pp-stop" aria-hidden="true">2</span><span class="pp-station__title">입력 준비</span><span class="pp-owner pp-owner--code">스크립트</span><span class="pp-station__brief">같은 순서로 자료를 맞춥니다.</span></a></li><li><a class="pp-station" id="pipeline-tab-experiment" href="#pipeline-panel-experiment" data-pipeline-step="experiment"><span class="pp-stop" aria-hidden="true">3</span><span class="pp-station__title">반복 검증</span><span class="pp-owner pp-owner--code">스크립트</span><span class="pp-station__brief">제안 → 학습 → 평가를 잇습니다.</span></a></li><li><a class="pp-station" id="pipeline-tab-decision" href="#pipeline-panel-decision" data-pipeline-step="decision"><span class="pp-stop" aria-hidden="true">4</span><span class="pp-station__title">선택과 중단</span><span class="pp-owner pp-owner--decision">스크립트</span><span class="pp-station__brief">모든 조건을 함께 확인합니다.</span></a></li><li><a class="pp-station" id="pipeline-tab-publish" href="#pipeline-panel-publish" data-pipeline-step="publish"><span class="pp-stop" aria-hidden="true">5</span><span class="pp-station__title">기록과 공개</span><span class="pp-owner pp-owner--record">코드 · 작성자</span><span class="pp-station__brief">확인된 결과만 화면에 올립니다.</span></a></li>    </ol>
+    <div class="pp-return"><span class="pp-return__arrow" aria-hidden="true">↶</span><p><strong>반복할 후보가 있으면 다시 검증</strong><span>조건을 충족한 후보가 없으면, 기존 기준을 유지하고 기록합니다.</span></p><span class="pp-return__end">기준 유지도 완료</span></div>
+    <div class="pp-panels">
+<section class="pp-panel" id="pipeline-panel-contract" data-pipeline-panel="contract" aria-labelledby="pipeline-heading-contract">
+        <div class="pp-panel__heading"><span class="pp-panel__number" aria-hidden="true">1</span><div><span class="pp-owner pp-owner--human">사람 · AI</span><h3 id="pipeline-heading-contract">질문과 기준</h3><p>같은 질문과 정답을 비교의 출발점으로 삼습니다.</p></div></div>
+        <div class="pp-panel__body"><dl class="pp-io"><div><dt>받는 것</dt><dd>예측하려는 시점, 사용할 자료, 이전 연구의 한계</dd></div><div><dt>하는 일</dt><dd>목표 정류장 첫 도착 표시를 정답으로 정하고, 시간 분할과 평가 기준을 고정합니다.</dd></div><div><dt>남기는 것</dt><dd>입력·정답 계약, 비교 정책, 실행 예산</dd></div></dl><aside class="pp-condition"><span class="pp-condition__label">다음으로 넘어가는 조건</span><p>정답 시점과 자료 판본이 일치해야 입력 준비로 넘어갑니다.</p><div>출발 이후 좌석 예측과 도착 좌석 예측은 서로 다른 문제입니다.</div></aside></div>
+      </section><section class="pp-panel" id="pipeline-panel-input" data-pipeline-panel="input" aria-labelledby="pipeline-heading-input">
+        <div class="pp-panel__heading"><span class="pp-panel__number" aria-hidden="true">2</span><div><span class="pp-owner pp-owner--code">스크립트</span><h3 id="pipeline-heading-input">입력 준비</h3><p>특징을 더해도 질문과 정답의 연결은 유지합니다.</p></div></div>
+        <div class="pp-panel__body"><dl class="pp-io"><div><dt>받는 것</dt><dd>고정된 질문 목록, 현재 버스 관측, 과거 정류장 통계</dd></div><div><dt>하는 일</dt><dd>예측 시점에 사용할 수 있는 입력을 정렬하고, 누락 여부와 시간·역할 분리를 검사합니다.</dd></div><div><dt>남기는 것</dt><dd>학습용 입력과 정답, 검증용 입력, 분리된 평가 정답</dd></div></dl><aside class="pp-condition"><span class="pp-condition__label">다음으로 넘어가는 조건</span><p>입력 검증을 통과한 경우에만 학습을 시작합니다.</p><div>자료를 준비하는 단계와 모델을 학습하는 단계는 별도입니다.</div></aside></div>
+      </section><section class="pp-panel" id="pipeline-panel-experiment" data-pipeline-panel="experiment" aria-labelledby="pipeline-heading-experiment">
+        <div class="pp-panel__heading"><span class="pp-panel__number" aria-hidden="true">3</span><div><span class="pp-owner pp-owner--code">스크립트</span><h3 id="pipeline-heading-experiment">반복 검증</h3><p>이번 도착 연구의 다음 후보는 고정 정책이 정합니다.</p></div></div>
+        <div class="pp-panel__body"><dl class="pp-io"><div><dt>받는 것</dt><dd>사전에 정한 후보 목록과 앞선 후보의 검증 결과</dd></div><div><dt>하는 일</dt><dd>각 시간 구간에서 학습한 뒤 저장 모델을 다시 불러와 예측을 대조하고, 별도 단계에서 채점합니다.</dd></div><div><dt>남기는 것</dt><dd>후보별 모델·예측·지표, 두 시간 구간의 판정 기록</dd></div></dl><aside class="pp-condition"><span class="pp-condition__label">다음으로 넘어가는 조건</span><p>필수 후보를 정상 완료했지만 통과 후보가 없을 때만 조건부 후보를 추가합니다.</p><div>현재 실행기는 작업자 하나를 순서대로 실행합니다. 수치 계산의 여러 스레드는 여러 AI 에이전트가 아닙니다.</div></aside></div>
+      </section><section class="pp-panel" id="pipeline-panel-decision" data-pipeline-panel="decision" aria-labelledby="pipeline-heading-decision">
+        <div class="pp-panel__heading"><span class="pp-panel__number" aria-hidden="true">4</span><div><span class="pp-owner pp-owner--decision">스크립트</span><h3 id="pipeline-heading-decision">선택과 중단</h3><p>평균 오차가 낮아졌다는 이유만으로 선택하지 않습니다.</p></div></div>
+        <div class="pp-panel__body"><dl class="pp-io"><div><dt>받는 것</dt><dd>두 시간 구간의 공통 지표와 완료된 후보 이력</dd></div><div><dt>하는 일</dt><dd>평균 오차, 노선별 오차, 좌석 부족 상황의 과대예측, 만석 감지 등을 함께 비교합니다.</dd></div><div><dt>남기는 것</dt><dd>선택된 후보 또는 기존 기준 유지</dd></div></dl><aside class="pp-condition"><span class="pp-condition__label">다음으로 넘어가는 조건</span><p>통과 후보가 있어야 전체 학습과 개발 평가로 넘어갑니다. 없으면 추가 학습 없이 종료합니다.</p><div>최종 개발 평가 결과를 본 뒤 다른 후보로 바꾸지 않습니다. 연구 추천과 운영 적용은 별도입니다.</div></aside></div>
+      </section><section class="pp-panel" id="pipeline-panel-publish" data-pipeline-panel="publish" aria-labelledby="pipeline-heading-publish">
+        <div class="pp-panel__heading"><span class="pp-panel__number" aria-hidden="true">5</span><div><span class="pp-owner pp-owner--record">코드 · 작성자</span><h3 id="pipeline-heading-publish">기록과 공개</h3><p>성공한 실행과 성능이 개선된 실행을 구분합니다.</p></div></div>
+        <div class="pp-panel__body"><dl class="pp-io"><div><dt>받는 것</dt><dd>완료 기록, 실제 학습 횟수, 검증된 공개 집계</dd></div><div><dt>하는 일</dt><dd>파일 판본과 기록의 연결을 확인하고, 집계 결과와 설명을 연구 사이트에 반영합니다.</dd></div><div><dt>남기는 것</dt><dd>실험 이력, 모델 비교, 판단 근거와 다음 연구의 출발점</dd></div></dl><aside class="pp-condition"><span class="pp-condition__label">다음으로 넘어가는 조건</span><p>검증을 통과한 완료 기록만 공개합니다. 실패·보류 기록도 보존합니다.</p><div>조건을 충족한 후보가 없다는 결론도 정상적인 연구 결과입니다.</div></aside></div>
+      </section>    </div>
+  </section>
+
+  <section id="pipeline-roles" class="pp-section pp-section--roles">
+    <div class="pp-section-head"><div><p class="pp-kicker">개발 과정의 역할 분담</p><h2>독립적인 준비는 나누고,<br>연결되는 결과는 함께 확인합니다.</h2></div><p>아래는 병렬로 준비할 수 있는 작업 구조입니다.<br>실제 동시 실행 시각을 재현한 화면은 아닙니다.</p></div>
+    <div class="pp-branch"><div class="pp-common"><span class="pp-owner pp-owner--human">공통 계약</span><p>같은 문제 · 같은 입력 정의 · 같은 평가 기준</p></div><div class="pp-role-grid"><article class="pp-role"><span>자료 연결</span><h3>입력 어댑터</h3><p>질문 순서, 특징 이름, 누락 값과 시간 조건을 맞춥니다.</p><small>담당 AI의 구현 작업</small></article><article class="pp-role"><span>모델 계산</span><h3>수치 구현</h3><p>학습·예측·복원 함수를 고정된 수치 계약에 맞춥니다.</p><small>담당 AI의 구현 작업</small></article><article class="pp-role"><span>단계 연결</span><h3>실행 제어</h3><p>실행 예산과 완료 조건을 검사하고 다음 단계를 연결합니다.</p><small>담당 AI의 구현 작업</small></article><article class="pp-role"><span>결과 설명</span><h3>화면 구성</h3><p>공개 스키마를 바탕으로 결과와 판단 근거를 표시합니다.</p><small>담당 AI의 구현 작업</small></article></div><div class="pp-join"><div><span class="pp-join__dot" aria-hidden="true"></span><h3>독립 검토 → 부모 통합</h3></div><p>산출물이 도착하는 대로 부분 검토합니다. 최종 연결은 입력·코드·정책의 판본과 필요한 검사를 확인한 뒤 진행합니다.</p></div></div>
+    <div class="pp-responsibility"><p><strong>사람</strong>문제의 의미, 위험 우선순위, 예산, 중지·재개와 운영 적용을 결정합니다.</p><p><strong>LLM 에이전트</strong>근거를 찾고, 구현을 제안하고, 다른 담당의 코드와 설명을 검토합니다.</p><p><strong>일반 코드</strong>데이터 준비·학습·측정·기준 판정·파일 검증을 정해진 절차로 수행합니다.</p></div>
+  </section>
+
+  <section id="pipeline-legacy" class="pp-section">
+    <details class="pp-legacy" id="pipeline-legacy-details"><summary id="pipeline-legacy-summary"><div><span class="pp-kicker">이전 출발 연구 · 별도 실행 방식</span><h2>LLM이 계획과 해석을 맡았던 루프</h2><p>현재 도착 연구의 고정 정책 루프와 구분해서 봅니다.</p></div><span class="pp-disclosure" aria-hidden="true">+</span></summary><div class="pp-legacy__body"><ol class="pp-legacy-flow"><li><span>설계 AI</span><strong>실험과 가설 제안</strong></li><li><span>검토 AI</span><strong>비판·수정·재검토</strong></li><li><span>일반 코드</span><strong>학습과 수치 측정</strong></li><li><span>판정 AI · 검토 AI</span><strong>결과 해석과 다음 제안</strong></li></ol><p>검토자는 작성자의 제안을 기다리고, 결과 판정은 실제 측정을 기다립니다. 여러 AI가 있다는 이유로 모든 단계가 동시에 실행되는 것은 아닙니다. AI가 동의해도 코드의 채택 조건을 통과하지 못하면 승격할 수 없습니다.</p><p class="pp-note">현재 도착 연구의 후보 결정·판정 함수는 고정 정책을 실행하는 코드입니다. 실행 중 LLM이 새 후보를 자유롭게 만들어 내는 구조가 아닙니다.</p><a href="/progress/">이전 출발 연구 기록 보기 →</a></div></details>
+  </section>
+
+  <footer class="pp-reading"><div><span class="pp-kicker">이 흐름을 읽는 기준</span><h2>완료와 개선은<br>같은 뜻이 아닙니다.</h2></div><div><p>학습이 정상 종료돼도 평균 오차와 좌석 부족 위험을 함께 줄이지 못하면 기존 모델을 유지합니다. 실패와 보류도 다음 연구가 참고할 기록입니다.</p><p>이미 살펴본 개발 자료를 반복 사용한 결과를 새 기간의 성능으로 확대하지 않습니다. 연구에서 선택한 모델의 운영 적용도 별도 검증이 필요합니다.</p><p>예측 대상은 도착 표시 잔여석입니다. 개인의 탑승 확률을 뜻하지 않습니다.</p><a href="/arrival/">도착 연구 개요로 돌아가기 →</a></div></footer>
+</div>
+</main>
+<footer class="footer">
+  <div class="footer__inner">
+    <p>채택 = 다음 실험의 기준 모델 · 운영 예보 반영과 별개</p>
+    <p class="footer__meta" id="footer-meta" data-live>입력 확장 반복 검증 · 2026년 10월 26일 20:46 KST · <a href="/THIRD-PARTY-LICENSES.txt">글꼴 라이선스</a></p>
+  </div>
+</footer>
+</body>
+</html>

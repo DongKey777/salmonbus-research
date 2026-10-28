@@ -338,3 +338,50 @@
   window.addEventListener('site:updated', () => applyFilter(root()));
   applyFilter(root());
 })();
+
+(() => {
+  'use strict';
+  let selected = 'experiment';
+  const root = () => document.getElementById('pipeline-content');
+  function choose(id, focus = false, updateLocation = false) {
+    const view = root(); if (!view) return;
+    const tabs = [...view.querySelectorAll('[data-pipeline-step]')];
+    if (!tabs.some(tab => tab.dataset.pipelineStep === id)) return;
+    selected = id;
+    if (updateLocation) history.replaceState(null, '', '#pipeline-panel-' + id);
+    tabs.forEach(tab => { const on = tab.dataset.pipelineStep === id; tab.setAttribute('aria-selected', String(on)); tab.tabIndex = on ? 0 : -1; if (on && focus) tab.focus(); });
+    view.querySelectorAll('[data-pipeline-panel]').forEach(panel => { panel.hidden = panel.dataset.pipelinePanel !== id; });
+  }
+  function init() {
+    const view = root(); if (!view) return;
+    const list = view.querySelector('.pp-stations');
+    list.setAttribute('role', 'tablist');
+    list.setAttribute('aria-orientation', matchMedia('(max-width: 600px)').matches ? 'vertical' : 'horizontal');
+    list.querySelectorAll('li').forEach(item => item.setAttribute('role', 'presentation'));
+    view.querySelectorAll('[data-pipeline-step]').forEach(tab => { tab.setAttribute('role', 'tab'); tab.setAttribute('aria-controls', 'pipeline-panel-' + tab.dataset.pipelineStep); });
+    view.querySelectorAll('[data-pipeline-panel]').forEach(panel => { panel.setAttribute('role', 'tabpanel'); panel.setAttribute('aria-labelledby', 'pipeline-tab-' + panel.dataset.pipelinePanel); panel.tabIndex = 0; });
+    const match = location.hash.match(/^#pipeline-panel-(contract|input|experiment|decision|publish)$/);
+    choose(match ? match[1] : selected);
+  }
+  document.addEventListener('click', event => {
+    const tab = event.target.closest?.('[data-pipeline-step]'); if (!tab || !root()?.contains(tab)) return;
+    event.preventDefault(); choose(tab.dataset.pipelineStep, false, true);
+    if (matchMedia('(max-width: 600px)').matches) document.getElementById(tab.getAttribute('aria-controls')).scrollIntoView({block: 'start', behavior: 'auto'});
+  });
+  document.addEventListener('keydown', event => {
+    const tab = event.target.closest?.('[data-pipeline-step]'); if (!tab || !root()?.contains(tab)) return;
+    const tabs = [...root().querySelectorAll('[data-pipeline-step]')]; const index = tabs.indexOf(tab);
+    let next;
+    if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (index + 1) % tabs.length;
+    else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (index + tabs.length - 1) % tabs.length;
+    else if (event.key === 'Home') next = 0;
+    else if (event.key === 'End') next = tabs.length - 1;
+    else if (event.key === ' ') next = index;
+    else return;
+    event.preventDefault(); choose(tabs[next].dataset.pipelineStep, true, true);
+  });
+  document.addEventListener('site:updated', init);
+  window.addEventListener('hashchange', init);
+  matchMedia('(max-width: 600px)').addEventListener('change', init);
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
